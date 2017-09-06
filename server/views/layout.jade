@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')     
+    meta(name='viewport', content="width=device-width, initial-scale=1, maximum-scale=1")   
+    base(href='/')
+    title= title
+    description= description
+    
+    link(rel='stylesheet', href='/css/vendor.min.css')
+    script(src='/js/vendor.js')
+   
+    style.
+      .animationload{background-color:hsla(193, 43%, 29%, 0.4);height:100%;left:0;position:fixed;top:0;width:100%;z-index:10000}.osahanloading{-webkit-animation:1.5s linear 0s normal none infinite running osahanloading;animation:1.5s linear 0s normal none infinite running osahanloading;background:#fed37f none repeat scroll 0 0;border-radius:50px;height:50px;left:50%;margin-left:-25px;margin-top:-25px;position:absolute;top:50%;width:50px}.osahanloading:after{-webkit-animation:1.5s linear 0s normal none infinite running osahanloading_after;animation:1.5s linear 0s normal none infinite running osahanloading_after;border-color:#85d6de transparent;border-radius:80px;border-style:solid;border-width:10px;content:"";height:80px;left:-15px;position:absolute;top:-15px;width:80px}@-webkit-keyframes osahanloading{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{background:#85d6de none repeat scroll 0 0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes osahanloading{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{background:#85d6de none repeat scroll 0 0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}
+ 
+  body.layout.layout-vertical.layout-left-navigation.layout-below-toolbar
+   
+    ng-app
+    
+    #animationload.animationload(style='display: none;')
+      .osahanloading
+
+    script(src='/build/polyfills.js')
+    script(src='/build/app.js')

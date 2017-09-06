@@ -1,0 +1,81 @@
+<simple-notifications [options]="options" style="z-index:9999"></simple-notifications>
+<div id="register-v2" class="row no-gutters">
+  <div class="intro col-12 col-md">
+      <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12">
+
+          <div class="logo bg-primary mb-8">
+              <span>D</span>
+          </div>
+
+          <div class="title">
+              PARC
+          </div>
+
+          <div class="description pt-2">
+              Enregistrer un nouvel utilisateur dans l'application
+          </div>
+
+      </div>
+  </div>
+    <div class="form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0">
+        <div class="form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-32 px-12">
+            <div class="title h5">Enregistrer un utilisateur</div>
+
+            <div class="description mt-2">
+                Ajouter un nouvel utilisateur
+            </div>
+
+            <form name="registerForm" class="mt-8" (submit)="handleSubmit($event)" #userForm="ngForm">
+                <div class="form-group mb-4"  [class.has-danger]="!name.valid || (!name.pristine && userForm.submitted)">
+                    <input type="text" class="form-control" [class.md-has-value]="currentUser.name.length" required name="name" id="name" [(ngModel)]="currentUser.name" #name="ngModel"  />
+                    <label for="name">Nom</label>
+                    <div class="form-control-feedback" [hidden]="name.valid || (name.pristine && !userForm.submitted)">Nom invalide</div>
+                </div>
+
+
+                <div class="form-group mb-4"  [class.has-danger]="!email.valid || (!email.pristine && userForm.submitted)">
+                    <input type="email" class="form-control" [class.md-has-value]="currentUser.email.length" required name="email" id="email" #email="ngModel" [(ngModel)]="currentUser.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" />
+                    <label for="email">Email</label>
+                    <div class="form-control-feedback" [hidden]="email.valid || (email.pristine && !userForm.submitted)">Adresse email invalide </div>
+                </div>
+                <div class="form-group mb-4"  [class.has-danger]="!roles.valid || (!roles.pristine && userForm.submitted)">
+                    <select name="roles" id="roles" class="form-control" [class.md-has-value]="currentUser.roles.length" [(ngModel)]="currentUser.roles" #roles="ngModel" required>
+                        <option value=""></option>
+                        <option  *ngFor="let role of userRoles">{{role}}</option>
+                    </select>
+                    <label for="roles">Rôle utilisateur</label>
+                    <div class="form-control-feedback" [hidden]="roles.valid || (roles.pristine && !userForm.submitted)">Un utilisateur doit avoir un rôle </div>
+                </div>
+
+                <div class="form-group mb-4"  [class.has-danger]="!password.valid || (!password.pristine && userForm.submitted)">
+                    <input type="text" class="form-control" [class.md-has-value]="currentUser.plainPassword.length" minlength="8" required name="plainPassword" id="plainPassword" [(ngModel)]="currentUser.plainPassword" #password="ngModel" />
+                    <label for="plainPassword">Mot de passe</label>
+                    <div class="form-control-feedback" [hidden]="password.valid || (password.pristine && !userForm.submitted)">Mot de passe incorrect (8 caractères min) </div>
+                </div>
+                <div class="remember-forgot-password row no-gutters align-items-center justify-content-between pt-4">
+                    <div class="form-check remember-me mb-4">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" aria-label="Afficher" [checked]="showPassword" (change)="toggleShowPassword()"/>
+                            <span class="checkbox-icon"></span>
+                            <span data-toggle="tooltip" data-original-title="Afficher le mot de passe">
+                                Afficher
+                            </span>
+                        </label>
+                    </div>
+                    <a href="#" data-toggle="tooltip" data-original-title="Générer un nouveau mot de passe" class="btn btn-primary fuse-ripple-ready" (click)="generatePassword($event)">Générer</a>
+                </div>
+
+                <button type="submit" [disabled]="!userForm.form.valid" class="submit-button btn btn-block btn-primary my-4 mx-auto" aria-label="LOG IN">
+                    CREER UN COMPTE
+                </button>
+
+            </form>
+
+            <!--<div class="login d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">
+                <span class="text mr-sm-2">Already have an account?</span>
+                <a class="link text-primary" href="#">Connexion</a>
+            </div>-->
+
+        </div>
+    </div>
+</div>

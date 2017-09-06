@@ -1,0 +1,10 @@
+<div id="wrapper">
+    <navigation style="z-index:1030" *ngIf="isUserLogged"></navigation>
+    <div class="content-wrapper">
+        <menu *ngIf="isUserLogged"></menu>
+
+        <div class="content">
+           <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

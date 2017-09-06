@@ -1,0 +1,164 @@
+<div id="contacts" class="page-layout simple left-sidebar-floating">
+
+    <div class="page-header bg-primary text-auto row no-gutters align-items-center justify-content-between p-4 p-sm-6">
+
+        <div class="col">
+
+            <div class="row no-gutters align-items-center flex-nowrap">
+
+                <button type="button" class="sidebar-toggle-button btn btn-icon d-inline-block d-lg-none mr-2" data-fuse-bar-toggle="contacts-sidebar">
+                    <i class="icon icon-menu"></i>
+                </button>
+
+                <!-- APP TITLE -->
+                <div class="logo row no-gutters align-items-center flex-nowrap">
+                    <span class="logo-icon mr-4">
+                        <i class="icon-account-box s-6"></i>
+                    </span>
+                    <span class="logo-text h4">Liste utilisateurs</span>
+                </div>
+            </div>
+            <!-- / APP TITLE -->
+        </div>
+
+        <!-- SEARCH -->
+        <div class="col search-wrapper">
+
+            <div class="input-group">
+
+                <span class="input-group-btn">
+
+                    <button type="button" class="btn btn-icon">
+                        <i class="icon icon-magnify"></i>
+                    </button>
+
+                </span>
+
+                <input id="contacts-search-input" type="text" class="form-control" placeholder="Search for anyone" aria-label="Search for anyone">
+
+            </div>
+        </div>
+        <!-- / SEARCH -->
+    </div>
+    <!-- / HEADER -->
+
+    <div class="page-content-wrapper">
+
+        <aside class="page-sidebar p-6" data-fuse-bar="contacts-sidebar" data-fuse-bar-media-step="md">
+            <div class="page-sidebar-card">
+                <!-- SIDENAV HEADER -->
+                <div class="header p-4">
+
+                    <!-- USER -->
+                    <div class="row no-gutters align-items-center">
+                        <img class="avatar mr-4" alt="John Doe">
+                        <span class="font-weight-bold">John Doe</span>
+                    </div>
+                    <!-- / USER -->
+
+                </div>
+                <!-- / SIDENAV HEADER -->
+
+                <div class="divider"></div>
+
+                <!-- SIDENAV CONTENT -->
+                <div class="content">
+
+                    <ul class="nav flex-column">
+
+                        <li class="nav-item">
+                            <a class="nav-link ripple" href="#">
+                                <span>Starred contacts</span>
+                            </a>
+                        </li>
+
+                        <div class="divider"></div>
+
+                        <li class="subheader">Groups</li>
+
+                        <li class="nav-item">
+                            <a class="nav-link ripple" href="#">
+                                <span class="pl-2">Friends</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- / SIDENAV CONTENT -->
+            </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="page-content p-4 p-sm-6">
+            <!-- CONTACT LIST -->
+            <div class="contacts-list card">
+
+                <!-- CONTACT LIST HEADER -->
+                <div class="contacts-list-header p-4">
+
+                    <div class="row no-gutters align-items-center justify-content-between">
+
+                        <div class="list-title text-muted">
+                            All contacts (25)
+                        </div>
+
+                        <button type="button" class="btn btn-icon">
+                            <i class="icon icon-sort-alphabetical"></i>
+                        </button>
+                    </div>
+
+                </div>
+                <!-- / CONTACT LIST HEADER -->
+
+                <!-- CONTACT ITEM -->
+                <div class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
+
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                    </label>
+
+                    <img class="avatar mx-4" alt="Abbott">
+
+                    <div class="col text-truncate font-weight-bold">Abbott Keitch</div>
+
+                    <div class="col email text-truncate px-1 d-none d-xl-flex">
+                        abbott@withinpixels.com
+                    </div>
+
+                    <div class="col phone text-truncate px-1 d-none d-xl-flex">
+                        +1-202-555-0175
+                    </div>
+
+                    <div class="col job-title text-truncate px-1 d-none d-sm-flex">
+                        Digital Archivist
+                    </div>
+
+                    <div class="col company text-truncate px-1 d-none d-sm-flex">
+                        Saois
+                    </div>
+
+                    <div class="col-auto actions">
+
+                        <div class="row no-gutters">
+
+                            <button type="button" class="btn btn-icon">
+
+                                <i class="icon-star-outline"></i>
+
+                            </button>
+
+                            <button type="button" class="btn btn-icon">
+                                <i class="icon icon-dots-vertical"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- / CONTACT LIST -->
+        </div>
+        <!-- / CONTENT -->
+    </div>
+</div>
