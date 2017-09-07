@@ -26719,7 +26719,7 @@ var Config = (function () {
     }
     Object.defineProperty(Config, "APP_HOST", {
         get: function () {
-            return 'http://localhost:8000/';
+            return 'http://localhost:3000/';
         },
         enumerable: true,
         configurable: true
@@ -26740,12 +26740,12 @@ var Config = (function () {
                 user_edit: this.APP_HOST + "utilisateurs/modifier",
                 user_remove: this.APP_HOST + "utilisateurs/supprimer",
                 upload_photo: this.APP_HOST + "utilisateurs/photo",
-                user_default_image: this.UPLOAD_FOLDER + "photos/user.png",
+                user_default_image: "photos/user.png",
                 loading: this.APP_HOST + "uploads/loading.svg",
                 profil: this.APP_HOST + 'profil',
-                login: this.APP_HOST + "connexion",
-                logout: this.APP_HOST + "logout",
-                roles: this.APP_HOST + "roles"
+                login: this.APP_HOST + "auth/login",
+                logout: this.APP_HOST + "auth/logout",
+                roles: this.APP_HOST + "utilisateurs/roles"
             };
         },
         enumerable: true,
@@ -35892,7 +35892,7 @@ var AuthGuard = (function () {
             return true;
         }
         // not logged in so redirect to login page with the return url
-        this.router.navigate(['/login']);
+        this.router.navigate(['/auth/login']);
         return false;
     };
     return AuthGuard;
@@ -76606,7 +76606,7 @@ var AdminGuard = (function () {
     }
     AdminGuard.prototype.canActivate = function (route, state) {
         var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-        if (loggedUser && (loggedUser.roles[0] === "ROLE_ADMIN")) {
+        if (loggedUser && (loggedUser.roles === "ROLE_ADMIN")) {
             return true;
         }
         return false;
@@ -76682,7 +76682,7 @@ exports.appRoutes = [
     { path: 'contact', component: contact_component_1.ContactComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'utilisateur/profil', component: index_1.ProfilComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'utilisateurs/liste', component: index_1.UserListComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'login', component: index_1.LoginComponent },
+    { path: 'auth/login', component: index_1.LoginComponent },
 ];
 
 
@@ -76799,16 +76799,6 @@ var UserService = (function () {
         }).catch(this.helper.handleError);
     };
     UserService.prototype.uploadPhoto = function (id, formData) {
-        /* var xhr = new XMLHttpRequest();
-         xhr.open('POST', Config.API_ROUTE.upload_photo + "/" + id, true);
-         xhr.onload = function () {
-             if (xhr.status === 200) {
-                 console.log(xhr.response);
-             } else {
-                 alert('An error occurred!');
-             }
-         };
-         xhr.send(formData);*/
         return this.http.post(app_config_1.Config.API_ROUTE.upload_photo + "/" + id, formData, { headers: this.headers }).map(function (response) {
             return response.json();
         });
@@ -76911,7 +76901,7 @@ var MenuComponent = (function () {
         this.authService.logout().subscribe(function () {
             localStorage.removeItem('loggedUser');
             _this.authService.onAuth();
-            _this.router.navigate(['/login']);
+            _this.router.navigate(['/auth/login']);
         });
     };
     return MenuComponent;
@@ -77004,8 +76994,7 @@ var EditComponent = (function () {
         this.route.paramMap.subscribe(function (params) {
             _this.helper.toggleLoadding(true);
             _this.userService.findOne(params.get('id')).subscribe(function (response) {
-                var user = JSON.parse(response);
-                _this.currentUser = JSON.parse(response);
+                var user = _this.currentUser = response;
                 _this.currentUser.plainPassword = "";
                 _this.currentUser.phone = user.phone || "";
                 _this.helper.toggleLoadding(false);
@@ -77128,10 +77117,10 @@ var LoginComponent = (function () {
                 localStorage.setItem("loggedUser", JSON.stringify(response.loggedUser));
                 _this.authService.onAuth();
                 _this.router.navigate(['/']);
-                _this.helper.toggleLoadding(false);
             }
             else
                 _this._notificationsService.error('Erreur', response.message);
+            _this.helper.toggleLoadding(false);
         });
     };
     return LoginComponent;
@@ -77213,7 +77202,7 @@ var RegistrationComponent = (function () {
             email: '',
             plainPassword: this.helper.getPassword(),
             roles: 'ROLE_USER',
-            photo: "photos/user.png"
+            photo: app_config_1.Config.API_ROUTE.user_default_image
         });
         this.userService.getRoles().subscribe(function (response) {
             _this.userRoles = response;
@@ -77497,7 +77486,7 @@ module.exports = "<div id=\"project-dashboard\" class=\"page-layout simple right
 /* 343 */
 /***/ (function(module, exports) {
 
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register\" class=\"row no-gutters\">\r\n    <div class=\"form-wrapper md-elevation-8 p-8\">\r\n\r\n        <div class=\"logo\">\r\n            <img [src]=\"upload_folder+currentUser.photo\" alt=\"currentUser.name\" style=\"cursor: pointer;width: 128px;height: 128px\" data-toggle=\"tooltip\" data-original-title=\"Modifier photo\" (click)=\"browse()\">\r\n            <input type=\"file\" id=\"fileElement\" name=\"image\" (change)=\"loadImage($event)\" style=\"display: none\"/>\r\n            <img [src]=\"loading\" alt=\"loading\" [hidden]=\"!uploading\" />\r\n        </div>\r\n\r\n        <div class=\"title mt-4 mb-8\">{{currentUser.name}}</div>\r\n\r\n        <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"/>\r\n                <label for=\"name\">Nom</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom\r\n                    invalide\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"/>\r\n                <label for=\"email\">Email</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">\r\n                    Adresse email invalide\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!phone.valid || (!phone.pristine && userForm.submitted)\">\r\n                <input type=\"tel\" class=\"form-control\" [class.md-has-value]=\"currentUser.phone.length\"  name=\"phone\" id=\"phone\" #phone=\"ngModel\" [(ngModel)]=\"currentUser.phone\"/>\r\n                <label for=\"email\">Téléphone</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"phone.valid || (phone.pristine && !userForm.submitted)\">\r\n                    Téléphone invalide\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                    <option value=\"\"></option>\r\n                    <option *ngFor=\"let role of userRoles\">{{role}}</option>\r\n                </select>\r\n                <label for=\"roles\">Rôle utilisateur</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un\r\n                    utilisateur doit avoir un rôle\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                <label for=\"plainPassword\">Mot de passe</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n            </div>\r\n\r\n            <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                <div class=\"form-check remember-me mb-4\">\r\n                    <label class=\"form-check-label\">\r\n                        <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                        <span class=\"checkbox-icon\"></span>\r\n                        <span data-toggle=\"tooltip\" data-original-title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                    </label>\r\n                </div>\r\n                <a href=\"#\" data-toggle=\"tooltip\" data-original-title=\"Générer un nouveau mot de passe\" class=\"btn btn-primary fuse-ripple-ready\" (click)=\"generatePassword($event)\">Générer</a>\r\n            </div>\r\n\r\n            <button type=\"submit\" [disabled]=\"!userForm.form.valid\" class=\"submit-button btn btn-block btn-primary my-4 mx-auto\" aria-label=\"LOG IN\">\r\n                ENREGISTRER\r\n            </button>\r\n\r\n        </form>\r\n\r\n    </div>\r\n</div>";
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register\" class=\"row no-gutters\">\r\n    <div class=\"form-wrapper md-elevation-8 p-8\">\r\n\r\n        <div class=\"logo\">\r\n            <img [src]=\"upload_folder+currentUser.photo\" alt=\"currentUser.name\" style=\"cursor: pointer;width: 128px;height: 128px\" data-toggle=\"tooltip\" data-original-title=\"Modifier photo\" (click)=\"browse()\">\r\n            <input type=\"file\" id=\"fileElement\" name=\"image\" (change)=\"loadImage($event)\" style=\"display: none\"/>\r\n            <img [src]=\"loading\" alt=\"loading\" [hidden]=\"!uploading\" />\r\n        </div>\r\n\r\n        <div class=\"title mt-4 mb-8\">{{currentUser.name}}</div>\r\n\r\n        <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"/>\r\n                <label for=\"name\">Nom</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom\r\n                    invalide\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"/>\r\n                <label for=\"email\">Email</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">\r\n                    Adresse email invalide\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!phone.valid || (!phone.pristine && userForm.submitted)\">\r\n                <input type=\"tel\" class=\"form-control\" [class.md-has-value]=\"currentUser.phone.length\"  name=\"phone\" id=\"phone\" #phone=\"ngModel\" [(ngModel)]=\"currentUser.phone\"/>\r\n                <label for=\"email\">Téléphone</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"phone.valid || (phone.pristine && !userForm.submitted)\">\r\n                    Téléphone invalide\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                    <option value=\"\"></option>\r\n                    <option *ngFor=\"let role of userRoles\" [ngValue]=\"role\">{{role}}</option>\r\n                </select>\r\n                <label for=\"roles\">Rôle utilisateur</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un\r\n                    utilisateur doit avoir un rôle\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                <label for=\"plainPassword\">Mot de passe</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n            </div>\r\n\r\n            <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                <div class=\"form-check remember-me mb-4\">\r\n                    <label class=\"form-check-label\">\r\n                        <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                        <span class=\"checkbox-icon\"></span>\r\n                        <span data-toggle=\"tooltip\" data-original-title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                    </label>\r\n                </div>\r\n                <a href=\"#\" data-toggle=\"tooltip\" data-original-title=\"Générer un nouveau mot de passe\" class=\"btn btn-primary fuse-ripple-ready\" (click)=\"generatePassword($event)\">Générer</a>\r\n            </div>\r\n\r\n            <button type=\"submit\" [disabled]=\"!userForm.form.valid\" class=\"submit-button btn btn-block btn-primary my-4 mx-auto\" aria-label=\"LOG IN\">\r\n                ENREGISTRER\r\n            </button>\r\n\r\n        </form>\r\n\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 344 */
