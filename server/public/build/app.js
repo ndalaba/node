@@ -76730,6 +76730,14 @@ var Helper = (function () {
         else
             document.getElementById("animationload").style.display = "none";
     };
+    Helper.prototype.isImage = function (file) {
+        var extensions = file.name.split('.');
+        var extension = '.' + extensions[extensions.length - 1];
+        if (extension !== '.jpg' && extension !== '.JPG' && extension !== '.png' && extension !== '.jpeg') {
+            return false;
+        }
+        return true;
+    };
     return Helper;
 }());
 Helper = __decorate([
@@ -76774,7 +76782,7 @@ var UserService = (function () {
         }).catch(this.helper.handleError);
     };
     UserService.prototype.removeUser = function (id) {
-        return this.http.delete(app_config_1.Config.API_ROUTE.user_remove + "/" + id, { headers: this.headers }).map(function (response) {
+        return this.http.get(app_config_1.Config.API_ROUTE.user_remove + "/" + id, { headers: this.headers }).map(function (response) {
             return response.json();
         }).catch(this.helper.handleError);
     };
@@ -76799,7 +76807,7 @@ var UserService = (function () {
         }).catch(this.helper.handleError);
     };
     UserService.prototype.uploadPhoto = function (id, formData) {
-        return this.http.post(app_config_1.Config.API_ROUTE.upload_photo + "/" + id, formData, { headers: this.headers }).map(function (response) {
+        return this.http.post(app_config_1.Config.API_ROUTE.upload_photo + "/" + id, formData).map(function (response) {
             return response.json();
         });
     };
@@ -77018,18 +77026,23 @@ var EditComponent = (function () {
     };
     EditComponent.prototype.loadImage = function () {
         var _this = this;
-        this.uploading = true;
         var formData = new FormData();
         var file = document.getElementById("fileElement").files[0];
-        formData.append("photo", file);
-        this.userService.uploadPhoto(this.currentUser.id, formData).subscribe(function (response) {
-            if (response.success) {
-                _this._notificationsService.success('Succès', response.message);
-            }
-            else
-                _this._notificationsService.error('Erreur', response.message);
-            _this.uploading = false;
-        });
+        if (this.helper.isImage(file)) {
+            this.uploading = true;
+            formData.append("photo", file);
+            this.userService.uploadPhoto(this.currentUser.id, formData).subscribe(function (response) {
+                if (response.success) {
+                    _this.currentUser.photo = response.photo;
+                    _this._notificationsService.success('Succès', response.message);
+                }
+                else
+                    _this._notificationsService.error('Erreur', response.message);
+                _this.uploading = false;
+            });
+        }
+        else
+            this._notificationsService.error('Erreur', "Format image incorrecte");
     };
     EditComponent.prototype.browse = function () {
         document.getElementById('fileElement').click();
@@ -77486,7 +77499,7 @@ module.exports = "<div id=\"project-dashboard\" class=\"page-layout simple right
 /* 343 */
 /***/ (function(module, exports) {
 
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register\" class=\"row no-gutters\">\r\n    <div class=\"form-wrapper md-elevation-8 p-8\">\r\n\r\n        <div class=\"logo\">\r\n            <img [src]=\"upload_folder+currentUser.photo\" alt=\"currentUser.name\" style=\"cursor: pointer;width: 128px;height: 128px\" data-toggle=\"tooltip\" data-original-title=\"Modifier photo\" (click)=\"browse()\">\r\n            <input type=\"file\" id=\"fileElement\" name=\"image\" (change)=\"loadImage($event)\" style=\"display: none\"/>\r\n            <img [src]=\"loading\" alt=\"loading\" [hidden]=\"!uploading\" />\r\n        </div>\r\n\r\n        <div class=\"title mt-4 mb-8\">{{currentUser.name}}</div>\r\n\r\n        <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"/>\r\n                <label for=\"name\">Nom</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom\r\n                    invalide\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"/>\r\n                <label for=\"email\">Email</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">\r\n                    Adresse email invalide\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!phone.valid || (!phone.pristine && userForm.submitted)\">\r\n                <input type=\"tel\" class=\"form-control\" [class.md-has-value]=\"currentUser.phone.length\"  name=\"phone\" id=\"phone\" #phone=\"ngModel\" [(ngModel)]=\"currentUser.phone\"/>\r\n                <label for=\"email\">Téléphone</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"phone.valid || (phone.pristine && !userForm.submitted)\">\r\n                    Téléphone invalide\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                    <option value=\"\"></option>\r\n                    <option *ngFor=\"let role of userRoles\" [ngValue]=\"role\">{{role}}</option>\r\n                </select>\r\n                <label for=\"roles\">Rôle utilisateur</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un\r\n                    utilisateur doit avoir un rôle\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                <label for=\"plainPassword\">Mot de passe</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n            </div>\r\n\r\n            <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                <div class=\"form-check remember-me mb-4\">\r\n                    <label class=\"form-check-label\">\r\n                        <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                        <span class=\"checkbox-icon\"></span>\r\n                        <span data-toggle=\"tooltip\" data-original-title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                    </label>\r\n                </div>\r\n                <a href=\"#\" data-toggle=\"tooltip\" data-original-title=\"Générer un nouveau mot de passe\" class=\"btn btn-primary fuse-ripple-ready\" (click)=\"generatePassword($event)\">Générer</a>\r\n            </div>\r\n\r\n            <button type=\"submit\" [disabled]=\"!userForm.form.valid\" class=\"submit-button btn btn-block btn-primary my-4 mx-auto\" aria-label=\"LOG IN\">\r\n                ENREGISTRER\r\n            </button>\r\n\r\n        </form>\r\n\r\n    </div>\r\n</div>";
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register\" class=\"row no-gutters\">\r\n    <div class=\"form-wrapper md-elevation-8 p-8\">\r\n\r\n        <div class=\"logo\">\r\n            <img [src]=\"upload_folder+currentUser.photo\" alt=\"currentUser.name\" style=\"cursor: pointer;width: 128px;height: 128px;border-radius:70px\" data-toggle=\"tooltip\" data-original-title=\"Modifier photo\" (click)=\"browse()\">\r\n            <input type=\"file\" id=\"fileElement\" name=\"image\" (change)=\"loadImage($event)\" style=\"display: none\"/>\r\n            <img [src]=\"loading\" alt=\"loading\" [hidden]=\"!uploading\" />\r\n        </div>\r\n\r\n        <div class=\"title mt-4 mb-8\">{{currentUser.name}}</div>\r\n\r\n        <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"/>\r\n                <label for=\"name\">Nom</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom\r\n                    invalide\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"/>\r\n                <label for=\"email\">Email</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">\r\n                    Adresse email invalide\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!phone.valid || (!phone.pristine && userForm.submitted)\">\r\n                <input type=\"tel\" class=\"form-control\" [class.md-has-value]=\"currentUser.phone.length\"  name=\"phone\" id=\"phone\" #phone=\"ngModel\" [(ngModel)]=\"currentUser.phone\"/>\r\n                <label for=\"email\">Téléphone</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"phone.valid || (phone.pristine && !userForm.submitted)\">\r\n                    Téléphone invalide\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                    <option value=\"\"></option>\r\n                    <option *ngFor=\"let role of userRoles\" [ngValue]=\"role\">{{role}}</option>\r\n                </select>\r\n                <label for=\"roles\">Rôle utilisateur</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un\r\n                    utilisateur doit avoir un rôle\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                <label for=\"plainPassword\">Mot de passe</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n            </div>\r\n\r\n            <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                <div class=\"form-check remember-me mb-4\">\r\n                    <label class=\"form-check-label\">\r\n                        <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                        <span class=\"checkbox-icon\"></span>\r\n                        <span data-toggle=\"tooltip\" data-original-title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                    </label>\r\n                </div>\r\n                <a href=\"#\" data-toggle=\"tooltip\" data-original-title=\"Générer un nouveau mot de passe\" class=\"btn btn-primary fuse-ripple-ready\" (click)=\"generatePassword($event)\">Générer</a>\r\n            </div>\r\n\r\n            <button type=\"submit\" [disabled]=\"!userForm.form.valid\" class=\"submit-button btn btn-block btn-primary my-4 mx-auto\" aria-label=\"LOG IN\">\r\n                ENREGISTRER\r\n            </button>\r\n\r\n        </form>\r\n\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 344 */

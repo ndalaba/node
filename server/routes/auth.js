@@ -16,13 +16,20 @@ auth.post('/login', (req, res, next) => {
     UserManager.byMail(req.body.email).then(user => {
         if (user) {
             if (user.password === UserManager.hash(req.body.password)) {
-                user.update({lastLogin: new Date().toString()}).then(()=>{
+                if (req.body.remember_me) {
+                    req.session.cookie.maxAge = 2592000000; // 30*24*60*60*1000 Rememeber 'me' for 30 days
+                } else {
+                    req.session.cookie.expires = false;
+                user.update({
+                    lastLogin: new Date().toString()
+                }).then(() => {
+                    req.session.user = user;
                     res.status(200).send({
                         success: 1,
                         loggedUser: user
                     });
                 });
-               
+
             } else
                 res.send({
                     success: 0,
@@ -39,8 +46,9 @@ auth.post('/login', (req, res, next) => {
 });
 
 auth.get('/logout', function (req, res, next) {
+    req.session.destroy();
     res.send({
-        success: 0
+        success: 1
     });
 });
 
