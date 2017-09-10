@@ -27,7 +27,7 @@ export class UserService {
     }
 
     removeUser(id: number): Observable<any> {
-        return this.http.delete(Config.API_ROUTE.user_remove + "/" + id, {headers: this.headers}).map(response => {
+        return this.http.get(Config.API_ROUTE.user_remove + "/" + id, {headers: this.headers}).map(response => {
             return response.json();
         }).catch(this.helper.handleError);
     }
@@ -57,17 +57,7 @@ export class UserService {
     }
 
     uploadPhoto(id: number, formData: any): Observable<any> {
-        /* var xhr = new XMLHttpRequest();
-         xhr.open('POST', Config.API_ROUTE.upload_photo + "/" + id, true);
-         xhr.onload = function () {
-             if (xhr.status === 200) {
-                 console.log(xhr.response);
-             } else {
-                 alert('An error occurred!');
-             }
-         };
-         xhr.send(formData);*/
-        return this.http.post(Config.API_ROUTE.upload_photo + "/" + id, formData,{headers: this.headers}).map(response => {
+        return this.http.post(Config.API_ROUTE.upload_photo + "/" + id, formData).map(response => {
             return response.json();
         });
 

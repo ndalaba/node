@@ -1,5 +1,5 @@
-var express = require('express');
-var auth = express.Router();
+let express = require('express');
+let auth = express.Router();
 const User = require('../models').User;
 let UserManager = require('../services/userManager');
 
@@ -16,9 +16,9 @@ auth.post('/login', (req, res, next) => {
     UserManager.byMail(req.body.email).then(user => {
         if (user) {
             if (user.password === UserManager.hash(req.body.password)) {
-                if (req.body.remember_me) {
+                if (req.body.remember_me)
                     req.session.cookie.maxAge = 2592000000; // 30*24*60*60*1000 Rememeber 'me' for 30 days
-                } else {
+                else
                     req.session.cookie.expires = false;
                 user.update({
                     lastLogin: new Date().toString()

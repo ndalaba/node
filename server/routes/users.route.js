@@ -1,6 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var isAdmin = require('../middlewares/isAdmin');
+let express = require('express');
+let router = express.Router();
+let isAdmin = require('../middlewares/isAdmin');
+let config= require('../config/app.config');
 
 let userManager = require('../services/userManager');
 let uploader = require('../services/imageUploader');
@@ -65,7 +66,7 @@ router.get('/ajouter', (req, res, next) => {
   });
 });
 router.post('/ajouter', (req, res, next) => {
-  userManager.byMail(req.body.email).then(user => {
+  UserManager.byMail(req.body.email).then(user => {
     if (!user) {
       userManager.addUser(req.body, () => res.json({
         success: 1,
@@ -81,7 +82,7 @@ router.post('/ajouter', (req, res, next) => {
 });
 
 router.get('/roles', (req, res, next) => {
-  res.send(['ROLE_USER', 'ROLE_ADMIN']);
+  res.send(config.roles);
 });
 
 module.exports = router;

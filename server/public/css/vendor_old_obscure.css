@@ -11626,8 +11626,8 @@ body>.ui-pnotify-modal-overlay {
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);
 @media print {
     *,
-    ::after,
-    ::before,
+     ::after,
+     ::before,
     blockquote::first-letter,
     blockquote::first-line,
     div::first-letter,
@@ -11729,7 +11729,7 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #172B4D;
+    color: #fff;
     background-color: #fff;
 }
 
@@ -11830,14 +11830,14 @@ sup {
 }
 
 a {
-    color: #0747a6;
+    color: #fff;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-    color: #0747a6;
+    color: #209e91;
     text-decoration: underline;
 }
 
@@ -12052,8 +12052,7 @@ h6 {
     font-family: inherit;
     font-weight: 400;
     line-height: 1.5;
-    color: #1a2e4f;
-    text-align: center;
+    color: inherit
 }
 
 .h1,
@@ -14137,7 +14136,7 @@ pre code {
     padding: 0 1.6rem;
     font-size: 1.4rem;
     line-height: 1.78571;
-    color: #172B4D;
+    color: #fff;
     background-color: transparent;
     background-image: none;
     background-clip: padding-box;
@@ -14162,8 +14161,8 @@ pre code {
     background-color: transparent;
     border-color: none;
     outline: 0;
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .form-control::-webkit-input-placeholder {
@@ -14612,7 +14611,7 @@ tbody.collapse.show {
 }
 
 .dropdown-toggle::after {
-    display: none;
+    display: inline-block;
     width: 0;
     height: 0;
     margin-left: .255em;
@@ -14620,7 +14619,7 @@ tbody.collapse.show {
     content: "";
     border-top: .3em solid;
     border-right: .3em solid transparent;
-    border-left: .3em solid transparent;
+    border-left: .3em solid transparent
 }
 
 .dropdown-toggle:empty::after {
@@ -14643,10 +14642,10 @@ tbody.collapse.show {
     padding: .5rem 0;
     margin: .25rem 0 0;
     font-size: 1.4rem;
-    color: #172B4D;
+    color: #fff;
     text-align: left;
     list-style: none;
-    /* background: url(../img/blur-bg-blurred.jpg); */
+    background: url(../img/blur-bg-blurred.jpg);
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
@@ -14663,7 +14662,7 @@ tbody.collapse.show {
     padding: 0 1.6rem;
     clear: both;
     font-weight: 400;
-    color: #172B4D;
+    color: #fff;
     text-align: inherit;
     white-space: nowrap;
     background: 0 0;
@@ -14672,7 +14671,7 @@ tbody.collapse.show {
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    color: rgb(7, 71, 166);
+    color: rgb(32, 158, 145);
     text-decoration: none;
     background-color: rgba(0, 0, 0, .06);
 }
@@ -15167,7 +15166,7 @@ tbody.collapse.show {
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-indicator {
-    background-color: #0052cc;
+    background-color: #209e91;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='inherit' d='M0 2h4'/%3E%3C/svg%3E");
     -webkit-box-shadow: none;
     box-shadow: none
@@ -15224,8 +15223,8 @@ tbody.collapse.show {
 .custom-select:focus {
     border-color: none;
     outline: 0;
-    -webkit-box-shadow: 0 1px 0 0 #0052cc, inset 0 -1px 0 0 #0052cc;
-    box-shadow: 0 1px 0 0 #0052cc, inset 0 -1px 0 0 #0052cc
+    -webkit-box-shadow: 0 1px 0 0 #209e91, inset 0 -1px 0 0 #209e91;
+    box-shadow: 0 1px 0 0 #209e91, inset 0 -1px 0 0 #209e91
 }
 
 .custom-select:focus::-ms-value {
@@ -15265,8 +15264,8 @@ tbody.collapse.show {
 }
 
 .custom-file-input:focus~.custom-file-control {
-    -webkit-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0052cc;
-    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0052cc
+    -webkit-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #209e91;
+    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #209e91
 }
 
 .custom-file-control {
@@ -15394,7 +15393,7 @@ tbody.collapse.show {
 .nav-pills .nav-link.active,
 .show .nav-pills .nav-link {
     color: #fff;
-    background-color: #0052cc
+    background-color: #209e91
 }
 
 .nav-fill .nav-item {
@@ -16009,8 +16008,8 @@ tbody.collapse.show {
 }
 
 .card-primary {
-    background-color: #0052cc;
-    border-color: #0052cc
+    background-color: #209e91;
+    border-color: #209e91
 }
 
 .card-primary .card-footer,
@@ -16060,13 +16059,13 @@ tbody.collapse.show {
 
 .card-outline-primary {
     background-color: transparent;
-    border-color: #0052cc
+    border-color: #209e91
 }
 
 .card-outline-primary .card-footer,
 .card-outline-primary .card-header {
     background-color: transparent;
-    border-color: #0052cc
+    border-color: #209e91
 }
 
 .card-outline-secondary {
@@ -16368,8 +16367,8 @@ tbody.collapse.show {
 .page-item.active .page-link {
     z-index: 2;
     color: #fff;
-    background-color: #0052cc;
-    border-color: #0052cc
+    background-color: #209e91;
+    border-color: #209e91
 }
 
 .page-item.disabled .page-link {
@@ -16482,7 +16481,7 @@ a.badge:hover {
 }
 
 .badge-primary {
-    background-color: #0052cc
+    background-color: #209e91
 }
 
 .badge-primary[href]:focus,
@@ -16665,7 +16664,7 @@ a.badge:hover {
     height: 1.6rem;
     line-height: 1.6rem;
     color: #fff;
-    background-color: #0052cc;
+    background-color: #209e91;
     -webkit-transition: width .6s ease;
     transition: width .6s ease
 }
@@ -16769,8 +16768,8 @@ a.badge:hover {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #0052cc;
-    border-color: #0052cc
+    background-color: #209e91;
+    border-color: #209e91
 }
 
 .list-group-flush .list-group-item {
@@ -17676,7 +17675,7 @@ button.close {
 }
 
 .bg-primary {
-    background-color: #0747a6!important;
+    background-color: #209e91!important;
 }
 
 a.bg-primary:focus,
@@ -31729,8 +31728,7 @@ a.bg-inverse:hover {
 
 @media (min-width:768px) {
     .text-md-left {
-        text-align: left!important;
-        /* max-width: 30%; */
+        text-align: left!important
     }
     .text-md-right {
         text-align: right!important
@@ -31802,7 +31800,7 @@ a.text-muted:hover {
 }
 
 .text-primary {
-    color: #0052cc!important
+    color: #209e91!important
 }
 
 a.text-primary:focus,
@@ -32635,7 +32633,7 @@ body {
 }
 
 body {
-    background: #fff;
+    background: url("../img/blur-bg.jpg") center center no-repeat;
     background-size: auto;
 }
 
@@ -32705,7 +32703,7 @@ body {
 .layout #wrapper .aside>.aside-content-wrapper>.aside-content {
     -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
-    background: #0747A6;
+    background: rgba(0, 0, 0, .5);
     position: fixed;
     height: 100%;
     width: 25.6rem;
@@ -32756,7 +32754,7 @@ body {
 
 .layout #wrapper .aside>.aside-content-wrapper>.aside-content>.aside-toolbar .logo .logo-icon {
     display: block;
-    background: #deebff;
+    background: #209e91;
     width: 32px;
     min-width: 32px;
     height: 32px;
@@ -32764,15 +32762,14 @@ body {
     text-align: center;
     font-size: 16px;
     font-weight: 500;
-    color: #0747a6;
+    color: #fff;
     -webkit-border-radius: 2px;
     border-radius: 2px;
 }
 
 .layout #wrapper .aside>.aside-content-wrapper>.aside-content>.aside-toolbar .logo .logo-text {
     margin-left: 16px;
-    font-size: 1.6rem;
-    color: #fff;
+    font-size: 1.6rem
 }
 
 .layout #wrapper .aside>.aside-content-wrapper>.aside-content>#sidenav {
@@ -32800,7 +32797,7 @@ body {
 }
 
 .layout #wrapper .aside>.aside-content-wrapper>.aside-content>#sidenav .nav-link.active {
-    background-color: #0052cc;
+    background-color: #209e91;
     color: #fff;
 }
 
@@ -32809,8 +32806,7 @@ body {
 }
 
 .layout #wrapper .aside>.aside-content-wrapper>.aside-content>#sidenav .nav-link>span {
-    white-space: nowrap;
-    color: #fff;
+    white-space: nowrap
 }
 
 .layout #wrapper .quick-panel-sidebar {
@@ -32827,7 +32823,7 @@ body {
     height: 5.4rem;
     min-height: 5.4rem;
     -webkit-transition: left .3s ease, right .3s ease;
-    transition: left .3s ease, right .3s ease;
+    transition: left .3s ease, right .3s ease
 }
 
 #toolbar .toolbar-separator {
@@ -33338,13 +33334,13 @@ i.s-32 {
 
 .page-layout.carded .page-content>.page-content-card {
     margin: 0;
-    /* background: url("../img/blur-bg-blurred.jpg") fixed; */
-    /* -webkit-box-shadow: 0 4px 5px -2px rgba(0, 0, 0, .2), 0 7px 10px 1px rgba(0, 0, 0, .14), 0 2px 16px 1px rgba(0, 0, 0, .12); */
-    /* box-shadow: 0 4px 5px -2px rgba(0, 0, 0, .2), 0 7px 10px 1px rgba(0, 0, 0, .14), 0 2px 16px 1px rgba(0, 0, 0, .12); */
+    background: url("../img/blur-bg-blurred.jpg") fixed;
+    -webkit-box-shadow: 0 4px 5px -2px rgba(0, 0, 0, .2), 0 7px 10px 1px rgba(0, 0, 0, .14), 0 2px 16px 1px rgba(0, 0, 0, .12);
+    box-shadow: 0 4px 5px -2px rgba(0, 0, 0, .2), 0 7px 10px 1px rgba(0, 0, 0, .14), 0 2px 16px 1px rgba(0, 0, 0, .12);
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
-    flex: 1;
+    flex: 1
 }
 
 .page-layout.carded .page-content>.page-content-card>.toolbar {
@@ -33596,17 +33592,17 @@ i.s-32 {
 }
 
 .avatar {
-    width: 3rem;
-    min-width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
     line-height: 4rem;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     font-size: 1.7rem;
     font-weight: 500;
     text-align: center;
-    color: #0052cc;
-    background-color: #0052cc;
+    color: #209e91;
+    background-color: #209e91;
 }
 
 .avatar.square {
@@ -33667,18 +33663,18 @@ i.s-32 {
     outline: 0;
     text-decoration: none;
     text-transform: uppercase;
-    /* overflow: hidden; */
+    overflow: hidden;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-appearance: none;
     letter-spacing: .04em;
-    /* -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12); */
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     -webkit-transition: -webkit-box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
     transition: -webkit-box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
     transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
     transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), -webkit-box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
-    will-change: box-shadow;
+    will-change: box-shadow
 }
 
 .btn:focus,
@@ -33737,8 +33733,7 @@ i.s-32 {
 .btn [class*=" icon-"],
 .btn [class^=icon-],
 .btn i {
-    vertical-align: middle;
-    color: #272b4d;
+    vertical-align: middle
 }
 
 a.btn.disabled,
@@ -33748,8 +33743,8 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
     color: #fff!important;
-    background-color: #0052cc;
-    border-color: #0052cc;
+    background-color: #209e91;
+    border-color: #209e91;
     -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     -webkit-transition: -webkit-box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
@@ -33789,8 +33784,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-primary .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-primary .form-control::-webkit-input-placeholder {
@@ -33821,8 +33816,8 @@ fieldset[disabled] a.btn {
 
 .btn-primary textarea.form-control:focus,
 .btn-primary textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-primary select.form-control {
@@ -33845,8 +33840,8 @@ fieldset[disabled] a.btn {
 .btn-primary select.form-control[multiple]:focus:hover,
 .btn-primary select.form-control[size]:focus,
 .btn-primary select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-primary .form-group>label {
@@ -33862,11 +33857,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-primary .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-primary .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-primary .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -33946,8 +33941,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-primary:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-primary:hover .form-control::-webkit-input-placeholder {
@@ -33978,8 +33973,8 @@ fieldset[disabled] a.btn {
 
 .btn-primary:hover textarea.form-control:focus,
 .btn-primary:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-primary:hover select.form-control {
@@ -34002,8 +33997,8 @@ fieldset[disabled] a.btn {
 .btn-primary:hover select.form-control[multiple]:focus:hover,
 .btn-primary:hover select.form-control[size]:focus,
 .btn-primary:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-primary:hover .form-group>label {
@@ -34019,11 +34014,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-primary:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-primary:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-primary:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -34071,8 +34066,8 @@ fieldset[disabled] a.btn {
 
 .btn-primary.disabled,
 .btn-primary:disabled {
-    background-color: #0052cc;
-    border-color: #0052cc
+    background-color: #209e91;
+    border-color: #209e91
 }
 
 .btn-primary.active,
@@ -34134,8 +34129,8 @@ fieldset[disabled] a.btn {
 .btn-primary.active .form-control:focus,
 .btn-primary:active .form-control:focus,
 .show>.btn-primary.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-primary.active .form-control::-webkit-input-placeholder,
@@ -34182,8 +34177,8 @@ fieldset[disabled] a.btn {
 .btn-primary:active textarea.form-control:focus:hover,
 .show>.btn-primary.dropdown-toggle textarea.form-control:focus,
 .show>.btn-primary.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-primary.active select.form-control,
@@ -34224,8 +34219,8 @@ fieldset[disabled] a.btn {
 .show>.btn-primary.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-primary.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-primary.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-primary.active .form-group>label,
@@ -34249,13 +34244,13 @@ fieldset[disabled] a.btn {
 .btn-primary.active .nav .nav-link:hover,
 .btn-primary:active .nav .nav-link:hover,
 .show>.btn-primary.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-primary.active .nav .nav-link:hover>i,
 .btn-primary:active .nav .nav-link:hover>i,
 .show>.btn-primary.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-primary.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -34353,13 +34348,13 @@ fieldset[disabled] a.btn {
     color: rgba(0, 0, 0, .87)!important;
     background-color: #fff;
     border-color: #ccc;
-    /* -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12); */
-    /* box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12); */
-    /* -webkit-transition: -webkit-box-shadow 280ms cubic-bezier(.4, 0, .2, 1); */
-    /* transition: -webkit-box-shadow 280ms cubic-bezier(.4, 0, .2, 1); */
-    /* transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1); */
-    /* transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), -webkit-box-shadow 280ms cubic-bezier(.4, 0, .2, 1); */
-    will-change: box-shadow;
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    -webkit-transition: -webkit-box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    transition: -webkit-box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), -webkit-box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    will-change: box-shadow
 }
 
 .btn-secondary a:hover {
@@ -34392,8 +34387,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-secondary .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-secondary .form-control::-webkit-input-placeholder {
@@ -34424,8 +34419,8 @@ fieldset[disabled] a.btn {
 
 .btn-secondary textarea.form-control:focus,
 .btn-secondary textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-secondary select.form-control {
@@ -34448,8 +34443,8 @@ fieldset[disabled] a.btn {
 .btn-secondary select.form-control[multiple]:focus:hover,
 .btn-secondary select.form-control[size]:focus,
 .btn-secondary select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-secondary .form-group>label {
@@ -34465,11 +34460,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-secondary .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-secondary .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-secondary .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -34549,8 +34544,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-secondary:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-secondary:hover .form-control::-webkit-input-placeholder {
@@ -34581,8 +34576,8 @@ fieldset[disabled] a.btn {
 
 .btn-secondary:hover textarea.form-control:focus,
 .btn-secondary:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-secondary:hover select.form-control {
@@ -34605,8 +34600,8 @@ fieldset[disabled] a.btn {
 .btn-secondary:hover select.form-control[multiple]:focus:hover,
 .btn-secondary:hover select.form-control[size]:focus,
 .btn-secondary:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-secondary:hover .form-group>label {
@@ -34622,11 +34617,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-secondary:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-secondary:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-secondary:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -34685,8 +34680,8 @@ fieldset[disabled] a.btn {
     color: rgba(0, 0, 0, .87);
     background-color: #e6e6e6;
     background-image: none;
-    /* -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12); */
-    /* box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12); */
+    -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12)
 }
 
 .btn-secondary.active a:hover,
@@ -34737,8 +34732,8 @@ fieldset[disabled] a.btn {
 .btn-secondary.active .form-control:focus,
 .btn-secondary:active .form-control:focus,
 .show>.btn-secondary.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-secondary.active .form-control::-webkit-input-placeholder,
@@ -34785,8 +34780,8 @@ fieldset[disabled] a.btn {
 .btn-secondary:active textarea.form-control:focus:hover,
 .show>.btn-secondary.dropdown-toggle textarea.form-control:focus,
 .show>.btn-secondary.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-secondary.active select.form-control,
@@ -34827,8 +34822,8 @@ fieldset[disabled] a.btn {
 .show>.btn-secondary.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-secondary.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-secondary.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-secondary.active .form-group>label,
@@ -34852,13 +34847,13 @@ fieldset[disabled] a.btn {
 .btn-secondary.active .nav .nav-link:hover,
 .btn-secondary:active .nav .nav-link:hover,
 .show>.btn-secondary.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-secondary.active .nav .nav-link:hover>i,
 .btn-secondary:active .nav .nav-link:hover>i,
 .show>.btn-secondary.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-secondary.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -34995,8 +34990,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-info .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-info .form-control::-webkit-input-placeholder {
@@ -35027,8 +35022,8 @@ fieldset[disabled] a.btn {
 
 .btn-info textarea.form-control:focus,
 .btn-info textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-info select.form-control {
@@ -35051,8 +35046,8 @@ fieldset[disabled] a.btn {
 .btn-info select.form-control[multiple]:focus:hover,
 .btn-info select.form-control[size]:focus,
 .btn-info select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-info .form-group>label {
@@ -35068,11 +35063,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-info .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-info .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-info .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -35152,8 +35147,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-info:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-info:hover .form-control::-webkit-input-placeholder {
@@ -35184,8 +35179,8 @@ fieldset[disabled] a.btn {
 
 .btn-info:hover textarea.form-control:focus,
 .btn-info:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-info:hover select.form-control {
@@ -35208,8 +35203,8 @@ fieldset[disabled] a.btn {
 .btn-info:hover select.form-control[multiple]:focus:hover,
 .btn-info:hover select.form-control[size]:focus,
 .btn-info:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-info:hover .form-group>label {
@@ -35225,11 +35220,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-info:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-info:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-info:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -35340,8 +35335,8 @@ fieldset[disabled] a.btn {
 .btn-info.active .form-control:focus,
 .btn-info:active .form-control:focus,
 .show>.btn-info.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-info.active .form-control::-webkit-input-placeholder,
@@ -35388,8 +35383,8 @@ fieldset[disabled] a.btn {
 .btn-info:active textarea.form-control:focus:hover,
 .show>.btn-info.dropdown-toggle textarea.form-control:focus,
 .show>.btn-info.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-info.active select.form-control,
@@ -35430,8 +35425,8 @@ fieldset[disabled] a.btn {
 .show>.btn-info.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-info.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-info.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-info.active .form-group>label,
@@ -35455,13 +35450,13 @@ fieldset[disabled] a.btn {
 .btn-info.active .nav .nav-link:hover,
 .btn-info:active .nav .nav-link:hover,
 .show>.btn-info.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-info.active .nav .nav-link:hover>i,
 .btn-info:active .nav .nav-link:hover>i,
 .show>.btn-info.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-info.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -35598,8 +35593,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-success .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-success .form-control::-webkit-input-placeholder {
@@ -35630,8 +35625,8 @@ fieldset[disabled] a.btn {
 
 .btn-success textarea.form-control:focus,
 .btn-success textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-success select.form-control {
@@ -35654,8 +35649,8 @@ fieldset[disabled] a.btn {
 .btn-success select.form-control[multiple]:focus:hover,
 .btn-success select.form-control[size]:focus,
 .btn-success select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-success .form-group>label {
@@ -35671,11 +35666,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-success .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-success .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-success .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -35755,8 +35750,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-success:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-success:hover .form-control::-webkit-input-placeholder {
@@ -35787,8 +35782,8 @@ fieldset[disabled] a.btn {
 
 .btn-success:hover textarea.form-control:focus,
 .btn-success:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-success:hover select.form-control {
@@ -35811,8 +35806,8 @@ fieldset[disabled] a.btn {
 .btn-success:hover select.form-control[multiple]:focus:hover,
 .btn-success:hover select.form-control[size]:focus,
 .btn-success:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-success:hover .form-group>label {
@@ -35828,11 +35823,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-success:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-success:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-success:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -35943,8 +35938,8 @@ fieldset[disabled] a.btn {
 .btn-success.active .form-control:focus,
 .btn-success:active .form-control:focus,
 .show>.btn-success.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-success.active .form-control::-webkit-input-placeholder,
@@ -35991,8 +35986,8 @@ fieldset[disabled] a.btn {
 .btn-success:active textarea.form-control:focus:hover,
 .show>.btn-success.dropdown-toggle textarea.form-control:focus,
 .show>.btn-success.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-success.active select.form-control,
@@ -36033,8 +36028,8 @@ fieldset[disabled] a.btn {
 .show>.btn-success.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-success.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-success.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-success.active .form-group>label,
@@ -36058,13 +36053,13 @@ fieldset[disabled] a.btn {
 .btn-success.active .nav .nav-link:hover,
 .btn-success:active .nav .nav-link:hover,
 .show>.btn-success.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-success.active .nav .nav-link:hover>i,
 .btn-success:active .nav .nav-link:hover>i,
 .show>.btn-success.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-success.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -36201,8 +36196,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-warning .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-warning .form-control::-webkit-input-placeholder {
@@ -36233,8 +36228,8 @@ fieldset[disabled] a.btn {
 
 .btn-warning textarea.form-control:focus,
 .btn-warning textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-warning select.form-control {
@@ -36257,8 +36252,8 @@ fieldset[disabled] a.btn {
 .btn-warning select.form-control[multiple]:focus:hover,
 .btn-warning select.form-control[size]:focus,
 .btn-warning select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-warning .form-group>label {
@@ -36274,11 +36269,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-warning .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-warning .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-warning .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -36358,8 +36353,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-warning:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-warning:hover .form-control::-webkit-input-placeholder {
@@ -36390,8 +36385,8 @@ fieldset[disabled] a.btn {
 
 .btn-warning:hover textarea.form-control:focus,
 .btn-warning:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-warning:hover select.form-control {
@@ -36414,8 +36409,8 @@ fieldset[disabled] a.btn {
 .btn-warning:hover select.form-control[multiple]:focus:hover,
 .btn-warning:hover select.form-control[size]:focus,
 .btn-warning:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-warning:hover .form-group>label {
@@ -36431,11 +36426,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-warning:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-warning:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-warning:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -36546,8 +36541,8 @@ fieldset[disabled] a.btn {
 .btn-warning.active .form-control:focus,
 .btn-warning:active .form-control:focus,
 .show>.btn-warning.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-warning.active .form-control::-webkit-input-placeholder,
@@ -36594,8 +36589,8 @@ fieldset[disabled] a.btn {
 .btn-warning:active textarea.form-control:focus:hover,
 .show>.btn-warning.dropdown-toggle textarea.form-control:focus,
 .show>.btn-warning.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-warning.active select.form-control,
@@ -36636,8 +36631,8 @@ fieldset[disabled] a.btn {
 .show>.btn-warning.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-warning.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-warning.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-warning.active .form-group>label,
@@ -36661,13 +36656,13 @@ fieldset[disabled] a.btn {
 .btn-warning.active .nav .nav-link:hover,
 .btn-warning:active .nav .nav-link:hover,
 .show>.btn-warning.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-warning.active .nav .nav-link:hover>i,
 .btn-warning:active .nav .nav-link:hover>i,
 .show>.btn-warning.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-warning.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -36804,8 +36799,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-danger .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-danger .form-control::-webkit-input-placeholder {
@@ -36836,8 +36831,8 @@ fieldset[disabled] a.btn {
 
 .btn-danger textarea.form-control:focus,
 .btn-danger textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-danger select.form-control {
@@ -36860,8 +36855,8 @@ fieldset[disabled] a.btn {
 .btn-danger select.form-control[multiple]:focus:hover,
 .btn-danger select.form-control[size]:focus,
 .btn-danger select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-danger .form-group>label {
@@ -36877,11 +36872,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-danger .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-danger .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-danger .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -36961,8 +36956,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-danger:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-danger:hover .form-control::-webkit-input-placeholder {
@@ -36993,8 +36988,8 @@ fieldset[disabled] a.btn {
 
 .btn-danger:hover textarea.form-control:focus,
 .btn-danger:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-danger:hover select.form-control {
@@ -37017,8 +37012,8 @@ fieldset[disabled] a.btn {
 .btn-danger:hover select.form-control[multiple]:focus:hover,
 .btn-danger:hover select.form-control[size]:focus,
 .btn-danger:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-danger:hover .form-group>label {
@@ -37034,11 +37029,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-danger:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-danger:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-danger:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -37149,8 +37144,8 @@ fieldset[disabled] a.btn {
 .btn-danger.active .form-control:focus,
 .btn-danger:active .form-control:focus,
 .show>.btn-danger.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-danger.active .form-control::-webkit-input-placeholder,
@@ -37197,8 +37192,8 @@ fieldset[disabled] a.btn {
 .btn-danger:active textarea.form-control:focus:hover,
 .show>.btn-danger.dropdown-toggle textarea.form-control:focus,
 .show>.btn-danger.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-danger.active select.form-control,
@@ -37239,8 +37234,8 @@ fieldset[disabled] a.btn {
 .show>.btn-danger.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-danger.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-danger.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-danger.active .form-group>label,
@@ -37264,13 +37259,13 @@ fieldset[disabled] a.btn {
 .btn-danger.active .nav .nav-link:hover,
 .btn-danger:active .nav .nav-link:hover,
 .show>.btn-danger.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-danger.active .nav .nav-link:hover>i,
 .btn-danger:active .nav .nav-link:hover>i,
 .show>.btn-danger.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-danger.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -37365,16 +37360,16 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-primary {
-    color: #0052cc;
+    color: #209e91;
     background-color: transparent;
     background-image: none;
-    border-color: #0052cc
+    border-color: #209e91
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #0052cc;
-    border-color: #0052cc
+    background-color: #209e91;
+    border-color: #209e91
 }
 
 .btn-outline-primary:hover a:hover {
@@ -37407,8 +37402,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-primary:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-primary:hover .form-control::-webkit-input-placeholder {
@@ -37439,8 +37434,8 @@ fieldset[disabled] a.btn {
 
 .btn-outline-primary:hover textarea.form-control:focus,
 .btn-outline-primary:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-primary:hover select.form-control {
@@ -37463,8 +37458,8 @@ fieldset[disabled] a.btn {
 .btn-outline-primary:hover select.form-control[multiple]:focus:hover,
 .btn-outline-primary:hover select.form-control[size]:focus,
 .btn-outline-primary:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-primary:hover .form-group>label {
@@ -37480,11 +37475,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-primary:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-primary:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-primary:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -37532,7 +37527,7 @@ fieldset[disabled] a.btn {
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-    color: #0052cc;
+    color: #209e91;
     background-color: transparent
 }
 
@@ -37540,8 +37535,8 @@ fieldset[disabled] a.btn {
 .btn-outline-primary:active,
 .show>.btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #0052cc;
-    border-color: #0052cc
+    background-color: #209e91;
+    border-color: #209e91
 }
 
 .btn-outline-primary.active a:hover,
@@ -37592,8 +37587,8 @@ fieldset[disabled] a.btn {
 .btn-outline-primary.active .form-control:focus,
 .btn-outline-primary:active .form-control:focus,
 .show>.btn-outline-primary.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-primary.active .form-control::-webkit-input-placeholder,
@@ -37640,8 +37635,8 @@ fieldset[disabled] a.btn {
 .btn-outline-primary:active textarea.form-control:focus:hover,
 .show>.btn-outline-primary.dropdown-toggle textarea.form-control:focus,
 .show>.btn-outline-primary.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-primary.active select.form-control,
@@ -37682,8 +37677,8 @@ fieldset[disabled] a.btn {
 .show>.btn-outline-primary.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-outline-primary.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-outline-primary.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-primary.active .form-group>label,
@@ -37707,13 +37702,13 @@ fieldset[disabled] a.btn {
 .btn-outline-primary.active .nav .nav-link:hover,
 .btn-outline-primary:active .nav .nav-link:hover,
 .show>.btn-outline-primary.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-primary.active .nav .nav-link:hover>i,
 .btn-outline-primary:active .nav .nav-link:hover>i,
 .show>.btn-outline-primary.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-primary.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -37850,8 +37845,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-secondary:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-secondary:hover .form-control::-webkit-input-placeholder {
@@ -37882,8 +37877,8 @@ fieldset[disabled] a.btn {
 
 .btn-outline-secondary:hover textarea.form-control:focus,
 .btn-outline-secondary:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-secondary:hover select.form-control {
@@ -37906,8 +37901,8 @@ fieldset[disabled] a.btn {
 .btn-outline-secondary:hover select.form-control[multiple]:focus:hover,
 .btn-outline-secondary:hover select.form-control[size]:focus,
 .btn-outline-secondary:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-secondary:hover .form-group>label {
@@ -37923,11 +37918,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-secondary:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-secondary:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-secondary:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -38035,8 +38030,8 @@ fieldset[disabled] a.btn {
 .btn-outline-secondary.active .form-control:focus,
 .btn-outline-secondary:active .form-control:focus,
 .show>.btn-outline-secondary.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-secondary.active .form-control::-webkit-input-placeholder,
@@ -38083,8 +38078,8 @@ fieldset[disabled] a.btn {
 .btn-outline-secondary:active textarea.form-control:focus:hover,
 .show>.btn-outline-secondary.dropdown-toggle textarea.form-control:focus,
 .show>.btn-outline-secondary.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-secondary.active select.form-control,
@@ -38125,8 +38120,8 @@ fieldset[disabled] a.btn {
 .show>.btn-outline-secondary.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-outline-secondary.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-outline-secondary.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-secondary.active .form-group>label,
@@ -38150,13 +38145,13 @@ fieldset[disabled] a.btn {
 .btn-outline-secondary.active .nav .nav-link:hover,
 .btn-outline-secondary:active .nav .nav-link:hover,
 .show>.btn-outline-secondary.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-secondary.active .nav .nav-link:hover>i,
 .btn-outline-secondary:active .nav .nav-link:hover>i,
 .show>.btn-outline-secondary.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-secondary.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -38293,8 +38288,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-info:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-info:hover .form-control::-webkit-input-placeholder {
@@ -38325,8 +38320,8 @@ fieldset[disabled] a.btn {
 
 .btn-outline-info:hover textarea.form-control:focus,
 .btn-outline-info:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-info:hover select.form-control {
@@ -38349,8 +38344,8 @@ fieldset[disabled] a.btn {
 .btn-outline-info:hover select.form-control[multiple]:focus:hover,
 .btn-outline-info:hover select.form-control[size]:focus,
 .btn-outline-info:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-info:hover .form-group>label {
@@ -38366,11 +38361,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-info:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-info:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-info:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -38478,8 +38473,8 @@ fieldset[disabled] a.btn {
 .btn-outline-info.active .form-control:focus,
 .btn-outline-info:active .form-control:focus,
 .show>.btn-outline-info.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-info.active .form-control::-webkit-input-placeholder,
@@ -38526,8 +38521,8 @@ fieldset[disabled] a.btn {
 .btn-outline-info:active textarea.form-control:focus:hover,
 .show>.btn-outline-info.dropdown-toggle textarea.form-control:focus,
 .show>.btn-outline-info.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-info.active select.form-control,
@@ -38568,8 +38563,8 @@ fieldset[disabled] a.btn {
 .show>.btn-outline-info.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-outline-info.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-outline-info.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-info.active .form-group>label,
@@ -38593,13 +38588,13 @@ fieldset[disabled] a.btn {
 .btn-outline-info.active .nav .nav-link:hover,
 .btn-outline-info:active .nav .nav-link:hover,
 .show>.btn-outline-info.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-info.active .nav .nav-link:hover>i,
 .btn-outline-info:active .nav .nav-link:hover>i,
 .show>.btn-outline-info.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-info.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -38736,8 +38731,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-success:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-success:hover .form-control::-webkit-input-placeholder {
@@ -38768,8 +38763,8 @@ fieldset[disabled] a.btn {
 
 .btn-outline-success:hover textarea.form-control:focus,
 .btn-outline-success:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-success:hover select.form-control {
@@ -38792,8 +38787,8 @@ fieldset[disabled] a.btn {
 .btn-outline-success:hover select.form-control[multiple]:focus:hover,
 .btn-outline-success:hover select.form-control[size]:focus,
 .btn-outline-success:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-success:hover .form-group>label {
@@ -38809,11 +38804,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-success:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-success:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-success:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -38921,8 +38916,8 @@ fieldset[disabled] a.btn {
 .btn-outline-success.active .form-control:focus,
 .btn-outline-success:active .form-control:focus,
 .show>.btn-outline-success.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-success.active .form-control::-webkit-input-placeholder,
@@ -38969,8 +38964,8 @@ fieldset[disabled] a.btn {
 .btn-outline-success:active textarea.form-control:focus:hover,
 .show>.btn-outline-success.dropdown-toggle textarea.form-control:focus,
 .show>.btn-outline-success.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-success.active select.form-control,
@@ -39011,8 +39006,8 @@ fieldset[disabled] a.btn {
 .show>.btn-outline-success.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-outline-success.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-outline-success.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-success.active .form-group>label,
@@ -39036,13 +39031,13 @@ fieldset[disabled] a.btn {
 .btn-outline-success.active .nav .nav-link:hover,
 .btn-outline-success:active .nav .nav-link:hover,
 .show>.btn-outline-success.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-success.active .nav .nav-link:hover>i,
 .btn-outline-success:active .nav .nav-link:hover>i,
 .show>.btn-outline-success.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-success.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -39179,8 +39174,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-warning:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-warning:hover .form-control::-webkit-input-placeholder {
@@ -39211,8 +39206,8 @@ fieldset[disabled] a.btn {
 
 .btn-outline-warning:hover textarea.form-control:focus,
 .btn-outline-warning:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-warning:hover select.form-control {
@@ -39235,8 +39230,8 @@ fieldset[disabled] a.btn {
 .btn-outline-warning:hover select.form-control[multiple]:focus:hover,
 .btn-outline-warning:hover select.form-control[size]:focus,
 .btn-outline-warning:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-warning:hover .form-group>label {
@@ -39252,11 +39247,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-warning:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-warning:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-warning:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -39364,8 +39359,8 @@ fieldset[disabled] a.btn {
 .btn-outline-warning.active .form-control:focus,
 .btn-outline-warning:active .form-control:focus,
 .show>.btn-outline-warning.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-warning.active .form-control::-webkit-input-placeholder,
@@ -39412,8 +39407,8 @@ fieldset[disabled] a.btn {
 .btn-outline-warning:active textarea.form-control:focus:hover,
 .show>.btn-outline-warning.dropdown-toggle textarea.form-control:focus,
 .show>.btn-outline-warning.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-warning.active select.form-control,
@@ -39454,8 +39449,8 @@ fieldset[disabled] a.btn {
 .show>.btn-outline-warning.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-outline-warning.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-outline-warning.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-warning.active .form-group>label,
@@ -39479,13 +39474,13 @@ fieldset[disabled] a.btn {
 .btn-outline-warning.active .nav .nav-link:hover,
 .btn-outline-warning:active .nav .nav-link:hover,
 .show>.btn-outline-warning.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-warning.active .nav .nav-link:hover>i,
 .btn-outline-warning:active .nav .nav-link:hover>i,
 .show>.btn-outline-warning.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-warning.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -39622,8 +39617,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-danger:hover .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-danger:hover .form-control::-webkit-input-placeholder {
@@ -39654,8 +39649,8 @@ fieldset[disabled] a.btn {
 
 .btn-outline-danger:hover textarea.form-control:focus,
 .btn-outline-danger:hover textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-danger:hover select.form-control {
@@ -39678,8 +39673,8 @@ fieldset[disabled] a.btn {
 .btn-outline-danger:hover select.form-control[multiple]:focus:hover,
 .btn-outline-danger:hover select.form-control[size]:focus,
 .btn-outline-danger:hover select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-danger:hover .form-group>label {
@@ -39695,11 +39690,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-danger:hover .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-danger:hover .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-danger:hover .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -39807,8 +39802,8 @@ fieldset[disabled] a.btn {
 .btn-outline-danger.active .form-control:focus,
 .btn-outline-danger:active .form-control:focus,
 .show>.btn-outline-danger.dropdown-toggle .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .btn-outline-danger.active .form-control::-webkit-input-placeholder,
@@ -39855,8 +39850,8 @@ fieldset[disabled] a.btn {
 .btn-outline-danger:active textarea.form-control:focus:hover,
 .show>.btn-outline-danger.dropdown-toggle textarea.form-control:focus,
 .show>.btn-outline-danger.dropdown-toggle textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-danger.active select.form-control,
@@ -39897,8 +39892,8 @@ fieldset[disabled] a.btn {
 .show>.btn-outline-danger.dropdown-toggle select.form-control[multiple]:focus:hover,
 .show>.btn-outline-danger.dropdown-toggle select.form-control[size]:focus,
 .show>.btn-outline-danger.dropdown-toggle select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .btn-outline-danger.active .form-group>label,
@@ -39922,13 +39917,13 @@ fieldset[disabled] a.btn {
 .btn-outline-danger.active .nav .nav-link:hover,
 .btn-outline-danger:active .nav .nav-link:hover,
 .show>.btn-outline-danger.dropdown-toggle .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-danger.active .nav .nav-link:hover>i,
 .btn-outline-danger:active .nav .nav-link:hover>i,
 .show>.btn-outline-danger.dropdown-toggle .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .btn-outline-danger.active .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -40191,8 +40186,8 @@ input[type=submit].btn-block {
 
 .btn-group,
 .btn-group-vertical {
-    /* -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12); */
-    /* box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12); */
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12)
 }
 
 .btn-group-vertical>.btn,
@@ -40335,8 +40330,8 @@ textarea {
 }
 
 .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 label+.form-control::-webkit-input-placeholder {
@@ -40382,8 +40377,8 @@ select.form-control[size] {
 
 select.form-control[multiple]:focus,
 select.form-control[size]:focus {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 select.form-control:not([multiple]):not([size]) option {
@@ -40610,7 +40605,7 @@ input[type=checkbox][disabled]~.form-check-description {
 .custom-radio input[type=checkbox]:checked~.custom-control-indicator,
 .form-check-label input[type=checkbox]:checked~.checkbox-icon,
 .form-check-label input[type=checkbox]:checked~.custom-control-indicator {
-    color: #0052cc
+    color: #209e91
 }
 
 .custom-checkbox input[type=checkbox]:checked~.checkbox-icon:before,
@@ -40788,7 +40783,7 @@ input[type=checkbox][disabled]~.form-check-description {
 .custom-radio input[type=radio]:checked~.radio-icon:before,
 .form-check-label input[type=radio]:checked~.custom-control-indicator:before,
 .form-check-label input[type=radio]:checked~.radio-icon:before {
-    border-color: #0052cc
+    border-color: #209e91
 }
 
 .custom-checkbox input[type=radio]:checked~.custom-control-indicator:after,
@@ -40800,7 +40795,7 @@ input[type=checkbox][disabled]~.form-check-description {
     -webkit-transform: scale(.5);
     -ms-transform: scale(.5);
     transform: scale(.5);
-    background-color: #0052cc
+    background-color: #209e91
 }
 
 .custom-control-input,
@@ -40868,7 +40863,7 @@ input[type=checkbox][disabled]~.form-check-description {
 
 .form-group>label {
     width: 100%;
-    color: #172b4d;
+    color: #fff;
     -webkit-transform: scale(.923, .923);
     -ms-transform: scale(.923, .923);
     transform: scale(.923, .923);
@@ -41012,8 +41007,8 @@ input[type=checkbox][disabled]~.form-check-description {
 
 .form-check.md-focus textarea.form-control,
 .form-group.md-focus textarea.form-control {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .form-check .form-control,
@@ -41052,7 +41047,7 @@ input[type=checkbox][disabled]~.form-check-description {
 .form-check:not(.has-success):not(.has-warning):not(.has-danger).md-focus label,
 .form-group:not(.has-success):not(.has-warning):not(.has-danger) .form-control:focus+label,
 .form-group:not(.has-success):not(.has-warning):not(.has-danger).md-focus label {
-    color: #0052cc!important
+    color: #209e91!important
 }
 
 .form-check input[type=date].form-control,
@@ -41335,8 +41330,8 @@ input[type=checkbox][disabled]~.form-check-description {
 .form-check textarea.form-control:focus:hover,
 .form-group textarea.form-control:focus,
 .form-group textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .form-check textarea.form-control+label,
@@ -41349,7 +41344,7 @@ input[type=checkbox][disabled]~.form-check-description {
 
 .form-check textarea.form-control:focus+label,
 .form-group textarea.form-control:focus+label {
-    color: #0052cc
+    color: #209e91
 }
 
 .form-check textarea.form-control.md-has-value+label,
@@ -41739,7 +41734,7 @@ input[type=checkbox][disabled]~.form-check-description {
     height: 1.6rem;
     line-height: 1.6rem;
     color: #fff;
-    background-color: #0052cc;
+    background-color: #209e91;
     -webkit-transition: width .6s ease;
     transition: width .6s ease
 }
@@ -41943,15 +41938,13 @@ input[type=checkbox][disabled]~.form-check-description {
 .nav-link.with-arrow:not(.collapsed):after {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    color: #fff;
+    transform: rotate(90deg)
 }
 
 .nav-link.with-arrow.collapsed:after {
     -webkit-transform: rotate(0);
     -ms-transform: rotate(0);
-    transform: rotate(0);
-    color: #fff;
+    transform: rotate(0)
 }
 
 .nav-fill .nav-item .nav-link {
@@ -41995,7 +41988,7 @@ input[type=checkbox][disabled]~.form-check-description {
     right: 0;
     bottom: 0;
     height: 2px;
-    background-color: #0052cc
+    background-color: #209e91
 }
 
 .navbar-brand {
@@ -52605,7 +52598,7 @@ input[type=checkbox][disabled]~.form-check-description {
 }
 
 .bg-white {
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .bg-white.fuse-ripple-ready .fuse-ripple {
@@ -53972,8 +53965,8 @@ input[type=checkbox][disabled]~.form-check-description {
 .bg-teal.text-auto .form-control:focus,
 .light-fg .form-control:focus,
 .light-fg.text-auto .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .bg-black-500.text-auto .form-control::-webkit-input-placeholder,
@@ -54988,8 +54981,8 @@ input[type=checkbox][disabled]~.form-check-description {
 .light-fg textarea.form-control:focus:hover,
 .light-fg.text-auto textarea.form-control:focus,
 .light-fg.text-auto textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .bg-black-500.text-auto select.form-control,
@@ -56119,8 +56112,8 @@ input[type=checkbox][disabled]~.form-check-description {
 .light-fg.text-auto select.form-control[multiple]:focus:hover,
 .light-fg.text-auto select.form-control[size]:focus,
 .light-fg.text-auto select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .bg-black-500.text-auto .form-group>label,
@@ -56628,7 +56621,7 @@ input[type=checkbox][disabled]~.form-check-description {
 .bg-teal.text-auto .nav .nav-link:hover,
 .light-fg .nav .nav-link:hover,
 .light-fg.text-auto .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .bg-black-500.text-auto .nav .nav-link:hover>i,
@@ -56755,7 +56748,7 @@ input[type=checkbox][disabled]~.form-check-description {
 .bg-teal.text-auto .nav .nav-link:hover>i,
 .light-fg .nav .nav-link:hover>i,
 .light-fg.text-auto .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .bg-black-500.text-auto .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -59684,7 +59677,7 @@ input[type=checkbox][disabled]~.form-check-description {
 .bg-yellow.text-auto,
 .dark-fg,
 .dark-fg.text-auto {
-    color: #172b4d;
+    color: #fff;
 }
 
 .bg-amber-100.text-auto a:hover,
@@ -60938,7 +60931,7 @@ input[type=checkbox][disabled]~.form-check-description {
 .bg-yellow.text-auto .form-control,
 .dark-fg .form-control,
 .dark-fg.text-auto .form-control {
-    color: #172b4d;
+    color: #fff;
     -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, .42);
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, .42);
     font-weight: bold;
@@ -61302,8 +61295,8 @@ input[type=checkbox][disabled]~.form-check-description {
 .bg-yellow.text-auto .form-control:focus,
 .dark-fg .form-control:focus,
 .dark-fg.text-auto .form-control:focus {
-    -webkit-box-shadow: 0 2px 0 0 #0052cc;
-    box-shadow: 0 2px 0 0 #0052cc
+    -webkit-box-shadow: 0 2px 0 0 #209e91;
+    box-shadow: 0 2px 0 0 #209e91
 }
 
 .bg-amber-100.text-auto .form-control::-webkit-input-placeholder,
@@ -62742,8 +62735,8 @@ input[type=checkbox][disabled]~.form-check-description {
 .dark-fg textarea.form-control:focus:hover,
 .dark-fg.text-auto textarea.form-control:focus,
 .dark-fg.text-auto textarea.form-control:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .bg-amber-100.text-auto select.form-control,
@@ -64350,8 +64343,8 @@ input[type=checkbox][disabled]~.form-check-description {
 .dark-fg.text-auto select.form-control[multiple]:focus:hover,
 .dark-fg.text-auto select.form-control[size]:focus,
 .dark-fg.text-auto select.form-control[size]:focus:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0052cc;
-    box-shadow: inset 0 0 0 2px #0052cc
+    -webkit-box-shadow: inset 0 0 0 2px #209e91;
+    box-shadow: inset 0 0 0 2px #209e91
 }
 
 .bg-amber-100.text-auto .form-group>label,
@@ -64531,7 +64524,7 @@ input[type=checkbox][disabled]~.form-check-description {
 .bg-yellow.text-auto .form-group>label,
 .dark-fg .form-group>label,
 .dark-fg.text-auto .form-group>label {
-    color: #172b4d;
+    color: #fff;
 }
 
 .bg-amber-100.text-auto .nav .subheader,
@@ -65071,7 +65064,7 @@ input[type=checkbox][disabled]~.form-check-description {
 .bg-yellow.text-auto .nav .nav-link:hover,
 .dark-fg .nav .nav-link:hover,
 .dark-fg.text-auto .nav .nav-link:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .bg-amber-100.text-auto .nav .nav-link:hover>i,
@@ -65251,7 +65244,7 @@ input[type=checkbox][disabled]~.form-check-description {
 .bg-yellow.text-auto .nav .nav-link:hover>i,
 .dark-fg .nav .nav-link:hover>i,
 .dark-fg.text-auto .nav .nav-link:hover>i {
-    color: #0052cc
+    color: #209e91
 }
 
 .bg-amber-100.text-auto .custom-checkbox input[type=radio]~.custom-control-indicator:before,
@@ -69524,7 +69517,7 @@ input[type=checkbox][disabled]~.form-check-description {
 }
 
 .doc .example>.description .toggle-source-preview:hover {
-    color: #0052cc
+    color: #209e91
 }
 
 .doc .example.show-source>.description .toggle-source-preview .icon-code-tags {
@@ -70481,14 +70474,14 @@ input[type=checkbox][disabled]~.form-check-description {
 }
 
 #project-dashboard .page-header .project-selection .selected-project {
-    background: rgb(7, 71, 166);
-    color: #fff;
+    background: rgba(0, 0, 0, .12);
+    color: #fff
 }
 
 #project-dashboard .page-header .project-selection .project-selector {
     margin-left: .1rem;
-    background: rgb(7, 71, 166);
-    overflow: hidden;
+    background: rgba(0, 0, 0, .12);
+    overflow: hidden
 }
 
 #project-dashboard .page-header .project-selection .project-selector i {
@@ -70994,10 +70987,10 @@ input[type=checkbox][disabled]~.form-check-description {
     line-height: 12.8rem;
     font-size: 8.6rem;
     font-weight: 500;
-    color: #deebff;
+    color: #fff;
     -webkit-border-radius: 2px;
     border-radius: 2px;
-    text-align: center;
+    text-align: center
 }
 
 #login-v2 .intro .title {
@@ -71006,14 +70999,14 @@ input[type=checkbox][disabled]~.form-check-description {
 }
 
 #login-v2 .intro .description {
-    font-size: 2.4rem;
-    max-width: 60rem;
+    font-size: 1.4rem;
+    max-width: 60rem
 }
 
 #login-v2 .form-wrapper .form-content {
     width: 41.6rem;
     max-width: 100%;
-    /* background-image: url("../img/blur-bg-blurred.jpg"); */
+    background-image: url("../img/blur-bg-blurred.jpg");
 }
 
 #login-v2 .form-wrapper .form-content form {
@@ -71135,11 +71128,11 @@ input[type=checkbox][disabled]~.form-check-description {
 }
 
 #register .form-wrapper {
-    width: 40.4rem;
-    max-width: 40.4rem;
-    background: #fff;
+    width: 38.4rem;
+    max-width: 38.4rem;
+    /* background: #fff; */
     text-align: center;
-    /* background-image: url(../img/blur-bg-blurred.jpg); */
+    background-image: url(../img/blur-bg-blurred.jpg);
 }
 
 #register .form-wrapper .logo {
@@ -71206,7 +71199,7 @@ input[type=checkbox][disabled]~.form-check-description {
     background-attachment: fixed;
 }
 
-#register-v2 .intro .logo, #register .intro .logo {
+#register-v2 .intro .logo {
     width: 12.8rem;
     height: 12.8rem;
     line-height: 12.8rem;
@@ -71218,12 +71211,12 @@ input[type=checkbox][disabled]~.form-check-description {
     text-align: center
 }
 
-#register-v2 .intro .title, #register .into .title {
+#register-v2 .intro .title {
     font-size: 4.2rem;
     font-weight: 300
 }
 
-#register-v2 .intro .description, #register .intro .description {
+#register-v2 .intro .description {
     font-size: 2.4rem;
     max-width: 60rem;
 }
@@ -71231,7 +71224,7 @@ input[type=checkbox][disabled]~.form-check-description {
 #register-v2 .form-wrapper .form-content {
     width: 44.6rem;
     max-width: 100%;
-    /* background-image: url('../img/blur-bg-blurred.jpg'); */
+    background-image: url('../img/blur-bg-blurred.jpg');
 }
 
 #register-v2 .form-wrapper .form-content .logo {
@@ -72698,7 +72691,7 @@ body.fuse-aside-collapsed #aside #sidenav .subheader:before {
     display: block;
     position: absolute;
     min-width: 1.6rem;
-    border-top: 2px solid rgb(218, 232, 253);
+    border-top: 2px solid rgba(0, 0, 0, .12)
 }
 
 body.fuse-aside-collapsed #aside #sidenav .subheader>span {
@@ -72900,32 +72893,4 @@ nvd3.show-line-points .nv-line .nv-scatter .nv-groups .nv-point {
 
 .nvtooltip table tbody tr td:last-child {
     padding-right: 0
-}
-
-#aside .dropdown-menu {
-    background-color: #fff
-}
-
-a:hover, button:hover {
-    position: relative;
-}
-
-a[title]:hover:after, button[title]:hover:after {
-    content: attr(title);
-    padding: 4px 8px;
-    color: #fff;
-    position: absolute;
-    left: -54px;
-    top: 100%;
-    white-space: nowrap;
-    z-index: 20px;
-    -moz-box-shadow: 0px 0px 4px #222;
-    -webkit-box-shadow: 0px 0px 4px #222;
-    box-shadow: 0px 0px 4px #222;
-    background-image: -moz-linear-gradient(top, #131313, #171717);
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #171717),color-stop(1, #171717));
-    background-image: -webkit-linear-gradient(top, #171717, #171717);
-    background-image: -moz-linear-gradient(top, #171717, #171717);
-    background-image: -ms-linear-gradient(top, #171717, #171717);
-    background-image: -o-linear-gradient(top, #171717, #171717);
 }

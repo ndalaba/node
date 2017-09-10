@@ -14,5 +14,5 @@ export const appRoutes: Routes = [
     {path: 'contact', component: ContactComponent, canActivate: [AuthGuard]},
     {path: 'utilisateur/profil', component: ProfilComponent, canActivate: [AuthGuard]},
     {path: 'utilisateurs/liste', component: UserListComponent, canActivate: [AuthGuard]},
-    {path: 'login', component: LoginComponent},
+    {path: 'auth/login', component: LoginComponent},
 ];

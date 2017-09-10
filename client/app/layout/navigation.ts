@@ -2,6 +2,9 @@ import {Component} from '@angular/core';
 import {User} from "../_models/index";
 import {AuthService} from "../_services/index";
 import {AdminGuard} from "../_guard/index";
+import { Config } from "../_modules/app.config";
+import { Router } from "@angular/router";
+
 
 
 @Component({
@@ -11,11 +14,14 @@ import {AdminGuard} from "../_guard/index";
             <div class="aside-content-wrapper">
                 <div class="aside-content">
                     <div class="aside-toolbar">
-                        <div class="logo">
+                        <!--<div class="logo">
                             <span class="logo-icon">{{ loggedUserIcon | uppercase}}</span><span class="logo-text">{{loggedUser.name}}</span>
+                        </div>-->
+                        <div class="logo">
+                            <span class="logo-icon">{{app_icon}}</span><span class="logo-text">{{app_name}}</span>
                         </div>
                         <button id="toggle-fold-aside-button" type="button" class="btn btn-icon d-none d-lg-block" data-fuse-aside-toggle-fold="">
-                            <i class="icon icon-backburger"></i>
+                            <i class="icon icon-backburger" style="color:#fff"></i>
                         </button>
                     </div>
                     <ul class="nav flex-column custom-scrollbar" id="sidenav" data-children=".nav-item">
@@ -79,6 +85,19 @@ import {AdminGuard} from "../_guard/index";
                             </ul>
                         </li>
                     </ul>
+                    <div class="btn-group dropup">
+                        <button style="background-color:#0747a6;margin-top: 20px;" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <div class="avatar-wrapper">
+                                <img class="avatar" [src]="upload_folder+loggedUser.photo"/>
+                            </div> 
+                        </button>
+                        <div class="dropdown-menu">
+                            <p style="padding:0 10px">{{loggedUser.name | uppercase}}</p>                    
+                            <a class="dropdown-item" href="#">Mon profil</a>                    
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" (click)="logout($event)">Se deconnecter</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -87,10 +106,19 @@ import {AdminGuard} from "../_guard/index";
 
 export class NavigationComponent {
     private loggedUser:User;
-    private loggedUserIcon:string;
+    private app_name: string = Config.APP_NAME;
+    private app_icon: string = this.app_name.charAt(0);
+    private upload_folder: string = Config.UPLOAD_FOLDER;
 
-    constructor(private authService:AuthService,private adminGuard: AdminGuard) {
+    constructor(private authService: AuthService, private adminGuard: AdminGuard, private router: Router) {
         this.loggedUser = authService.loggedUser;
-        this.loggedUserIcon = this.loggedUser.name.charAt(0);
+    }
+    logout(event: Event) {
+        event.preventDefault();
+        this.authService.logout().subscribe(() => {
+            localStorage.removeItem('loggedUser');
+            this.authService.onAuth();
+            this.router.navigate(['/auth/login']);
+        });
     }
 }

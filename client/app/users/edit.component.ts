@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import {User} from '../_models/index';
-import {UserService, Helper} from '../_services/index';
-import {NotificationsService} from 'angular2-notifications';
-import {ActivatedRoute, ParamMap} from '@angular/router';
-import {Config} from '../_modules/app.config';
+import { User } from '../_models/index';
+import { UserService, Helper } from '../_services/index';
+import { NotificationsService } from 'angular2-notifications';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Config } from '../_modules/app.config';
 
 
 @Component({
@@ -13,6 +13,7 @@ import {Config} from '../_modules/app.config';
 })
 
 export class EditComponent implements OnInit {
+
     private currentUser: User;
     private showPassword: boolean;
     private userRoles: string[];
@@ -20,6 +21,8 @@ export class EditComponent implements OnInit {
     private uploading: boolean = false;
     public options = Config.NOTIFICATION_OPTIONS;
     private upload_folder: string = Config.UPLOAD_FOLDER;
+    private app_name:string=Config.APP_NAME;
+    private app_icon:string= this.app_name.charAt(0);
 
 
     constructor(private userService: UserService, private helper: Helper, private _notificationsService: NotificationsService, private route: ActivatedRoute) {
@@ -33,8 +36,7 @@ export class EditComponent implements OnInit {
         this.route.paramMap.subscribe((params: ParamMap) => {
             this.helper.toggleLoadding(true);
             this.userService.findOne(params.get('id')).subscribe(response => {
-                let user = JSON.parse(response);
-                this.currentUser = JSON.parse(response);
+                let user = this.currentUser = response;
                 this.currentUser.plainPassword = "";
                 this.currentUser.phone = user.phone || "";
                 this.helper.toggleLoadding(false);
@@ -59,18 +61,22 @@ export class EditComponent implements OnInit {
     }
 
     loadImage() {
-        this.uploading = true;
         let formData = new FormData();
         let file = (<HTMLInputElement>document.getElementById("fileElement")).files[0];
-        formData.append("photo", file);
-
-        this.userService.uploadPhoto(this.currentUser.id, formData).subscribe(response => {
-            if (response.success) {
-                this._notificationsService.success('Succès', response.message);
-            } else
-                this._notificationsService.error('Erreur', response.message);
-            this.uploading = false;
-        });
+        if (this.helper.isImage(file)) {
+            this.uploading = true;
+            formData.append("photo", file);
+            this.userService.uploadPhoto(this.currentUser.id, formData).subscribe(response => {
+                if (response.success) {
+                    this.currentUser.photo = response.photo;
+                    this._notificationsService.success('Succès', response.message);
+                } else
+                    this._notificationsService.error('Erreur', response.message);
+                this.uploading = false;
+            });
+        }
+        else
+            this._notificationsService.error('Erreur', "Format image incorrecte");
 
     }
 

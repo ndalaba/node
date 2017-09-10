@@ -139,7 +139,7 @@ export class MenuComponent {
         this.authService.logout().subscribe(()=>{
             localStorage.removeItem('loggedUser');
             this.authService.onAuth();
-            this.router.navigate(['/login']);
+            this.router.navigate(['/auth/login']);
         });
     }
 }
