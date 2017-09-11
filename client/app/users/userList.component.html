@@ -98,7 +98,7 @@
                 <tr *ngFor="let user of filtredUsers">
                     <td>{{user.id}}</td>
                     <td>
-                        <img class="product-image" [src]="upload_folder+user.photo" [alt]="user.name" style="width: 55px;height: 55px">
+                        <img class="product-image" [src]="upload_folder+user.photo" [alt]="user.name" style="border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;width: 55px;height: 55px">
                     </td>
                     <td>{{user.name}}</td>
                     <td>{{user.email}}</td>
