@@ -28,6 +28,7 @@ export class EditComponent implements OnInit {
     constructor(private userService: UserService, private helper: Helper, private _notificationsService: NotificationsService, private route: ActivatedRoute) {
         this.showPassword = true;
         this.loading = Config.API_ROUTE.loading;
+        this.helper.currentMenu("a_collapse_users");
         this.resetCurrentUser();
 
     }
@@ -36,9 +37,12 @@ export class EditComponent implements OnInit {
         this.route.paramMap.subscribe((params: ParamMap) => {
             this.helper.toggleLoadding(true);
             this.userService.findOne(params.get('id')).subscribe(response => {
-                let user = this.currentUser = response;
-                this.currentUser.plainPassword = "";
-                this.currentUser.phone = user.phone || "";
+                if(response){
+                    let user = this.currentUser = response;
+                    this.currentUser.plainPassword = "";
+                    this.currentUser.phone = user.phone || "";
+                }
+
                 this.helper.toggleLoadding(false);
             });
 

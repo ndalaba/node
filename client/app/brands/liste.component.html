@@ -15,8 +15,8 @@
                         <i class="icon-cube-outline s-6"></i>
                     </div>
                     <div class="logo-text">
-                        <div class="h4">Liste utilisateurs</div>
-                        <div class="">Total utilisateurs: {{userCount}}</div>
+                        <div class="h4">Liste marques</div>
+                        <div class="">Total marques: {{brandCount}}</div>
                     </div>
                 </div>
 
@@ -32,14 +32,14 @@
                             <i class="icon icon-magnify"></i>
                         </button>
                     </span>
-                    <input [(ngModel)]="textFilter" type="text" (keyup)="filterUsers($event)" class="form-control" placeholder="rechercher" aria-label="Search">
+                    <input [(ngModel)]="textFilter" type="text" (keyup)="filterBrands($event)" class="form-control" placeholder="rechercher" aria-label="Search">
                 </div>
 
             </div>
             <!-- / SEARCH -->
 
             <div class="col-auto">
-                <a [routerLink]="['/utilisateurs/ajouter']" class="btn btn-secondary">Ajouter un nouveau</a>
+                <a [routerLink]="['/marques/enregistrer/0']" class="btn btn-secondary">Ajouter une nouvelle</a>
             </div>
 
         </div>
@@ -54,24 +54,10 @@
                             <span class="column-title">ID</span>
                         </div>
                     </th>
+
                     <th>
                         <div class="table-header">
-                            <span class="column-title">IMAGE</span>
-                        </div>
-                    </th>
-                    <th>
-                        <div class="table-header">
-                            <span class="column-title">NOM</span>
-                        </div>
-                    </th>
-                    <th>
-                        <div class="table-header">
-                            <span class="column-title">EMAIL</span>
-                        </div>
-                    </th>
-                    <th>
-                        <div class="table-header">
-                            <span class="column-title">ROLE</span>
+                            <span class="column-title">MARQUE</span>
                         </div>
                     </th>
                     <th>
@@ -82,19 +68,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr *ngFor="let user of filtredUsers">
-                    <td>{{user.id}}</td>
+                <tr *ngFor="let brand of filtredBrands">
+                    <td>{{brand.id}}</td>
+                    <td>{{brand.name}}</td>
                     <td>
-                        <img class="product-image" [src]="upload_folder+user.photo" [alt]="user.name" style="border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;width: 55px;height: 55px">
-                    </td>
-                    <td>{{user.name}}</td>
-                    <td>{{user.email}}</td>
-                    <td>{{user.roles}}</td>
-                    <td>
-                        <a [routerLink]="['/utilisateurs/modifier/',user.id]" class="btn btn-icon" title="Modifier l'utilisateur">
+                        <a [routerLink]="['/marques/modifier/',brand.id]" class="btn btn-icon" title="Modifier la marque">
                             <i class="icon icon-pencil s-4"></i>
                         </a>
-                        <a class="btn btn-icon btn-sm" title="Supprimer l'utilisateur" (click)="removeUser($event,user)">
+                        <a class="btn btn-icon btn-sm" title="Supprimer la marque" (click)="removeBrand($event,brand)">
                             <i class="icon icon-trash s-4"></i>
                         </a>
                     </td>

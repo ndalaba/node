@@ -59,17 +59,12 @@
                     </div>
                     <a href="#" title="Nouveau mot de passe" class="btn btn-sm btn-primary" (click)="generatePassword($event)">Générer</a>
                 </div>
-                <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-primary my-4 mx-auto" aria-label="Créer un compte">
+                <button [disabled]="!userForm.form.valid" class="btn btn-primary my-4 mx-auto" aria-label="Créer un compte">
                     CREER UN COMPTE
                 </button>
                 <a [routerLink]="['/utilisateurs/liste']" title="Annuler et revenir à la liste">ANNULLER</a>
 
             </form>
-
-            <!--<div class="login d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">
-                <span class="text mr-sm-2">Already have an account?</span>
-                <a class="link text-primary" href="#">Connexion</a>
-            </div>-->
 
         </div>
     </div>

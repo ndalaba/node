@@ -41,6 +41,10 @@ export class Helper {
             return false;
         }
         return true;
-
+    }
+    public currentMenu(id:string){
+        let element=document.getElementById(id);
+        if(element.classList.contains('collapsed'))
+            element.click();
     }
 }  

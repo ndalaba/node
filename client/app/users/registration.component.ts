@@ -22,6 +22,7 @@ export class RegistrationComponent {
     constructor(private userService: UserService, private helper: Helper, private _notificationsService: NotificationsService) {
         this.showPassword = true;
         this.helper.setPageInfo("Ajouter un utilisateur","Ajouter un utilisateur");
+        this.helper.currentMenu("a_collapse_users");
         this.resetCurrentUser();
     }
 

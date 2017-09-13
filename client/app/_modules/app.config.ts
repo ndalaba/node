@@ -22,7 +22,18 @@ export class Config {
             profil: this.APP_HOST + 'profil',
             login: this.APP_HOST + "auth/login",
             logout: this.APP_HOST + "auth/logout",
-            roles: this.APP_HOST + "utilisateurs/roles"
+            roles: this.APP_HOST + "utilisateurs/roles",
+
+            brand_add: this.APP_HOST + "marques/ajouter",
+            brand_list: this.APP_HOST + "marques/liste",
+            brand_edit: this.APP_HOST + "marques/modifier",
+            brand_remove: this.APP_HOST + "marques/supprimer",
+
+            model_add: this.APP_HOST + "models/ajouter",
+            model_list: this.APP_HOST + "models/liste",
+            model_edit: this.APP_HOST + "models/modifier",
+            model_remove: this.APP_HOST + "models/supprimer",
+
         }
     }
 

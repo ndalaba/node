@@ -50,13 +50,6 @@ class UserManager {
         }).catch(error => err(error));
     }
 
-    /*setPhoto(id, filename) {
-        return this.byId(id).then(user => {
-            return user.update({
-                photo: filename
-            });
-        });
-    }*/
 
     hash(password) {
         return crypto.createHash('sha256').update(password).digest('hex');

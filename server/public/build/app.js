@@ -74,7 +74,7 @@
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__ = __webpack_require__(359);
@@ -15560,10 +15560,27 @@ var SafeSubscriber = (function (_super) {
 /* 16 */,
 /* 17 */,
 /* 18 */,
-/* 19 */,
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(179));
+__export(__webpack_require__(180));
+__export(__webpack_require__(112));
+__export(__webpack_require__(380));
+__export(__webpack_require__(381));
+
+
+/***/ }),
 /* 20 */,
 /* 21 */,
-/* 22 */
+/* 22 */,
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15746,21 +15763,6 @@ function __asyncValues(o) {
 }
 
 /***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(179));
-__export(__webpack_require__(180));
-__export(__webpack_require__(112));
-
-
-/***/ }),
 /* 24 */,
 /* 25 */,
 /* 26 */,
@@ -15812,7 +15814,15 @@ var Config = (function () {
                 profil: this.APP_HOST + 'profil',
                 login: this.APP_HOST + "auth/login",
                 logout: this.APP_HOST + "auth/logout",
-                roles: this.APP_HOST + "utilisateurs/roles"
+                roles: this.APP_HOST + "utilisateurs/roles",
+                brand_add: this.APP_HOST + "marques/ajouter",
+                brand_list: this.APP_HOST + "marques/liste",
+                brand_edit: this.APP_HOST + "marques/modifier",
+                brand_remove: this.APP_HOST + "marques/supprimer",
+                model_add: this.APP_HOST + "models/ajouter",
+                model_list: this.APP_HOST + "models/liste",
+                model_edit: this.APP_HOST + "models/modifier",
+                model_remove: this.APP_HOST + "models/supprimer",
             };
         },
         enumerable: true,
@@ -15847,7 +15857,7 @@ exports.Config = Config;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(2);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserModule", function() { return BrowserModule; });
@@ -20354,7 +20364,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.2.6'
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__ = __webpack_require__(348);
@@ -26806,7 +26816,7 @@ __export(__webpack_require__(174));
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgLocaleLocalization", function() { return NgLocaleLocalization; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgLocalization", function() { return NgLocalization; });
@@ -30900,6 +30910,8 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(177));
 __export(__webpack_require__(176));
+__export(__webpack_require__(378));
+__export(__webpack_require__(379));
 
 
 /***/ }),
@@ -32517,7 +32529,7 @@ var ɵPRE_STYLE = '!';
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
@@ -35949,7 +35961,7 @@ __webpack_require__(147);
 var Subject_1 = __webpack_require__(43);
 var app_config_1 = __webpack_require__(31);
 var index_1 = __webpack_require__(58);
-var index_2 = __webpack_require__(23);
+var index_2 = __webpack_require__(19);
 var AuthService = (function () {
     function AuthService(http, helper) {
         this.http = http;
@@ -36023,10 +36035,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(2);
+var index_1 = __webpack_require__(19);
 var HomeComponent = (function () {
-    function HomeComponent() {
+    function HomeComponent(authService) {
+        this.authService = authService;
+        this.loggedUser = authService.loggedUser;
     }
     return HomeComponent;
 }());
@@ -36034,7 +36052,8 @@ HomeComponent = __decorate([
     core_1.Component({
         selector: 'home',
         template: __webpack_require__(342)
-    })
+    }),
+    __metadata("design:paramtypes", [index_1.AuthService])
 ], HomeComponent);
 exports.HomeComponent = HomeComponent;
 
@@ -36741,7 +36760,7 @@ exports.isScheduler = isScheduler;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_compiler__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(56);
@@ -36945,8 +36964,9 @@ var app_component_1 = __webpack_require__(181);
 var index_2 = __webpack_require__(182);
 var home_component_1 = __webpack_require__(114);
 var index_3 = __webpack_require__(115);
+var index_4 = __webpack_require__(387);
 var contact_component_1 = __webpack_require__(113);
-var index_4 = __webpack_require__(23);
+var index_5 = __webpack_require__(19);
 var AppModule = (function () {
     function AppModule() {
     }
@@ -36960,9 +36980,9 @@ AppModule = __decorate([
         ],
         declarations: [
             app_component_1.AppComponent, index_2.NavigationComponent, index_2.MenuComponent, home_component_1.HomeComponent, index_3.RegistrationComponent, index_3.LoginComponent,
-            contact_component_1.ContactComponent, index_3.ProfilComponent, index_3.UserListComponent, index_3.EditComponent
+            contact_component_1.ContactComponent, index_3.ProfilComponent, index_3.UserListComponent, index_3.EditComponent, index_4.BrandListComponent, index_4.EditComponent
         ],
-        providers: [index_4.Helper, index_4.UserService, index_1.AuthGuard, index_4.AuthService, index_1.AdminGuard],
+        providers: [index_5.Helper, index_5.UserService, index_1.AuthGuard, index_5.AuthService, index_1.AdminGuard, index_5.BrandService, index_5.ModelService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
@@ -36979,7 +36999,7 @@ exports.AppModule = AppModule;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__(72);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AnimationDriver; });
 /* unused harmony export ɵAnimation */
@@ -41906,7 +41926,7 @@ function supportsWebAnimations() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
 /* unused harmony export VERSION */
 /* unused harmony export TEMPLATE_TRANSFORMS */
@@ -69668,7 +69688,7 @@ function _mergeArrays(parts) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__ = __webpack_require__(357);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__);
@@ -75772,7 +75792,7 @@ ReactiveFormsModule.ctorParameters = function () { return []; };
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_animations__ = __webpack_require__(72);
@@ -76679,16 +76699,20 @@ exports.User = User;
 Object.defineProperty(exports, "__esModule", { value: true });
 var home_component_1 = __webpack_require__(114);
 var index_1 = __webpack_require__(115);
+var index_2 = __webpack_require__(387);
 var contact_component_1 = __webpack_require__(113);
 var auth_guard_1 = __webpack_require__(110);
+var admin_guard_1 = __webpack_require__(175);
 exports.appRoutes = [
     { path: '', component: home_component_1.HomeComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'accueil', component: home_component_1.HomeComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'utilisateurs/ajouter', component: index_1.RegistrationComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'utilisateurs/modifier/:id', component: index_1.EditComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'utilisateurs/ajouter', component: index_1.RegistrationComponent, canActivate: [admin_guard_1.AdminGuard] },
+    { path: 'utilisateurs/modifier/:id', component: index_1.EditComponent, canActivate: [admin_guard_1.AdminGuard] },
+    { path: 'utilisateurs/liste', component: index_1.UserListComponent, canActivate: [admin_guard_1.AdminGuard] },
     { path: 'contact', component: contact_component_1.ContactComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'utilisateur/profil', component: index_1.ProfilComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'utilisateurs/liste', component: index_1.UserListComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'marques/liste', component: index_2.BrandListComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'marques/enregistrer/:id', component: index_2.EditComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'auth/login', component: index_1.LoginComponent },
 ];
 
@@ -76745,6 +76769,11 @@ var Helper = (function () {
         }
         return true;
     };
+    Helper.prototype.currentMenu = function (id) {
+        var element = document.getElementById(id);
+        if (element.classList.contains('collapsed'))
+            element.click();
+    };
     return Helper;
 }());
 Helper = __decorate([
@@ -76775,7 +76804,7 @@ __webpack_require__(149);
 __webpack_require__(148);
 __webpack_require__(147);
 var app_config_1 = __webpack_require__(31);
-var index_1 = __webpack_require__(23);
+var index_1 = __webpack_require__(19);
 var UserService = (function () {
     function UserService(http, helper) {
         this.http = http;
@@ -76904,7 +76933,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(2);
-var index_1 = __webpack_require__(23);
+var index_1 = __webpack_require__(19);
 var router_1 = __webpack_require__(38);
 var app_config_1 = __webpack_require__(31);
 var MenuComponent = (function () {
@@ -76928,7 +76957,7 @@ var MenuComponent = (function () {
 MenuComponent = __decorate([
     core_1.Component({
         selector: 'menu',
-        template: "\n        <nav id=\"toolbar\" class=\"fixed-top bg-white\">\n\n            <div class=\"row no-gutters align-items-center flex-nowrap\">\n                <div class=\"col\">\n                    <div class=\"row no-gutters align-items-center flex-nowrap\">\n                        <button type=\"button\" class=\"toggle-aside-button btn btn-icon d-block d-lg-none\"\n                                data-fuse-bar-toggle=\"aside\">\n                            <i class=\"icon icon-menu\"></i>\n                        </button>\n                        <div class=\"toolbar-separator d-block d-lg-none\"></div>\n                        <div class=\"shortcuts-wrapper row no-gutters align-items-center px-0 px-sm-2\">\n\n                            <div class=\"shortcuts row no-gutters align-items-center d-none d-md-flex\">\n\n                                <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\n                                    <i class=\"icon icon-hangouts\"></i>\n                                </a>\n\n                                <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\n                                    <i class=\"icon icon-account-box\"></i>\n                                </a>\n\n                                <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\n                                    <i class=\"icon icon-email\"></i>\n                                </a>\n\n                            </div>\n\n                            <div class=\"add-shortcut-menu-button dropdown px-1 px-sm-3\">\n\n                                <div class=\"dropdown-toggle btn btn-icon\" role=\"button\"\n                                     id=\"dropdownShortcutMenu\"\n                                     data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                                    <i class=\"icon icon-star text-amber-600\"></i>\n                                </div>\n\n                                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownShortcutMenu\">\n\n                                    <a class=\"dropdown-item\" href=\"#\">\n                                        <div\n                                                class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\n                                            <div class=\"row no-gutters align-items-center flex-nowrap\">\n                                                <i class=\"icon icon-calendar-today\"></i>\n                                                <span class=\"px-3\">Calendar</span>\n                                            </div>\n                                            <i class=\"icon icon-pin s-5 ml-2\"></i>\n                                        </div>\n                                    </a>\n\n                                    <a class=\"dropdown-item\" href=\"#\">\n                                        <div\n                                                class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\n                                            <div class=\"row no-gutters align-items-center flex-nowrap\">\n                                                <i class=\"icon icon-folder\"></i>\n                                                <span class=\"px-3\">File Manager</span>\n                                            </div>\n                                            <i class=\"icon icon-pin s-5 ml-2\"></i>\n                                        </div>\n                                    </a>\n\n                                    <a class=\"dropdown-item\" href=\"#\">\n                                        <div class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\n                                            <div class=\"row no-gutters align-items-center flex-nowrap\">\n                                                <i class=\"icon icon-checkbox-marked\"></i>\n                                                <span class=\"px-3\">To-Do</span>\n                                            </div>\n                                            <i class=\"icon icon-pin s-5 ml-2\"></i>\n                                        </div>\n                                    </a>\n\n                                </div>\n                            </div>\n                        </div>\n\n                        <div class=\"toolbar-separator\"></div>\n\n                    </div>\n                </div>\n                <div class=\"col-auto\">\n                    <div class=\"row no-gutters align-items-center justify-content-end\">\n                        <div class=\"user-menu-button dropdown\">\n\n                            <div class=\"dropdown-toggle ripple row align-items-center no-gutters px-2 px-sm-4\"\n                                 role=\"button\" id=\"dropdownUserMenu\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                                <div class=\"avatar-wrapper\">\n                                    <img class=\"avatar\" [src]=\"upload_folder+loggedUser.photo\"/>\n                                    <i class=\"status text-green icon-checkbox-marked-circle s-4\"></i>\n                                </div>\n                                <span class=\"username mx-3 d-none d-md-block\">{{loggedUser.name}}</span>\n                            </div>\n\n                            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownUserMenu\">\n                               \n                                <a class=\"dropdown-item\" [routerLink]=\"['/profil']\">\n                                    <div class=\"row no-gutters align-items-center flex-nowrap\">\n                                        <i class=\"icon-account\"></i>\n                                        <span class=\"px-3\">Mon Profil</span>\n                                    </div>\n                                </a>\n\n                                <div class=\"dropdown-divider\"></div>\n\n                                <a class=\"dropdown-item\" (click)=\"logout($event)\">\n                                    <div class=\"row no-gutters align-items-center flex-nowrap\">\n                                        <i class=\"icon-logout\"></i>\n                                        <span class=\"px-3\">Logout</span>\n                                    </div>\n                                </a>\n\n                            </div>\n                        </div>\n\n                    </div>\n                </div>\n            </div>\n        </nav>\n    "
+        template: __webpack_require__(384)
     }),
     __metadata("design:paramtypes", [index_1.AuthService, router_1.Router])
 ], MenuComponent);
@@ -76952,14 +76981,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(2);
-var index_1 = __webpack_require__(23);
+var index_1 = __webpack_require__(19);
 var index_2 = __webpack_require__(111);
 var app_config_1 = __webpack_require__(31);
 var router_1 = __webpack_require__(38);
 var NavigationComponent = (function () {
-    function NavigationComponent(authService, adminGuard, router) {
+    function NavigationComponent(authService, adminGuard, authGuard, router) {
         this.authService = authService;
         this.adminGuard = adminGuard;
+        this.authGuard = authGuard;
         this.router = router;
         this.app_name = app_config_1.Config.APP_NAME;
         this.app_icon = this.app_name.charAt(0);
@@ -76980,9 +77010,9 @@ var NavigationComponent = (function () {
 NavigationComponent = __decorate([
     core_1.Component({
         selector: 'navigation',
-        template: "\n        <aside id=\"aside\" class=\"aside aside-left\" data-fuse-bar=\"aside\" data-fuse-bar-media-step=\"md\" data-fuse-bar-position=\"left\">\n            <div class=\"aside-content-wrapper\">\n                <div class=\"aside-content\">\n                    <div class=\"aside-toolbar\">\n                        <!--<div class=\"logo\">\n                            <span class=\"logo-icon\">{{ loggedUserIcon | uppercase}}</span><span class=\"logo-text\">{{loggedUser.name}}</span>\n                        </div>-->\n                        <div class=\"logo\">\n                            <span class=\"logo-icon\">{{app_icon}}</span><span class=\"logo-text\">{{app_name}}</span>\n                        </div>\n                        <button id=\"toggle-fold-aside-button\" type=\"button\" class=\"btn btn-icon d-none d-lg-block\" data-fuse-aside-toggle-fold=\"\">\n                            <i class=\"icon icon-backburger\" style=\"color:#fff\"></i>\n                        </button>\n                    </div>\n                    <ul class=\"nav flex-column custom-scrollbar\" id=\"sidenav\" data-children=\".nav-item\">\n                        <li class=\"subheader\">\n                            <span>APPS</span>\n                        </li>\n\n                        <li class=\"nav-item\" role=\"tab\" id=\"heading-dashboards\">\n                            <a class=\"nav-link ripple with-arrow \" data-toggle=\"collapse\" data-target=\"#collapse-dashboards\" href=\"#\" aria-expanded=\"true\" aria-controls=\"collapse-dashboards\">\n                                <i class=\"icon s-4 icon-tile-four\"></i>\n                                <span>Tableau de bord</span>\n                            </a>\n                            <ul id=\"collapse-dashboards\" class=\"collapse show\" role=\"tabpanel\" aria-labelledby=\"heading-dashboards\" data-children=\".nav-item\">\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link ripple\" [routerLink]=\"['/']\">\n                                        <span>Project Dashboard</span>\n                                    </a>\n                                </li>\n                            </ul>\n                        </li>\n                        <li class=\"nav-item\" role=\"tab\" id=\"heading-ecommerce\">\n                            <a class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-ecommerce\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-ecommerce\">\n                                <i class=\"icon s-4 icon-cart\"></i>\n                                <span>Ecommerce</span>\n                            </a>\n                            <ul id=\"collapse-ecommerce\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-ecommerce\" data-children=\".nav-item\">\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link ripple \">\n                                        <span>Orders</span>\n                                    </a>\n                                </li>\n                            </ul>\n                        </li>\n                        <li class=\"nav-item\">\n                            <a class=\"nav-link ripple \">\n                                <i class=\"icon s-4 icon-email\"></i>\n                                <span>Mail</span>\n                            </a>\n                        </li>\n                        <li class=\"subheader\">\n                            <span>PAGES</span>\n                        </li>\n                        <li class=\"nav-item\" role=\"tab\" id=\"heading-authentication\" *ngIf=\"adminGuard.canActivate()\">\n                            <a class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-authentication\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-authentication\">\n                                <i class=\"icon s-4 icon-account-box\"></i>\n                                <span>Utilisateurs</span>\n                            </a>\n                            <ul id=\"collapse-authentication\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-authentication\" data-children=\".nav-item\">\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/liste']\">\n                                        <i class=\"icon s-4 icon-account\"></i>\n                                        <span>Liste utilisateurs</span>\n                                    </a>\n                                </li>\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/ajouter']\">\n                                        <i class=\"icon s-4 icon-pencil-circle\"></i>\n                                        <span>Ajouter un utilisateur</span>\n                                    </a>\n                                </li>\n                            </ul>\n                        </li>\n                    </ul>\n                    <div class=\"btn-group dropup\">\n                        <button style=\"background-color:#0747a6;margin-top: 20px;\" type=\"button\" class=\"btn btn-secondary dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                           <div class=\"avatar-wrapper\">\n                                <img class=\"avatar\" [src]=\"upload_folder+loggedUser.photo\"/>\n                            </div> \n                        </button>\n                        <div class=\"dropdown-menu\">\n                            <p style=\"padding:0 10px\">{{loggedUser.name | uppercase}}</p>                    \n                            <a class=\"dropdown-item\" href=\"#\">Mon profil</a>                    \n                            <div class=\"dropdown-divider\"></div>\n                            <a class=\"dropdown-item\" href=\"#\" (click)=\"logout($event)\">Se deconnecter</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </aside>\n    "
+        template: __webpack_require__(385)
     }),
-    __metadata("design:paramtypes", [index_1.AuthService, index_2.AdminGuard, router_1.Router])
+    __metadata("design:paramtypes", [index_1.AuthService, index_2.AdminGuard, index_2.AuthGuard, router_1.Router])
 ], NavigationComponent);
 exports.NavigationComponent = NavigationComponent;
 
@@ -77005,7 +77035,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(2);
 var index_1 = __webpack_require__(58);
-var index_2 = __webpack_require__(23);
+var index_2 = __webpack_require__(19);
 var angular2_notifications_1 = __webpack_require__(51);
 var router_1 = __webpack_require__(38);
 var app_config_1 = __webpack_require__(31);
@@ -77022,6 +77052,7 @@ var EditComponent = (function () {
         this.app_icon = this.app_name.charAt(0);
         this.showPassword = true;
         this.loading = app_config_1.Config.API_ROUTE.loading;
+        this.helper.currentMenu("a_collapse_users");
         this.resetCurrentUser();
     }
     EditComponent.prototype.ngOnInit = function () {
@@ -77029,9 +77060,11 @@ var EditComponent = (function () {
         this.route.paramMap.subscribe(function (params) {
             _this.helper.toggleLoadding(true);
             _this.userService.findOne(params.get('id')).subscribe(function (response) {
-                var user = _this.currentUser = response;
-                _this.currentUser.plainPassword = "";
-                _this.currentUser.phone = user.phone || "";
+                if (response) {
+                    var user = _this.currentUser = response;
+                    _this.currentUser.plainPassword = "";
+                    _this.currentUser.phone = user.phone || "";
+                }
                 _this.helper.toggleLoadding(false);
             });
         });
@@ -77127,7 +77160,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(2);
 var index_1 = __webpack_require__(58);
-var index_2 = __webpack_require__(23);
+var index_2 = __webpack_require__(19);
 var router_1 = __webpack_require__(38);
 var angular2_notifications_1 = __webpack_require__(51);
 var app_config_1 = __webpack_require__(31);
@@ -77219,7 +77252,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(2);
 var index_1 = __webpack_require__(58);
-var index_2 = __webpack_require__(23);
+var index_2 = __webpack_require__(19);
 var angular2_notifications_1 = __webpack_require__(51);
 var app_config_1 = __webpack_require__(31);
 var RegistrationComponent = (function () {
@@ -77232,6 +77265,7 @@ var RegistrationComponent = (function () {
         this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
         this.showPassword = true;
         this.helper.setPageInfo("Ajouter un utilisateur", "Ajouter un utilisateur");
+        this.helper.currentMenu("a_collapse_users");
         this.resetCurrentUser();
     }
     RegistrationComponent.prototype.resetCurrentUser = function () {
@@ -77300,7 +77334,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(2);
-var index_1 = __webpack_require__(23);
+var index_1 = __webpack_require__(19);
 var angular2_notifications_1 = __webpack_require__(51);
 var app_config_1 = __webpack_require__(31);
 var UserListComponent = (function () {
@@ -77311,6 +77345,7 @@ var UserListComponent = (function () {
         this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
         this.upload_folder = app_config_1.Config.UPLOAD_FOLDER;
         this.helper.setPageInfo("Liste utilisateurs", "Liste des utilisateurs");
+        this.helper.currentMenu("a_collapse_users");
         this.getList();
     }
     UserListComponent.prototype.filterUsers = function (event) {
@@ -77508,7 +77543,7 @@ exports.UserListComponent = UserListComponent;
 /* 340 */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"wrapper\">\r\n    <navigation style=\"z-index:1030\" *ngIf=\"isUserLogged\"></navigation>\r\n    <div class=\"content-wrapper\">\r\n       <!-- <menu *ngIf=\"isUserLogged\"></menu>-->\r\n\r\n        <div class=\"content\">\r\n           <router-outlet></router-outlet>\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<div id=\"wrapper\">\r\n    <navigation style=\"z-index:1030\" *ngIf=\"isUserLogged\"></navigation>\r\n    <div class=\"content-wrapper\">\r\n        <menu *ngIf=\"isUserLogged\"></menu>\r\n\r\n        <div class=\"content\">\r\n           <router-outlet></router-outlet>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 341 */
@@ -77520,13 +77555,13 @@ module.exports = "<div id=\"contacts\" class=\"page-layout simple left-sidebar-f
 /* 342 */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"project-dashboard\" class=\"page-layout simple right-sidebar tabbed\">\r\n    <div class=\"page-content-wrapper\">\r\n        <div  class=\"page-header text-auto d-flex flex-column justify-content-between px-6 pt-4 pb-0\">\r\n\r\n            <div class=\"row no-gutters align-items-start justify-content-between flex-nowrap\">\r\n\r\n                <div>\r\n                    <span class=\"h2\">Welcome back, John!</span>\r\n                </div>\r\n\r\n                <button type=\"button\" class=\"sidebar-toggle-button btn btn-icon d-block d-xl-none\"\r\n                        data-fuse-bar-toggle=\"dashboard-project-sidebar\"\r\n                        aria-label=\"Toggle sidebar\">\r\n                    <i class=\"icon icon-menu\"></i>\r\n                </button>\r\n            </div>\r\n\r\n            <div class=\"row no-gutters align-items-center project-selection\">\r\n\r\n                <div class=\"selected-project h6 px-4 py-2\">ACME Corp. Backend App</div>\r\n\r\n                <div class=\"project-selector\">\r\n                    <button type=\"button\" class=\"btn btn-icon\">\r\n                        <i class=\"icon icon-dots-horizontal\"></i>\r\n                    </button>\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<div id=\"project-dashboard\" class=\"page-layout simple right-sidebar tabbed\">\r\n    <div class=\"page-content-wrapper\">\r\n        <div  class=\"page-header text-auto d-flex flex-column justify-content-between px-6 pt-4 pb-0\">\r\n\r\n            <div class=\"row no-gutters align-items-start justify-content-between flex-nowrap\">\r\n\r\n                <div>\r\n                    <span class=\"h2\">Bonjour {{loggedUser.name}}!</span>\r\n                </div>\r\n\r\n                <button type=\"button\" class=\"sidebar-toggle-button btn btn-icon d-block d-xl-none\"\r\n                        data-fuse-bar-toggle=\"dashboard-project-sidebar\"\r\n                        aria-label=\"Toggle sidebar\">\r\n                    <i class=\"icon icon-menu\"></i>\r\n                </button>\r\n            </div>\r\n\r\n            <div class=\"row no-gutters align-items-center project-selection\">\r\n\r\n                <div class=\"selected-project h6 px-4 py-2\">ACME Corp. Backend App</div>\r\n\r\n                <div class=\"project-selector\">\r\n                    <button type=\"button\" class=\"btn btn-icon\">\r\n                        <i class=\"icon icon-dots-horizontal\"></i>\r\n                    </button>\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 343 */
 /***/ (function(module, exports) {
 
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n    <div class=\"intro col-12 col-md\">\r\n        <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n            <div class=\"logo bg-primary mb-8\">\r\n                <span>{{app_icon}}</span>\r\n            </div>\r\n\r\n            <div class=\"title\">\r\n                {{app_name}}\r\n            </div>\r\n\r\n            <div class=\"description pt-2\">\r\n                Modifier l'utilisateur {{currentUser.name}}\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Modifier l'utilisateur</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n                <div class=\"logo\">\r\n                    <img [src]=\"upload_folder+currentUser.photo\" alt=\"currentUser.name\" style=\"cursor: pointer;width: 128px;height: 128px;border-radius:70px\" data-toggle=\"tooltip\" data-original-title=\"Modifier photo\" (click)=\"browse()\">\r\n                    <input type=\"file\" id=\"fileElement\" name=\"image\" (change)=\"loadImage($event)\" style=\"display: none\"/>\r\n                    <img [src]=\"loading\" alt=\"loading\" [hidden]=\"!uploading\" />\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"/>\r\n                    <label for=\"name\">Nom</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom\r\n                        invalide\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                    <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"/>\r\n                    <label for=\"email\">Email</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">\r\n                        Adresse email invalide\r\n                    </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!phone.valid || (!phone.pristine && userForm.submitted)\">\r\n                    <input type=\"tel\" class=\"form-control\" [class.md-has-value]=\"currentUser.phone.length\"  name=\"phone\" id=\"phone\" #phone=\"ngModel\" [(ngModel)]=\"currentUser.phone\"/>\r\n                    <label for=\"email\">Téléphone</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"phone.valid || (phone.pristine && !userForm.submitted)\">\r\n                        Téléphone invalide\r\n                    </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                    <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                        <option value=\"\"></option>\r\n                        <option *ngFor=\"let role of userRoles\" [ngValue]=\"role\">{{role}}</option>\r\n                    </select>\r\n                    <label for=\"roles\">Rôle utilisateur</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un\r\n                        utilisateur doit avoir un rôle\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                    <label for=\"plainPassword\">Mot de passe</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n                </div>\r\n\r\n                <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                    <div class=\"form-check remember-me mb-4\">\r\n                        <label class=\"form-check-label\">\r\n                            <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                            <span class=\"checkbox-icon\"></span>\r\n                            <span title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                        </label>\r\n                    </div>\r\n                    <a href=\"#\" title=\"Nouveau mot de passe\" class=\"btn btn-sm btn-primary\" (click)=\"generatePassword($event)\">Générer</a>\r\n                </div>\r\n\r\n                <button type=\"submit\" [disabled]=\"!userForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Enregistrer\">\r\n                    ENREGISTRER\r\n                </button>\r\n                <a [routerLink]=\"['/utilisateurs/liste']\" title=\"Annuller et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n    <div class=\"intro col-12 col-md\">\r\n        <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n            <div class=\"logo bg-primary mb-8\">\r\n                <span>{{app_icon}}</span>\r\n            </div>\r\n\r\n            <div class=\"title\">\r\n                {{app_name}}\r\n            </div>\r\n\r\n            <div class=\"description pt-2\">\r\n                Modifier l'utilisateur {{currentUser.name}}\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Modifier l'utilisateur</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n                <div class=\"logo\">\r\n                    <img [src]=\"upload_folder+currentUser.photo\" alt=\"currentUser.name\" style=\"cursor: pointer;width: 128px;height: 128px;border-radius:70px\" data-toggle=\"tooltip\" data-original-title=\"Modifier photo\" (click)=\"browse()\">\r\n                    <input type=\"file\" id=\"fileElement\" name=\"image\" (change)=\"loadImage($event)\" style=\"display: none\"/>\r\n                    <img [src]=\"loading\" alt=\"loading\" [hidden]=\"!uploading\" />\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"/>\r\n                    <label for=\"name\">Nom</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom\r\n                        invalide\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                    <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"/>\r\n                    <label for=\"email\">Email</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">\r\n                        Adresse email invalide\r\n                    </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!phone.valid || (!phone.pristine && userForm.submitted)\">\r\n                    <input type=\"tel\" class=\"form-control\" [class.md-has-value]=\"currentUser.phone.length\"  name=\"phone\" id=\"phone\" #phone=\"ngModel\" [(ngModel)]=\"currentUser.phone\"/>\r\n                    <label for=\"email\">Téléphone</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"phone.valid || (phone.pristine && !userForm.submitted)\">\r\n                        Téléphone invalide\r\n                    </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                    <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                        <option value=\"\"></option>\r\n                        <option *ngFor=\"let role of userRoles\" [ngValue]=\"role\">{{role}}</option>\r\n                    </select>\r\n                    <label for=\"roles\">Rôle utilisateur</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un\r\n                        utilisateur doit avoir un rôle\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                    <label for=\"plainPassword\">Mot de passe</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n                </div>\r\n\r\n                <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                    <div class=\"form-check remember-me mb-4\">\r\n                        <label class=\"form-check-label\">\r\n                            <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                            <span class=\"checkbox-icon\"></span>\r\n                            <span title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                        </label>\r\n                    </div>\r\n                    <a href=\"#\" title=\"Nouveau mot de passe\" class=\"btn btn-sm btn-primary\" (click)=\"generatePassword($event)\">Générer</a>\r\n                </div>\r\n\r\n                <button [disabled]=\"!userForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Enregistrer\">\r\n                    ENREGISTRER\r\n                </button>\r\n                <a [routerLink]=\"['/utilisateurs/liste']\" title=\"Annuller et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 344 */
@@ -77544,13 +77579,13 @@ module.exports = "<div id=\"profile\" class=\"page-layout simple tabbed\">\r\n\r
 /* 346 */
 /***/ (function(module, exports) {
 
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n  <div class=\"intro col-12 col-md\">\r\n      <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n          <div class=\"logo bg-primary mb-8\">\r\n              <span>{{app_icon}}</span>\r\n          </div>\r\n\r\n          <div class=\"title\">\r\n              {{app_name}}\r\n          </div>\r\n\r\n          <div class=\"description pt-2\">\r\n              Enregistrer un nouvel utilisateur dans l'application\r\n          </div>\r\n\r\n      </div>\r\n  </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Ajouter un utilisateur</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"  />\r\n                    <label for=\"name\">Nom</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom invalide</div>\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                    <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" />\r\n                    <label for=\"email\">Email</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">Adresse email invalide </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                    <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                        <option value=\"\"></option>\r\n                        <option  *ngFor=\"let role of userRoles\">{{role}}</option>\r\n                    </select>\r\n                    <label for=\"roles\">Rôle utilisateur</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un utilisateur doit avoir un rôle </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" required name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                    <label for=\"plainPassword\">Mot de passe</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n                </div>\r\n                <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                    <div class=\"form-check remember-me mb-4\">\r\n                        <label class=\"form-check-label\">\r\n                            <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                            <span class=\"checkbox-icon\"></span>\r\n                            <span title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                        </label>\r\n                    </div>\r\n                    <a href=\"#\" title=\"Nouveau mot de passe\" class=\"btn btn-sm btn-primary\" (click)=\"generatePassword($event)\">Générer</a>\r\n                </div>\r\n                <button type=\"submit\" [disabled]=\"!userForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Créer un compte\">\r\n                    CREER UN COMPTE\r\n                </button>\r\n                <a [routerLink]=\"['/utilisateurs/liste']\" title=\"Annuler et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n            <!--<div class=\"login d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto\">\r\n                <span class=\"text mr-sm-2\">Already have an account?</span>\r\n                <a class=\"link text-primary\" href=\"#\">Connexion</a>\r\n            </div>-->\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n  <div class=\"intro col-12 col-md\">\r\n      <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n          <div class=\"logo bg-primary mb-8\">\r\n              <span>{{app_icon}}</span>\r\n          </div>\r\n\r\n          <div class=\"title\">\r\n              {{app_name}}\r\n          </div>\r\n\r\n          <div class=\"description pt-2\">\r\n              Enregistrer un nouvel utilisateur dans l'application\r\n          </div>\r\n\r\n      </div>\r\n  </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Ajouter un utilisateur</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"  />\r\n                    <label for=\"name\">Nom</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom invalide</div>\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                    <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" />\r\n                    <label for=\"email\">Email</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">Adresse email invalide </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                    <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                        <option value=\"\"></option>\r\n                        <option  *ngFor=\"let role of userRoles\">{{role}}</option>\r\n                    </select>\r\n                    <label for=\"roles\">Rôle utilisateur</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un utilisateur doit avoir un rôle </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" required name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                    <label for=\"plainPassword\">Mot de passe</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n                </div>\r\n                <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                    <div class=\"form-check remember-me mb-4\">\r\n                        <label class=\"form-check-label\">\r\n                            <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                            <span class=\"checkbox-icon\"></span>\r\n                            <span title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                        </label>\r\n                    </div>\r\n                    <a href=\"#\" title=\"Nouveau mot de passe\" class=\"btn btn-sm btn-primary\" (click)=\"generatePassword($event)\">Générer</a>\r\n                </div>\r\n                <button [disabled]=\"!userForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Créer un compte\">\r\n                    CREER UN COMPTE\r\n                </button>\r\n                <a [routerLink]=\"['/utilisateurs/liste']\" title=\"Annuler et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 347 */
 /***/ (function(module, exports) {
 
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div class=\"page-layout carded full-width\">\r\n    <div class=\"top-bg\"></div>\r\n    <!-- CONTENT -->\r\n    <div class=\"page-content\">\r\n\r\n        <!-- HEADER -->\r\n        <div class=\"header text-auto row no-gutters align-items-center justify-content-between\">\r\n\r\n            <!-- APP TITLE -->\r\n            <div class=\"col-12 col-sm\">\r\n\r\n                <div class=\"logo row no-gutters align-items-start\">\r\n                    <div class=\"logo-icon mr-3 mt-1\">\r\n                        <i class=\"icon-cube-outline s-6\"></i>\r\n                    </div>\r\n                    <div class=\"logo-text\">\r\n                        <div class=\"h4\">Liste utilisateurs</div>\r\n                        <div class=\"\">Total utilisateurs: {{userCount}}</div>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / APP TITLE -->\r\n\r\n            <!-- SEARCH -->\r\n            <div class=\"col search-wrapper px-2\">\r\n\r\n                <div class=\"input-group\">\r\n                    <span class=\"input-group-btn\">\r\n                        <button type=\"button\" class=\"btn btn-icon\">\r\n                            <i class=\"icon icon-magnify\"></i>\r\n                        </button>\r\n                    </span>\r\n                    <input [(ngModel)]=\"textFilter\" type=\"text\" (keyup)=\"filterUsers($event)\" class=\"form-control\" placeholder=\"rechercher\" aria-label=\"Search\">\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / SEARCH -->\r\n\r\n            <div class=\"col-auto\">\r\n                <a [routerLink]=\"['/utilisateurs/ajouter']\" class=\"btn btn-secondary\">Ajouter un nouveau</a>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- / HEADER -->\r\n\r\n        <div class=\"page-content-card\">\r\n\r\n            <table id=\"e-commerce-products-table\" class=\"table dataTable\">\r\n\r\n                <thead>\r\n\r\n                <tr>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ID</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">IMAGE</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">NOM</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">EMAIL</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ROLE</span>\r\n                        </div>\r\n                    </th>\r\n\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\"></span>\r\n                        </div>\r\n                    </th>\r\n\r\n                </tr>\r\n                </thead>\r\n\r\n                <tbody>\r\n\r\n                <tr *ngFor=\"let user of filtredUsers\">\r\n                    <td>{{user.id}}</td>\r\n                    <td>\r\n                        <img class=\"product-image\" [src]=\"upload_folder+user.photo\" [alt]=\"user.name\" style=\"border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;width: 55px;height: 55px\">\r\n                    </td>\r\n                    <td>{{user.name}}</td>\r\n                    <td>{{user.email}}</td>\r\n                    <td>{{user.roles}}</td>\r\n                    <td>\r\n                        <a [routerLink]=\"['/utilisateurs/modifier/',user.id]\" class=\"btn btn-icon\"title=\"Modifier l'utilisateur\">\r\n                            <i class=\"icon icon-pencil s-4\"></i>\r\n                        </a>\r\n                        <a class=\"btn btn-icon btn-sm\" title=\"Supprimer l'utilisateur\" (click)=\"removeUser($event,user)\">\r\n                            <i class=\"icon icon-trash s-4\"></i>\r\n                        </a>\r\n                    </td>\r\n                </tr>\r\n\r\n\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n    <!-- / CONTENT -->\r\n</div>";
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div class=\"page-layout carded full-width\">\r\n    <div class=\"top-bg\"></div>\r\n    <!-- CONTENT -->\r\n    <div class=\"page-content\">\r\n\r\n        <!-- HEADER -->\r\n        <div class=\"header text-auto row no-gutters align-items-center justify-content-between\">\r\n\r\n            <!-- APP TITLE -->\r\n            <div class=\"col-12 col-sm\">\r\n\r\n                <div class=\"logo row no-gutters align-items-start\">\r\n                    <div class=\"logo-icon mr-3 mt-1\">\r\n                        <i class=\"icon-cube-outline s-6\"></i>\r\n                    </div>\r\n                    <div class=\"logo-text\">\r\n                        <div class=\"h4\">Liste utilisateurs</div>\r\n                        <div class=\"\">Total utilisateurs: {{userCount}}</div>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / APP TITLE -->\r\n\r\n            <!-- SEARCH -->\r\n            <div class=\"col search-wrapper px-2\">\r\n\r\n                <div class=\"input-group\">\r\n                    <span class=\"input-group-btn\">\r\n                        <button type=\"button\" class=\"btn btn-icon\">\r\n                            <i class=\"icon icon-magnify\"></i>\r\n                        </button>\r\n                    </span>\r\n                    <input [(ngModel)]=\"textFilter\" type=\"text\" (keyup)=\"filterUsers($event)\" class=\"form-control\" placeholder=\"rechercher\" aria-label=\"Search\">\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / SEARCH -->\r\n\r\n            <div class=\"col-auto\">\r\n                <a [routerLink]=\"['/utilisateurs/ajouter']\" class=\"btn btn-secondary\">Ajouter un nouveau</a>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- / HEADER -->\r\n        <div class=\"page-content-card\">\r\n\r\n            <table id=\"e-commerce-products-table\" class=\"table table-responsive\">\r\n                <thead>\r\n                <tr>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ID</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">IMAGE</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">NOM</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">EMAIL</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ROLE</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\"></span>\r\n                        </div>\r\n                    </th>\r\n                </tr>\r\n                </thead>\r\n                <tbody>\r\n                <tr *ngFor=\"let user of filtredUsers\">\r\n                    <td>{{user.id}}</td>\r\n                    <td>\r\n                        <img class=\"product-image\" [src]=\"upload_folder+user.photo\" [alt]=\"user.name\" style=\"border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;width: 55px;height: 55px\">\r\n                    </td>\r\n                    <td>{{user.name}}</td>\r\n                    <td>{{user.email}}</td>\r\n                    <td>{{user.roles}}</td>\r\n                    <td>\r\n                        <a [routerLink]=\"['/utilisateurs/modifier/',user.id]\" class=\"btn btn-icon\" title=\"Modifier l'utilisateur\">\r\n                            <i class=\"icon icon-pencil s-4\"></i>\r\n                        </a>\r\n                        <a class=\"btn btn-icon btn-sm\" title=\"Supprimer l'utilisateur\" (click)=\"removeUser($event,user)\">\r\n                            <i class=\"icon icon-trash s-4\"></i>\r\n                        </a>\r\n                    </td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n    <!-- / CONTENT -->\r\n</div>";
 
 /***/ }),
 /* 348 */
@@ -79840,6 +79875,361 @@ var app_module_1 = __webpack_require__(163);
 //enableProdMode();
 platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 
+
+/***/ }),
+/* 377 */,
+/* 378 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Brand = (function () {
+    function Brand(data) {
+        this.id = data.id;
+        this.name = data.name;
+    }
+    return Brand;
+}());
+exports.Brand = Brand;
+
+
+/***/ }),
+/* 379 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Model = (function () {
+    function Model(data) {
+        this.id = data.id;
+        this.brand_id = data.brand_id;
+        this.name = data.name;
+    }
+    return Model;
+}());
+exports.Model = Model;
+
+
+/***/ }),
+/* 380 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var http_1 = __webpack_require__(73);
+__webpack_require__(149);
+__webpack_require__(148);
+__webpack_require__(147);
+var app_config_1 = __webpack_require__(31);
+var index_1 = __webpack_require__(19);
+var BrandService = (function () {
+    function BrandService(http, helper) {
+        this.http = http;
+        this.helper = helper;
+        this.headers = new http_1.Headers();
+        this.headers.append('X-Requested-With', 'XMLHttpRequest');
+    }
+    BrandService.prototype.findOne = function (id) {
+        return this.http.get(app_config_1.Config.API_ROUTE.brand_edit + "/" + id, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    BrandService.prototype.removeBrand = function (id) {
+        return this.http.get(app_config_1.Config.API_ROUTE.brand_remove + "/" + id, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    BrandService.prototype.getListe = function () {
+        return this.http.get(app_config_1.Config.API_ROUTE.brand_list, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    BrandService.prototype.saveBrand = function (data) {
+        var url = (data.id === 0) ? app_config_1.Config.API_ROUTE.brand_add : app_config_1.Config.API_ROUTE.brand_edit + "/" + data.id;
+        return this.http.post(url, data, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    return BrandService;
+}());
+BrandService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http, index_1.Helper])
+], BrandService);
+exports.BrandService = BrandService;
+
+
+/***/ }),
+/* 381 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var http_1 = __webpack_require__(73);
+__webpack_require__(149);
+__webpack_require__(148);
+__webpack_require__(147);
+var app_config_1 = __webpack_require__(31);
+var index_1 = __webpack_require__(19);
+var ModelService = (function () {
+    function ModelService(http, helper) {
+        this.http = http;
+        this.helper = helper;
+        this.headers = new http_1.Headers();
+        this.headers.append('X-Requested-With', 'XMLHttpRequest');
+    }
+    ModelService.prototype.findOne = function (id) {
+        return this.http.get(app_config_1.Config.API_ROUTE.model_edit + "/" + id, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.removeModel = function (id) {
+        return this.http.get(app_config_1.Config.API_ROUTE.model_remove + "/" + id, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.getListe = function () {
+        return this.http.get(app_config_1.Config.API_ROUTE.model_list, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.createModel = function (data) {
+        return this.http.post(app_config_1.Config.API_ROUTE.registration, data, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.editModel = function (data) {
+        return this.http.post(app_config_1.Config.API_ROUTE.model_edit + '/' + data.id, data, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.getRoles = function () {
+        return this.http.get(app_config_1.Config.API_ROUTE.roles, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.uploadPhoto = function (id, formData) {
+        return this.http.post(app_config_1.Config.API_ROUTE.upload_photo + "/" + id, formData).map(function (response) {
+            return response.json();
+        });
+    };
+    return ModelService;
+}());
+ModelService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http, index_1.Helper])
+], ModelService);
+exports.ModelService = ModelService;
+
+
+/***/ }),
+/* 382 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var index_1 = __webpack_require__(19);
+var angular2_notifications_1 = __webpack_require__(51);
+var app_config_1 = __webpack_require__(31);
+var BrandListComponent = (function () {
+    function BrandListComponent(brandService, helper, _notificationsService) {
+        this.brandService = brandService;
+        this.helper = helper;
+        this._notificationsService = _notificationsService;
+        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
+        this.helper.setPageInfo("Liste marques", "Liste des marques");
+        this.helper.currentMenu("a_collapse_brands");
+        this.getList();
+    }
+    BrandListComponent.prototype.filterBrands = function (event) {
+        var _this = this;
+        this.filtredBrands = this.brands.filter(function (brand) {
+            return brand.name.toLocaleLowerCase().indexOf(_this.textFilter.toLocaleLowerCase()) !== -1;
+        });
+        this.brandCount = this.filtredBrands.length;
+    };
+    BrandListComponent.prototype.getList = function () {
+        var _this = this;
+        this.brandService.getListe().subscribe(function (response) {
+            _this.brands = response;
+            _this.filtredBrands = _this.brands;
+            _this.brandCount = _this.brands.length;
+        });
+    };
+    BrandListComponent.prototype.removeBrand = function (event, brand) {
+        var _this = this;
+        event.preventDefault();
+        if (confirm("Supprimer la marque")) {
+            this.brandService.removeBrand(brand.id).subscribe(function (response) {
+                if (response.success) {
+                    _this.getList();
+                    _this._notificationsService.success('Succès', response.message);
+                }
+                else
+                    _this._notificationsService.error('Erreur', response.message);
+            });
+        }
+    };
+    return BrandListComponent;
+}());
+BrandListComponent = __decorate([
+    core_1.Component({
+        selector: "brand-list",
+        template: __webpack_require__(383)
+    }),
+    __metadata("design:paramtypes", [index_1.BrandService, index_1.Helper, angular2_notifications_1.NotificationsService])
+], BrandListComponent);
+exports.BrandListComponent = BrandListComponent;
+
+
+/***/ }),
+/* 383 */
+/***/ (function(module, exports) {
+
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div class=\"page-layout carded full-width\">\r\n    <div class=\"top-bg\"></div>\r\n    <!-- CONTENT -->\r\n    <div class=\"page-content\">\r\n\r\n        <!-- HEADER -->\r\n        <div class=\"header text-auto row no-gutters align-items-center justify-content-between\">\r\n\r\n            <!-- APP TITLE -->\r\n            <div class=\"col-12 col-sm\">\r\n\r\n                <div class=\"logo row no-gutters align-items-start\">\r\n                    <div class=\"logo-icon mr-3 mt-1\">\r\n                        <i class=\"icon-cube-outline s-6\"></i>\r\n                    </div>\r\n                    <div class=\"logo-text\">\r\n                        <div class=\"h4\">Liste marques</div>\r\n                        <div class=\"\">Total marques: {{brandCount}}</div>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / APP TITLE -->\r\n\r\n            <!-- SEARCH -->\r\n            <div class=\"col search-wrapper px-2\">\r\n\r\n                <div class=\"input-group\">\r\n                    <span class=\"input-group-btn\">\r\n                        <button type=\"button\" class=\"btn btn-icon\">\r\n                            <i class=\"icon icon-magnify\"></i>\r\n                        </button>\r\n                    </span>\r\n                    <input [(ngModel)]=\"textFilter\" type=\"text\" (keyup)=\"filterBrands($event)\" class=\"form-control\" placeholder=\"rechercher\" aria-label=\"Search\">\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / SEARCH -->\r\n\r\n            <div class=\"col-auto\">\r\n                <a [routerLink]=\"['/marques/enregistrer/0']\" class=\"btn btn-secondary\">Ajouter une nouvelle</a>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- / HEADER -->\r\n        <div class=\"page-content-card\">\r\n\r\n            <table id=\"e-commerce-products-table\" class=\"table table-responsive\">\r\n                <thead>\r\n                <tr>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ID</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">MARQUE</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\"></span>\r\n                        </div>\r\n                    </th>\r\n                </tr>\r\n                </thead>\r\n                <tbody>\r\n                <tr *ngFor=\"let brand of filtredBrands\">\r\n                    <td>{{brand.id}}</td>\r\n                    <td>{{brand.name}}</td>\r\n                    <td>\r\n                        <a [routerLink]=\"['/marques/modifier/',brand.id]\" class=\"btn btn-icon\" title=\"Modifier la marque\">\r\n                            <i class=\"icon icon-pencil s-4\"></i>\r\n                        </a>\r\n                        <a class=\"btn btn-icon btn-sm\" title=\"Supprimer la marque\" (click)=\"removeBrand($event,brand)\">\r\n                            <i class=\"icon icon-trash s-4\"></i>\r\n                        </a>\r\n                    </td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n    <!-- / CONTENT -->\r\n</div>";
+
+/***/ }),
+/* 384 */
+/***/ (function(module, exports) {
+
+module.exports = "<nav id=\"toolbar\" class=\"fixed-top bg-white\">\r\n\r\n    <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n        <div class=\"col\">\r\n            <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                <button type=\"button\" class=\"toggle-aside-button btn btn-icon d-block d-lg-none\"\r\n                        data-fuse-bar-toggle=\"aside\">\r\n                    <i class=\"icon icon-menu\"></i>\r\n                </button>\r\n                <div class=\"toolbar-separator d-block d-lg-none\"></div>\r\n                <div class=\"shortcuts-wrapper row no-gutters align-items-center px-0 px-sm-2\">\r\n\r\n                    <div class=\"shortcuts row no-gutters align-items-center d-none d-md-flex\">\r\n\r\n                        <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\r\n                            <i class=\"icon icon-hangouts\"></i>\r\n                        </a>\r\n\r\n                        <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\r\n                            <i class=\"icon icon-account-box\"></i>\r\n                        </a>\r\n\r\n                        <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\r\n                            <i class=\"icon icon-email\"></i>\r\n                        </a>\r\n\r\n                    </div>\r\n\r\n                    <div class=\"add-shortcut-menu-button dropdown px-1 px-sm-3\">\r\n\r\n                        <div class=\"dropdown-toggle btn btn-icon\" role=\"button\"\r\n                             id=\"dropdownShortcutMenu\"\r\n                             data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                            <i class=\"icon icon-star text-amber-600\"></i>\r\n                        </div>\r\n\r\n                        <div class=\"dropdown-menu\" aria-labelledby=\"dropdownShortcutMenu\">\r\n\r\n                            <a class=\"dropdown-item\" href=\"#\">\r\n                                <div\r\n                                        class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\r\n                                    <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                                        <i class=\"icon icon-calendar-today\"></i>\r\n                                        <span class=\"px-3\">Calendar</span>\r\n                                    </div>\r\n                                    <i class=\"icon icon-pin s-5 ml-2\"></i>\r\n                                </div>\r\n                            </a>\r\n\r\n                            <a class=\"dropdown-item\" href=\"#\">\r\n                                <div\r\n                                        class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\r\n                                    <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                                        <i class=\"icon icon-folder\"></i>\r\n                                        <span class=\"px-3\">File Manager</span>\r\n                                    </div>\r\n                                    <i class=\"icon icon-pin s-5 ml-2\"></i>\r\n                                </div>\r\n                            </a>\r\n\r\n                            <a class=\"dropdown-item\" href=\"#\">\r\n                                <div class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\r\n                                    <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                                        <i class=\"icon icon-checkbox-marked\"></i>\r\n                                        <span class=\"px-3\">To-Do</span>\r\n                                    </div>\r\n                                    <i class=\"icon icon-pin s-5 ml-2\"></i>\r\n                                </div>\r\n                            </a>\r\n\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"toolbar-separator\"></div>\r\n\r\n            </div>\r\n        </div>\r\n        <div class=\"col-auto\">\r\n            <div class=\"row no-gutters align-items-center justify-content-end\">\r\n                <div class=\"user-menu-button dropdown\">\r\n\r\n                    <div class=\"dropdown-toggle ripple row align-items-center no-gutters px-2 px-sm-4\"\r\n                         role=\"button\" id=\"dropdownUserMenu\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                        <div class=\"avatar-wrapper\">\r\n                            <img class=\"avatar\" [src]=\"upload_folder+loggedUser.photo\"/>\r\n                            <i class=\"status text-green icon-checkbox-marked-circle s-4\"></i>\r\n                        </div>\r\n                        <span class=\"username mx-3 d-none d-md-block\">{{loggedUser.name}}</span>\r\n                    </div>\r\n\r\n                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownUserMenu\">\r\n\r\n                        <a class=\"dropdown-item\" [routerLink]=\"['/profil']\">\r\n                            <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                                <i class=\"icon-account\"></i>\r\n                                <span class=\"px-3\">Mon Profil</span>\r\n                            </div>\r\n                        </a>\r\n\r\n                        <div class=\"dropdown-divider\"></div>\r\n\r\n                        <a class=\"dropdown-item\" (click)=\"logout($event)\">\r\n                            <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                                <i class=\"icon-logout\"></i>\r\n                                <span class=\"px-3\">Se deconnecter</span>\r\n                            </div>\r\n                        </a>\r\n\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n</nav>";
+
+/***/ }),
+/* 385 */
+/***/ (function(module, exports) {
+
+module.exports = "<aside id=\"aside\" class=\"aside aside-left\" data-fuse-bar=\"aside\" data-fuse-bar-media-step=\"md\" data-fuse-bar-position=\"left\">\r\n    <div class=\"aside-content-wrapper\">\r\n        <div class=\"aside-content\">\r\n            <div class=\"aside-toolbar\">\r\n                <!--<div class=\"logo\">\r\n                    <span class=\"logo-icon\">{{ loggedUserIcon | uppercase}}</span><span class=\"logo-text\">{{loggedUser.name}}</span>\r\n                </div>-->\r\n                <div class=\"logo\">\r\n                    <span class=\"logo-icon\">{{app_icon}}</span><span class=\"logo-text\">{{app_name}}</span>\r\n                </div>\r\n                <button id=\"toggle-fold-aside-button\" type=\"button\" class=\"btn btn-icon d-none d-lg-block\" data-fuse-aside-toggle-fold=\"\">\r\n                    <i class=\"icon icon-backburger\" style=\"color:#fff\"></i>\r\n                </button>\r\n            </div>\r\n            <ul class=\"nav flex-column custom-scrollbar\" id=\"sidenav\" data-children=\".nav-item\">\r\n                <li class=\"subheader\">\r\n                    <span>APPS</span>\r\n                </li>\r\n\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-dashboards\">\r\n                    <a class=\"nav-link ripple with-arrow \" data-toggle=\"collapse\" data-target=\"#collapse-dashboards\" href=\"#\" aria-expanded=\"true\" aria-controls=\"collapse-dashboards\">\r\n                        <i class=\"icon s-4 icon-tile-four\"></i>\r\n                        <span>Tableau de bord</span>\r\n                    </a>\r\n                    <ul id=\"collapse-dashboards\" class=\"collapse show\" role=\"tabpanel\" aria-labelledby=\"heading-dashboards\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" [routerLink]=\"['/']\">\r\n                                <span>Project Dashboard</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-ecommerce\">\r\n                    <a class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-ecommerce\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-ecommerce\">\r\n                        <i class=\"icon s-4 icon-cart\"></i>\r\n                        <span>Ecommerce</span>\r\n                    </a>\r\n                    <ul id=\"collapse-ecommerce\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-ecommerce\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple \">\r\n                                <span>Orders</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link ripple \">\r\n                        <i class=\"icon s-4 icon-email\"></i>\r\n                        <span>Mail</span>\r\n                    </a>\r\n                </li>\r\n                <li class=\"subheader\">\r\n                    <span>PAGES</span>\r\n                </li>\r\n                <li class=\"nav-item\" id=\"heading-brands\" role=\"tab\"  *ngIf=\"authGuard.canActivate()\">\r\n                    <a id=\"a_collapse_brands\" class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-brands\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-brands\">\r\n                        <i class=\"icon s-4 icon-car\"></i>\r\n                        <span>Marques et models</span>\r\n                    </a>\r\n                    <ul id=\"collapse-brands\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-brands\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/marques/liste']\">\r\n                                <i class=\"icon s-4 icon-car\"></i>\r\n                                <span>Liste marques</span>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/marques/enregistrer/0']\">\r\n                                <i class=\"icon s-4 icon-pencil-circle\"></i>\r\n                                <span>Ajouter une marque</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-users\" *ngIf=\"adminGuard.canActivate()\">\r\n                    <a id=\"a_collapse_users\" class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-users\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-users\">\r\n                        <i class=\"icon s-4 icon-account-box\"></i>\r\n                        <span>Utilisateurs</span>\r\n                    </a>\r\n                    <ul id=\"collapse-users\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-users\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/liste']\">\r\n                                <i class=\"icon s-4 icon-account\"></i>\r\n                                <span>Liste utilisateurs</span>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/ajouter']\">\r\n                                <i class=\"icon s-4 icon-pencil-circle\"></i>\r\n                                <span>Ajouter un utilisateur</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n            <!--<div class=\"btn-group dropup\">\r\n                <button style=\"background-color:#0747a6;margin-top: 20px;\" type=\"button\" class=\"btn btn-secondary dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                   <div class=\"avatar-wrapper\">\r\n                        <img class=\"avatar\" [src]=\"upload_folder+loggedUser.photo\"/>\r\n                    </div>\r\n                </button>\r\n                <div class=\"dropdown-menu\">\r\n                    <p style=\"padding:0 10px\">{{loggedUser.name | uppercase}}</p>\r\n                    <a class=\"dropdown-item\" href=\"#\">Mon profil</a>\r\n                    <div class=\"dropdown-divider\"></div>\r\n                    <a class=\"dropdown-item\" href=\"#\" (click)=\"logout($event)\">Se deconnecter</a>\r\n                </div>\r\n            </div>-->\r\n        </div>\r\n    </div>\r\n</aside>";
+
+/***/ }),
+/* 386 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var index_1 = __webpack_require__(58);
+var index_2 = __webpack_require__(19);
+var angular2_notifications_1 = __webpack_require__(51);
+var router_1 = __webpack_require__(38);
+var app_config_1 = __webpack_require__(31);
+var EditComponent = (function () {
+    function EditComponent(brandService, helper, _notificationsService, route) {
+        this.brandService = brandService;
+        this.helper = helper;
+        this._notificationsService = _notificationsService;
+        this.route = route;
+        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
+        this.app_name = app_config_1.Config.APP_NAME;
+        this.app_icon = this.app_name.charAt(0);
+        this.loading = app_config_1.Config.API_ROUTE.loading;
+        this.helper.currentMenu("a_collapse_brands");
+        this.resetCurrentBrand();
+    }
+    EditComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.paramMap.subscribe(function (params) {
+            _this.helper.toggleLoadding(true);
+            _this.brandService.findOne(params.get('id')).subscribe(function (response) {
+                if (response !== null)
+                    _this.currentBrand = response;
+                _this.helper.toggleLoadding(false);
+            });
+        });
+    };
+    EditComponent.prototype.resetCurrentBrand = function () {
+        this.currentBrand = new index_1.Brand({
+            id: 0,
+            name: '',
+        });
+    };
+    EditComponent.prototype.handleSubmit = function (event) {
+        var _this = this;
+        event.preventDefault();
+        this.helper.toggleLoadding(true);
+        this.brandService.saveBrand(this.currentBrand).subscribe(function (response) {
+            _this.helper.toggleLoadding(false);
+            if (response.success)
+                _this._notificationsService.success('Succès', response.message);
+            else
+                _this._notificationsService.error('Erreur', response.message);
+        });
+    };
+    return EditComponent;
+}());
+EditComponent = __decorate([
+    core_1.Component({
+        selector: 'edit',
+        template: __webpack_require__(388)
+    }),
+    __metadata("design:paramtypes", [index_2.BrandService, index_2.Helper, angular2_notifications_1.NotificationsService, router_1.ActivatedRoute])
+], EditComponent);
+exports.EditComponent = EditComponent;
+
+
+/***/ }),
+/* 387 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(386));
+__export(__webpack_require__(382));
+
+
+/***/ }),
+/* 388 */
+/***/ (function(module, exports) {
+
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n  <div class=\"intro col-12 col-md\">\r\n      <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n          <div class=\"logo bg-primary mb-8\">\r\n              <span>{{app_icon}}</span>\r\n          </div>\r\n\r\n          <div class=\"title\">\r\n              {{app_name}}\r\n          </div>\r\n\r\n          <div class=\"description pt-2\">\r\n              Enregistrer une marque\r\n          </div>\r\n\r\n      </div>\r\n  </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Enregistrer une marque</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #brandForm=\"ngForm\">\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!name.valid || (!name.pristine && brandForm.submitted)\">\r\n                    <textarea style=\"height: 280px;\" class=\"form-control\"  [class.md-has-value]=\"currentBrand.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentBrand.name\" #name=\"ngModel\"  rows=\"3\"></textarea>\r\n                    <label for=\"name\">Marques séparées par une virgule</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !brandForm.submitted)\">Nom invalide</div>\r\n                </div>\r\n\r\n                <button [disabled]=\"!brandForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Enregistrer\">\r\n                    ENREGISTRER\r\n                </button>\r\n                <a [routerLink]=\"['/marques/liste']\" title=\"Annuler et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ })
 /******/ ]);

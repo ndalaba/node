@@ -1,40 +1,64 @@
-const crypto = require('crypto');
-const User = require('../models').User;
+const Brand = require('../models').Brand;
 
 class BrandManager {
 
-    getAll(cb,err) {
-        return User.findAll().then((users) => {
-            cb(users);
+    getAll(cb, err) {
+        return Brand.findAll().then((brands) => {
+            cb(brands);
         }).catch(error => err(error));
     }
 
-    byId(id,cb,err) {
-        return User.findById(id).then(user=>{
-            cb(user);
-        }).catch(error => err(error));;
+    byId(id, cb, err) {
+        return Brand.findById(id).then(brand => {
+            cb(brand);
+        }).catch(error => err(error));
+        ;
     }
 
-    byMail(email) {
-        return User.find({
+    byName(name) {
+        return Brand.find({
             where: {
-                email: email
+                name: name
             }
         });
     }
-    addUser(data,cb,err) {
-        data.password = this.hash(data.plainPassword);
-        return User.create(data).then(()=>{
-            cb();
+
+    deleteBrand(id, cb, err) {
+        return Brand.destroy({
+            where: {
+                id: id
+            }
+        }).then(() => {
+            cb()
         }).catch(error => err(error));
     }
+
+    addBrand(data, cb, err) {
+        let bulkBrands = [];
+        let postedNames = data.split(',');
+        let existingBrandName = [];
+        Brand.findAll().then((brandDatas) => {
+            brandDatas.forEach((br) => {
+                existingBrandName.push(br.get('name'));
+            });
+            postedNames.forEach((name) => {
+                if (name.trim() !== "")
+                    if (existingBrandName.indexOf(name) === -1)
+                        bulkBrands.push({name: name});
+            });
+            return Brand.bulkCreate(bulkBrands).then(() => {
+                cb();
+            }).catch(error => err(error));
+        }).catch(error => err(error));
+    }
+
     editBrand(data) {
-        return this.byId(data.id, user => {
-            return user.update(data);
+        return this.byId(data.id, () => {
+            return Brand.update(data);
         });
     }
-    
-  
+
+
 }
 
 module.exports = new BrandManager();

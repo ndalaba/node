@@ -1559,7 +1559,8 @@
 }
 
 .icon-checkbox-marked-circle:before {
-    content: "\ea81"
+    content: "\ea81";
+    color: #0747a6;
 }
 
 .icon-checkbox-marked-outline:before {
@@ -14130,7 +14131,8 @@ tbody.collapse.show {
 }
 
 .dropdown-menu.show {
-    display: block
+    display: block;
+    background-color: #fff;
 }
 
 .dropdown-header {
@@ -34909,12 +34911,12 @@ body {
 }
 
 #toolbar {
-    -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
-    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
-    height: 5.4rem;
+    /* -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12); */
+    /* box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12); */
+    /* height: 5.4rem; */
     min-height: 5.4rem;
     -webkit-transition: left .3s ease, right .3s ease;
-    transition: left .3s ease, right .3s ease
+    /* transition: left .3s ease, right .3s ease; */
 }
 
 #toolbar .toolbar-separator {
@@ -35000,8 +35002,8 @@ body {
 }
 
 .layout.layout-vertical.layout-below-toolbar #wrapper .content-wrapper > .content {
-    margin-top: 2rem;
-    margin-bottom: 2rem
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
 .layout.layout-vertical.layout-below-toolbar.layout-left-navigation #wrapper .content-wrapper {
@@ -35033,7 +35035,7 @@ body {
     font-size: 2.4rem;
     height: 2.4rem;
     line-height: 2.4rem;
-    width: 2.4rem
+    width: 2.4rem;
 }
 
 [class*=" icon-"].s-2, [class^=icon-].s-2, i.s-2 {
@@ -42717,7 +42719,8 @@ input[type=checkbox]:disabled ~ .checkbox-icon, input[type=checkbox]:disabled ~ 
 
 #login-v2 .form-wrapper .form-content {
     width: 41.6rem;
-    max-width: 100%
+    max-width: 100%;
+    margin-right: 20px;
 }
 
 #login-v2 .form-wrapper .form-content form {
@@ -43118,6 +43121,9 @@ nvd3.show-line-points .nv-line .nv-scatter .nv-groups .nv-point {
 
 #aside .dropdown-menu {
     background-color: #fff
+}
+.dropdown-menu.show i {
+    color: #272b4d;
 }
 
 a:hover, button:hover {
