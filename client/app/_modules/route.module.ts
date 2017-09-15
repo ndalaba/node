@@ -21,6 +21,7 @@ export const appRoutes: Routes = [
 
     {path: 'marques/liste', component: BrandListComponent, canActivate: [AuthGuard]},
     {path: 'marques/enregistrer/:id', component: EditBrand, canActivate: [AuthGuard]},
+    {path: 'marques/modifier/:id', component: EditBrand, canActivate: [AuthGuard]},
 
 
     {path: 'auth/login', component: LoginComponent},

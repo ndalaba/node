@@ -12,7 +12,6 @@ class BrandManager {
         return Brand.findById(id).then(brand => {
             cb(brand);
         }).catch(error => err(error));
-        ;
     }
 
     byName(name) {
@@ -52,10 +51,10 @@ class BrandManager {
         }).catch(error => err(error));
     }
 
-    editBrand(data) {
-        return this.byId(data.id, () => {
-            return Brand.update(data);
-        });
+    editBrand(data,cb,err) {
+        return this.byId(data.id, (brand) => {
+            return brand.update(data).then(()=>{cb()});
+        },err);
     }
 
 
