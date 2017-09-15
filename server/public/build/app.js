@@ -63,25 +63,24 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 376);
+/******/ 	return __webpack_require__(__webpack_require__.s = 387);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */,
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__ = __webpack_require__(370);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share__ = __webpack_require__(372);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share__ = __webpack_require__(383);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Class", function() { return Class; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPlatform", function() { return createPlatform; });
@@ -5920,7 +5919,7 @@ var SystemJsNgModuleLoader = (function () {
         if (exportName === undefined) {
             exportName = 'default';
         }
-        return __webpack_require__(104)(module)
+        return __webpack_require__(107)(module)
             .then(function (module) { return module[exportName]; })
             .then(function (type) { return checkNotEmpty(type, module, exportName); })
             .then(function (type) { return _this._compiler.compileModuleAsync(type); });
@@ -5936,7 +5935,7 @@ var SystemJsNgModuleLoader = (function () {
             exportName = 'default';
             factoryClassSuffix = '';
         }
-        return __webpack_require__(104)(this._config.factoryPathPrefix + module + this._config.factoryPathSuffix)
+        return __webpack_require__(107)(this._config.factoryPathPrefix + module + this._config.factoryPathSuffix)
             .then(function (module) { return module[exportName + factoryClassSuffix]; })
             .then(function (factory) { return checkNotEmpty(factory, module, exportName); });
     };
@@ -15011,9 +15010,10 @@ function transition$$1(stateChangeExpr, steps) {
 
 //# sourceMappingURL=core.es5.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(71)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(75)))
 
 /***/ }),
+/* 2 */,
 /* 3 */,
 /* 4 */,
 /* 5 */,
@@ -15023,9 +15023,9 @@ function transition$$1(stateChangeExpr, steps) {
 
 "use strict";
 
-var root_1 = __webpack_require__(42);
-var toSubscriber_1 = __webpack_require__(374);
-var observable_1 = __webpack_require__(100);
+var root_1 = __webpack_require__(45);
+var toSubscriber_1 = __webpack_require__(385);
+var observable_1 = __webpack_require__(103);
 /**
  * A representation of any set of values over any amount of time. This the most basic building block
  * of RxJS.
@@ -15283,9 +15283,26 @@ exports.Observable = Observable;
 /* 8 */,
 /* 9 */,
 /* 10 */,
-/* 11 */,
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(183));
+__export(__webpack_require__(185));
+__export(__webpack_require__(116));
+__export(__webpack_require__(182));
+__export(__webpack_require__(184));
+
+
+/***/ }),
 /* 12 */,
-/* 13 */
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15295,10 +15312,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var isFunction_1 = __webpack_require__(158);
-var Subscription_1 = __webpack_require__(69);
-var Observer_1 = __webpack_require__(146);
-var rxSubscriber_1 = __webpack_require__(101);
+var isFunction_1 = __webpack_require__(160);
+var Subscription_1 = __webpack_require__(70);
+var Observer_1 = __webpack_require__(151);
+var rxSubscriber_1 = __webpack_require__(104);
 /**
  * Implements the {@link Observer} interface and extends the
  * {@link Subscription} class. While the {@link Observer} is the public API for
@@ -15555,15 +15572,92 @@ var SafeSubscriber = (function (_super) {
 //# sourceMappingURL=Subscriber.js.map
 
 /***/ }),
-/* 14 */,
-/* 15 */,
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Config = (function () {
+    function Config() {
+    }
+    Object.defineProperty(Config, "APP_HOST", {
+        get: function () {
+            return 'http://localhost:3000/';
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ;
+    Object.defineProperty(Config, "UPLOAD_FOLDER", {
+        get: function () {
+            return this.APP_HOST + "uploads/";
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Config, "APP_NAME", {
+        get: function () {
+            return "PARC";
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Config, "API_ROUTE", {
+        get: function () {
+            return {
+                registration: this.APP_HOST + 'utilisateurs/ajouter',
+                user_list: this.APP_HOST + "utilisateurs/liste",
+                user_edit: this.APP_HOST + "utilisateurs/modifier",
+                user_remove: this.APP_HOST + "utilisateurs/supprimer",
+                upload_photo: this.APP_HOST + "utilisateurs/photo",
+                user_default_image: "photos/user.png",
+                loading: this.APP_HOST + "uploads/loading.svg",
+                profil: this.APP_HOST + 'profil',
+                login: this.APP_HOST + "auth/login",
+                logout: this.APP_HOST + "auth/logout",
+                roles: this.APP_HOST + "utilisateurs/roles",
+                brand_add: this.APP_HOST + "marques/ajouter",
+                brand_list: this.APP_HOST + "marques/liste",
+                brand_edit: this.APP_HOST + "marques/modifier",
+                brand_remove: this.APP_HOST + "marques/supprimer",
+                model_add: this.APP_HOST + "models/ajouter",
+                model_list: this.APP_HOST + "models/liste",
+                model_edit: this.APP_HOST + "models/modifier",
+                model_remove: this.APP_HOST + "models/supprimer",
+            };
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Config, "NOTIFICATION_OPTIONS", {
+        get: function () {
+            return {
+                position: ["middle", "right"],
+                timeOut: 2000,
+                lastOnBottom: true,
+                pauseOnHover: true,
+                clickToClose: true
+            };
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Config;
+}());
+exports.Config = Config;
+
+
+/***/ }),
 /* 16 */,
 /* 17 */,
 /* 18 */,
 /* 19 */,
 /* 20 */,
 /* 21 */,
-/* 22 */
+/* 22 */,
+/* 23 */,
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15746,22 +15840,6 @@ function __asyncValues(o) {
 }
 
 /***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(179));
-__export(__webpack_require__(180));
-__export(__webpack_require__(112));
-
-
-/***/ }),
-/* 24 */,
 /* 25 */,
 /* 26 */,
 /* 27 */,
@@ -15769,4765 +15847,50 @@ __export(__webpack_require__(112));
 /* 29 */,
 /* 30 */,
 /* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(2);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserModule", function() { return BrowserModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "platformBrowser", function() { return platformBrowser; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Meta", function() { return Meta; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Title", function() { return Title; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableDebugTools", function() { return disableDebugTools; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableDebugTools", function() { return enableDebugTools; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "By", function() { return By; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgProbeToken", function() { return NgProbeToken$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DOCUMENT", function() { return DOCUMENT$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EVENT_MANAGER_PLUGINS", function() { return EVENT_MANAGER_PLUGINS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventManager", function() { return EventManager; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HAMMER_GESTURE_CONFIG", function() { return HAMMER_GESTURE_CONFIG; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HammerGestureConfig", function() { return HammerGestureConfig; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DomSanitizer", function() { return DomSanitizer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBROWSER_SANITIZATION_PROVIDERS", function() { return BROWSER_SANITIZATION_PROVIDERS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵINTERNAL_BROWSER_PLATFORM_PROVIDERS", function() { return INTERNAL_BROWSER_PLATFORM_PROVIDERS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵinitDomAdapter", function() { return initDomAdapter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBrowserDomAdapter", function() { return BrowserDomAdapter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBrowserPlatformLocation", function() { return BrowserPlatformLocation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵTRANSITION_ID", function() { return TRANSITION_ID; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBrowserGetTestability", function() { return BrowserGetTestability; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵELEMENT_PROBE_PROVIDERS", function() { return ELEMENT_PROBE_PROVIDERS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomAdapter", function() { return DomAdapter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵgetDOM", function() { return getDOM; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵsetRootDomAdapter", function() { return setRootDomAdapter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomRendererFactory2", function() { return DomRendererFactory2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵNAMESPACE_URIS", function() { return NAMESPACE_URIS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵflattenStyles", function() { return flattenStyles; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵshimContentAttribute", function() { return shimContentAttribute; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵshimHostAttribute", function() { return shimHostAttribute; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomEventsPlugin", function() { return DomEventsPlugin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵHammerGesturesPlugin", function() { return HammerGesturesPlugin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵKeyEventsPlugin", function() { return KeyEventsPlugin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomSharedStylesHost", function() { return DomSharedStylesHost; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵSharedStylesHost", function() { return SharedStylesHost; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return _document; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return errorHandler; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵh", function() { return GenericBrowserDomAdapter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return SERVER_TRANSITION_PROVIDERS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return appInitializerFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return _createNgProbe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return EventManagerPlugin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵe", function() { return DomSanitizerImpl; });
-
-/**
- * @license Angular v4.2.6
- * (c) 2010-2017 Google, Inc. https://angular.io/
- * License: MIT
- */
-
-
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var _DOM = ((null));
-/**
- * @return {?}
- */
-function getDOM() {
-    return _DOM;
-}
-/**
- * @param {?} adapter
- * @return {?}
- */
-/**
- * @param {?} adapter
- * @return {?}
- */
-function setRootDomAdapter(adapter) {
-    if (!_DOM) {
-        _DOM = adapter;
-    }
-}
-/**
- * Provides DOM operations in an environment-agnostic way.
- *
- * \@security Tread carefully! Interacting with the DOM directly is dangerous and
- * can introduce XSS risks.
- * @abstract
- */
-var DomAdapter = (function () {
-    function DomAdapter() {
-        this.resourceLoaderType = ((null));
-    }
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} name
-     * @return {?}
-     */
-    DomAdapter.prototype.hasProperty = function (element, name) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    DomAdapter.prototype.setProperty = function (el, name, value) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} name
-     * @return {?}
-     */
-    DomAdapter.prototype.getProperty = function (el, name) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} methodName
-     * @param {?} args
-     * @return {?}
-     */
-    DomAdapter.prototype.invoke = function (el, methodName, args) { };
-    /**
-     * @abstract
-     * @param {?} error
-     * @return {?}
-     */
-    DomAdapter.prototype.logError = function (error) { };
-    /**
-     * @abstract
-     * @param {?} error
-     * @return {?}
-     */
-    DomAdapter.prototype.log = function (error) { };
-    /**
-     * @abstract
-     * @param {?} error
-     * @return {?}
-     */
-    DomAdapter.prototype.logGroup = function (error) { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.logGroupEnd = function () { };
-    Object.defineProperty(DomAdapter.prototype, "attrToPropMap", {
-        /**
-         * Maps attribute names to their corresponding property names for cases
-         * where attribute name doesn't match property name.
-         * @return {?}
-         */
-        get: function () { return this._attrToPropMap; },
-        /**
-         * @param {?} value
-         * @return {?}
-         */
-        set: function (value) { this._attrToPropMap = value; },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    ;
-    /**
-     * @abstract
-     * @param {?} nodeA
-     * @param {?} nodeB
-     * @return {?}
-     */
-    DomAdapter.prototype.contains = function (nodeA, nodeB) { };
-    /**
-     * @abstract
-     * @param {?} templateHtml
-     * @return {?}
-     */
-    DomAdapter.prototype.parse = function (templateHtml) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} selector
-     * @return {?}
-     */
-    DomAdapter.prototype.querySelector = function (el, selector) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} selector
-     * @return {?}
-     */
-    DomAdapter.prototype.querySelectorAll = function (el, selector) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} evt
-     * @param {?} listener
-     * @return {?}
-     */
-    DomAdapter.prototype.on = function (el, evt, listener) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} evt
-     * @param {?} listener
-     * @return {?}
-     */
-    DomAdapter.prototype.onAndCancel = function (el, evt, listener) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} evt
-     * @return {?}
-     */
-    DomAdapter.prototype.dispatchEvent = function (el, evt) { };
-    /**
-     * @abstract
-     * @param {?} eventType
-     * @return {?}
-     */
-    DomAdapter.prototype.createMouseEvent = function (eventType) { };
-    /**
-     * @abstract
-     * @param {?} eventType
-     * @return {?}
-     */
-    DomAdapter.prototype.createEvent = function (eventType) { };
-    /**
-     * @abstract
-     * @param {?} evt
-     * @return {?}
-     */
-    DomAdapter.prototype.preventDefault = function (evt) { };
-    /**
-     * @abstract
-     * @param {?} evt
-     * @return {?}
-     */
-    DomAdapter.prototype.isPrevented = function (evt) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.getInnerHTML = function (el) { };
-    /**
-     * Returns content if el is a <template> element, null otherwise.
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.getTemplateContent = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.getOuterHTML = function (el) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.nodeName = function (node) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.nodeValue = function (node) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.type = function (node) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.content = function (node) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.firstChild = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.nextSibling = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.parentElement = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.childNodes = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.childNodesAsList = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.clearNodes = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.appendChild = function (el, node) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.removeChild = function (el, node) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} newNode
-     * @param {?} oldNode
-     * @return {?}
-     */
-    DomAdapter.prototype.replaceChild = function (el, newNode, oldNode) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.remove = function (el) { };
-    /**
-     * @abstract
-     * @param {?} parent
-     * @param {?} ref
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.insertBefore = function (parent, ref, node) { };
-    /**
-     * @abstract
-     * @param {?} parent
-     * @param {?} ref
-     * @param {?} nodes
-     * @return {?}
-     */
-    DomAdapter.prototype.insertAllBefore = function (parent, ref, nodes) { };
-    /**
-     * @abstract
-     * @param {?} parent
-     * @param {?} el
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.insertAfter = function (parent, el, node) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} value
-     * @return {?}
-     */
-    DomAdapter.prototype.setInnerHTML = function (el, value) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.getText = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} value
-     * @return {?}
-     */
-    DomAdapter.prototype.setText = function (el, value) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.getValue = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} value
-     * @return {?}
-     */
-    DomAdapter.prototype.setValue = function (el, value) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.getChecked = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @param {?} value
-     * @return {?}
-     */
-    DomAdapter.prototype.setChecked = function (el, value) { };
-    /**
-     * @abstract
-     * @param {?} text
-     * @return {?}
-     */
-    DomAdapter.prototype.createComment = function (text) { };
-    /**
-     * @abstract
-     * @param {?} html
-     * @return {?}
-     */
-    DomAdapter.prototype.createTemplate = function (html) { };
-    /**
-     * @abstract
-     * @param {?} tagName
-     * @param {?=} doc
-     * @return {?}
-     */
-    DomAdapter.prototype.createElement = function (tagName, doc) { };
-    /**
-     * @abstract
-     * @param {?} ns
-     * @param {?} tagName
-     * @param {?=} doc
-     * @return {?}
-     */
-    DomAdapter.prototype.createElementNS = function (ns, tagName, doc) { };
-    /**
-     * @abstract
-     * @param {?} text
-     * @param {?=} doc
-     * @return {?}
-     */
-    DomAdapter.prototype.createTextNode = function (text, doc) { };
-    /**
-     * @abstract
-     * @param {?} attrName
-     * @param {?} attrValue
-     * @param {?=} doc
-     * @return {?}
-     */
-    DomAdapter.prototype.createScriptTag = function (attrName, attrValue, doc) { };
-    /**
-     * @abstract
-     * @param {?} css
-     * @param {?=} doc
-     * @return {?}
-     */
-    DomAdapter.prototype.createStyleElement = function (css, doc) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.createShadowRoot = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.getShadowRoot = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.getHost = function (el) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.getDistributedNodes = function (el) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.clone /*<T extends Node>*/ = function (node) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} name
-     * @return {?}
-     */
-    DomAdapter.prototype.getElementsByClassName = function (element, name) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} name
-     * @return {?}
-     */
-    DomAdapter.prototype.getElementsByTagName = function (element, name) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @return {?}
-     */
-    DomAdapter.prototype.classList = function (element) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} className
-     * @return {?}
-     */
-    DomAdapter.prototype.addClass = function (element, className) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} className
-     * @return {?}
-     */
-    DomAdapter.prototype.removeClass = function (element, className) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} className
-     * @return {?}
-     */
-    DomAdapter.prototype.hasClass = function (element, className) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} styleName
-     * @param {?} styleValue
-     * @return {?}
-     */
-    DomAdapter.prototype.setStyle = function (element, styleName, styleValue) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} styleName
-     * @return {?}
-     */
-    DomAdapter.prototype.removeStyle = function (element, styleName) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} styleName
-     * @return {?}
-     */
-    DomAdapter.prototype.getStyle = function (element, styleName) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} styleName
-     * @param {?=} styleValue
-     * @return {?}
-     */
-    DomAdapter.prototype.hasStyle = function (element, styleName, styleValue) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @return {?}
-     */
-    DomAdapter.prototype.tagName = function (element) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @return {?}
-     */
-    DomAdapter.prototype.attributeMap = function (element) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} attribute
-     * @return {?}
-     */
-    DomAdapter.prototype.hasAttribute = function (element, attribute) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} ns
-     * @param {?} attribute
-     * @return {?}
-     */
-    DomAdapter.prototype.hasAttributeNS = function (element, ns, attribute) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} attribute
-     * @return {?}
-     */
-    DomAdapter.prototype.getAttribute = function (element, attribute) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} ns
-     * @param {?} attribute
-     * @return {?}
-     */
-    DomAdapter.prototype.getAttributeNS = function (element, ns, attribute) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    DomAdapter.prototype.setAttribute = function (element, name, value) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} ns
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    DomAdapter.prototype.setAttributeNS = function (element, ns, name, value) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} attribute
-     * @return {?}
-     */
-    DomAdapter.prototype.removeAttribute = function (element, attribute) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} ns
-     * @param {?} attribute
-     * @return {?}
-     */
-    DomAdapter.prototype.removeAttributeNS = function (element, ns, attribute) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.templateAwareRoot = function (el) { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.createHtmlDocument = function () { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.getBoundingClientRect = function (el) { };
-    /**
-     * @abstract
-     * @param {?} doc
-     * @return {?}
-     */
-    DomAdapter.prototype.getTitle = function (doc) { };
-    /**
-     * @abstract
-     * @param {?} doc
-     * @param {?} newTitle
-     * @return {?}
-     */
-    DomAdapter.prototype.setTitle = function (doc, newTitle) { };
-    /**
-     * @abstract
-     * @param {?} n
-     * @param {?} selector
-     * @return {?}
-     */
-    DomAdapter.prototype.elementMatches = function (n, selector) { };
-    /**
-     * @abstract
-     * @param {?} el
-     * @return {?}
-     */
-    DomAdapter.prototype.isTemplateElement = function (el) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.isTextNode = function (node) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.isCommentNode = function (node) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.isElementNode = function (node) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.hasShadowRoot = function (node) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.isShadowRoot = function (node) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.importIntoDoc /*<T extends Node>*/ = function (node) { };
-    /**
-     * @abstract
-     * @param {?} node
-     * @return {?}
-     */
-    DomAdapter.prototype.adoptNode /*<T extends Node>*/ = function (node) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @return {?}
-     */
-    DomAdapter.prototype.getHref = function (element) { };
-    /**
-     * @abstract
-     * @param {?} event
-     * @return {?}
-     */
-    DomAdapter.prototype.getEventKey = function (event) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} baseUrl
-     * @param {?} href
-     * @return {?}
-     */
-    DomAdapter.prototype.resolveAndSetHref = function (element, baseUrl, href) { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.supportsDOMEvents = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.supportsNativeShadowDOM = function () { };
-    /**
-     * @abstract
-     * @param {?} doc
-     * @param {?} target
-     * @return {?}
-     */
-    DomAdapter.prototype.getGlobalEventTarget = function (doc, target) { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.getHistory = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.getLocation = function () { };
-    /**
-     * @abstract
-     * @param {?} doc
-     * @return {?}
-     */
-    DomAdapter.prototype.getBaseHref = function (doc) { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.resetBaseElement = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.getUserAgent = function () { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    DomAdapter.prototype.setData = function (element, name, value) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @return {?}
-     */
-    DomAdapter.prototype.getComputedStyle = function (element) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} name
-     * @return {?}
-     */
-    DomAdapter.prototype.getData = function (element, name) { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.supportsWebAnimation = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.performanceNow = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.getAnimationPrefix = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.getTransitionEnd = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.supportsAnimation = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    DomAdapter.prototype.supportsCookies = function () { };
-    /**
-     * @abstract
-     * @param {?} name
-     * @return {?}
-     */
-    DomAdapter.prototype.getCookie = function (name) { };
-    /**
-     * @abstract
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    DomAdapter.prototype.setCookie = function (name, value) { };
-    return DomAdapter;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Provides DOM operations in any browser environment.
- *
- * \@security Tread carefully! Interacting with the DOM directly is dangerous and
- * can introduce XSS risks.
- * @abstract
- */
-var GenericBrowserDomAdapter = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](GenericBrowserDomAdapter, _super);
-    function GenericBrowserDomAdapter() {
-        var _this = _super.call(this) || this;
-        _this._animationPrefix = null;
-        _this._transitionEnd = null;
-        try {
-            var element_1 = _this.createElement('div', document);
-            if (_this.getStyle(element_1, 'animationName') != null) {
-                _this._animationPrefix = '';
-            }
-            else {
-                var domPrefixes = ['Webkit', 'Moz', 'O', 'ms'];
-                for (var i = 0; i < domPrefixes.length; i++) {
-                    if (_this.getStyle(element_1, domPrefixes[i] + 'AnimationName') != null) {
-                        _this._animationPrefix = '-' + domPrefixes[i].toLowerCase() + '-';
-                        break;
-                    }
-                }
-            }
-            var transEndEventNames_1 = {
-                WebkitTransition: 'webkitTransitionEnd',
-                MozTransition: 'transitionend',
-                OTransition: 'oTransitionEnd otransitionend',
-                transition: 'transitionend'
-            };
-            Object.keys(transEndEventNames_1).forEach(function (key) {
-                if (_this.getStyle(element_1, key) != null) {
-                    _this._transitionEnd = transEndEventNames_1[key];
-                }
-            });
-        }
-        catch (e) {
-            _this._animationPrefix = null;
-            _this._transitionEnd = null;
-        }
-        return _this;
-    }
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    GenericBrowserDomAdapter.prototype.getDistributedNodes = function (el) { return ((el)).getDistributedNodes(); };
-    /**
-     * @param {?} el
-     * @param {?} baseUrl
-     * @param {?} href
-     * @return {?}
-     */
-    GenericBrowserDomAdapter.prototype.resolveAndSetHref = function (el, baseUrl, href) {
-        el.href = href == null ? baseUrl : baseUrl + '/../' + href;
-    };
-    /**
-     * @return {?}
-     */
-    GenericBrowserDomAdapter.prototype.supportsDOMEvents = function () { return true; };
-    /**
-     * @return {?}
-     */
-    GenericBrowserDomAdapter.prototype.supportsNativeShadowDOM = function () {
-        return typeof ((document.body)).createShadowRoot === 'function';
-    };
-    /**
-     * @return {?}
-     */
-    GenericBrowserDomAdapter.prototype.getAnimationPrefix = function () { return this._animationPrefix ? this._animationPrefix : ''; };
-    /**
-     * @return {?}
-     */
-    GenericBrowserDomAdapter.prototype.getTransitionEnd = function () { return this._transitionEnd ? this._transitionEnd : ''; };
-    /**
-     * @return {?}
-     */
-    GenericBrowserDomAdapter.prototype.supportsAnimation = function () {
-        return this._animationPrefix != null && this._transitionEnd != null;
-    };
-    return GenericBrowserDomAdapter;
-}(DomAdapter));
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var _attrToPropMap = {
-    'class': 'className',
-    'innerHtml': 'innerHTML',
-    'readonly': 'readOnly',
-    'tabindex': 'tabIndex',
-};
-var DOM_KEY_LOCATION_NUMPAD = 3;
-// Map to convert some key or keyIdentifier values to what will be returned by getEventKey
-var _keyMap = {
-    // The following values are here for cross-browser compatibility and to match the W3C standard
-    // cf http://www.w3.org/TR/DOM-Level-3-Events-key/
-    '\b': 'Backspace',
-    '\t': 'Tab',
-    '\x7F': 'Delete',
-    '\x1B': 'Escape',
-    'Del': 'Delete',
-    'Esc': 'Escape',
-    'Left': 'ArrowLeft',
-    'Right': 'ArrowRight',
-    'Up': 'ArrowUp',
-    'Down': 'ArrowDown',
-    'Menu': 'ContextMenu',
-    'Scroll': 'ScrollLock',
-    'Win': 'OS'
-};
-// There is a bug in Chrome for numeric keypad keys:
-// https://code.google.com/p/chromium/issues/detail?id=155654
-// 1, 2, 3 ... are reported as A, B, C ...
-var _chromeNumKeyPadMap = {
-    'A': '1',
-    'B': '2',
-    'C': '3',
-    'D': '4',
-    'E': '5',
-    'F': '6',
-    'G': '7',
-    'H': '8',
-    'I': '9',
-    'J': '*',
-    'K': '+',
-    'M': '-',
-    'N': '.',
-    'O': '/',
-    '\x60': '0',
-    '\x90': 'NumLock'
-};
-var nodeContains;
-if (__WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['Node']) {
-    nodeContains = __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['Node'].prototype.contains || function (node) {
-        return !!(this.compareDocumentPosition(node) & 16);
-    };
-}
-var BrowserDomAdapter = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](BrowserDomAdapter, _super);
-    function BrowserDomAdapter() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * @param {?} templateHtml
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.parse = function (templateHtml) { throw new Error('parse not implemented'); };
-    /**
-     * @return {?}
-     */
-    BrowserDomAdapter.makeCurrent = function () { setRootDomAdapter(new BrowserDomAdapter()); };
-    /**
-     * @param {?} element
-     * @param {?} name
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.hasProperty = function (element, name) { return name in element; };
-    /**
-     * @param {?} el
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setProperty = function (el, name, value) { ((el))[name] = value; };
-    /**
-     * @param {?} el
-     * @param {?} name
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getProperty = function (el, name) { return ((el))[name]; };
-    /**
-     * @param {?} el
-     * @param {?} methodName
-     * @param {?} args
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.invoke = function (el, methodName, args) { ((el))[methodName].apply(((el)), args); };
-    /**
-     * @param {?} error
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.logError = function (error) {
-        if (window.console) {
-            if (console.error) {
-                console.error(error);
-            }
-            else {
-                console.log(error);
-            }
-        }
-    };
-    /**
-     * @param {?} error
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.log = function (error) {
-        if (window.console) {
-            window.console.log && window.console.log(error);
-        }
-    };
-    /**
-     * @param {?} error
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.logGroup = function (error) {
-        if (window.console) {
-            window.console.group && window.console.group(error);
-        }
-    };
-    /**
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.logGroupEnd = function () {
-        if (window.console) {
-            window.console.groupEnd && window.console.groupEnd();
-        }
-    };
-    Object.defineProperty(BrowserDomAdapter.prototype, "attrToPropMap", {
-        /**
-         * @return {?}
-         */
-        get: function () { return _attrToPropMap; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @param {?} nodeA
-     * @param {?} nodeB
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.contains = function (nodeA, nodeB) { return nodeContains.call(nodeA, nodeB); };
-    /**
-     * @param {?} el
-     * @param {?} selector
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.querySelector = function (el, selector) { return el.querySelector(selector); };
-    /**
-     * @param {?} el
-     * @param {?} selector
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.querySelectorAll = function (el, selector) { return el.querySelectorAll(selector); };
-    /**
-     * @param {?} el
-     * @param {?} evt
-     * @param {?} listener
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.on = function (el, evt, listener) { el.addEventListener(evt, listener, false); };
-    /**
-     * @param {?} el
-     * @param {?} evt
-     * @param {?} listener
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.onAndCancel = function (el, evt, listener) {
-        el.addEventListener(evt, listener, false);
-        // Needed to follow Dart's subscription semantic, until fix of
-        // https://code.google.com/p/dart/issues/detail?id=17406
-        return function () { el.removeEventListener(evt, listener, false); };
-    };
-    /**
-     * @param {?} el
-     * @param {?} evt
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.dispatchEvent = function (el, evt) { el.dispatchEvent(evt); };
-    /**
-     * @param {?} eventType
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createMouseEvent = function (eventType) {
-        var /** @type {?} */ evt = document.createEvent('MouseEvent');
-        evt.initEvent(eventType, true, true);
-        return evt;
-    };
-    /**
-     * @param {?} eventType
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createEvent = function (eventType) {
-        var /** @type {?} */ evt = document.createEvent('Event');
-        evt.initEvent(eventType, true, true);
-        return evt;
-    };
-    /**
-     * @param {?} evt
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.preventDefault = function (evt) {
-        evt.preventDefault();
-        evt.returnValue = false;
-    };
-    /**
-     * @param {?} evt
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.isPrevented = function (evt) {
-        return evt.defaultPrevented || evt.returnValue != null && !evt.returnValue;
-    };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getInnerHTML = function (el) { return el.innerHTML; };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getTemplateContent = function (el) {
-        return 'content' in el && el instanceof HTMLTemplateElement ? el.content : null;
-    };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getOuterHTML = function (el) { return el.outerHTML; };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.nodeName = function (node) { return node.nodeName; };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.nodeValue = function (node) { return node.nodeValue; };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.type = function (node) { return node.type; };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.content = function (node) {
-        if (this.hasProperty(node, 'content')) {
-            return ((node)).content;
-        }
-        else {
-            return node;
-        }
-    };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.firstChild = function (el) { return el.firstChild; };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.nextSibling = function (el) { return el.nextSibling; };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.parentElement = function (el) { return el.parentNode; };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.childNodes = function (el) { return el.childNodes; };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.childNodesAsList = function (el) {
-        var /** @type {?} */ childNodes = el.childNodes;
-        var /** @type {?} */ res = new Array(childNodes.length);
-        for (var /** @type {?} */ i = 0; i < childNodes.length; i++) {
-            res[i] = childNodes[i];
-        }
-        return res;
-    };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.clearNodes = function (el) {
-        while (el.firstChild) {
-            el.removeChild(el.firstChild);
-        }
-    };
-    /**
-     * @param {?} el
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.appendChild = function (el, node) { el.appendChild(node); };
-    /**
-     * @param {?} el
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.removeChild = function (el, node) { el.removeChild(node); };
-    /**
-     * @param {?} el
-     * @param {?} newChild
-     * @param {?} oldChild
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.replaceChild = function (el, newChild, oldChild) { el.replaceChild(newChild, oldChild); };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.remove = function (node) {
-        if (node.parentNode) {
-            node.parentNode.removeChild(node);
-        }
-        return node;
-    };
-    /**
-     * @param {?} parent
-     * @param {?} ref
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.insertBefore = function (parent, ref, node) { parent.insertBefore(node, ref); };
-    /**
-     * @param {?} parent
-     * @param {?} ref
-     * @param {?} nodes
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.insertAllBefore = function (parent, ref, nodes) {
-        nodes.forEach(function (n) { return parent.insertBefore(n, ref); });
-    };
-    /**
-     * @param {?} parent
-     * @param {?} ref
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.insertAfter = function (parent, ref, node) { parent.insertBefore(node, ref.nextSibling); };
-    /**
-     * @param {?} el
-     * @param {?} value
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setInnerHTML = function (el, value) { el.innerHTML = value; };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getText = function (el) { return el.textContent; };
-    /**
-     * @param {?} el
-     * @param {?} value
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setText = function (el, value) { el.textContent = value; };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getValue = function (el) { return el.value; };
-    /**
-     * @param {?} el
-     * @param {?} value
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setValue = function (el, value) { el.value = value; };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getChecked = function (el) { return el.checked; };
-    /**
-     * @param {?} el
-     * @param {?} value
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setChecked = function (el, value) { el.checked = value; };
-    /**
-     * @param {?} text
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createComment = function (text) { return document.createComment(text); };
-    /**
-     * @param {?} html
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createTemplate = function (html) {
-        var /** @type {?} */ t = document.createElement('template');
-        t.innerHTML = html;
-        return t;
-    };
-    /**
-     * @param {?} tagName
-     * @param {?=} doc
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createElement = function (tagName, doc) {
-        if (doc === void 0) { doc = document; }
-        return doc.createElement(tagName);
-    };
-    /**
-     * @param {?} ns
-     * @param {?} tagName
-     * @param {?=} doc
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createElementNS = function (ns, tagName, doc) {
-        if (doc === void 0) { doc = document; }
-        return doc.createElementNS(ns, tagName);
-    };
-    /**
-     * @param {?} text
-     * @param {?=} doc
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createTextNode = function (text, doc) {
-        if (doc === void 0) { doc = document; }
-        return doc.createTextNode(text);
-    };
-    /**
-     * @param {?} attrName
-     * @param {?} attrValue
-     * @param {?=} doc
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createScriptTag = function (attrName, attrValue, doc) {
-        if (doc === void 0) { doc = document; }
-        var /** @type {?} */ el = (doc.createElement('SCRIPT'));
-        el.setAttribute(attrName, attrValue);
-        return el;
-    };
-    /**
-     * @param {?} css
-     * @param {?=} doc
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createStyleElement = function (css, doc) {
-        if (doc === void 0) { doc = document; }
-        var /** @type {?} */ style = (doc.createElement('style'));
-        this.appendChild(style, this.createTextNode(css));
-        return style;
-    };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createShadowRoot = function (el) { return ((el)).createShadowRoot(); };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getShadowRoot = function (el) { return ((el)).shadowRoot; };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getHost = function (el) { return ((el)).host; };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.clone = function (node) { return node.cloneNode(true); };
-    /**
-     * @param {?} element
-     * @param {?} name
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getElementsByClassName = function (element, name) {
-        return element.getElementsByClassName(name);
-    };
-    /**
-     * @param {?} element
-     * @param {?} name
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getElementsByTagName = function (element, name) {
-        return element.getElementsByTagName(name);
-    };
-    /**
-     * @param {?} element
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.classList = function (element) { return Array.prototype.slice.call(element.classList, 0); };
-    /**
-     * @param {?} element
-     * @param {?} className
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.addClass = function (element, className) { element.classList.add(className); };
-    /**
-     * @param {?} element
-     * @param {?} className
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.removeClass = function (element, className) { element.classList.remove(className); };
-    /**
-     * @param {?} element
-     * @param {?} className
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.hasClass = function (element, className) {
-        return element.classList.contains(className);
-    };
-    /**
-     * @param {?} element
-     * @param {?} styleName
-     * @param {?} styleValue
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setStyle = function (element, styleName, styleValue) {
-        element.style[styleName] = styleValue;
-    };
-    /**
-     * @param {?} element
-     * @param {?} stylename
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.removeStyle = function (element, stylename) {
-        // IE requires '' instead of null
-        // see https://github.com/angular/angular/issues/7916
-        element.style[stylename] = '';
-    };
-    /**
-     * @param {?} element
-     * @param {?} stylename
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getStyle = function (element, stylename) { return element.style[stylename]; };
-    /**
-     * @param {?} element
-     * @param {?} styleName
-     * @param {?=} styleValue
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.hasStyle = function (element, styleName, styleValue) {
-        var /** @type {?} */ value = this.getStyle(element, styleName) || '';
-        return styleValue ? value == styleValue : value.length > 0;
-    };
-    /**
-     * @param {?} element
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.tagName = function (element) { return element.tagName; };
-    /**
-     * @param {?} element
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.attributeMap = function (element) {
-        var /** @type {?} */ res = new Map();
-        var /** @type {?} */ elAttrs = element.attributes;
-        for (var /** @type {?} */ i = 0; i < elAttrs.length; i++) {
-            var /** @type {?} */ attrib = elAttrs[i];
-            res.set(attrib.name, attrib.value);
-        }
-        return res;
-    };
-    /**
-     * @param {?} element
-     * @param {?} attribute
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.hasAttribute = function (element, attribute) {
-        return element.hasAttribute(attribute);
-    };
-    /**
-     * @param {?} element
-     * @param {?} ns
-     * @param {?} attribute
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.hasAttributeNS = function (element, ns, attribute) {
-        return element.hasAttributeNS(ns, attribute);
-    };
-    /**
-     * @param {?} element
-     * @param {?} attribute
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getAttribute = function (element, attribute) {
-        return element.getAttribute(attribute);
-    };
-    /**
-     * @param {?} element
-     * @param {?} ns
-     * @param {?} name
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getAttributeNS = function (element, ns, name) {
-        return element.getAttributeNS(ns, name);
-    };
-    /**
-     * @param {?} element
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setAttribute = function (element, name, value) { element.setAttribute(name, value); };
-    /**
-     * @param {?} element
-     * @param {?} ns
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setAttributeNS = function (element, ns, name, value) {
-        element.setAttributeNS(ns, name, value);
-    };
-    /**
-     * @param {?} element
-     * @param {?} attribute
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.removeAttribute = function (element, attribute) { element.removeAttribute(attribute); };
-    /**
-     * @param {?} element
-     * @param {?} ns
-     * @param {?} name
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.removeAttributeNS = function (element, ns, name) {
-        element.removeAttributeNS(ns, name);
-    };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.templateAwareRoot = function (el) { return this.isTemplateElement(el) ? this.content(el) : el; };
-    /**
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.createHtmlDocument = function () {
-        return document.implementation.createHTMLDocument('fakeTitle');
-    };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getBoundingClientRect = function (el) {
-        try {
-            return el.getBoundingClientRect();
-        }
-        catch (e) {
-            return { top: 0, bottom: 0, left: 0, right: 0, width: 0, height: 0 };
-        }
-    };
-    /**
-     * @param {?} doc
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getTitle = function (doc) { return document.title; };
-    /**
-     * @param {?} doc
-     * @param {?} newTitle
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setTitle = function (doc, newTitle) { document.title = newTitle || ''; };
-    /**
-     * @param {?} n
-     * @param {?} selector
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.elementMatches = function (n, selector) {
-        if (n instanceof HTMLElement) {
-            return n.matches && n.matches(selector) ||
-                n.msMatchesSelector && n.msMatchesSelector(selector) ||
-                n.webkitMatchesSelector && n.webkitMatchesSelector(selector);
-        }
-        return false;
-    };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.isTemplateElement = function (el) {
-        return el instanceof HTMLElement && el.nodeName == 'TEMPLATE';
-    };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.isTextNode = function (node) { return node.nodeType === Node.TEXT_NODE; };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.isCommentNode = function (node) { return node.nodeType === Node.COMMENT_NODE; };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.isElementNode = function (node) { return node.nodeType === Node.ELEMENT_NODE; };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.hasShadowRoot = function (node) {
-        return node.shadowRoot != null && node instanceof HTMLElement;
-    };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.isShadowRoot = function (node) { return node instanceof DocumentFragment; };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.importIntoDoc = function (node) { return document.importNode(this.templateAwareRoot(node), true); };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.adoptNode = function (node) { return document.adoptNode(node); };
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getHref = function (el) { return ((el)).href; };
-    /**
-     * @param {?} event
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getEventKey = function (event) {
-        var /** @type {?} */ key = event.key;
-        if (key == null) {
-            key = event.keyIdentifier;
-            // keyIdentifier is defined in the old draft of DOM Level 3 Events implemented by Chrome and
-            // Safari cf
-            // http://www.w3.org/TR/2007/WD-DOM-Level-3-Events-20071221/events.html#Events-KeyboardEvents-Interfaces
-            if (key == null) {
-                return 'Unidentified';
-            }
-            if (key.startsWith('U+')) {
-                key = String.fromCharCode(parseInt(key.substring(2), 16));
-                if (event.location === DOM_KEY_LOCATION_NUMPAD && _chromeNumKeyPadMap.hasOwnProperty(key)) {
-                    // There is a bug in Chrome for numeric keypad keys:
-                    // https://code.google.com/p/chromium/issues/detail?id=155654
-                    // 1, 2, 3 ... are reported as A, B, C ...
-                    key = ((_chromeNumKeyPadMap))[key];
-                }
-            }
-        }
-        return _keyMap[key] || key;
-    };
-    /**
-     * @param {?} doc
-     * @param {?} target
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getGlobalEventTarget = function (doc, target) {
-        if (target === 'window') {
-            return window;
-        }
-        if (target === 'document') {
-            return document;
-        }
-        if (target === 'body') {
-            return document.body;
-        }
-        return null;
-    };
-    /**
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getHistory = function () { return window.history; };
-    /**
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getLocation = function () { return window.location; };
-    /**
-     * @param {?} doc
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getBaseHref = function (doc) {
-        var /** @type {?} */ href = getBaseElementHref();
-        return href == null ? null : relativePath(href);
-    };
-    /**
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.resetBaseElement = function () { baseElement = null; };
-    /**
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getUserAgent = function () { return window.navigator.userAgent; };
-    /**
-     * @param {?} element
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setData = function (element, name, value) {
-        this.setAttribute(element, 'data-' + name, value);
-    };
-    /**
-     * @param {?} element
-     * @param {?} name
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getData = function (element, name) {
-        return this.getAttribute(element, 'data-' + name);
-    };
-    /**
-     * @param {?} element
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getComputedStyle = function (element) { return getComputedStyle(element); };
-    /**
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.supportsWebAnimation = function () {
-        return typeof ((Element)).prototype['animate'] === 'function';
-    };
-    /**
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.performanceNow = function () {
-        // performance.now() is not available in all browsers, see
-        // http://caniuse.com/#search=performance.now
-        return window.performance && window.performance.now ? window.performance.now() :
-            new Date().getTime();
-    };
-    /**
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.supportsCookies = function () { return true; };
-    /**
-     * @param {?} name
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.getCookie = function (name) { return parseCookieValue(document.cookie, name); };
-    /**
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    BrowserDomAdapter.prototype.setCookie = function (name, value) {
-        // document.cookie is magical, assigning into it assigns/overrides one cookie value, but does
-        // not clear other cookies.
-        document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
-    };
-    return BrowserDomAdapter;
-}(GenericBrowserDomAdapter));
-var baseElement = null;
-/**
- * @return {?}
- */
-function getBaseElementHref() {
-    if (!baseElement) {
-        baseElement = ((document.querySelector('base')));
-        if (!baseElement) {
-            return null;
-        }
-    }
-    return baseElement.getAttribute('href');
-}
-// based on urlUtils.js in AngularJS 1
-var urlParsingNode;
-/**
- * @param {?} url
- * @return {?}
- */
-function relativePath(url) {
-    if (!urlParsingNode) {
-        urlParsingNode = document.createElement('a');
-    }
-    urlParsingNode.setAttribute('href', url);
-    return (urlParsingNode.pathname.charAt(0) === '/') ? urlParsingNode.pathname :
-        '/' + urlParsingNode.pathname;
-}
-/**
- * @param {?} cookieStr
- * @param {?} name
- * @return {?}
- */
-function parseCookieValue(cookieStr, name) {
-    name = encodeURIComponent(name);
-    for (var _i = 0, _a = cookieStr.split(';'); _i < _a.length; _i++) {
-        var cookie = _a[_i];
-        var /** @type {?} */ eqIndex = cookie.indexOf('=');
-        var _b = eqIndex == -1 ? [cookie, ''] : [cookie.slice(0, eqIndex), cookie.slice(eqIndex + 1)], cookieName = _b[0], cookieValue = _b[1];
-        if (cookieName.trim() === name) {
-            return decodeURIComponent(cookieValue);
-        }
-    }
-    return null;
-}
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * A DI Token representing the main rendering context. In a browser this is the DOM Document.
- *
- * Note: Document might not be available in the Application Context when Application and Rendering
- * Contexts are not the same (e.g. when running the application into a Web Worker).
- *
- * \@deprecated, import from `\@angular/common` instead.
- */
-var DOCUMENT$1 = __WEBPACK_IMPORTED_MODULE_1__angular_common__["DOCUMENT"];
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- * @return {?}
- */
-function supportsState() {
-    return !!window.history.pushState;
-}
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * `PlatformLocation` encapsulates all of the direct calls to platform APIs.
- * This class should not be used directly by an application developer. Instead, use
- * {\@link Location}.
- */
-var BrowserPlatformLocation = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](BrowserPlatformLocation, _super);
-    /**
-     * @param {?} _doc
-     */
-    function BrowserPlatformLocation(_doc) {
-        var _this = _super.call(this) || this;
-        _this._doc = _doc;
-        _this._init();
-        return _this;
-    }
-    /**
-     * \@internal
-     * @return {?}
-     */
-    BrowserPlatformLocation.prototype._init = function () {
-        this._location = getDOM().getLocation();
-        this._history = getDOM().getHistory();
-    };
-    Object.defineProperty(BrowserPlatformLocation.prototype, "location", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this._location; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @return {?}
-     */
-    BrowserPlatformLocation.prototype.getBaseHrefFromDOM = function () { return ((getDOM().getBaseHref(this._doc))); };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    BrowserPlatformLocation.prototype.onPopState = function (fn) {
-        getDOM().getGlobalEventTarget(this._doc, 'window').addEventListener('popstate', fn, false);
-    };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    BrowserPlatformLocation.prototype.onHashChange = function (fn) {
-        getDOM().getGlobalEventTarget(this._doc, 'window').addEventListener('hashchange', fn, false);
-    };
-    Object.defineProperty(BrowserPlatformLocation.prototype, "pathname", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this._location.pathname; },
-        /**
-         * @param {?} newPath
-         * @return {?}
-         */
-        set: function (newPath) { this._location.pathname = newPath; },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(BrowserPlatformLocation.prototype, "search", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this._location.search; },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(BrowserPlatformLocation.prototype, "hash", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this._location.hash; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @param {?} state
-     * @param {?} title
-     * @param {?} url
-     * @return {?}
-     */
-    BrowserPlatformLocation.prototype.pushState = function (state, title, url) {
-        if (supportsState()) {
-            this._history.pushState(state, title, url);
-        }
-        else {
-            this._location.hash = url;
-        }
-    };
-    /**
-     * @param {?} state
-     * @param {?} title
-     * @param {?} url
-     * @return {?}
-     */
-    BrowserPlatformLocation.prototype.replaceState = function (state, title, url) {
-        if (supportsState()) {
-            this._history.replaceState(state, title, url);
-        }
-        else {
-            this._location.hash = url;
-        }
-    };
-    /**
-     * @return {?}
-     */
-    BrowserPlatformLocation.prototype.forward = function () { this._history.forward(); };
-    /**
-     * @return {?}
-     */
-    BrowserPlatformLocation.prototype.back = function () { this._history.back(); };
-    return BrowserPlatformLocation;
-}(__WEBPACK_IMPORTED_MODULE_1__angular_common__["PlatformLocation"]));
-BrowserPlatformLocation.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-BrowserPlatformLocation.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * A service that can be used to get and add meta tags.
- *
- * \@experimental
- */
-var Meta = (function () {
-    /**
-     * @param {?} _doc
-     */
-    function Meta(_doc) {
-        this._doc = _doc;
-        this._dom = getDOM();
-    }
-    /**
-     * @param {?} tag
-     * @param {?=} forceCreation
-     * @return {?}
-     */
-    Meta.prototype.addTag = function (tag, forceCreation) {
-        if (forceCreation === void 0) { forceCreation = false; }
-        if (!tag)
-            return null;
-        return this._getOrCreateElement(tag, forceCreation);
-    };
-    /**
-     * @param {?} tags
-     * @param {?=} forceCreation
-     * @return {?}
-     */
-    Meta.prototype.addTags = function (tags, forceCreation) {
-        var _this = this;
-        if (forceCreation === void 0) { forceCreation = false; }
-        if (!tags)
-            return [];
-        return tags.reduce(function (result, tag) {
-            if (tag) {
-                result.push(_this._getOrCreateElement(tag, forceCreation));
-            }
-            return result;
-        }, []);
-    };
-    /**
-     * @param {?} attrSelector
-     * @return {?}
-     */
-    Meta.prototype.getTag = function (attrSelector) {
-        if (!attrSelector)
-            return null;
-        return this._dom.querySelector(this._doc, "meta[" + attrSelector + "]");
-    };
-    /**
-     * @param {?} attrSelector
-     * @return {?}
-     */
-    Meta.prototype.getTags = function (attrSelector) {
-        if (!attrSelector)
-            return [];
-        var /** @type {?} */ list /*NodeList*/ = this._dom.querySelectorAll(this._doc, "meta[" + attrSelector + "]");
-        return list ? [].slice.call(list) : [];
-    };
-    /**
-     * @param {?} tag
-     * @param {?=} selector
-     * @return {?}
-     */
-    Meta.prototype.updateTag = function (tag, selector) {
-        if (!tag)
-            return null;
-        selector = selector || this._parseSelector(tag);
-        var /** @type {?} */ meta = ((this.getTag(selector)));
-        if (meta) {
-            return this._setMetaElementAttributes(tag, meta);
-        }
-        return this._getOrCreateElement(tag, true);
-    };
-    /**
-     * @param {?} attrSelector
-     * @return {?}
-     */
-    Meta.prototype.removeTag = function (attrSelector) { this.removeTagElement(/** @type {?} */ ((this.getTag(attrSelector)))); };
-    /**
-     * @param {?} meta
-     * @return {?}
-     */
-    Meta.prototype.removeTagElement = function (meta) {
-        if (meta) {
-            this._dom.remove(meta);
-        }
-    };
-    /**
-     * @param {?} meta
-     * @param {?=} forceCreation
-     * @return {?}
-     */
-    Meta.prototype._getOrCreateElement = function (meta, forceCreation) {
-        if (forceCreation === void 0) { forceCreation = false; }
-        if (!forceCreation) {
-            var /** @type {?} */ selector = this._parseSelector(meta);
-            var /** @type {?} */ elem = ((this.getTag(selector)));
-            // It's allowed to have multiple elements with the same name so it's not enough to
-            // just check that element with the same name already present on the page. We also need to
-            // check if element has tag attributes
-            if (elem && this._containsAttributes(meta, elem))
-                return elem;
-        }
-        var /** @type {?} */ element = (this._dom.createElement('meta'));
-        this._setMetaElementAttributes(meta, element);
-        var /** @type {?} */ head = this._dom.getElementsByTagName(this._doc, 'head')[0];
-        this._dom.appendChild(head, element);
-        return element;
-    };
-    /**
-     * @param {?} tag
-     * @param {?} el
-     * @return {?}
-     */
-    Meta.prototype._setMetaElementAttributes = function (tag, el) {
-        var _this = this;
-        Object.keys(tag).forEach(function (prop) { return _this._dom.setAttribute(el, prop, tag[prop]); });
-        return el;
-    };
-    /**
-     * @param {?} tag
-     * @return {?}
-     */
-    Meta.prototype._parseSelector = function (tag) {
-        var /** @type {?} */ attr = tag.name ? 'name' : 'property';
-        return attr + "=\"" + tag[attr] + "\"";
-    };
-    /**
-     * @param {?} tag
-     * @param {?} elem
-     * @return {?}
-     */
-    Meta.prototype._containsAttributes = function (tag, elem) {
-        var _this = this;
-        return Object.keys(tag).every(function (key) { return _this._dom.getAttribute(elem, key) === tag[key]; });
-    };
-    return Meta;
-}());
-Meta.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-Meta.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * An id that identifies a particular application being bootstrapped, that should
- * match across the client/server boundary.
- */
-var TRANSITION_ID = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["InjectionToken"]('TRANSITION_ID');
-/**
- * @param {?} transitionId
- * @param {?} document
- * @param {?} injector
- * @return {?}
- */
-function appInitializerFactory(transitionId, document, injector) {
-    return function () {
-        // Wait for all application initializers to be completed before removing the styles set by
-        // the server.
-        injector.get(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ApplicationInitStatus"]).donePromise.then(function () {
-            var /** @type {?} */ dom = getDOM();
-            var /** @type {?} */ styles = Array.prototype.slice.apply(dom.querySelectorAll(document, "style[ng-transition]"));
-            styles.filter(function (el) { return dom.getAttribute(el, 'ng-transition') === transitionId; })
-                .forEach(function (el) { return dom.remove(el); });
-        });
-    };
-}
-var SERVER_TRANSITION_PROVIDERS = [
-    {
-        provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["APP_INITIALIZER"],
-        useFactory: appInitializerFactory,
-        deps: [TRANSITION_ID, DOCUMENT$1, __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injector"]],
-        multi: true
-    },
-];
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var BrowserGetTestability = (function () {
-    function BrowserGetTestability() {
-    }
-    /**
-     * @return {?}
-     */
-    BrowserGetTestability.init = function () { __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["setTestabilityGetter"])(new BrowserGetTestability()); };
-    /**
-     * @param {?} registry
-     * @return {?}
-     */
-    BrowserGetTestability.prototype.addToWindow = function (registry) {
-        __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['getAngularTestability'] = function (elem, findInAncestors) {
-            if (findInAncestors === void 0) { findInAncestors = true; }
-            var /** @type {?} */ testability = registry.findTestabilityInTree(elem, findInAncestors);
-            if (testability == null) {
-                throw new Error('Could not find testability for element.');
-            }
-            return testability;
-        };
-        __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['getAllAngularTestabilities'] = function () { return registry.getAllTestabilities(); };
-        __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['getAllAngularRootElements'] = function () { return registry.getAllRootElements(); };
-        var /** @type {?} */ whenAllStable = function (callback /** TODO #9100 */) {
-            var /** @type {?} */ testabilities = __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['getAllAngularTestabilities']();
-            var /** @type {?} */ count = testabilities.length;
-            var /** @type {?} */ didWork = false;
-            var /** @type {?} */ decrement = function (didWork_ /** TODO #9100 */) {
-                didWork = didWork || didWork_;
-                count--;
-                if (count == 0) {
-                    callback(didWork);
-                }
-            };
-            testabilities.forEach(function (testability /** TODO #9100 */) {
-                testability.whenStable(decrement);
-            });
-        };
-        if (!__WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['frameworkStabilizers']) {
-            __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['frameworkStabilizers'] = [];
-        }
-        __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['frameworkStabilizers'].push(whenAllStable);
-    };
-    /**
-     * @param {?} registry
-     * @param {?} elem
-     * @param {?} findInAncestors
-     * @return {?}
-     */
-    BrowserGetTestability.prototype.findTestabilityInTree = function (registry, elem, findInAncestors) {
-        if (elem == null) {
-            return null;
-        }
-        var /** @type {?} */ t = registry.getTestability(elem);
-        if (t != null) {
-            return t;
-        }
-        else if (!findInAncestors) {
-            return null;
-        }
-        if (getDOM().isShadowRoot(elem)) {
-            return this.findTestabilityInTree(registry, getDOM().getHost(elem), true);
-        }
-        return this.findTestabilityInTree(registry, getDOM().parentElement(elem), true);
-    };
-    return BrowserGetTestability;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * A service that can be used to get and set the title of a current HTML document.
- *
- * Since an Angular application can't be bootstrapped on the entire HTML document (`<html>` tag)
- * it is not possible to bind to the `text` property of the `HTMLTitleElement` elements
- * (representing the `<title>` tag). Instead, this service can be used to set and get the current
- * title value.
- *
- * \@experimental
- */
-var Title = (function () {
-    /**
-     * @param {?} _doc
-     */
-    function Title(_doc) {
-        this._doc = _doc;
-    }
-    /**
-     * Get the title of the current HTML document.
-     * @return {?}
-     */
-    Title.prototype.getTitle = function () { return getDOM().getTitle(this._doc); };
-    /**
-     * Set the title of the current HTML document.
-     * @param {?} newTitle
-     * @return {?}
-     */
-    Title.prototype.setTitle = function (newTitle) { getDOM().setTitle(this._doc, newTitle); };
-    return Title;
-}());
-Title.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-Title.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @param {?} input
- * @return {?}
- */
-/**
- * @param {?} input
- * @return {?}
- */
-/**
- * Exports the value under a given `name` in the global property `ng`. For example `ng.probe` if
- * `name` is `'probe'`.
- * @param {?} name Name under which it will be exported. Keep in mind this will be a property of the
- * global `ng` object.
- * @param {?} value The value to export.
- * @return {?}
- */
-function exportNgVar(name, value) {
-    if (!ng) {
-        __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['ng'] = ng = ((__WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['ng'])) || {};
-    }
-    ng[name] = value;
-}
-var ng;
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var CORE_TOKENS = {
-    'ApplicationRef': __WEBPACK_IMPORTED_MODULE_2__angular_core__["ApplicationRef"],
-    'NgZone': __WEBPACK_IMPORTED_MODULE_2__angular_core__["NgZone"],
-};
-var INSPECT_GLOBAL_NAME = 'probe';
-var CORE_TOKENS_GLOBAL_NAME = 'coreTokens';
-/**
- * Returns a {\@link DebugElement} for the given native DOM element, or
- * null if the given native element does not have an Angular view associated
- * with it.
- * @param {?} element
- * @return {?}
- */
-function inspectNativeElement(element) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["getDebugNode"])(element);
-}
-/**
- * Deprecated. Use the one from '\@angular/core'.
- * @deprecated
- */
-var NgProbeToken$1 = (function () {
-    /**
-     * @param {?} name
-     * @param {?} token
-     */
-    function NgProbeToken$1(name, token) {
-        this.name = name;
-        this.token = token;
-    }
-    return NgProbeToken$1;
-}());
-/**
- * @param {?} extraTokens
- * @param {?} coreTokens
- * @return {?}
- */
-function _createNgProbe(extraTokens, coreTokens) {
-    var /** @type {?} */ tokens = (extraTokens || []).concat(coreTokens || []);
-    exportNgVar(INSPECT_GLOBAL_NAME, inspectNativeElement);
-    exportNgVar(CORE_TOKENS_GLOBAL_NAME, Object.assign({}, CORE_TOKENS, _ngProbeTokensToMap(tokens || [])));
-    return function () { return inspectNativeElement; };
-}
-/**
- * @param {?} tokens
- * @return {?}
- */
-function _ngProbeTokensToMap(tokens) {
-    return tokens.reduce(function (prev, t) { return (prev[t.name] = t.token, prev); }, {});
-}
-/**
- * Providers which support debugging Angular applications (e.g. via `ng.probe`).
- */
-var ELEMENT_PROBE_PROVIDERS = [
-    {
-        provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["APP_INITIALIZER"],
-        useFactory: _createNgProbe,
-        deps: [
-            [NgProbeToken$1, new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Optional"]()],
-            [__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgProbeToken"], new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Optional"]()],
-        ],
-        multi: true,
-    },
-];
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * \@stable
- */
-var EVENT_MANAGER_PLUGINS = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["InjectionToken"]('EventManagerPlugins');
-/**
- * \@stable
- */
-var EventManager = (function () {
-    /**
-     * @param {?} plugins
-     * @param {?} _zone
-     */
-    function EventManager(plugins, _zone) {
-        var _this = this;
-        this._zone = _zone;
-        this._eventNameToPlugin = new Map();
-        plugins.forEach(function (p) { return p.manager = _this; });
-        this._plugins = plugins.slice().reverse();
-    }
-    /**
-     * @param {?} element
-     * @param {?} eventName
-     * @param {?} handler
-     * @return {?}
-     */
-    EventManager.prototype.addEventListener = function (element, eventName, handler) {
-        var /** @type {?} */ plugin = this._findPluginFor(eventName);
-        return plugin.addEventListener(element, eventName, handler);
-    };
-    /**
-     * @param {?} target
-     * @param {?} eventName
-     * @param {?} handler
-     * @return {?}
-     */
-    EventManager.prototype.addGlobalEventListener = function (target, eventName, handler) {
-        var /** @type {?} */ plugin = this._findPluginFor(eventName);
-        return plugin.addGlobalEventListener(target, eventName, handler);
-    };
-    /**
-     * @return {?}
-     */
-    EventManager.prototype.getZone = function () { return this._zone; };
-    /**
-     * \@internal
-     * @param {?} eventName
-     * @return {?}
-     */
-    EventManager.prototype._findPluginFor = function (eventName) {
-        var /** @type {?} */ plugin = this._eventNameToPlugin.get(eventName);
-        if (plugin) {
-            return plugin;
-        }
-        var /** @type {?} */ plugins = this._plugins;
-        for (var /** @type {?} */ i = 0; i < plugins.length; i++) {
-            var /** @type {?} */ plugin_1 = plugins[i];
-            if (plugin_1.supports(eventName)) {
-                this._eventNameToPlugin.set(eventName, plugin_1);
-                return plugin_1;
-            }
-        }
-        throw new Error("No event manager plugin found for event " + eventName);
-    };
-    return EventManager;
-}());
-EventManager.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-EventManager.ctorParameters = function () { return [
-    { type: Array, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [EVENT_MANAGER_PLUGINS,] },] },
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["NgZone"], },
-]; };
-/**
- * @abstract
- */
-var EventManagerPlugin = (function () {
-    /**
-     * @param {?} _doc
-     */
-    function EventManagerPlugin(_doc) {
-        this._doc = _doc;
-    }
-    /**
-     * @abstract
-     * @param {?} eventName
-     * @return {?}
-     */
-    EventManagerPlugin.prototype.supports = function (eventName) { };
-    /**
-     * @abstract
-     * @param {?} element
-     * @param {?} eventName
-     * @param {?} handler
-     * @return {?}
-     */
-    EventManagerPlugin.prototype.addEventListener = function (element, eventName, handler) { };
-    /**
-     * @param {?} element
-     * @param {?} eventName
-     * @param {?} handler
-     * @return {?}
-     */
-    EventManagerPlugin.prototype.addGlobalEventListener = function (element, eventName, handler) {
-        var /** @type {?} */ target = getDOM().getGlobalEventTarget(this._doc, element);
-        if (!target) {
-            throw new Error("Unsupported event target " + target + " for event " + eventName);
-        }
-        return this.addEventListener(target, eventName, handler);
-    };
-    ;
-    return EventManagerPlugin;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var SharedStylesHost = (function () {
-    function SharedStylesHost() {
-        /**
-         * \@internal
-         */
-        this._stylesSet = new Set();
-    }
-    /**
-     * @param {?} styles
-     * @return {?}
-     */
-    SharedStylesHost.prototype.addStyles = function (styles) {
-        var _this = this;
-        var /** @type {?} */ additions = new Set();
-        styles.forEach(function (style) {
-            if (!_this._stylesSet.has(style)) {
-                _this._stylesSet.add(style);
-                additions.add(style);
-            }
-        });
-        this.onStylesAdded(additions);
-    };
-    /**
-     * @param {?} additions
-     * @return {?}
-     */
-    SharedStylesHost.prototype.onStylesAdded = function (additions) { };
-    /**
-     * @return {?}
-     */
-    SharedStylesHost.prototype.getAllStyles = function () { return Array.from(this._stylesSet); };
-    return SharedStylesHost;
-}());
-SharedStylesHost.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-SharedStylesHost.ctorParameters = function () { return []; };
-var DomSharedStylesHost = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](DomSharedStylesHost, _super);
-    /**
-     * @param {?} _doc
-     */
-    function DomSharedStylesHost(_doc) {
-        var _this = _super.call(this) || this;
-        _this._doc = _doc;
-        _this._hostNodes = new Set();
-        _this._styleNodes = new Set();
-        _this._hostNodes.add(_doc.head);
-        return _this;
-    }
-    /**
-     * @param {?} styles
-     * @param {?} host
-     * @return {?}
-     */
-    DomSharedStylesHost.prototype._addStylesToHost = function (styles, host) {
-        var _this = this;
-        styles.forEach(function (style) {
-            var /** @type {?} */ styleEl = _this._doc.createElement('style');
-            styleEl.textContent = style;
-            _this._styleNodes.add(host.appendChild(styleEl));
-        });
-    };
-    /**
-     * @param {?} hostNode
-     * @return {?}
-     */
-    DomSharedStylesHost.prototype.addHost = function (hostNode) {
-        this._addStylesToHost(this._stylesSet, hostNode);
-        this._hostNodes.add(hostNode);
-    };
-    /**
-     * @param {?} hostNode
-     * @return {?}
-     */
-    DomSharedStylesHost.prototype.removeHost = function (hostNode) { this._hostNodes.delete(hostNode); };
-    /**
-     * @param {?} additions
-     * @return {?}
-     */
-    DomSharedStylesHost.prototype.onStylesAdded = function (additions) {
-        var _this = this;
-        this._hostNodes.forEach(function (hostNode) { return _this._addStylesToHost(additions, hostNode); });
-    };
-    /**
-     * @return {?}
-     */
-    DomSharedStylesHost.prototype.ngOnDestroy = function () { this._styleNodes.forEach(function (styleNode) { return getDOM().remove(styleNode); }); };
-    return DomSharedStylesHost;
-}(SharedStylesHost));
-DomSharedStylesHost.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-DomSharedStylesHost.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var NAMESPACE_URIS = {
-    'svg': 'http://www.w3.org/2000/svg',
-    'xhtml': 'http://www.w3.org/1999/xhtml',
-    'xlink': 'http://www.w3.org/1999/xlink',
-    'xml': 'http://www.w3.org/XML/1998/namespace',
-    'xmlns': 'http://www.w3.org/2000/xmlns/',
-};
-var COMPONENT_REGEX = /%COMP%/g;
-var COMPONENT_VARIABLE = '%COMP%';
-var HOST_ATTR = "_nghost-" + COMPONENT_VARIABLE;
-var CONTENT_ATTR = "_ngcontent-" + COMPONENT_VARIABLE;
-/**
- * @param {?} componentShortId
- * @return {?}
- */
-function shimContentAttribute(componentShortId) {
-    return CONTENT_ATTR.replace(COMPONENT_REGEX, componentShortId);
-}
-/**
- * @param {?} componentShortId
- * @return {?}
- */
-function shimHostAttribute(componentShortId) {
-    return HOST_ATTR.replace(COMPONENT_REGEX, componentShortId);
-}
-/**
- * @param {?} compId
- * @param {?} styles
- * @param {?} target
- * @return {?}
- */
-function flattenStyles(compId, styles, target) {
-    for (var /** @type {?} */ i = 0; i < styles.length; i++) {
-        var /** @type {?} */ style = styles[i];
-        if (Array.isArray(style)) {
-            flattenStyles(compId, style, target);
-        }
-        else {
-            style = style.replace(COMPONENT_REGEX, compId);
-            target.push(style);
-        }
-    }
-    return target;
-}
-/**
- * @param {?} eventHandler
- * @return {?}
- */
-function decoratePreventDefault(eventHandler) {
-    return function (event) {
-        var /** @type {?} */ allowDefaultBehavior = eventHandler(event);
-        if (allowDefaultBehavior === false) {
-            // TODO(tbosch): move preventDefault into event plugins...
-            event.preventDefault();
-            event.returnValue = false;
-        }
-    };
-}
-var DomRendererFactory2 = (function () {
-    /**
-     * @param {?} eventManager
-     * @param {?} sharedStylesHost
-     */
-    function DomRendererFactory2(eventManager, sharedStylesHost) {
-        this.eventManager = eventManager;
-        this.sharedStylesHost = sharedStylesHost;
-        this.rendererByCompId = new Map();
-        this.defaultRenderer = new DefaultDomRenderer2(eventManager);
-    }
-    ;
-    /**
-     * @param {?} element
-     * @param {?} type
-     * @return {?}
-     */
-    DomRendererFactory2.prototype.createRenderer = function (element, type) {
-        if (!element || !type) {
-            return this.defaultRenderer;
-        }
-        switch (type.encapsulation) {
-            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewEncapsulation"].Emulated: {
-                var /** @type {?} */ renderer = this.rendererByCompId.get(type.id);
-                if (!renderer) {
-                    renderer =
-                        new EmulatedEncapsulationDomRenderer2(this.eventManager, this.sharedStylesHost, type);
-                    this.rendererByCompId.set(type.id, renderer);
-                }
-                ((renderer)).applyToHost(element);
-                return renderer;
-            }
-            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewEncapsulation"].Native:
-                return new ShadowDomRenderer(this.eventManager, this.sharedStylesHost, element, type);
-            default: {
-                if (!this.rendererByCompId.has(type.id)) {
-                    var /** @type {?} */ styles = flattenStyles(type.id, type.styles, []);
-                    this.sharedStylesHost.addStyles(styles);
-                    this.rendererByCompId.set(type.id, this.defaultRenderer);
-                }
-                return this.defaultRenderer;
-            }
-        }
-    };
-    /**
-     * @return {?}
-     */
-    DomRendererFactory2.prototype.begin = function () { };
-    /**
-     * @return {?}
-     */
-    DomRendererFactory2.prototype.end = function () { };
-    return DomRendererFactory2;
-}());
-DomRendererFactory2.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-DomRendererFactory2.ctorParameters = function () { return [
-    { type: EventManager, },
-    { type: DomSharedStylesHost, },
-]; };
-var DefaultDomRenderer2 = (function () {
-    /**
-     * @param {?} eventManager
-     */
-    function DefaultDomRenderer2(eventManager) {
-        this.eventManager = eventManager;
-        this.data = Object.create(null);
-    }
-    /**
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.destroy = function () { };
-    /**
-     * @param {?} name
-     * @param {?=} namespace
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.createElement = function (name, namespace) {
-        if (namespace) {
-            return document.createElementNS(NAMESPACE_URIS[namespace], name);
-        }
-        return document.createElement(name);
-    };
-    /**
-     * @param {?} value
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.createComment = function (value) { return document.createComment(value); };
-    /**
-     * @param {?} value
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.createText = function (value) { return document.createTextNode(value); };
-    /**
-     * @param {?} parent
-     * @param {?} newChild
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.appendChild = function (parent, newChild) { parent.appendChild(newChild); };
-    /**
-     * @param {?} parent
-     * @param {?} newChild
-     * @param {?} refChild
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.insertBefore = function (parent, newChild, refChild) {
-        if (parent) {
-            parent.insertBefore(newChild, refChild);
-        }
-    };
-    /**
-     * @param {?} parent
-     * @param {?} oldChild
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.removeChild = function (parent, oldChild) {
-        if (parent) {
-            parent.removeChild(oldChild);
-        }
-    };
-    /**
-     * @param {?} selectorOrNode
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.selectRootElement = function (selectorOrNode) {
-        var /** @type {?} */ el = typeof selectorOrNode === 'string' ? document.querySelector(selectorOrNode) :
-            selectorOrNode;
-        if (!el) {
-            throw new Error("The selector \"" + selectorOrNode + "\" did not match any elements");
-        }
-        el.textContent = '';
-        return el;
-    };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.parentNode = function (node) { return node.parentNode; };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.nextSibling = function (node) { return node.nextSibling; };
-    /**
-     * @param {?} el
-     * @param {?} name
-     * @param {?} value
-     * @param {?=} namespace
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.setAttribute = function (el, name, value, namespace) {
-        if (namespace) {
-            name = namespace + ":" + name;
-            var /** @type {?} */ namespaceUri = NAMESPACE_URIS[namespace];
-            if (namespaceUri) {
-                el.setAttributeNS(namespaceUri, name, value);
-            }
-            else {
-                el.setAttribute(name, value);
-            }
-        }
-        else {
-            el.setAttribute(name, value);
-        }
-    };
-    /**
-     * @param {?} el
-     * @param {?} name
-     * @param {?=} namespace
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.removeAttribute = function (el, name, namespace) {
-        if (namespace) {
-            var /** @type {?} */ namespaceUri = NAMESPACE_URIS[namespace];
-            if (namespaceUri) {
-                el.removeAttributeNS(namespaceUri, name);
-            }
-            else {
-                el.removeAttribute(namespace + ":" + name);
-            }
-        }
-        else {
-            el.removeAttribute(name);
-        }
-    };
-    /**
-     * @param {?} el
-     * @param {?} name
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.addClass = function (el, name) { el.classList.add(name); };
-    /**
-     * @param {?} el
-     * @param {?} name
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.removeClass = function (el, name) { el.classList.remove(name); };
-    /**
-     * @param {?} el
-     * @param {?} style
-     * @param {?} value
-     * @param {?} flags
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.setStyle = function (el, style, value, flags) {
-        if (flags & __WEBPACK_IMPORTED_MODULE_2__angular_core__["RendererStyleFlags2"].DashCase) {
-            el.style.setProperty(style, value, !!(flags & __WEBPACK_IMPORTED_MODULE_2__angular_core__["RendererStyleFlags2"].Important) ? 'important' : '');
-        }
-        else {
-            el.style[style] = value;
-        }
-    };
-    /**
-     * @param {?} el
-     * @param {?} style
-     * @param {?} flags
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.removeStyle = function (el, style, flags) {
-        if (flags & __WEBPACK_IMPORTED_MODULE_2__angular_core__["RendererStyleFlags2"].DashCase) {
-            el.style.removeProperty(style);
-        }
-        else {
-            // IE requires '' instead of null
-            // see https://github.com/angular/angular/issues/7916
-            el.style[style] = '';
-        }
-    };
-    /**
-     * @param {?} el
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.setProperty = function (el, name, value) {
-        checkNoSyntheticProp(name, 'property');
-        el[name] = value;
-    };
-    /**
-     * @param {?} node
-     * @param {?} value
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.setValue = function (node, value) { node.nodeValue = value; };
-    /**
-     * @param {?} target
-     * @param {?} event
-     * @param {?} callback
-     * @return {?}
-     */
-    DefaultDomRenderer2.prototype.listen = function (target, event, callback) {
-        checkNoSyntheticProp(event, 'listener');
-        if (typeof target === 'string') {
-            return (this.eventManager.addGlobalEventListener(target, event, decoratePreventDefault(callback)));
-        }
-        return ((this.eventManager.addEventListener(target, event, decoratePreventDefault(callback))));
-    };
-    return DefaultDomRenderer2;
-}());
-var AT_CHARCODE = '@'.charCodeAt(0);
-/**
- * @param {?} name
- * @param {?} nameKind
- * @return {?}
- */
-function checkNoSyntheticProp(name, nameKind) {
-    if (name.charCodeAt(0) === AT_CHARCODE) {
-        throw new Error("Found the synthetic " + nameKind + " " + name + ". Please include either \"BrowserAnimationsModule\" or \"NoopAnimationsModule\" in your application.");
-    }
-}
-var EmulatedEncapsulationDomRenderer2 = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](EmulatedEncapsulationDomRenderer2, _super);
-    /**
-     * @param {?} eventManager
-     * @param {?} sharedStylesHost
-     * @param {?} component
-     */
-    function EmulatedEncapsulationDomRenderer2(eventManager, sharedStylesHost, component) {
-        var _this = _super.call(this, eventManager) || this;
-        _this.component = component;
-        var styles = flattenStyles(component.id, component.styles, []);
-        sharedStylesHost.addStyles(styles);
-        _this.contentAttr = shimContentAttribute(component.id);
-        _this.hostAttr = shimHostAttribute(component.id);
-        return _this;
-    }
-    /**
-     * @param {?} element
-     * @return {?}
-     */
-    EmulatedEncapsulationDomRenderer2.prototype.applyToHost = function (element) { _super.prototype.setAttribute.call(this, element, this.hostAttr, ''); };
-    /**
-     * @param {?} parent
-     * @param {?} name
-     * @return {?}
-     */
-    EmulatedEncapsulationDomRenderer2.prototype.createElement = function (parent, name) {
-        var /** @type {?} */ el = _super.prototype.createElement.call(this, parent, name);
-        _super.prototype.setAttribute.call(this, el, this.contentAttr, '');
-        return el;
-    };
-    return EmulatedEncapsulationDomRenderer2;
-}(DefaultDomRenderer2));
-var ShadowDomRenderer = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](ShadowDomRenderer, _super);
-    /**
-     * @param {?} eventManager
-     * @param {?} sharedStylesHost
-     * @param {?} hostEl
-     * @param {?} component
-     */
-    function ShadowDomRenderer(eventManager, sharedStylesHost, hostEl, component) {
-        var _this = _super.call(this, eventManager) || this;
-        _this.sharedStylesHost = sharedStylesHost;
-        _this.hostEl = hostEl;
-        _this.component = component;
-        _this.shadowRoot = hostEl.createShadowRoot();
-        _this.sharedStylesHost.addHost(_this.shadowRoot);
-        var styles = flattenStyles(component.id, component.styles, []);
-        for (var i = 0; i < styles.length; i++) {
-            var styleEl = document.createElement('style');
-            styleEl.textContent = styles[i];
-            _this.shadowRoot.appendChild(styleEl);
-        }
-        return _this;
-    }
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    ShadowDomRenderer.prototype.nodeOrShadowRoot = function (node) { return node === this.hostEl ? this.shadowRoot : node; };
-    /**
-     * @return {?}
-     */
-    ShadowDomRenderer.prototype.destroy = function () { this.sharedStylesHost.removeHost(this.shadowRoot); };
-    /**
-     * @param {?} parent
-     * @param {?} newChild
-     * @return {?}
-     */
-    ShadowDomRenderer.prototype.appendChild = function (parent, newChild) {
-        return _super.prototype.appendChild.call(this, this.nodeOrShadowRoot(parent), newChild);
-    };
-    /**
-     * @param {?} parent
-     * @param {?} newChild
-     * @param {?} refChild
-     * @return {?}
-     */
-    ShadowDomRenderer.prototype.insertBefore = function (parent, newChild, refChild) {
-        return _super.prototype.insertBefore.call(this, this.nodeOrShadowRoot(parent), newChild, refChild);
-    };
-    /**
-     * @param {?} parent
-     * @param {?} oldChild
-     * @return {?}
-     */
-    ShadowDomRenderer.prototype.removeChild = function (parent, oldChild) {
-        return _super.prototype.removeChild.call(this, this.nodeOrShadowRoot(parent), oldChild);
-    };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    ShadowDomRenderer.prototype.parentNode = function (node) {
-        return this.nodeOrShadowRoot(_super.prototype.parentNode.call(this, this.nodeOrShadowRoot(node)));
-    };
-    return ShadowDomRenderer;
-}(DefaultDomRenderer2));
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var DomEventsPlugin = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](DomEventsPlugin, _super);
-    /**
-     * @param {?} doc
-     */
-    function DomEventsPlugin(doc) {
-        return _super.call(this, doc) || this;
-    }
-    /**
-     * @param {?} eventName
-     * @return {?}
-     */
-    DomEventsPlugin.prototype.supports = function (eventName) { return true; };
-    /**
-     * @param {?} element
-     * @param {?} eventName
-     * @param {?} handler
-     * @return {?}
-     */
-    DomEventsPlugin.prototype.addEventListener = function (element, eventName, handler) {
-        element.addEventListener(eventName, /** @type {?} */ (handler), false);
-        return function () { return element.removeEventListener(eventName, /** @type {?} */ (handler), false); };
-    };
-    return DomEventsPlugin;
-}(EventManagerPlugin));
-DomEventsPlugin.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-DomEventsPlugin.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var EVENT_NAMES = {
-    // pan
-    'pan': true,
-    'panstart': true,
-    'panmove': true,
-    'panend': true,
-    'pancancel': true,
-    'panleft': true,
-    'panright': true,
-    'panup': true,
-    'pandown': true,
-    // pinch
-    'pinch': true,
-    'pinchstart': true,
-    'pinchmove': true,
-    'pinchend': true,
-    'pinchcancel': true,
-    'pinchin': true,
-    'pinchout': true,
-    // press
-    'press': true,
-    'pressup': true,
-    // rotate
-    'rotate': true,
-    'rotatestart': true,
-    'rotatemove': true,
-    'rotateend': true,
-    'rotatecancel': true,
-    // swipe
-    'swipe': true,
-    'swipeleft': true,
-    'swiperight': true,
-    'swipeup': true,
-    'swipedown': true,
-    // tap
-    'tap': true,
-};
-/**
- * A DI token that you can use to provide{\@link HammerGestureConfig} to Angular. Use it to configure
- * Hammer gestures.
- *
- * \@experimental
- */
-var HAMMER_GESTURE_CONFIG = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["InjectionToken"]('HammerGestureConfig');
-/**
- * \@experimental
- */
-var HammerGestureConfig = (function () {
-    function HammerGestureConfig() {
-        this.events = [];
-        this.overrides = {};
-    }
-    /**
-     * @param {?} element
-     * @return {?}
-     */
-    HammerGestureConfig.prototype.buildHammer = function (element) {
-        var /** @type {?} */ mc = new Hammer(element);
-        mc.get('pinch').set({ enable: true });
-        mc.get('rotate').set({ enable: true });
-        for (var /** @type {?} */ eventName in this.overrides) {
-            mc.get(eventName).set(this.overrides[eventName]);
-        }
-        return mc;
-    };
-    return HammerGestureConfig;
-}());
-HammerGestureConfig.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-HammerGestureConfig.ctorParameters = function () { return []; };
-var HammerGesturesPlugin = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](HammerGesturesPlugin, _super);
-    /**
-     * @param {?} doc
-     * @param {?} _config
-     */
-    function HammerGesturesPlugin(doc, _config) {
-        var _this = _super.call(this, doc) || this;
-        _this._config = _config;
-        return _this;
-    }
-    /**
-     * @param {?} eventName
-     * @return {?}
-     */
-    HammerGesturesPlugin.prototype.supports = function (eventName) {
-        if (!EVENT_NAMES.hasOwnProperty(eventName.toLowerCase()) && !this.isCustomEvent(eventName)) {
-            return false;
-        }
-        if (!((window)).Hammer) {
-            throw new Error("Hammer.js is not loaded, can not bind " + eventName + " event");
-        }
-        return true;
-    };
-    /**
-     * @param {?} element
-     * @param {?} eventName
-     * @param {?} handler
-     * @return {?}
-     */
-    HammerGesturesPlugin.prototype.addEventListener = function (element, eventName, handler) {
-        var _this = this;
-        var /** @type {?} */ zone = this.manager.getZone();
-        eventName = eventName.toLowerCase();
-        return zone.runOutsideAngular(function () {
-            // Creating the manager bind events, must be done outside of angular
-            var /** @type {?} */ mc = _this._config.buildHammer(element);
-            var /** @type {?} */ callback = function (eventObj) {
-                zone.runGuarded(function () { handler(eventObj); });
-            };
-            mc.on(eventName, callback);
-            return function () { return mc.off(eventName, callback); };
-        });
-    };
-    /**
-     * @param {?} eventName
-     * @return {?}
-     */
-    HammerGesturesPlugin.prototype.isCustomEvent = function (eventName) { return this._config.events.indexOf(eventName) > -1; };
-    return HammerGesturesPlugin;
-}(EventManagerPlugin));
-HammerGesturesPlugin.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-HammerGesturesPlugin.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
-    { type: HammerGestureConfig, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [HAMMER_GESTURE_CONFIG,] },] },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var MODIFIER_KEYS = ['alt', 'control', 'meta', 'shift'];
-var MODIFIER_KEY_GETTERS = {
-    'alt': function (event) { return event.altKey; },
-    'control': function (event) { return event.ctrlKey; },
-    'meta': function (event) { return event.metaKey; },
-    'shift': function (event) { return event.shiftKey; }
-};
-/**
- * \@experimental
- */
-var KeyEventsPlugin = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](KeyEventsPlugin, _super);
-    /**
-     * @param {?} doc
-     */
-    function KeyEventsPlugin(doc) {
-        return _super.call(this, doc) || this;
-    }
-    /**
-     * @param {?} eventName
-     * @return {?}
-     */
-    KeyEventsPlugin.prototype.supports = function (eventName) { return KeyEventsPlugin.parseEventName(eventName) != null; };
-    /**
-     * @param {?} element
-     * @param {?} eventName
-     * @param {?} handler
-     * @return {?}
-     */
-    KeyEventsPlugin.prototype.addEventListener = function (element, eventName, handler) {
-        var /** @type {?} */ parsedEvent = ((KeyEventsPlugin.parseEventName(eventName)));
-        var /** @type {?} */ outsideHandler = KeyEventsPlugin.eventCallback(parsedEvent['fullKey'], handler, this.manager.getZone());
-        return this.manager.getZone().runOutsideAngular(function () {
-            return getDOM().onAndCancel(element, parsedEvent['domEventName'], outsideHandler);
-        });
-    };
-    /**
-     * @param {?} eventName
-     * @return {?}
-     */
-    KeyEventsPlugin.parseEventName = function (eventName) {
-        var /** @type {?} */ parts = eventName.toLowerCase().split('.');
-        var /** @type {?} */ domEventName = parts.shift();
-        if ((parts.length === 0) || !(domEventName === 'keydown' || domEventName === 'keyup')) {
-            return null;
-        }
-        var /** @type {?} */ key = KeyEventsPlugin._normalizeKey(/** @type {?} */ ((parts.pop())));
-        var /** @type {?} */ fullKey = '';
-        MODIFIER_KEYS.forEach(function (modifierName) {
-            var /** @type {?} */ index = parts.indexOf(modifierName);
-            if (index > -1) {
-                parts.splice(index, 1);
-                fullKey += modifierName + '.';
-            }
-        });
-        fullKey += key;
-        if (parts.length != 0 || key.length === 0) {
-            // returning null instead of throwing to let another plugin process the event
-            return null;
-        }
-        var /** @type {?} */ result = {};
-        result['domEventName'] = domEventName;
-        result['fullKey'] = fullKey;
-        return result;
-    };
-    /**
-     * @param {?} event
-     * @return {?}
-     */
-    KeyEventsPlugin.getEventFullKey = function (event) {
-        var /** @type {?} */ fullKey = '';
-        var /** @type {?} */ key = getDOM().getEventKey(event);
-        key = key.toLowerCase();
-        if (key === ' ') {
-            key = 'space'; // for readability
-        }
-        else if (key === '.') {
-            key = 'dot'; // because '.' is used as a separator in event names
-        }
-        MODIFIER_KEYS.forEach(function (modifierName) {
-            if (modifierName != key) {
-                var /** @type {?} */ modifierGetter = MODIFIER_KEY_GETTERS[modifierName];
-                if (modifierGetter(event)) {
-                    fullKey += modifierName + '.';
-                }
-            }
-        });
-        fullKey += key;
-        return fullKey;
-    };
-    /**
-     * @param {?} fullKey
-     * @param {?} handler
-     * @param {?} zone
-     * @return {?}
-     */
-    KeyEventsPlugin.eventCallback = function (fullKey, handler, zone) {
-        return function (event /** TODO #9100 */) {
-            if (KeyEventsPlugin.getEventFullKey(event) === fullKey) {
-                zone.runGuarded(function () { return handler(event); });
-            }
-        };
-    };
-    /**
-     * \@internal
-     * @param {?} keyName
-     * @return {?}
-     */
-    KeyEventsPlugin._normalizeKey = function (keyName) {
-        // TODO: switch to a Map if the mapping grows too much
-        switch (keyName) {
-            case 'esc':
-                return 'escape';
-            default:
-                return keyName;
-        }
-    };
-    return KeyEventsPlugin;
-}(EventManagerPlugin));
-KeyEventsPlugin.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-KeyEventsPlugin.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * A pattern that recognizes a commonly useful subset of URLs that are safe.
- *
- * This regular expression matches a subset of URLs that will not cause script
- * execution if used in URL context within a HTML document. Specifically, this
- * regular expression matches if (comment from here on and regex copied from
- * Soy's EscapingConventions):
- * (1) Either a protocol in a whitelist (http, https, mailto or ftp).
- * (2) or no protocol.  A protocol must be followed by a colon. The below
- *     allows that by allowing colons only after one of the characters [/?#].
- *     A colon after a hash (#) must be in the fragment.
- *     Otherwise, a colon after a (?) must be in a query.
- *     Otherwise, a colon after a single solidus (/) must be in a path.
- *     Otherwise, a colon after a double solidus (//) must be in the authority
- *     (before port).
- *
- * The pattern disallows &, used in HTML entity declarations before
- * one of the characters in [/?#]. This disallows HTML entities used in the
- * protocol name, which should never happen, e.g. "h&#116;tp" for "http".
- * It also disallows HTML entities in the first path part of a relative path,
- * e.g. "foo&lt;bar/baz".  Our existing escaping functions should not produce
- * that. More importantly, it disallows masking of a colon,
- * e.g. "javascript&#58;...".
- *
- * This regular expression was taken from the Closure sanitization library.
- */
-var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
-/**
- * A pattern that matches safe data URLs. Only matches image, video and audio types.
- */
-var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+\/]+=*$/i;
-/**
- * @param {?} url
- * @return {?}
- */
-function sanitizeUrl(url) {
-    url = String(url);
-    if (url.match(SAFE_URL_PATTERN) || url.match(DATA_URL_PATTERN))
-        return url;
-    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])()) {
-        getDOM().log("WARNING: sanitizing unsafe URL value " + url + " (see http://g.co/ng/security#xss)");
-    }
-    return 'unsafe:' + url;
-}
-/**
- * @param {?} srcset
- * @return {?}
- */
-function sanitizeSrcset(srcset) {
-    srcset = String(srcset);
-    return srcset.split(',').map(function (srcset) { return sanitizeUrl(srcset.trim()); }).join(', ');
-}
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * A <body> element that can be safely used to parse untrusted HTML. Lazily initialized below.
- */
-var inertElement = null;
-/**
- * Lazily initialized to make sure the DOM adapter gets set before use.
- */
-var DOM = null;
-/**
- * Returns an HTML element that is guaranteed to not execute code when creating elements in it.
- * @return {?}
- */
-function getInertElement() {
-    if (inertElement)
-        return inertElement;
-    DOM = getDOM();
-    // Prefer using <template> element if supported.
-    var /** @type {?} */ templateEl = DOM.createElement('template');
-    if ('content' in templateEl)
-        return templateEl;
-    var /** @type {?} */ doc = DOM.createHtmlDocument();
-    inertElement = DOM.querySelector(doc, 'body');
-    if (inertElement == null) {
-        // usually there should be only one body element in the document, but IE doesn't have any, so we
-        // need to create one.
-        var /** @type {?} */ html = DOM.createElement('html', doc);
-        inertElement = DOM.createElement('body', doc);
-        DOM.appendChild(html, inertElement);
-        DOM.appendChild(doc, html);
-    }
-    return inertElement;
-}
-/**
- * @param {?} tags
- * @return {?}
- */
-function tagSet(tags) {
-    var /** @type {?} */ res = {};
-    for (var _i = 0, _a = tags.split(','); _i < _a.length; _i++) {
-        var t = _a[_i];
-        res[t] = true;
-    }
-    return res;
-}
-/**
- * @param {...?} sets
- * @return {?}
- */
-function merge() {
-    var sets = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        sets[_i] = arguments[_i];
-    }
-    var /** @type {?} */ res = {};
-    for (var _a = 0, sets_1 = sets; _a < sets_1.length; _a++) {
-        var s = sets_1[_a];
-        for (var /** @type {?} */ v in s) {
-            if (s.hasOwnProperty(v))
-                res[v] = true;
-        }
-    }
-    return res;
-}
-// Good source of info about elements and attributes
-// http://dev.w3.org/html5/spec/Overview.html#semantics
-// http://simon.html5.org/html-elements
-// Safe Void Elements - HTML5
-// http://dev.w3.org/html5/spec/Overview.html#void-elements
-var VOID_ELEMENTS = tagSet('area,br,col,hr,img,wbr');
-// Elements that you can, intentionally, leave open (and which close themselves)
-// http://dev.w3.org/html5/spec/Overview.html#optional-tags
-var OPTIONAL_END_TAG_BLOCK_ELEMENTS = tagSet('colgroup,dd,dt,li,p,tbody,td,tfoot,th,thead,tr');
-var OPTIONAL_END_TAG_INLINE_ELEMENTS = tagSet('rp,rt');
-var OPTIONAL_END_TAG_ELEMENTS = merge(OPTIONAL_END_TAG_INLINE_ELEMENTS, OPTIONAL_END_TAG_BLOCK_ELEMENTS);
-// Safe Block Elements - HTML5
-var BLOCK_ELEMENTS = merge(OPTIONAL_END_TAG_BLOCK_ELEMENTS, tagSet('address,article,' +
-    'aside,blockquote,caption,center,del,details,dialog,dir,div,dl,figure,figcaption,footer,h1,h2,h3,h4,h5,' +
-    'h6,header,hgroup,hr,ins,main,map,menu,nav,ol,pre,section,summary,table,ul'));
-// Inline Elements - HTML5
-var INLINE_ELEMENTS = merge(OPTIONAL_END_TAG_INLINE_ELEMENTS, tagSet('a,abbr,acronym,audio,b,' +
-    'bdi,bdo,big,br,cite,code,del,dfn,em,font,i,img,ins,kbd,label,map,mark,picture,q,ruby,rp,rt,s,' +
-    'samp,small,source,span,strike,strong,sub,sup,time,track,tt,u,var,video'));
-var VALID_ELEMENTS = merge(VOID_ELEMENTS, BLOCK_ELEMENTS, INLINE_ELEMENTS, OPTIONAL_END_TAG_ELEMENTS);
-// Attributes that have href and hence need to be sanitized
-var URI_ATTRS = tagSet('background,cite,href,itemtype,longdesc,poster,src,xlink:href');
-// Attributes that have special href set hence need to be sanitized
-var SRCSET_ATTRS = tagSet('srcset');
-var HTML_ATTRS = tagSet('abbr,accesskey,align,alt,autoplay,axis,bgcolor,border,cellpadding,cellspacing,class,clear,color,cols,colspan,' +
-    'compact,controls,coords,datetime,default,dir,download,face,headers,height,hidden,hreflang,hspace,' +
-    'ismap,itemscope,itemprop,kind,label,lang,language,loop,media,muted,nohref,nowrap,open,preload,rel,rev,role,rows,rowspan,rules,' +
-    'scope,scrolling,shape,size,sizes,span,srclang,start,summary,tabindex,target,title,translate,type,usemap,' +
-    'valign,value,vspace,width');
-// NB: This currently consciously doesn't support SVG. SVG sanitization has had several security
-// issues in the past, so it seems safer to leave it out if possible. If support for binding SVG via
-// innerHTML is required, SVG attributes should be added here.
-// NB: Sanitization does not allow <form> elements or other active elements (<button> etc). Those
-// can be sanitized, but they increase security surface area without a legitimate use case, so they
-// are left out here.
-var VALID_ATTRS = merge(URI_ATTRS, SRCSET_ATTRS, HTML_ATTRS);
-/**
- * SanitizingHtmlSerializer serializes a DOM fragment, stripping out any unsafe elements and unsafe
- * attributes.
- */
-var SanitizingHtmlSerializer = (function () {
-    function SanitizingHtmlSerializer() {
-        this.sanitizedSomething = false;
-        this.buf = [];
-    }
-    /**
-     * @param {?} el
-     * @return {?}
-     */
-    SanitizingHtmlSerializer.prototype.sanitizeChildren = function (el) {
-        // This cannot use a TreeWalker, as it has to run on Angular's various DOM adapters.
-        // However this code never accesses properties off of `document` before deleting its contents
-        // again, so it shouldn't be vulnerable to DOM clobbering.
-        var /** @type {?} */ current = ((el.firstChild));
-        while (current) {
-            if (DOM.isElementNode(current)) {
-                this.startElement(/** @type {?} */ (current));
-            }
-            else if (DOM.isTextNode(current)) {
-                this.chars(/** @type {?} */ ((DOM.nodeValue(current))));
-            }
-            else {
-                // Strip non-element, non-text nodes.
-                this.sanitizedSomething = true;
-            }
-            if (DOM.firstChild(current)) {
-                current = ((DOM.firstChild(current)));
-                continue;
-            }
-            while (current) {
-                // Leaving the element. Walk up and to the right, closing tags as we go.
-                if (DOM.isElementNode(current)) {
-                    this.endElement(/** @type {?} */ (current));
-                }
-                var /** @type {?} */ next = checkClobberedElement(current, /** @type {?} */ ((DOM.nextSibling(current))));
-                if (next) {
-                    current = next;
-                    break;
-                }
-                current = checkClobberedElement(current, /** @type {?} */ ((DOM.parentElement(current))));
-            }
-        }
-        return this.buf.join('');
-    };
-    /**
-     * @param {?} element
-     * @return {?}
-     */
-    SanitizingHtmlSerializer.prototype.startElement = function (element) {
-        var _this = this;
-        var /** @type {?} */ tagName = DOM.nodeName(element).toLowerCase();
-        if (!VALID_ELEMENTS.hasOwnProperty(tagName)) {
-            this.sanitizedSomething = true;
-            return;
-        }
-        this.buf.push('<');
-        this.buf.push(tagName);
-        DOM.attributeMap(element).forEach(function (value, attrName) {
-            var /** @type {?} */ lower = attrName.toLowerCase();
-            if (!VALID_ATTRS.hasOwnProperty(lower)) {
-                _this.sanitizedSomething = true;
-                return;
-            }
-            // TODO(martinprobst): Special case image URIs for data:image/...
-            if (URI_ATTRS[lower])
-                value = sanitizeUrl(value);
-            if (SRCSET_ATTRS[lower])
-                value = sanitizeSrcset(value);
-            _this.buf.push(' ');
-            _this.buf.push(attrName);
-            _this.buf.push('="');
-            _this.buf.push(encodeEntities(value));
-            _this.buf.push('"');
-        });
-        this.buf.push('>');
-    };
-    /**
-     * @param {?} current
-     * @return {?}
-     */
-    SanitizingHtmlSerializer.prototype.endElement = function (current) {
-        var /** @type {?} */ tagName = DOM.nodeName(current).toLowerCase();
-        if (VALID_ELEMENTS.hasOwnProperty(tagName) && !VOID_ELEMENTS.hasOwnProperty(tagName)) {
-            this.buf.push('</');
-            this.buf.push(tagName);
-            this.buf.push('>');
-        }
-    };
-    /**
-     * @param {?} chars
-     * @return {?}
-     */
-    SanitizingHtmlSerializer.prototype.chars = function (chars) { this.buf.push(encodeEntities(chars)); };
-    return SanitizingHtmlSerializer;
-}());
-/**
- * @param {?} node
- * @param {?} nextNode
- * @return {?}
- */
-function checkClobberedElement(node, nextNode) {
-    if (nextNode && DOM.contains(node, nextNode)) {
-        throw new Error("Failed to sanitize html because the element is clobbered: " + DOM.getOuterHTML(node));
-    }
-    return nextNode;
-}
-// Regular Expressions for parsing tags and attributes
-var SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-// ! to ~ is the ASCII range.
-var NON_ALPHANUMERIC_REGEXP = /([^\#-~ |!])/g;
-/**
- * Escapes all potentially dangerous characters, so that the
- * resulting string can be safely inserted into attribute or
- * element text.
- * @param {?} value
- * @return {?}
- */
-function encodeEntities(value) {
-    return value.replace(/&/g, '&amp;')
-        .replace(SURROGATE_PAIR_REGEXP, function (match) {
-        var /** @type {?} */ hi = match.charCodeAt(0);
-        var /** @type {?} */ low = match.charCodeAt(1);
-        return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
-    })
-        .replace(NON_ALPHANUMERIC_REGEXP, function (match) { return '&#' + match.charCodeAt(0) + ';'; })
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
-}
-/**
- * When IE9-11 comes across an unknown namespaced attribute e.g. 'xlink:foo' it adds 'xmlns:ns1'
- * attribute to declare ns1 namespace and prefixes the attribute with 'ns1' (e.g. 'ns1:xlink:foo').
- *
- * This is undesirable since we don't want to allow any of these custom attributes. This method
- * strips them all.
- * @param {?} el
- * @return {?}
- */
-function stripCustomNsAttrs(el) {
-    DOM.attributeMap(el).forEach(function (_, attrName) {
-        if (attrName === 'xmlns:ns1' || attrName.indexOf('ns1:') === 0) {
-            DOM.removeAttribute(el, attrName);
-        }
-    });
-    for (var _i = 0, _a = DOM.childNodesAsList(el); _i < _a.length; _i++) {
-        var n = _a[_i];
-        if (DOM.isElementNode(n))
-            stripCustomNsAttrs(/** @type {?} */ (n));
-    }
-}
-/**
- * Sanitizes the given unsafe, untrusted HTML fragment, and returns HTML text that is safe to add to
- * the DOM in a browser environment.
- * @param {?} defaultDoc
- * @param {?} unsafeHtmlInput
- * @return {?}
- */
-function sanitizeHtml(defaultDoc, unsafeHtmlInput) {
-    try {
-        var /** @type {?} */ containerEl = getInertElement();
-        // Make sure unsafeHtml is actually a string (TypeScript types are not enforced at runtime).
-        var /** @type {?} */ unsafeHtml = unsafeHtmlInput ? String(unsafeHtmlInput) : '';
-        // mXSS protection. Repeatedly parse the document to make sure it stabilizes, so that a browser
-        // trying to auto-correct incorrect HTML cannot cause formerly inert HTML to become dangerous.
-        var /** @type {?} */ mXSSAttempts = 5;
-        var /** @type {?} */ parsedHtml = unsafeHtml;
-        do {
-            if (mXSSAttempts === 0) {
-                throw new Error('Failed to sanitize html because the input is unstable');
-            }
-            mXSSAttempts--;
-            unsafeHtml = parsedHtml;
-            DOM.setInnerHTML(containerEl, unsafeHtml);
-            if (defaultDoc.documentMode) {
-                // strip custom-namespaced attributes on IE<=11
-                stripCustomNsAttrs(containerEl);
-            }
-            parsedHtml = DOM.getInnerHTML(containerEl);
-        } while (unsafeHtml !== parsedHtml);
-        var /** @type {?} */ sanitizer = new SanitizingHtmlSerializer();
-        var /** @type {?} */ safeHtml = sanitizer.sanitizeChildren(DOM.getTemplateContent(containerEl) || containerEl);
-        // Clear out the body element.
-        var /** @type {?} */ parent = DOM.getTemplateContent(containerEl) || containerEl;
-        for (var _i = 0, _a = DOM.childNodesAsList(parent); _i < _a.length; _i++) {
-            var child = _a[_i];
-            DOM.removeChild(parent, child);
-        }
-        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])() && sanitizer.sanitizedSomething) {
-            DOM.log('WARNING: sanitizing HTML stripped some content (see http://g.co/ng/security#xss).');
-        }
-        return safeHtml;
-    }
-    catch (e) {
-        // In case anything goes wrong, clear out inertElement to reset the entire DOM structure.
-        inertElement = null;
-        throw e;
-    }
-}
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Regular expression for safe style values.
- *
- * Quotes (" and ') are allowed, but a check must be done elsewhere to ensure they're balanced.
- *
- * ',' allows multiple values to be assigned to the same property (e.g. background-attachment or
- * font-family) and hence could allow multiple values to get injected, but that should pose no risk
- * of XSS.
- *
- * The function expression checks only for XSS safety, not for CSS validity.
- *
- * This regular expression was taken from the Closure sanitization library, and augmented for
- * transformation values.
- */
-var VALUES = '[-,."\'%_!# a-zA-Z0-9]+';
-var TRANSFORMATION_FNS = '(?:matrix|translate|scale|rotate|skew|perspective)(?:X|Y|3d)?';
-var COLOR_FNS = '(?:rgb|hsl)a?';
-var GRADIENTS = '(?:repeating-)?(?:linear|radial)-gradient';
-var CSS3_FNS = '(?:calc|attr)';
-var FN_ARGS = '\\([-0-9.%, #a-zA-Z]+\\)';
-var SAFE_STYLE_VALUE = new RegExp("^(" + VALUES + "|" +
-    ("(?:" + TRANSFORMATION_FNS + "|" + COLOR_FNS + "|" + GRADIENTS + "|" + CSS3_FNS + ")") +
-    (FN_ARGS + ")$"), 'g');
-/**
- * Matches a `url(...)` value with an arbitrary argument as long as it does
- * not contain parentheses.
- *
- * The URL value still needs to be sanitized separately.
- *
- * `url(...)` values are a very common use case, e.g. for `background-image`. With carefully crafted
- * CSS style rules, it is possible to construct an information leak with `url` values in CSS, e.g.
- * by observing whether scroll bars are displayed, or character ranges used by a font face
- * definition.
- *
- * Angular only allows binding CSS values (as opposed to entire CSS rules), so it is unlikely that
- * binding a URL value without further cooperation from the page will cause an information leak, and
- * if so, it is just a leak, not a full blown XSS vulnerability.
- *
- * Given the common use case, low likelihood of attack vector, and low impact of an attack, this
- * code is permissive and allows URLs that sanitize otherwise.
- */
-var URL_RE = /^url\(([^)]+)\)$/;
-/**
- * Checks that quotes (" and ') are properly balanced inside a string. Assumes
- * that neither escape (\) nor any other character that could result in
- * breaking out of a string parsing context are allowed;
- * see http://www.w3.org/TR/css3-syntax/#string-token-diagram.
- *
- * This code was taken from the Closure sanitization library.
- * @param {?} value
- * @return {?}
- */
-function hasBalancedQuotes(value) {
-    var /** @type {?} */ outsideSingle = true;
-    var /** @type {?} */ outsideDouble = true;
-    for (var /** @type {?} */ i = 0; i < value.length; i++) {
-        var /** @type {?} */ c = value.charAt(i);
-        if (c === '\'' && outsideDouble) {
-            outsideSingle = !outsideSingle;
-        }
-        else if (c === '"' && outsideSingle) {
-            outsideDouble = !outsideDouble;
-        }
-    }
-    return outsideSingle && outsideDouble;
-}
-/**
- * Sanitizes the given untrusted CSS style property value (i.e. not an entire object, just a single
- * value) and returns a value that is safe to use in a browser environment.
- * @param {?} value
- * @return {?}
- */
-function sanitizeStyle(value) {
-    value = String(value).trim(); // Make sure it's actually a string.
-    if (!value)
-        return '';
-    // Single url(...) values are supported, but only for URLs that sanitize cleanly. See above for
-    // reasoning behind this.
-    var /** @type {?} */ urlMatch = value.match(URL_RE);
-    if ((urlMatch && sanitizeUrl(urlMatch[1]) === urlMatch[1]) ||
-        value.match(SAFE_STYLE_VALUE) && hasBalancedQuotes(value)) {
-        return value; // Safe style values.
-    }
-    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])()) {
-        getDOM().log("WARNING: sanitizing unsafe style value " + value + " (see http://g.co/ng/security#xss).");
-    }
-    return 'unsafe';
-}
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * DomSanitizer helps preventing Cross Site Scripting Security bugs (XSS) by sanitizing
- * values to be safe to use in the different DOM contexts.
- *
- * For example, when binding a URL in an `<a [href]="someValue">` hyperlink, `someValue` will be
- * sanitized so that an attacker cannot inject e.g. a `javascript:` URL that would execute code on
- * the website.
- *
- * In specific situations, it might be necessary to disable sanitization, for example if the
- * application genuinely needs to produce a `javascript:` style link with a dynamic value in it.
- * Users can bypass security by constructing a value with one of the `bypassSecurityTrust...`
- * methods, and then binding to that value from the template.
- *
- * These situations should be very rare, and extraordinary care must be taken to avoid creating a
- * Cross Site Scripting (XSS) security bug!
- *
- * When using `bypassSecurityTrust...`, make sure to call the method as early as possible and as
- * close as possible to the source of the value, to make it easy to verify no security bug is
- * created by its use.
- *
- * It is not required (and not recommended) to bypass security if the value is safe, e.g. a URL that
- * does not start with a suspicious protocol, or an HTML snippet that does not contain dangerous
- * code. The sanitizer leaves safe values intact.
- *
- * \@security Calling any of the `bypassSecurityTrust...` APIs disables Angular's built-in
- * sanitization for the value passed in. Carefully check and audit all values and code paths going
- * into this call. Make sure any user data is appropriately escaped for this security context.
- * For more detail, see the [Security Guide](http://g.co/ng/security).
- *
- * \@stable
- * @abstract
- */
-var DomSanitizer = (function () {
-    function DomSanitizer() {
-    }
-    /**
-     * Sanitizes a value for use in the given SecurityContext.
-     *
-     * If value is trusted for the context, this method will unwrap the contained safe value and use
-     * it directly. Otherwise, value will be sanitized to be safe in the given context, for example
-     * by replacing URLs that have an unsafe protocol part (such as `javascript:`). The implementation
-     * is responsible to make sure that the value can definitely be safely used in the given context.
-     * @abstract
-     * @param {?} context
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizer.prototype.sanitize = function (context, value) { };
-    /**
-     * Bypass security and trust the given value to be safe HTML. Only use this when the bound HTML
-     * is unsafe (e.g. contains `<script>` tags) and the code should be executed. The sanitizer will
-     * leave safe HTML intact, so in most situations this method should not be used.
-     *
-     * **WARNING:** calling this method with untrusted user data exposes your application to XSS
-     * security risks!
-     * @abstract
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizer.prototype.bypassSecurityTrustHtml = function (value) { };
-    /**
-     * Bypass security and trust the given value to be safe style value (CSS).
-     *
-     * **WARNING:** calling this method with untrusted user data exposes your application to XSS
-     * security risks!
-     * @abstract
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizer.prototype.bypassSecurityTrustStyle = function (value) { };
-    /**
-     * Bypass security and trust the given value to be safe JavaScript.
-     *
-     * **WARNING:** calling this method with untrusted user data exposes your application to XSS
-     * security risks!
-     * @abstract
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizer.prototype.bypassSecurityTrustScript = function (value) { };
-    /**
-     * Bypass security and trust the given value to be a safe style URL, i.e. a value that can be used
-     * in hyperlinks or `<img src>`.
-     *
-     * **WARNING:** calling this method with untrusted user data exposes your application to XSS
-     * security risks!
-     * @abstract
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizer.prototype.bypassSecurityTrustUrl = function (value) { };
-    /**
-     * Bypass security and trust the given value to be a safe resource URL, i.e. a location that may
-     * be used to load executable code from, like `<script src>`, or `<iframe src>`.
-     *
-     * **WARNING:** calling this method with untrusted user data exposes your application to XSS
-     * security risks!
-     * @abstract
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizer.prototype.bypassSecurityTrustResourceUrl = function (value) { };
-    return DomSanitizer;
-}());
-var DomSanitizerImpl = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](DomSanitizerImpl, _super);
-    /**
-     * @param {?} _doc
-     */
-    function DomSanitizerImpl(_doc) {
-        var _this = _super.call(this) || this;
-        _this._doc = _doc;
-        return _this;
-    }
-    /**
-     * @param {?} ctx
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizerImpl.prototype.sanitize = function (ctx, value) {
-        if (value == null)
-            return null;
-        switch (ctx) {
-            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].NONE:
-                return (value);
-            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].HTML:
-                if (value instanceof SafeHtmlImpl)
-                    return value.changingThisBreaksApplicationSecurity;
-                this.checkNotSafeValue(value, 'HTML');
-                return sanitizeHtml(this._doc, String(value));
-            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].STYLE:
-                if (value instanceof SafeStyleImpl)
-                    return value.changingThisBreaksApplicationSecurity;
-                this.checkNotSafeValue(value, 'Style');
-                return sanitizeStyle(/** @type {?} */ (value));
-            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].SCRIPT:
-                if (value instanceof SafeScriptImpl)
-                    return value.changingThisBreaksApplicationSecurity;
-                this.checkNotSafeValue(value, 'Script');
-                throw new Error('unsafe value used in a script context');
-            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].URL:
-                if (value instanceof SafeResourceUrlImpl || value instanceof SafeUrlImpl) {
-                    // Allow resource URLs in URL contexts, they are strictly more trusted.
-                    return value.changingThisBreaksApplicationSecurity;
-                }
-                this.checkNotSafeValue(value, 'URL');
-                return sanitizeUrl(String(value));
-            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].RESOURCE_URL:
-                if (value instanceof SafeResourceUrlImpl) {
-                    return value.changingThisBreaksApplicationSecurity;
-                }
-                this.checkNotSafeValue(value, 'ResourceURL');
-                throw new Error('unsafe value used in a resource URL context (see http://g.co/ng/security#xss)');
-            default:
-                throw new Error("Unexpected SecurityContext " + ctx + " (see http://g.co/ng/security#xss)");
-        }
-    };
-    /**
-     * @param {?} value
-     * @param {?} expectedType
-     * @return {?}
-     */
-    DomSanitizerImpl.prototype.checkNotSafeValue = function (value, expectedType) {
-        if (value instanceof SafeValueImpl) {
-            throw new Error("Required a safe " + expectedType + ", got a " + value.getTypeName() + " " +
-                "(see http://g.co/ng/security#xss)");
-        }
-    };
-    /**
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizerImpl.prototype.bypassSecurityTrustHtml = function (value) { return new SafeHtmlImpl(value); };
-    /**
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizerImpl.prototype.bypassSecurityTrustStyle = function (value) { return new SafeStyleImpl(value); };
-    /**
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizerImpl.prototype.bypassSecurityTrustScript = function (value) { return new SafeScriptImpl(value); };
-    /**
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizerImpl.prototype.bypassSecurityTrustUrl = function (value) { return new SafeUrlImpl(value); };
-    /**
-     * @param {?} value
-     * @return {?}
-     */
-    DomSanitizerImpl.prototype.bypassSecurityTrustResourceUrl = function (value) {
-        return new SafeResourceUrlImpl(value);
-    };
-    return DomSanitizerImpl;
-}(DomSanitizer));
-DomSanitizerImpl.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-DomSanitizerImpl.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
-]; };
-/**
- * @abstract
- */
-var SafeValueImpl = (function () {
-    /**
-     * @param {?} changingThisBreaksApplicationSecurity
-     */
-    function SafeValueImpl(changingThisBreaksApplicationSecurity) {
-        this.changingThisBreaksApplicationSecurity = changingThisBreaksApplicationSecurity;
-        // empty
-    }
-    /**
-     * @abstract
-     * @return {?}
-     */
-    SafeValueImpl.prototype.getTypeName = function () { };
-    /**
-     * @return {?}
-     */
-    SafeValueImpl.prototype.toString = function () {
-        return "SafeValue must use [property]=binding: " + this.changingThisBreaksApplicationSecurity +
-            " (see http://g.co/ng/security#xss)";
-    };
-    return SafeValueImpl;
-}());
-var SafeHtmlImpl = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](SafeHtmlImpl, _super);
-    function SafeHtmlImpl() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * @return {?}
-     */
-    SafeHtmlImpl.prototype.getTypeName = function () { return 'HTML'; };
-    return SafeHtmlImpl;
-}(SafeValueImpl));
-var SafeStyleImpl = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](SafeStyleImpl, _super);
-    function SafeStyleImpl() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * @return {?}
-     */
-    SafeStyleImpl.prototype.getTypeName = function () { return 'Style'; };
-    return SafeStyleImpl;
-}(SafeValueImpl));
-var SafeScriptImpl = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](SafeScriptImpl, _super);
-    function SafeScriptImpl() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * @return {?}
-     */
-    SafeScriptImpl.prototype.getTypeName = function () { return 'Script'; };
-    return SafeScriptImpl;
-}(SafeValueImpl));
-var SafeUrlImpl = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](SafeUrlImpl, _super);
-    function SafeUrlImpl() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * @return {?}
-     */
-    SafeUrlImpl.prototype.getTypeName = function () { return 'URL'; };
-    return SafeUrlImpl;
-}(SafeValueImpl));
-var SafeResourceUrlImpl = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](SafeResourceUrlImpl, _super);
-    function SafeResourceUrlImpl() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * @return {?}
-     */
-    SafeResourceUrlImpl.prototype.getTypeName = function () { return 'ResourceURL'; };
-    return SafeResourceUrlImpl;
-}(SafeValueImpl));
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var INTERNAL_BROWSER_PLATFORM_PROVIDERS = [
-    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["PLATFORM_ID"], useValue: __WEBPACK_IMPORTED_MODULE_1__angular_common__["ɵPLATFORM_BROWSER_ID"] },
-    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["PLATFORM_INITIALIZER"], useValue: initDomAdapter, multi: true },
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_common__["PlatformLocation"], useClass: BrowserPlatformLocation },
-    { provide: DOCUMENT$1, useFactory: _document, deps: [] },
-];
-/**
- * \@security Replacing built-in sanitization providers exposes the application to XSS risks.
- * Attacker-controlled data introduced by an unsanitized provider could expose your
- * application to XSS risks. For more detail, see the [Security Guide](http://g.co/ng/security).
- * \@experimental
- */
-var BROWSER_SANITIZATION_PROVIDERS = [
-    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Sanitizer"], useExisting: DomSanitizer },
-    { provide: DomSanitizer, useClass: DomSanitizerImpl },
-];
-/**
- * \@stable
- */
-var platformBrowser = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["createPlatformFactory"])(__WEBPACK_IMPORTED_MODULE_2__angular_core__["platformCore"], 'browser', INTERNAL_BROWSER_PLATFORM_PROVIDERS);
-/**
- * @return {?}
- */
-function initDomAdapter() {
-    BrowserDomAdapter.makeCurrent();
-    BrowserGetTestability.init();
-}
-/**
- * @return {?}
- */
-function errorHandler() {
-    return new __WEBPACK_IMPORTED_MODULE_2__angular_core__["ErrorHandler"]();
-}
-/**
- * @return {?}
- */
-function _document() {
-    return document;
-}
-/**
- * The ng module for the browser.
- *
- * \@stable
- */
-var BrowserModule = (function () {
-    /**
-     * @param {?} parentModule
-     */
-    function BrowserModule(parentModule) {
-        if (parentModule) {
-            throw new Error("BrowserModule has already been loaded. If you need access to common directives such as NgIf and NgFor from a lazy loaded module, import CommonModule instead.");
-        }
-    }
-    /**
-     * Configures a browser-based application to transition from a server-rendered app, if
-     * one is present on the page. The specified parameters must include an application id,
-     * which must match between the client and server applications.
-     *
-     * \@experimental
-     * @param {?} params
-     * @return {?}
-     */
-    BrowserModule.withServerTransition = function (params) {
-        return {
-            ngModule: BrowserModule,
-            providers: [
-                { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["APP_ID"], useValue: params.appId },
-                { provide: TRANSITION_ID, useExisting: __WEBPACK_IMPORTED_MODULE_2__angular_core__["APP_ID"] },
-                SERVER_TRANSITION_PROVIDERS,
-            ],
-        };
-    };
-    return BrowserModule;
-}());
-BrowserModule.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"], args: [{
-                providers: [
-                    BROWSER_SANITIZATION_PROVIDERS,
-                    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["ErrorHandler"], useFactory: errorHandler, deps: [] },
-                    { provide: EVENT_MANAGER_PLUGINS, useClass: DomEventsPlugin, multi: true },
-                    { provide: EVENT_MANAGER_PLUGINS, useClass: KeyEventsPlugin, multi: true },
-                    { provide: EVENT_MANAGER_PLUGINS, useClass: HammerGesturesPlugin, multi: true },
-                    { provide: HAMMER_GESTURE_CONFIG, useClass: HammerGestureConfig },
-                    DomRendererFactory2,
-                    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["RendererFactory2"], useExisting: DomRendererFactory2 },
-                    { provide: SharedStylesHost, useExisting: DomSharedStylesHost },
-                    DomSharedStylesHost,
-                    __WEBPACK_IMPORTED_MODULE_2__angular_core__["Testability"],
-                    EventManager,
-                    ELEMENT_PROBE_PROVIDERS,
-                    Meta,
-                    Title,
-                ],
-                exports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"], __WEBPACK_IMPORTED_MODULE_2__angular_core__["ApplicationModule"]]
-            },] },
-];
-/**
- * @nocollapse
- */
-BrowserModule.ctorParameters = function () { return [
-    { type: BrowserModule, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Optional"] }, { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["SkipSelf"] },] },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var win = typeof window !== 'undefined' && window || {};
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var ChangeDetectionPerfRecord = (function () {
-    /**
-     * @param {?} msPerTick
-     * @param {?} numTicks
-     */
-    function ChangeDetectionPerfRecord(msPerTick, numTicks) {
-        this.msPerTick = msPerTick;
-        this.numTicks = numTicks;
-    }
-    return ChangeDetectionPerfRecord;
-}());
-/**
- * Entry point for all Angular profiling-related debug tools. This object
- * corresponds to the `ng.profiler` in the dev console.
- */
-var AngularProfiler = (function () {
-    /**
-     * @param {?} ref
-     */
-    function AngularProfiler(ref) {
-        this.appRef = ref.injector.get(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ApplicationRef"]);
-    }
-    /**
-     * Exercises change detection in a loop and then prints the average amount of
-     * time in milliseconds how long a single round of change detection takes for
-     * the current state of the UI. It runs a minimum of 5 rounds for a minimum
-     * of 500 milliseconds.
-     *
-     * Optionally, a user may pass a `config` parameter containing a map of
-     * options. Supported options are:
-     *
-     * `record` (boolean) - causes the profiler to record a CPU profile while
-     * it exercises the change detector. Example:
-     *
-     * ```
-     * ng.profiler.timeChangeDetection({record: true})
-     * ```
-     * @param {?} config
-     * @return {?}
-     */
-    AngularProfiler.prototype.timeChangeDetection = function (config) {
-        var /** @type {?} */ record = config && config['record'];
-        var /** @type {?} */ profileName = 'Change Detection';
-        // Profiler is not available in Android browsers, nor in IE 9 without dev tools opened
-        var /** @type {?} */ isProfilerAvailable = win.console.profile != null;
-        if (record && isProfilerAvailable) {
-            win.console.profile(profileName);
-        }
-        var /** @type {?} */ start = getDOM().performanceNow();
-        var /** @type {?} */ numTicks = 0;
-        while (numTicks < 5 || (getDOM().performanceNow() - start) < 500) {
-            this.appRef.tick();
-            numTicks++;
-        }
-        var /** @type {?} */ end = getDOM().performanceNow();
-        if (record && isProfilerAvailable) {
-            // need to cast to <any> because type checker thinks there's no argument
-            // while in fact there is:
-            //
-            // https://developer.mozilla.org/en-US/docs/Web/API/Console/profileEnd
-            ((win.console.profileEnd))(profileName);
-        }
-        var /** @type {?} */ msPerTick = (end - start) / numTicks;
-        win.console.log("ran " + numTicks + " change detection cycles");
-        win.console.log(msPerTick.toFixed(2) + " ms per check");
-        return new ChangeDetectionPerfRecord(msPerTick, numTicks);
-    };
-    return AngularProfiler;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var PROFILER_GLOBAL_NAME = 'profiler';
-/**
- * Enabled Angular debug tools that are accessible via your browser's
- * developer console.
- *
- * Usage:
- *
- * 1. Open developer console (e.g. in Chrome Ctrl + Shift + j)
- * 1. Type `ng.` (usually the console will show auto-complete suggestion)
- * 1. Try the change detection profiler `ng.profiler.timeChangeDetection()`
- *    then hit Enter.
- *
- * \@experimental All debugging apis are currently experimental.
- * @template T
- * @param {?} ref
- * @return {?}
- */
-function enableDebugTools(ref) {
-    exportNgVar(PROFILER_GLOBAL_NAME, new AngularProfiler(ref));
-    return ref;
-}
-/**
- * Disables Angular tools.
- *
- * \@experimental All debugging apis are currently experimental.
- * @return {?}
- */
-function disableDebugTools() {
-    exportNgVar(PROFILER_GLOBAL_NAME, null);
-}
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Predicates for use with {\@link DebugElement}'s query functions.
- *
- * \@experimental All debugging apis are currently experimental.
- */
-var By = (function () {
-    function By() {
-    }
-    /**
-     * Match all elements.
-     *
-     * ## Example
-     *
-     * {\@example platform-browser/dom/debug/ts/by/by.ts region='by_all'}
-     * @return {?}
-     */
-    By.all = function () { return function (debugElement) { return true; }; };
-    /**
-     * Match elements by the given CSS selector.
-     *
-     * ## Example
-     *
-     * {\@example platform-browser/dom/debug/ts/by/by.ts region='by_css'}
-     * @param {?} selector
-     * @return {?}
-     */
-    By.css = function (selector) {
-        return function (debugElement) {
-            return debugElement.nativeElement != null ?
-                getDOM().elementMatches(debugElement.nativeElement, selector) :
-                false;
-        };
-    };
-    /**
-     * Match elements that have the given directive present.
-     *
-     * ## Example
-     *
-     * {\@example platform-browser/dom/debug/ts/by/by.ts region='by_directive'}
-     * @param {?} type
-     * @return {?}
-     */
-    By.directive = function (type) {
-        return function (debugElement) { return ((debugElement.providerTokens)).indexOf(type) !== -1; };
-    };
-    return By;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @module
- * @description
- * Entry point for all public APIs of the common package.
- */
-/**
- * \@stable
- */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.2.6');
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @module
- * @description
- * Entry point for all public APIs of the platform-browser package.
- */
-// This file only reexports content of the `src` folder. Keep it that way.
-/**
- * Generated bundle index. Do not edit.
- */
-
-//# sourceMappingURL=platform-browser.es5.js.map
-
-
-/***/ }),
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var Observable_1 = __webpack_require__(7);
-var Subscriber_1 = __webpack_require__(13);
-var Subscription_1 = __webpack_require__(69);
-var ObjectUnsubscribedError_1 = __webpack_require__(155);
-var SubjectSubscription_1 = __webpack_require__(351);
-var rxSubscriber_1 = __webpack_require__(101);
-/**
- * @class SubjectSubscriber<T>
- */
-var SubjectSubscriber = (function (_super) {
-    __extends(SubjectSubscriber, _super);
-    function SubjectSubscriber(destination) {
-        _super.call(this, destination);
-        this.destination = destination;
-    }
-    return SubjectSubscriber;
-}(Subscriber_1.Subscriber));
-exports.SubjectSubscriber = SubjectSubscriber;
-/**
- * @class Subject<T>
- */
-var Subject = (function (_super) {
-    __extends(Subject, _super);
-    function Subject() {
-        _super.call(this);
-        this.observers = [];
-        this.closed = false;
-        this.isStopped = false;
-        this.hasError = false;
-        this.thrownError = null;
-    }
-    Subject.prototype[rxSubscriber_1.rxSubscriber] = function () {
-        return new SubjectSubscriber(this);
-    };
-    Subject.prototype.lift = function (operator) {
-        var subject = new AnonymousSubject(this, this);
-        subject.operator = operator;
-        return subject;
-    };
-    Subject.prototype.next = function (value) {
-        if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        if (!this.isStopped) {
-            var observers = this.observers;
-            var len = observers.length;
-            var copy = observers.slice();
-            for (var i = 0; i < len; i++) {
-                copy[i].next(value);
-            }
-        }
-    };
-    Subject.prototype.error = function (err) {
-        if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        this.hasError = true;
-        this.thrownError = err;
-        this.isStopped = true;
-        var observers = this.observers;
-        var len = observers.length;
-        var copy = observers.slice();
-        for (var i = 0; i < len; i++) {
-            copy[i].error(err);
-        }
-        this.observers.length = 0;
-    };
-    Subject.prototype.complete = function () {
-        if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        this.isStopped = true;
-        var observers = this.observers;
-        var len = observers.length;
-        var copy = observers.slice();
-        for (var i = 0; i < len; i++) {
-            copy[i].complete();
-        }
-        this.observers.length = 0;
-    };
-    Subject.prototype.unsubscribe = function () {
-        this.isStopped = true;
-        this.closed = true;
-        this.observers = null;
-    };
-    Subject.prototype._trySubscribe = function (subscriber) {
-        if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        else {
-            return _super.prototype._trySubscribe.call(this, subscriber);
-        }
-    };
-    Subject.prototype._subscribe = function (subscriber) {
-        if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        else if (this.hasError) {
-            subscriber.error(this.thrownError);
-            return Subscription_1.Subscription.EMPTY;
-        }
-        else if (this.isStopped) {
-            subscriber.complete();
-            return Subscription_1.Subscription.EMPTY;
-        }
-        else {
-            this.observers.push(subscriber);
-            return new SubjectSubscription_1.SubjectSubscription(this, subscriber);
-        }
-    };
-    Subject.prototype.asObservable = function () {
-        var observable = new Observable_1.Observable();
-        observable.source = this;
-        return observable;
-    };
-    Subject.create = function (destination, source) {
-        return new AnonymousSubject(destination, source);
-    };
-    return Subject;
-}(Observable_1.Observable));
-exports.Subject = Subject;
-/**
- * @class AnonymousSubject<T>
- */
-var AnonymousSubject = (function (_super) {
-    __extends(AnonymousSubject, _super);
-    function AnonymousSubject(destination, source) {
-        _super.call(this);
-        this.destination = destination;
-        this.source = source;
-    }
-    AnonymousSubject.prototype.next = function (value) {
-        var destination = this.destination;
-        if (destination && destination.next) {
-            destination.next(value);
-        }
-    };
-    AnonymousSubject.prototype.error = function (err) {
-        var destination = this.destination;
-        if (destination && destination.error) {
-            this.destination.error(err);
-        }
-    };
-    AnonymousSubject.prototype.complete = function () {
-        var destination = this.destination;
-        if (destination && destination.complete) {
-            this.destination.complete();
-        }
-    };
-    AnonymousSubject.prototype._subscribe = function (subscriber) {
-        var source = this.source;
-        if (source) {
-            return this.source.subscribe(subscriber);
-        }
-        else {
-            return Subscription_1.Subscription.EMPTY;
-        }
-    };
-    return AnonymousSubject;
-}(Subject));
-exports.AnonymousSubject = AnonymousSubject;
-//# sourceMappingURL=Subject.js.map
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
-// CommonJS / Node have global context exposed as "global" variable.
-// We don't want to include the whole node.d.ts this this compilation unit so we'll just fake
-// the global "global" var for now.
-var __window = typeof window !== 'undefined' && window;
-var __self = typeof self !== 'undefined' && typeof WorkerGlobalScope !== 'undefined' &&
-    self instanceof WorkerGlobalScope && self;
-var __global = typeof global !== 'undefined' && global;
-var _root = __window || __global || __self;
-exports.root = _root;
-// Workaround Closure Compiler restriction: The body of a goog.module cannot use throw.
-// This is needed when used with angular/tsickle which inserts a goog.module statement.
-// Wrap in IIFE
-(function () {
-    if (!_root) {
-        throw new Error('RxJS could not find any global context (window, self, global)');
-    }
-})();
-//# sourceMappingURL=root.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(71)))
-
-/***/ }),
-/* 43 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__ = __webpack_require__(359);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__ = __webpack_require__(358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__ = __webpack_require__(369);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__ = __webpack_require__(371);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_concatMap__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_concatMap__ = __webpack_require__(373);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_concatMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_operator_concatMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_every__ = __webpack_require__(364);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_every__ = __webpack_require__(375);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_every___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_operator_every__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_first__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_first__ = __webpack_require__(377);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_first___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs_operator_first__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_operator_map__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_operator_map__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_rxjs_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_mergeMap__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_mergeMap__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_rxjs_operator_mergeMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_reduce__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_reduce__ = __webpack_require__(382);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_reduce___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_rxjs_operator_reduce__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_Observable__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_operator_catch__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_operator_catch__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_rxjs_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_operator_concatAll__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_operator_concatAll__ = __webpack_require__(372);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_operator_concatAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_rxjs_operator_concatAll__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_util_EmptyError__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_util_EmptyError__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_util_EmptyError___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_rxjs_util_EmptyError__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_rxjs_observable_fromPromise__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_rxjs_observable_fromPromise__ = __webpack_require__(154);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_rxjs_observable_fromPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_rxjs_operator_last__ = __webpack_require__(367);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_rxjs_operator_last__ = __webpack_require__(378);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_rxjs_operator_last___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18_rxjs_operator_last__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_rxjs_operator_mergeAll__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_rxjs_operator_mergeAll__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_rxjs_operator_mergeAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_rxjs_operator_mergeAll__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter__ = __webpack_require__(365);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter__ = __webpack_require__(376);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterLink", function() { return RouterLink; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterLinkWithHref", function() { return RouterLinkWithHref; });
@@ -26708,75 +22071,4519 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.2.6'
 
 
 /***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserModule", function() { return BrowserModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "platformBrowser", function() { return platformBrowser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Meta", function() { return Meta; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Title", function() { return Title; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableDebugTools", function() { return disableDebugTools; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableDebugTools", function() { return enableDebugTools; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "By", function() { return By; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgProbeToken", function() { return NgProbeToken$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DOCUMENT", function() { return DOCUMENT$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EVENT_MANAGER_PLUGINS", function() { return EVENT_MANAGER_PLUGINS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventManager", function() { return EventManager; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HAMMER_GESTURE_CONFIG", function() { return HAMMER_GESTURE_CONFIG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HammerGestureConfig", function() { return HammerGestureConfig; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DomSanitizer", function() { return DomSanitizer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBROWSER_SANITIZATION_PROVIDERS", function() { return BROWSER_SANITIZATION_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵINTERNAL_BROWSER_PLATFORM_PROVIDERS", function() { return INTERNAL_BROWSER_PLATFORM_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵinitDomAdapter", function() { return initDomAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBrowserDomAdapter", function() { return BrowserDomAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBrowserPlatformLocation", function() { return BrowserPlatformLocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵTRANSITION_ID", function() { return TRANSITION_ID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBrowserGetTestability", function() { return BrowserGetTestability; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵELEMENT_PROBE_PROVIDERS", function() { return ELEMENT_PROBE_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomAdapter", function() { return DomAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵgetDOM", function() { return getDOM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵsetRootDomAdapter", function() { return setRootDomAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomRendererFactory2", function() { return DomRendererFactory2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵNAMESPACE_URIS", function() { return NAMESPACE_URIS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵflattenStyles", function() { return flattenStyles; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵshimContentAttribute", function() { return shimContentAttribute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵshimHostAttribute", function() { return shimHostAttribute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomEventsPlugin", function() { return DomEventsPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵHammerGesturesPlugin", function() { return HammerGesturesPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵKeyEventsPlugin", function() { return KeyEventsPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomSharedStylesHost", function() { return DomSharedStylesHost; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵSharedStylesHost", function() { return SharedStylesHost; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return _document; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return errorHandler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵh", function() { return GenericBrowserDomAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return SERVER_TRANSITION_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return appInitializerFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return _createNgProbe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return EventManagerPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵe", function() { return DomSanitizerImpl; });
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var Config = (function () {
-    function Config() {
+/**
+ * @license Angular v4.2.6
+ * (c) 2010-2017 Google, Inc. https://angular.io/
+ * License: MIT
+ */
+
+
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var _DOM = ((null));
+/**
+ * @return {?}
+ */
+function getDOM() {
+    return _DOM;
+}
+/**
+ * @param {?} adapter
+ * @return {?}
+ */
+/**
+ * @param {?} adapter
+ * @return {?}
+ */
+function setRootDomAdapter(adapter) {
+    if (!_DOM) {
+        _DOM = adapter;
     }
-    Object.defineProperty(Config, "APP_HOST", {
-        get: function () {
-            return 'http://localhost:8000/';
-        },
+}
+/**
+ * Provides DOM operations in an environment-agnostic way.
+ *
+ * \@security Tread carefully! Interacting with the DOM directly is dangerous and
+ * can introduce XSS risks.
+ * @abstract
+ */
+var DomAdapter = (function () {
+    function DomAdapter() {
+        this.resourceLoaderType = ((null));
+    }
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} name
+     * @return {?}
+     */
+    DomAdapter.prototype.hasProperty = function (element, name) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    DomAdapter.prototype.setProperty = function (el, name, value) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} name
+     * @return {?}
+     */
+    DomAdapter.prototype.getProperty = function (el, name) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} methodName
+     * @param {?} args
+     * @return {?}
+     */
+    DomAdapter.prototype.invoke = function (el, methodName, args) { };
+    /**
+     * @abstract
+     * @param {?} error
+     * @return {?}
+     */
+    DomAdapter.prototype.logError = function (error) { };
+    /**
+     * @abstract
+     * @param {?} error
+     * @return {?}
+     */
+    DomAdapter.prototype.log = function (error) { };
+    /**
+     * @abstract
+     * @param {?} error
+     * @return {?}
+     */
+    DomAdapter.prototype.logGroup = function (error) { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.logGroupEnd = function () { };
+    Object.defineProperty(DomAdapter.prototype, "attrToPropMap", {
+        /**
+         * Maps attribute names to their corresponding property names for cases
+         * where attribute name doesn't match property name.
+         * @return {?}
+         */
+        get: function () { return this._attrToPropMap; },
+        /**
+         * @param {?} value
+         * @return {?}
+         */
+        set: function (value) { this._attrToPropMap = value; },
         enumerable: true,
         configurable: true
     });
     ;
-    Object.defineProperty(Config, "UPLOAD_FOLDER", {
-        get: function () {
-            return this.APP_HOST + "uploads/";
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Config, "API_ROUTE", {
-        get: function () {
-            return {
-                registration: this.APP_HOST + 'utilisateurs/ajouter',
-                user_list: this.APP_HOST + "utilisateurs/liste",
-                user_edit: this.APP_HOST + "utilisateurs/modifier",
-                user_remove: this.APP_HOST + "utilisateurs/supprimer",
-                upload_photo: this.APP_HOST + "utilisateurs/photo",
-                user_default_image: this.UPLOAD_FOLDER + "photos/user.png",
-                loading: this.APP_HOST + "uploads/loading.svg",
-                profil: this.APP_HOST + 'profil',
-                login: this.APP_HOST + "connexion",
-                logout: this.APP_HOST + "logout",
-                roles: this.APP_HOST + "roles"
-            };
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Config, "NOTIFICATION_OPTIONS", {
-        get: function () {
-            return {
-                position: ["middle", "right"],
-                timeOut: 2000,
-                lastOnBottom: true,
-                pauseOnHover: true,
-                clickToClose: true
-            };
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return Config;
+    ;
+    /**
+     * @abstract
+     * @param {?} nodeA
+     * @param {?} nodeB
+     * @return {?}
+     */
+    DomAdapter.prototype.contains = function (nodeA, nodeB) { };
+    /**
+     * @abstract
+     * @param {?} templateHtml
+     * @return {?}
+     */
+    DomAdapter.prototype.parse = function (templateHtml) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} selector
+     * @return {?}
+     */
+    DomAdapter.prototype.querySelector = function (el, selector) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} selector
+     * @return {?}
+     */
+    DomAdapter.prototype.querySelectorAll = function (el, selector) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} evt
+     * @param {?} listener
+     * @return {?}
+     */
+    DomAdapter.prototype.on = function (el, evt, listener) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} evt
+     * @param {?} listener
+     * @return {?}
+     */
+    DomAdapter.prototype.onAndCancel = function (el, evt, listener) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} evt
+     * @return {?}
+     */
+    DomAdapter.prototype.dispatchEvent = function (el, evt) { };
+    /**
+     * @abstract
+     * @param {?} eventType
+     * @return {?}
+     */
+    DomAdapter.prototype.createMouseEvent = function (eventType) { };
+    /**
+     * @abstract
+     * @param {?} eventType
+     * @return {?}
+     */
+    DomAdapter.prototype.createEvent = function (eventType) { };
+    /**
+     * @abstract
+     * @param {?} evt
+     * @return {?}
+     */
+    DomAdapter.prototype.preventDefault = function (evt) { };
+    /**
+     * @abstract
+     * @param {?} evt
+     * @return {?}
+     */
+    DomAdapter.prototype.isPrevented = function (evt) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.getInnerHTML = function (el) { };
+    /**
+     * Returns content if el is a <template> element, null otherwise.
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.getTemplateContent = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.getOuterHTML = function (el) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.nodeName = function (node) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.nodeValue = function (node) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.type = function (node) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.content = function (node) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.firstChild = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.nextSibling = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.parentElement = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.childNodes = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.childNodesAsList = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.clearNodes = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.appendChild = function (el, node) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.removeChild = function (el, node) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} newNode
+     * @param {?} oldNode
+     * @return {?}
+     */
+    DomAdapter.prototype.replaceChild = function (el, newNode, oldNode) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.remove = function (el) { };
+    /**
+     * @abstract
+     * @param {?} parent
+     * @param {?} ref
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.insertBefore = function (parent, ref, node) { };
+    /**
+     * @abstract
+     * @param {?} parent
+     * @param {?} ref
+     * @param {?} nodes
+     * @return {?}
+     */
+    DomAdapter.prototype.insertAllBefore = function (parent, ref, nodes) { };
+    /**
+     * @abstract
+     * @param {?} parent
+     * @param {?} el
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.insertAfter = function (parent, el, node) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} value
+     * @return {?}
+     */
+    DomAdapter.prototype.setInnerHTML = function (el, value) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.getText = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} value
+     * @return {?}
+     */
+    DomAdapter.prototype.setText = function (el, value) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.getValue = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} value
+     * @return {?}
+     */
+    DomAdapter.prototype.setValue = function (el, value) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.getChecked = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @param {?} value
+     * @return {?}
+     */
+    DomAdapter.prototype.setChecked = function (el, value) { };
+    /**
+     * @abstract
+     * @param {?} text
+     * @return {?}
+     */
+    DomAdapter.prototype.createComment = function (text) { };
+    /**
+     * @abstract
+     * @param {?} html
+     * @return {?}
+     */
+    DomAdapter.prototype.createTemplate = function (html) { };
+    /**
+     * @abstract
+     * @param {?} tagName
+     * @param {?=} doc
+     * @return {?}
+     */
+    DomAdapter.prototype.createElement = function (tagName, doc) { };
+    /**
+     * @abstract
+     * @param {?} ns
+     * @param {?} tagName
+     * @param {?=} doc
+     * @return {?}
+     */
+    DomAdapter.prototype.createElementNS = function (ns, tagName, doc) { };
+    /**
+     * @abstract
+     * @param {?} text
+     * @param {?=} doc
+     * @return {?}
+     */
+    DomAdapter.prototype.createTextNode = function (text, doc) { };
+    /**
+     * @abstract
+     * @param {?} attrName
+     * @param {?} attrValue
+     * @param {?=} doc
+     * @return {?}
+     */
+    DomAdapter.prototype.createScriptTag = function (attrName, attrValue, doc) { };
+    /**
+     * @abstract
+     * @param {?} css
+     * @param {?=} doc
+     * @return {?}
+     */
+    DomAdapter.prototype.createStyleElement = function (css, doc) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.createShadowRoot = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.getShadowRoot = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.getHost = function (el) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.getDistributedNodes = function (el) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.clone /*<T extends Node>*/ = function (node) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} name
+     * @return {?}
+     */
+    DomAdapter.prototype.getElementsByClassName = function (element, name) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} name
+     * @return {?}
+     */
+    DomAdapter.prototype.getElementsByTagName = function (element, name) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @return {?}
+     */
+    DomAdapter.prototype.classList = function (element) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} className
+     * @return {?}
+     */
+    DomAdapter.prototype.addClass = function (element, className) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} className
+     * @return {?}
+     */
+    DomAdapter.prototype.removeClass = function (element, className) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} className
+     * @return {?}
+     */
+    DomAdapter.prototype.hasClass = function (element, className) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} styleName
+     * @param {?} styleValue
+     * @return {?}
+     */
+    DomAdapter.prototype.setStyle = function (element, styleName, styleValue) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} styleName
+     * @return {?}
+     */
+    DomAdapter.prototype.removeStyle = function (element, styleName) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} styleName
+     * @return {?}
+     */
+    DomAdapter.prototype.getStyle = function (element, styleName) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} styleName
+     * @param {?=} styleValue
+     * @return {?}
+     */
+    DomAdapter.prototype.hasStyle = function (element, styleName, styleValue) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @return {?}
+     */
+    DomAdapter.prototype.tagName = function (element) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @return {?}
+     */
+    DomAdapter.prototype.attributeMap = function (element) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} attribute
+     * @return {?}
+     */
+    DomAdapter.prototype.hasAttribute = function (element, attribute) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} ns
+     * @param {?} attribute
+     * @return {?}
+     */
+    DomAdapter.prototype.hasAttributeNS = function (element, ns, attribute) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} attribute
+     * @return {?}
+     */
+    DomAdapter.prototype.getAttribute = function (element, attribute) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} ns
+     * @param {?} attribute
+     * @return {?}
+     */
+    DomAdapter.prototype.getAttributeNS = function (element, ns, attribute) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    DomAdapter.prototype.setAttribute = function (element, name, value) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} ns
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    DomAdapter.prototype.setAttributeNS = function (element, ns, name, value) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} attribute
+     * @return {?}
+     */
+    DomAdapter.prototype.removeAttribute = function (element, attribute) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} ns
+     * @param {?} attribute
+     * @return {?}
+     */
+    DomAdapter.prototype.removeAttributeNS = function (element, ns, attribute) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.templateAwareRoot = function (el) { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.createHtmlDocument = function () { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.getBoundingClientRect = function (el) { };
+    /**
+     * @abstract
+     * @param {?} doc
+     * @return {?}
+     */
+    DomAdapter.prototype.getTitle = function (doc) { };
+    /**
+     * @abstract
+     * @param {?} doc
+     * @param {?} newTitle
+     * @return {?}
+     */
+    DomAdapter.prototype.setTitle = function (doc, newTitle) { };
+    /**
+     * @abstract
+     * @param {?} n
+     * @param {?} selector
+     * @return {?}
+     */
+    DomAdapter.prototype.elementMatches = function (n, selector) { };
+    /**
+     * @abstract
+     * @param {?} el
+     * @return {?}
+     */
+    DomAdapter.prototype.isTemplateElement = function (el) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.isTextNode = function (node) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.isCommentNode = function (node) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.isElementNode = function (node) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.hasShadowRoot = function (node) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.isShadowRoot = function (node) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.importIntoDoc /*<T extends Node>*/ = function (node) { };
+    /**
+     * @abstract
+     * @param {?} node
+     * @return {?}
+     */
+    DomAdapter.prototype.adoptNode /*<T extends Node>*/ = function (node) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @return {?}
+     */
+    DomAdapter.prototype.getHref = function (element) { };
+    /**
+     * @abstract
+     * @param {?} event
+     * @return {?}
+     */
+    DomAdapter.prototype.getEventKey = function (event) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} baseUrl
+     * @param {?} href
+     * @return {?}
+     */
+    DomAdapter.prototype.resolveAndSetHref = function (element, baseUrl, href) { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.supportsDOMEvents = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.supportsNativeShadowDOM = function () { };
+    /**
+     * @abstract
+     * @param {?} doc
+     * @param {?} target
+     * @return {?}
+     */
+    DomAdapter.prototype.getGlobalEventTarget = function (doc, target) { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.getHistory = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.getLocation = function () { };
+    /**
+     * @abstract
+     * @param {?} doc
+     * @return {?}
+     */
+    DomAdapter.prototype.getBaseHref = function (doc) { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.resetBaseElement = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.getUserAgent = function () { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    DomAdapter.prototype.setData = function (element, name, value) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @return {?}
+     */
+    DomAdapter.prototype.getComputedStyle = function (element) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} name
+     * @return {?}
+     */
+    DomAdapter.prototype.getData = function (element, name) { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.supportsWebAnimation = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.performanceNow = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.getAnimationPrefix = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.getTransitionEnd = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.supportsAnimation = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    DomAdapter.prototype.supportsCookies = function () { };
+    /**
+     * @abstract
+     * @param {?} name
+     * @return {?}
+     */
+    DomAdapter.prototype.getCookie = function (name) { };
+    /**
+     * @abstract
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    DomAdapter.prototype.setCookie = function (name, value) { };
+    return DomAdapter;
 }());
-exports.Config = Config;
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Provides DOM operations in any browser environment.
+ *
+ * \@security Tread carefully! Interacting with the DOM directly is dangerous and
+ * can introduce XSS risks.
+ * @abstract
+ */
+var GenericBrowserDomAdapter = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](GenericBrowserDomAdapter, _super);
+    function GenericBrowserDomAdapter() {
+        var _this = _super.call(this) || this;
+        _this._animationPrefix = null;
+        _this._transitionEnd = null;
+        try {
+            var element_1 = _this.createElement('div', document);
+            if (_this.getStyle(element_1, 'animationName') != null) {
+                _this._animationPrefix = '';
+            }
+            else {
+                var domPrefixes = ['Webkit', 'Moz', 'O', 'ms'];
+                for (var i = 0; i < domPrefixes.length; i++) {
+                    if (_this.getStyle(element_1, domPrefixes[i] + 'AnimationName') != null) {
+                        _this._animationPrefix = '-' + domPrefixes[i].toLowerCase() + '-';
+                        break;
+                    }
+                }
+            }
+            var transEndEventNames_1 = {
+                WebkitTransition: 'webkitTransitionEnd',
+                MozTransition: 'transitionend',
+                OTransition: 'oTransitionEnd otransitionend',
+                transition: 'transitionend'
+            };
+            Object.keys(transEndEventNames_1).forEach(function (key) {
+                if (_this.getStyle(element_1, key) != null) {
+                    _this._transitionEnd = transEndEventNames_1[key];
+                }
+            });
+        }
+        catch (e) {
+            _this._animationPrefix = null;
+            _this._transitionEnd = null;
+        }
+        return _this;
+    }
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    GenericBrowserDomAdapter.prototype.getDistributedNodes = function (el) { return ((el)).getDistributedNodes(); };
+    /**
+     * @param {?} el
+     * @param {?} baseUrl
+     * @param {?} href
+     * @return {?}
+     */
+    GenericBrowserDomAdapter.prototype.resolveAndSetHref = function (el, baseUrl, href) {
+        el.href = href == null ? baseUrl : baseUrl + '/../' + href;
+    };
+    /**
+     * @return {?}
+     */
+    GenericBrowserDomAdapter.prototype.supportsDOMEvents = function () { return true; };
+    /**
+     * @return {?}
+     */
+    GenericBrowserDomAdapter.prototype.supportsNativeShadowDOM = function () {
+        return typeof ((document.body)).createShadowRoot === 'function';
+    };
+    /**
+     * @return {?}
+     */
+    GenericBrowserDomAdapter.prototype.getAnimationPrefix = function () { return this._animationPrefix ? this._animationPrefix : ''; };
+    /**
+     * @return {?}
+     */
+    GenericBrowserDomAdapter.prototype.getTransitionEnd = function () { return this._transitionEnd ? this._transitionEnd : ''; };
+    /**
+     * @return {?}
+     */
+    GenericBrowserDomAdapter.prototype.supportsAnimation = function () {
+        return this._animationPrefix != null && this._transitionEnd != null;
+    };
+    return GenericBrowserDomAdapter;
+}(DomAdapter));
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var _attrToPropMap = {
+    'class': 'className',
+    'innerHtml': 'innerHTML',
+    'readonly': 'readOnly',
+    'tabindex': 'tabIndex',
+};
+var DOM_KEY_LOCATION_NUMPAD = 3;
+// Map to convert some key or keyIdentifier values to what will be returned by getEventKey
+var _keyMap = {
+    // The following values are here for cross-browser compatibility and to match the W3C standard
+    // cf http://www.w3.org/TR/DOM-Level-3-Events-key/
+    '\b': 'Backspace',
+    '\t': 'Tab',
+    '\x7F': 'Delete',
+    '\x1B': 'Escape',
+    'Del': 'Delete',
+    'Esc': 'Escape',
+    'Left': 'ArrowLeft',
+    'Right': 'ArrowRight',
+    'Up': 'ArrowUp',
+    'Down': 'ArrowDown',
+    'Menu': 'ContextMenu',
+    'Scroll': 'ScrollLock',
+    'Win': 'OS'
+};
+// There is a bug in Chrome for numeric keypad keys:
+// https://code.google.com/p/chromium/issues/detail?id=155654
+// 1, 2, 3 ... are reported as A, B, C ...
+var _chromeNumKeyPadMap = {
+    'A': '1',
+    'B': '2',
+    'C': '3',
+    'D': '4',
+    'E': '5',
+    'F': '6',
+    'G': '7',
+    'H': '8',
+    'I': '9',
+    'J': '*',
+    'K': '+',
+    'M': '-',
+    'N': '.',
+    'O': '/',
+    '\x60': '0',
+    '\x90': 'NumLock'
+};
+var nodeContains;
+if (__WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['Node']) {
+    nodeContains = __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['Node'].prototype.contains || function (node) {
+        return !!(this.compareDocumentPosition(node) & 16);
+    };
+}
+var BrowserDomAdapter = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](BrowserDomAdapter, _super);
+    function BrowserDomAdapter() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * @param {?} templateHtml
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.parse = function (templateHtml) { throw new Error('parse not implemented'); };
+    /**
+     * @return {?}
+     */
+    BrowserDomAdapter.makeCurrent = function () { setRootDomAdapter(new BrowserDomAdapter()); };
+    /**
+     * @param {?} element
+     * @param {?} name
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.hasProperty = function (element, name) { return name in element; };
+    /**
+     * @param {?} el
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setProperty = function (el, name, value) { ((el))[name] = value; };
+    /**
+     * @param {?} el
+     * @param {?} name
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getProperty = function (el, name) { return ((el))[name]; };
+    /**
+     * @param {?} el
+     * @param {?} methodName
+     * @param {?} args
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.invoke = function (el, methodName, args) { ((el))[methodName].apply(((el)), args); };
+    /**
+     * @param {?} error
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.logError = function (error) {
+        if (window.console) {
+            if (console.error) {
+                console.error(error);
+            }
+            else {
+                console.log(error);
+            }
+        }
+    };
+    /**
+     * @param {?} error
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.log = function (error) {
+        if (window.console) {
+            window.console.log && window.console.log(error);
+        }
+    };
+    /**
+     * @param {?} error
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.logGroup = function (error) {
+        if (window.console) {
+            window.console.group && window.console.group(error);
+        }
+    };
+    /**
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.logGroupEnd = function () {
+        if (window.console) {
+            window.console.groupEnd && window.console.groupEnd();
+        }
+    };
+    Object.defineProperty(BrowserDomAdapter.prototype, "attrToPropMap", {
+        /**
+         * @return {?}
+         */
+        get: function () { return _attrToPropMap; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @param {?} nodeA
+     * @param {?} nodeB
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.contains = function (nodeA, nodeB) { return nodeContains.call(nodeA, nodeB); };
+    /**
+     * @param {?} el
+     * @param {?} selector
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.querySelector = function (el, selector) { return el.querySelector(selector); };
+    /**
+     * @param {?} el
+     * @param {?} selector
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.querySelectorAll = function (el, selector) { return el.querySelectorAll(selector); };
+    /**
+     * @param {?} el
+     * @param {?} evt
+     * @param {?} listener
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.on = function (el, evt, listener) { el.addEventListener(evt, listener, false); };
+    /**
+     * @param {?} el
+     * @param {?} evt
+     * @param {?} listener
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.onAndCancel = function (el, evt, listener) {
+        el.addEventListener(evt, listener, false);
+        // Needed to follow Dart's subscription semantic, until fix of
+        // https://code.google.com/p/dart/issues/detail?id=17406
+        return function () { el.removeEventListener(evt, listener, false); };
+    };
+    /**
+     * @param {?} el
+     * @param {?} evt
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.dispatchEvent = function (el, evt) { el.dispatchEvent(evt); };
+    /**
+     * @param {?} eventType
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createMouseEvent = function (eventType) {
+        var /** @type {?} */ evt = document.createEvent('MouseEvent');
+        evt.initEvent(eventType, true, true);
+        return evt;
+    };
+    /**
+     * @param {?} eventType
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createEvent = function (eventType) {
+        var /** @type {?} */ evt = document.createEvent('Event');
+        evt.initEvent(eventType, true, true);
+        return evt;
+    };
+    /**
+     * @param {?} evt
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.preventDefault = function (evt) {
+        evt.preventDefault();
+        evt.returnValue = false;
+    };
+    /**
+     * @param {?} evt
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.isPrevented = function (evt) {
+        return evt.defaultPrevented || evt.returnValue != null && !evt.returnValue;
+    };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getInnerHTML = function (el) { return el.innerHTML; };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getTemplateContent = function (el) {
+        return 'content' in el && el instanceof HTMLTemplateElement ? el.content : null;
+    };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getOuterHTML = function (el) { return el.outerHTML; };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.nodeName = function (node) { return node.nodeName; };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.nodeValue = function (node) { return node.nodeValue; };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.type = function (node) { return node.type; };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.content = function (node) {
+        if (this.hasProperty(node, 'content')) {
+            return ((node)).content;
+        }
+        else {
+            return node;
+        }
+    };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.firstChild = function (el) { return el.firstChild; };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.nextSibling = function (el) { return el.nextSibling; };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.parentElement = function (el) { return el.parentNode; };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.childNodes = function (el) { return el.childNodes; };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.childNodesAsList = function (el) {
+        var /** @type {?} */ childNodes = el.childNodes;
+        var /** @type {?} */ res = new Array(childNodes.length);
+        for (var /** @type {?} */ i = 0; i < childNodes.length; i++) {
+            res[i] = childNodes[i];
+        }
+        return res;
+    };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.clearNodes = function (el) {
+        while (el.firstChild) {
+            el.removeChild(el.firstChild);
+        }
+    };
+    /**
+     * @param {?} el
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.appendChild = function (el, node) { el.appendChild(node); };
+    /**
+     * @param {?} el
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.removeChild = function (el, node) { el.removeChild(node); };
+    /**
+     * @param {?} el
+     * @param {?} newChild
+     * @param {?} oldChild
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.replaceChild = function (el, newChild, oldChild) { el.replaceChild(newChild, oldChild); };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.remove = function (node) {
+        if (node.parentNode) {
+            node.parentNode.removeChild(node);
+        }
+        return node;
+    };
+    /**
+     * @param {?} parent
+     * @param {?} ref
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.insertBefore = function (parent, ref, node) { parent.insertBefore(node, ref); };
+    /**
+     * @param {?} parent
+     * @param {?} ref
+     * @param {?} nodes
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.insertAllBefore = function (parent, ref, nodes) {
+        nodes.forEach(function (n) { return parent.insertBefore(n, ref); });
+    };
+    /**
+     * @param {?} parent
+     * @param {?} ref
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.insertAfter = function (parent, ref, node) { parent.insertBefore(node, ref.nextSibling); };
+    /**
+     * @param {?} el
+     * @param {?} value
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setInnerHTML = function (el, value) { el.innerHTML = value; };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getText = function (el) { return el.textContent; };
+    /**
+     * @param {?} el
+     * @param {?} value
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setText = function (el, value) { el.textContent = value; };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getValue = function (el) { return el.value; };
+    /**
+     * @param {?} el
+     * @param {?} value
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setValue = function (el, value) { el.value = value; };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getChecked = function (el) { return el.checked; };
+    /**
+     * @param {?} el
+     * @param {?} value
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setChecked = function (el, value) { el.checked = value; };
+    /**
+     * @param {?} text
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createComment = function (text) { return document.createComment(text); };
+    /**
+     * @param {?} html
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createTemplate = function (html) {
+        var /** @type {?} */ t = document.createElement('template');
+        t.innerHTML = html;
+        return t;
+    };
+    /**
+     * @param {?} tagName
+     * @param {?=} doc
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createElement = function (tagName, doc) {
+        if (doc === void 0) { doc = document; }
+        return doc.createElement(tagName);
+    };
+    /**
+     * @param {?} ns
+     * @param {?} tagName
+     * @param {?=} doc
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createElementNS = function (ns, tagName, doc) {
+        if (doc === void 0) { doc = document; }
+        return doc.createElementNS(ns, tagName);
+    };
+    /**
+     * @param {?} text
+     * @param {?=} doc
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createTextNode = function (text, doc) {
+        if (doc === void 0) { doc = document; }
+        return doc.createTextNode(text);
+    };
+    /**
+     * @param {?} attrName
+     * @param {?} attrValue
+     * @param {?=} doc
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createScriptTag = function (attrName, attrValue, doc) {
+        if (doc === void 0) { doc = document; }
+        var /** @type {?} */ el = (doc.createElement('SCRIPT'));
+        el.setAttribute(attrName, attrValue);
+        return el;
+    };
+    /**
+     * @param {?} css
+     * @param {?=} doc
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createStyleElement = function (css, doc) {
+        if (doc === void 0) { doc = document; }
+        var /** @type {?} */ style = (doc.createElement('style'));
+        this.appendChild(style, this.createTextNode(css));
+        return style;
+    };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createShadowRoot = function (el) { return ((el)).createShadowRoot(); };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getShadowRoot = function (el) { return ((el)).shadowRoot; };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getHost = function (el) { return ((el)).host; };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.clone = function (node) { return node.cloneNode(true); };
+    /**
+     * @param {?} element
+     * @param {?} name
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getElementsByClassName = function (element, name) {
+        return element.getElementsByClassName(name);
+    };
+    /**
+     * @param {?} element
+     * @param {?} name
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getElementsByTagName = function (element, name) {
+        return element.getElementsByTagName(name);
+    };
+    /**
+     * @param {?} element
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.classList = function (element) { return Array.prototype.slice.call(element.classList, 0); };
+    /**
+     * @param {?} element
+     * @param {?} className
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.addClass = function (element, className) { element.classList.add(className); };
+    /**
+     * @param {?} element
+     * @param {?} className
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.removeClass = function (element, className) { element.classList.remove(className); };
+    /**
+     * @param {?} element
+     * @param {?} className
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.hasClass = function (element, className) {
+        return element.classList.contains(className);
+    };
+    /**
+     * @param {?} element
+     * @param {?} styleName
+     * @param {?} styleValue
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setStyle = function (element, styleName, styleValue) {
+        element.style[styleName] = styleValue;
+    };
+    /**
+     * @param {?} element
+     * @param {?} stylename
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.removeStyle = function (element, stylename) {
+        // IE requires '' instead of null
+        // see https://github.com/angular/angular/issues/7916
+        element.style[stylename] = '';
+    };
+    /**
+     * @param {?} element
+     * @param {?} stylename
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getStyle = function (element, stylename) { return element.style[stylename]; };
+    /**
+     * @param {?} element
+     * @param {?} styleName
+     * @param {?=} styleValue
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.hasStyle = function (element, styleName, styleValue) {
+        var /** @type {?} */ value = this.getStyle(element, styleName) || '';
+        return styleValue ? value == styleValue : value.length > 0;
+    };
+    /**
+     * @param {?} element
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.tagName = function (element) { return element.tagName; };
+    /**
+     * @param {?} element
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.attributeMap = function (element) {
+        var /** @type {?} */ res = new Map();
+        var /** @type {?} */ elAttrs = element.attributes;
+        for (var /** @type {?} */ i = 0; i < elAttrs.length; i++) {
+            var /** @type {?} */ attrib = elAttrs[i];
+            res.set(attrib.name, attrib.value);
+        }
+        return res;
+    };
+    /**
+     * @param {?} element
+     * @param {?} attribute
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.hasAttribute = function (element, attribute) {
+        return element.hasAttribute(attribute);
+    };
+    /**
+     * @param {?} element
+     * @param {?} ns
+     * @param {?} attribute
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.hasAttributeNS = function (element, ns, attribute) {
+        return element.hasAttributeNS(ns, attribute);
+    };
+    /**
+     * @param {?} element
+     * @param {?} attribute
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getAttribute = function (element, attribute) {
+        return element.getAttribute(attribute);
+    };
+    /**
+     * @param {?} element
+     * @param {?} ns
+     * @param {?} name
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getAttributeNS = function (element, ns, name) {
+        return element.getAttributeNS(ns, name);
+    };
+    /**
+     * @param {?} element
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setAttribute = function (element, name, value) { element.setAttribute(name, value); };
+    /**
+     * @param {?} element
+     * @param {?} ns
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setAttributeNS = function (element, ns, name, value) {
+        element.setAttributeNS(ns, name, value);
+    };
+    /**
+     * @param {?} element
+     * @param {?} attribute
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.removeAttribute = function (element, attribute) { element.removeAttribute(attribute); };
+    /**
+     * @param {?} element
+     * @param {?} ns
+     * @param {?} name
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.removeAttributeNS = function (element, ns, name) {
+        element.removeAttributeNS(ns, name);
+    };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.templateAwareRoot = function (el) { return this.isTemplateElement(el) ? this.content(el) : el; };
+    /**
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.createHtmlDocument = function () {
+        return document.implementation.createHTMLDocument('fakeTitle');
+    };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getBoundingClientRect = function (el) {
+        try {
+            return el.getBoundingClientRect();
+        }
+        catch (e) {
+            return { top: 0, bottom: 0, left: 0, right: 0, width: 0, height: 0 };
+        }
+    };
+    /**
+     * @param {?} doc
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getTitle = function (doc) { return document.title; };
+    /**
+     * @param {?} doc
+     * @param {?} newTitle
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setTitle = function (doc, newTitle) { document.title = newTitle || ''; };
+    /**
+     * @param {?} n
+     * @param {?} selector
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.elementMatches = function (n, selector) {
+        if (n instanceof HTMLElement) {
+            return n.matches && n.matches(selector) ||
+                n.msMatchesSelector && n.msMatchesSelector(selector) ||
+                n.webkitMatchesSelector && n.webkitMatchesSelector(selector);
+        }
+        return false;
+    };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.isTemplateElement = function (el) {
+        return el instanceof HTMLElement && el.nodeName == 'TEMPLATE';
+    };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.isTextNode = function (node) { return node.nodeType === Node.TEXT_NODE; };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.isCommentNode = function (node) { return node.nodeType === Node.COMMENT_NODE; };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.isElementNode = function (node) { return node.nodeType === Node.ELEMENT_NODE; };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.hasShadowRoot = function (node) {
+        return node.shadowRoot != null && node instanceof HTMLElement;
+    };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.isShadowRoot = function (node) { return node instanceof DocumentFragment; };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.importIntoDoc = function (node) { return document.importNode(this.templateAwareRoot(node), true); };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.adoptNode = function (node) { return document.adoptNode(node); };
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getHref = function (el) { return ((el)).href; };
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getEventKey = function (event) {
+        var /** @type {?} */ key = event.key;
+        if (key == null) {
+            key = event.keyIdentifier;
+            // keyIdentifier is defined in the old draft of DOM Level 3 Events implemented by Chrome and
+            // Safari cf
+            // http://www.w3.org/TR/2007/WD-DOM-Level-3-Events-20071221/events.html#Events-KeyboardEvents-Interfaces
+            if (key == null) {
+                return 'Unidentified';
+            }
+            if (key.startsWith('U+')) {
+                key = String.fromCharCode(parseInt(key.substring(2), 16));
+                if (event.location === DOM_KEY_LOCATION_NUMPAD && _chromeNumKeyPadMap.hasOwnProperty(key)) {
+                    // There is a bug in Chrome for numeric keypad keys:
+                    // https://code.google.com/p/chromium/issues/detail?id=155654
+                    // 1, 2, 3 ... are reported as A, B, C ...
+                    key = ((_chromeNumKeyPadMap))[key];
+                }
+            }
+        }
+        return _keyMap[key] || key;
+    };
+    /**
+     * @param {?} doc
+     * @param {?} target
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getGlobalEventTarget = function (doc, target) {
+        if (target === 'window') {
+            return window;
+        }
+        if (target === 'document') {
+            return document;
+        }
+        if (target === 'body') {
+            return document.body;
+        }
+        return null;
+    };
+    /**
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getHistory = function () { return window.history; };
+    /**
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getLocation = function () { return window.location; };
+    /**
+     * @param {?} doc
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getBaseHref = function (doc) {
+        var /** @type {?} */ href = getBaseElementHref();
+        return href == null ? null : relativePath(href);
+    };
+    /**
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.resetBaseElement = function () { baseElement = null; };
+    /**
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getUserAgent = function () { return window.navigator.userAgent; };
+    /**
+     * @param {?} element
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setData = function (element, name, value) {
+        this.setAttribute(element, 'data-' + name, value);
+    };
+    /**
+     * @param {?} element
+     * @param {?} name
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getData = function (element, name) {
+        return this.getAttribute(element, 'data-' + name);
+    };
+    /**
+     * @param {?} element
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getComputedStyle = function (element) { return getComputedStyle(element); };
+    /**
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.supportsWebAnimation = function () {
+        return typeof ((Element)).prototype['animate'] === 'function';
+    };
+    /**
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.performanceNow = function () {
+        // performance.now() is not available in all browsers, see
+        // http://caniuse.com/#search=performance.now
+        return window.performance && window.performance.now ? window.performance.now() :
+            new Date().getTime();
+    };
+    /**
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.supportsCookies = function () { return true; };
+    /**
+     * @param {?} name
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.getCookie = function (name) { return parseCookieValue(document.cookie, name); };
+    /**
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    BrowserDomAdapter.prototype.setCookie = function (name, value) {
+        // document.cookie is magical, assigning into it assigns/overrides one cookie value, but does
+        // not clear other cookies.
+        document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+    };
+    return BrowserDomAdapter;
+}(GenericBrowserDomAdapter));
+var baseElement = null;
+/**
+ * @return {?}
+ */
+function getBaseElementHref() {
+    if (!baseElement) {
+        baseElement = ((document.querySelector('base')));
+        if (!baseElement) {
+            return null;
+        }
+    }
+    return baseElement.getAttribute('href');
+}
+// based on urlUtils.js in AngularJS 1
+var urlParsingNode;
+/**
+ * @param {?} url
+ * @return {?}
+ */
+function relativePath(url) {
+    if (!urlParsingNode) {
+        urlParsingNode = document.createElement('a');
+    }
+    urlParsingNode.setAttribute('href', url);
+    return (urlParsingNode.pathname.charAt(0) === '/') ? urlParsingNode.pathname :
+        '/' + urlParsingNode.pathname;
+}
+/**
+ * @param {?} cookieStr
+ * @param {?} name
+ * @return {?}
+ */
+function parseCookieValue(cookieStr, name) {
+    name = encodeURIComponent(name);
+    for (var _i = 0, _a = cookieStr.split(';'); _i < _a.length; _i++) {
+        var cookie = _a[_i];
+        var /** @type {?} */ eqIndex = cookie.indexOf('=');
+        var _b = eqIndex == -1 ? [cookie, ''] : [cookie.slice(0, eqIndex), cookie.slice(eqIndex + 1)], cookieName = _b[0], cookieValue = _b[1];
+        if (cookieName.trim() === name) {
+            return decodeURIComponent(cookieValue);
+        }
+    }
+    return null;
+}
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A DI Token representing the main rendering context. In a browser this is the DOM Document.
+ *
+ * Note: Document might not be available in the Application Context when Application and Rendering
+ * Contexts are not the same (e.g. when running the application into a Web Worker).
+ *
+ * \@deprecated, import from `\@angular/common` instead.
+ */
+var DOCUMENT$1 = __WEBPACK_IMPORTED_MODULE_1__angular_common__["DOCUMENT"];
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ * @return {?}
+ */
+function supportsState() {
+    return !!window.history.pushState;
+}
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * `PlatformLocation` encapsulates all of the direct calls to platform APIs.
+ * This class should not be used directly by an application developer. Instead, use
+ * {\@link Location}.
+ */
+var BrowserPlatformLocation = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](BrowserPlatformLocation, _super);
+    /**
+     * @param {?} _doc
+     */
+    function BrowserPlatformLocation(_doc) {
+        var _this = _super.call(this) || this;
+        _this._doc = _doc;
+        _this._init();
+        return _this;
+    }
+    /**
+     * \@internal
+     * @return {?}
+     */
+    BrowserPlatformLocation.prototype._init = function () {
+        this._location = getDOM().getLocation();
+        this._history = getDOM().getHistory();
+    };
+    Object.defineProperty(BrowserPlatformLocation.prototype, "location", {
+        /**
+         * @return {?}
+         */
+        get: function () { return this._location; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    BrowserPlatformLocation.prototype.getBaseHrefFromDOM = function () { return ((getDOM().getBaseHref(this._doc))); };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    BrowserPlatformLocation.prototype.onPopState = function (fn) {
+        getDOM().getGlobalEventTarget(this._doc, 'window').addEventListener('popstate', fn, false);
+    };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    BrowserPlatformLocation.prototype.onHashChange = function (fn) {
+        getDOM().getGlobalEventTarget(this._doc, 'window').addEventListener('hashchange', fn, false);
+    };
+    Object.defineProperty(BrowserPlatformLocation.prototype, "pathname", {
+        /**
+         * @return {?}
+         */
+        get: function () { return this._location.pathname; },
+        /**
+         * @param {?} newPath
+         * @return {?}
+         */
+        set: function (newPath) { this._location.pathname = newPath; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(BrowserPlatformLocation.prototype, "search", {
+        /**
+         * @return {?}
+         */
+        get: function () { return this._location.search; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(BrowserPlatformLocation.prototype, "hash", {
+        /**
+         * @return {?}
+         */
+        get: function () { return this._location.hash; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @param {?} state
+     * @param {?} title
+     * @param {?} url
+     * @return {?}
+     */
+    BrowserPlatformLocation.prototype.pushState = function (state, title, url) {
+        if (supportsState()) {
+            this._history.pushState(state, title, url);
+        }
+        else {
+            this._location.hash = url;
+        }
+    };
+    /**
+     * @param {?} state
+     * @param {?} title
+     * @param {?} url
+     * @return {?}
+     */
+    BrowserPlatformLocation.prototype.replaceState = function (state, title, url) {
+        if (supportsState()) {
+            this._history.replaceState(state, title, url);
+        }
+        else {
+            this._location.hash = url;
+        }
+    };
+    /**
+     * @return {?}
+     */
+    BrowserPlatformLocation.prototype.forward = function () { this._history.forward(); };
+    /**
+     * @return {?}
+     */
+    BrowserPlatformLocation.prototype.back = function () { this._history.back(); };
+    return BrowserPlatformLocation;
+}(__WEBPACK_IMPORTED_MODULE_1__angular_common__["PlatformLocation"]));
+BrowserPlatformLocation.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+BrowserPlatformLocation.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A service that can be used to get and add meta tags.
+ *
+ * \@experimental
+ */
+var Meta = (function () {
+    /**
+     * @param {?} _doc
+     */
+    function Meta(_doc) {
+        this._doc = _doc;
+        this._dom = getDOM();
+    }
+    /**
+     * @param {?} tag
+     * @param {?=} forceCreation
+     * @return {?}
+     */
+    Meta.prototype.addTag = function (tag, forceCreation) {
+        if (forceCreation === void 0) { forceCreation = false; }
+        if (!tag)
+            return null;
+        return this._getOrCreateElement(tag, forceCreation);
+    };
+    /**
+     * @param {?} tags
+     * @param {?=} forceCreation
+     * @return {?}
+     */
+    Meta.prototype.addTags = function (tags, forceCreation) {
+        var _this = this;
+        if (forceCreation === void 0) { forceCreation = false; }
+        if (!tags)
+            return [];
+        return tags.reduce(function (result, tag) {
+            if (tag) {
+                result.push(_this._getOrCreateElement(tag, forceCreation));
+            }
+            return result;
+        }, []);
+    };
+    /**
+     * @param {?} attrSelector
+     * @return {?}
+     */
+    Meta.prototype.getTag = function (attrSelector) {
+        if (!attrSelector)
+            return null;
+        return this._dom.querySelector(this._doc, "meta[" + attrSelector + "]");
+    };
+    /**
+     * @param {?} attrSelector
+     * @return {?}
+     */
+    Meta.prototype.getTags = function (attrSelector) {
+        if (!attrSelector)
+            return [];
+        var /** @type {?} */ list /*NodeList*/ = this._dom.querySelectorAll(this._doc, "meta[" + attrSelector + "]");
+        return list ? [].slice.call(list) : [];
+    };
+    /**
+     * @param {?} tag
+     * @param {?=} selector
+     * @return {?}
+     */
+    Meta.prototype.updateTag = function (tag, selector) {
+        if (!tag)
+            return null;
+        selector = selector || this._parseSelector(tag);
+        var /** @type {?} */ meta = ((this.getTag(selector)));
+        if (meta) {
+            return this._setMetaElementAttributes(tag, meta);
+        }
+        return this._getOrCreateElement(tag, true);
+    };
+    /**
+     * @param {?} attrSelector
+     * @return {?}
+     */
+    Meta.prototype.removeTag = function (attrSelector) { this.removeTagElement(/** @type {?} */ ((this.getTag(attrSelector)))); };
+    /**
+     * @param {?} meta
+     * @return {?}
+     */
+    Meta.prototype.removeTagElement = function (meta) {
+        if (meta) {
+            this._dom.remove(meta);
+        }
+    };
+    /**
+     * @param {?} meta
+     * @param {?=} forceCreation
+     * @return {?}
+     */
+    Meta.prototype._getOrCreateElement = function (meta, forceCreation) {
+        if (forceCreation === void 0) { forceCreation = false; }
+        if (!forceCreation) {
+            var /** @type {?} */ selector = this._parseSelector(meta);
+            var /** @type {?} */ elem = ((this.getTag(selector)));
+            // It's allowed to have multiple elements with the same name so it's not enough to
+            // just check that element with the same name already present on the page. We also need to
+            // check if element has tag attributes
+            if (elem && this._containsAttributes(meta, elem))
+                return elem;
+        }
+        var /** @type {?} */ element = (this._dom.createElement('meta'));
+        this._setMetaElementAttributes(meta, element);
+        var /** @type {?} */ head = this._dom.getElementsByTagName(this._doc, 'head')[0];
+        this._dom.appendChild(head, element);
+        return element;
+    };
+    /**
+     * @param {?} tag
+     * @param {?} el
+     * @return {?}
+     */
+    Meta.prototype._setMetaElementAttributes = function (tag, el) {
+        var _this = this;
+        Object.keys(tag).forEach(function (prop) { return _this._dom.setAttribute(el, prop, tag[prop]); });
+        return el;
+    };
+    /**
+     * @param {?} tag
+     * @return {?}
+     */
+    Meta.prototype._parseSelector = function (tag) {
+        var /** @type {?} */ attr = tag.name ? 'name' : 'property';
+        return attr + "=\"" + tag[attr] + "\"";
+    };
+    /**
+     * @param {?} tag
+     * @param {?} elem
+     * @return {?}
+     */
+    Meta.prototype._containsAttributes = function (tag, elem) {
+        var _this = this;
+        return Object.keys(tag).every(function (key) { return _this._dom.getAttribute(elem, key) === tag[key]; });
+    };
+    return Meta;
+}());
+Meta.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+Meta.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * An id that identifies a particular application being bootstrapped, that should
+ * match across the client/server boundary.
+ */
+var TRANSITION_ID = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["InjectionToken"]('TRANSITION_ID');
+/**
+ * @param {?} transitionId
+ * @param {?} document
+ * @param {?} injector
+ * @return {?}
+ */
+function appInitializerFactory(transitionId, document, injector) {
+    return function () {
+        // Wait for all application initializers to be completed before removing the styles set by
+        // the server.
+        injector.get(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ApplicationInitStatus"]).donePromise.then(function () {
+            var /** @type {?} */ dom = getDOM();
+            var /** @type {?} */ styles = Array.prototype.slice.apply(dom.querySelectorAll(document, "style[ng-transition]"));
+            styles.filter(function (el) { return dom.getAttribute(el, 'ng-transition') === transitionId; })
+                .forEach(function (el) { return dom.remove(el); });
+        });
+    };
+}
+var SERVER_TRANSITION_PROVIDERS = [
+    {
+        provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["APP_INITIALIZER"],
+        useFactory: appInitializerFactory,
+        deps: [TRANSITION_ID, DOCUMENT$1, __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injector"]],
+        multi: true
+    },
+];
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var BrowserGetTestability = (function () {
+    function BrowserGetTestability() {
+    }
+    /**
+     * @return {?}
+     */
+    BrowserGetTestability.init = function () { __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["setTestabilityGetter"])(new BrowserGetTestability()); };
+    /**
+     * @param {?} registry
+     * @return {?}
+     */
+    BrowserGetTestability.prototype.addToWindow = function (registry) {
+        __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['getAngularTestability'] = function (elem, findInAncestors) {
+            if (findInAncestors === void 0) { findInAncestors = true; }
+            var /** @type {?} */ testability = registry.findTestabilityInTree(elem, findInAncestors);
+            if (testability == null) {
+                throw new Error('Could not find testability for element.');
+            }
+            return testability;
+        };
+        __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['getAllAngularTestabilities'] = function () { return registry.getAllTestabilities(); };
+        __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['getAllAngularRootElements'] = function () { return registry.getAllRootElements(); };
+        var /** @type {?} */ whenAllStable = function (callback /** TODO #9100 */) {
+            var /** @type {?} */ testabilities = __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['getAllAngularTestabilities']();
+            var /** @type {?} */ count = testabilities.length;
+            var /** @type {?} */ didWork = false;
+            var /** @type {?} */ decrement = function (didWork_ /** TODO #9100 */) {
+                didWork = didWork || didWork_;
+                count--;
+                if (count == 0) {
+                    callback(didWork);
+                }
+            };
+            testabilities.forEach(function (testability /** TODO #9100 */) {
+                testability.whenStable(decrement);
+            });
+        };
+        if (!__WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['frameworkStabilizers']) {
+            __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['frameworkStabilizers'] = [];
+        }
+        __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['frameworkStabilizers'].push(whenAllStable);
+    };
+    /**
+     * @param {?} registry
+     * @param {?} elem
+     * @param {?} findInAncestors
+     * @return {?}
+     */
+    BrowserGetTestability.prototype.findTestabilityInTree = function (registry, elem, findInAncestors) {
+        if (elem == null) {
+            return null;
+        }
+        var /** @type {?} */ t = registry.getTestability(elem);
+        if (t != null) {
+            return t;
+        }
+        else if (!findInAncestors) {
+            return null;
+        }
+        if (getDOM().isShadowRoot(elem)) {
+            return this.findTestabilityInTree(registry, getDOM().getHost(elem), true);
+        }
+        return this.findTestabilityInTree(registry, getDOM().parentElement(elem), true);
+    };
+    return BrowserGetTestability;
+}());
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A service that can be used to get and set the title of a current HTML document.
+ *
+ * Since an Angular application can't be bootstrapped on the entire HTML document (`<html>` tag)
+ * it is not possible to bind to the `text` property of the `HTMLTitleElement` elements
+ * (representing the `<title>` tag). Instead, this service can be used to set and get the current
+ * title value.
+ *
+ * \@experimental
+ */
+var Title = (function () {
+    /**
+     * @param {?} _doc
+     */
+    function Title(_doc) {
+        this._doc = _doc;
+    }
+    /**
+     * Get the title of the current HTML document.
+     * @return {?}
+     */
+    Title.prototype.getTitle = function () { return getDOM().getTitle(this._doc); };
+    /**
+     * Set the title of the current HTML document.
+     * @param {?} newTitle
+     * @return {?}
+     */
+    Title.prototype.setTitle = function (newTitle) { getDOM().setTitle(this._doc, newTitle); };
+    return Title;
+}());
+Title.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+Title.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @param {?} input
+ * @return {?}
+ */
+/**
+ * @param {?} input
+ * @return {?}
+ */
+/**
+ * Exports the value under a given `name` in the global property `ng`. For example `ng.probe` if
+ * `name` is `'probe'`.
+ * @param {?} name Name under which it will be exported. Keep in mind this will be a property of the
+ * global `ng` object.
+ * @param {?} value The value to export.
+ * @return {?}
+ */
+function exportNgVar(name, value) {
+    if (!ng) {
+        __WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['ng'] = ng = ((__WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵglobal"]['ng'])) || {};
+    }
+    ng[name] = value;
+}
+var ng;
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var CORE_TOKENS = {
+    'ApplicationRef': __WEBPACK_IMPORTED_MODULE_2__angular_core__["ApplicationRef"],
+    'NgZone': __WEBPACK_IMPORTED_MODULE_2__angular_core__["NgZone"],
+};
+var INSPECT_GLOBAL_NAME = 'probe';
+var CORE_TOKENS_GLOBAL_NAME = 'coreTokens';
+/**
+ * Returns a {\@link DebugElement} for the given native DOM element, or
+ * null if the given native element does not have an Angular view associated
+ * with it.
+ * @param {?} element
+ * @return {?}
+ */
+function inspectNativeElement(element) {
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["getDebugNode"])(element);
+}
+/**
+ * Deprecated. Use the one from '\@angular/core'.
+ * @deprecated
+ */
+var NgProbeToken$1 = (function () {
+    /**
+     * @param {?} name
+     * @param {?} token
+     */
+    function NgProbeToken$1(name, token) {
+        this.name = name;
+        this.token = token;
+    }
+    return NgProbeToken$1;
+}());
+/**
+ * @param {?} extraTokens
+ * @param {?} coreTokens
+ * @return {?}
+ */
+function _createNgProbe(extraTokens, coreTokens) {
+    var /** @type {?} */ tokens = (extraTokens || []).concat(coreTokens || []);
+    exportNgVar(INSPECT_GLOBAL_NAME, inspectNativeElement);
+    exportNgVar(CORE_TOKENS_GLOBAL_NAME, Object.assign({}, CORE_TOKENS, _ngProbeTokensToMap(tokens || [])));
+    return function () { return inspectNativeElement; };
+}
+/**
+ * @param {?} tokens
+ * @return {?}
+ */
+function _ngProbeTokensToMap(tokens) {
+    return tokens.reduce(function (prev, t) { return (prev[t.name] = t.token, prev); }, {});
+}
+/**
+ * Providers which support debugging Angular applications (e.g. via `ng.probe`).
+ */
+var ELEMENT_PROBE_PROVIDERS = [
+    {
+        provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["APP_INITIALIZER"],
+        useFactory: _createNgProbe,
+        deps: [
+            [NgProbeToken$1, new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Optional"]()],
+            [__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgProbeToken"], new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Optional"]()],
+        ],
+        multi: true,
+    },
+];
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@stable
+ */
+var EVENT_MANAGER_PLUGINS = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["InjectionToken"]('EventManagerPlugins');
+/**
+ * \@stable
+ */
+var EventManager = (function () {
+    /**
+     * @param {?} plugins
+     * @param {?} _zone
+     */
+    function EventManager(plugins, _zone) {
+        var _this = this;
+        this._zone = _zone;
+        this._eventNameToPlugin = new Map();
+        plugins.forEach(function (p) { return p.manager = _this; });
+        this._plugins = plugins.slice().reverse();
+    }
+    /**
+     * @param {?} element
+     * @param {?} eventName
+     * @param {?} handler
+     * @return {?}
+     */
+    EventManager.prototype.addEventListener = function (element, eventName, handler) {
+        var /** @type {?} */ plugin = this._findPluginFor(eventName);
+        return plugin.addEventListener(element, eventName, handler);
+    };
+    /**
+     * @param {?} target
+     * @param {?} eventName
+     * @param {?} handler
+     * @return {?}
+     */
+    EventManager.prototype.addGlobalEventListener = function (target, eventName, handler) {
+        var /** @type {?} */ plugin = this._findPluginFor(eventName);
+        return plugin.addGlobalEventListener(target, eventName, handler);
+    };
+    /**
+     * @return {?}
+     */
+    EventManager.prototype.getZone = function () { return this._zone; };
+    /**
+     * \@internal
+     * @param {?} eventName
+     * @return {?}
+     */
+    EventManager.prototype._findPluginFor = function (eventName) {
+        var /** @type {?} */ plugin = this._eventNameToPlugin.get(eventName);
+        if (plugin) {
+            return plugin;
+        }
+        var /** @type {?} */ plugins = this._plugins;
+        for (var /** @type {?} */ i = 0; i < plugins.length; i++) {
+            var /** @type {?} */ plugin_1 = plugins[i];
+            if (plugin_1.supports(eventName)) {
+                this._eventNameToPlugin.set(eventName, plugin_1);
+                return plugin_1;
+            }
+        }
+        throw new Error("No event manager plugin found for event " + eventName);
+    };
+    return EventManager;
+}());
+EventManager.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+EventManager.ctorParameters = function () { return [
+    { type: Array, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [EVENT_MANAGER_PLUGINS,] },] },
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["NgZone"], },
+]; };
+/**
+ * @abstract
+ */
+var EventManagerPlugin = (function () {
+    /**
+     * @param {?} _doc
+     */
+    function EventManagerPlugin(_doc) {
+        this._doc = _doc;
+    }
+    /**
+     * @abstract
+     * @param {?} eventName
+     * @return {?}
+     */
+    EventManagerPlugin.prototype.supports = function (eventName) { };
+    /**
+     * @abstract
+     * @param {?} element
+     * @param {?} eventName
+     * @param {?} handler
+     * @return {?}
+     */
+    EventManagerPlugin.prototype.addEventListener = function (element, eventName, handler) { };
+    /**
+     * @param {?} element
+     * @param {?} eventName
+     * @param {?} handler
+     * @return {?}
+     */
+    EventManagerPlugin.prototype.addGlobalEventListener = function (element, eventName, handler) {
+        var /** @type {?} */ target = getDOM().getGlobalEventTarget(this._doc, element);
+        if (!target) {
+            throw new Error("Unsupported event target " + target + " for event " + eventName);
+        }
+        return this.addEventListener(target, eventName, handler);
+    };
+    ;
+    return EventManagerPlugin;
+}());
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var SharedStylesHost = (function () {
+    function SharedStylesHost() {
+        /**
+         * \@internal
+         */
+        this._stylesSet = new Set();
+    }
+    /**
+     * @param {?} styles
+     * @return {?}
+     */
+    SharedStylesHost.prototype.addStyles = function (styles) {
+        var _this = this;
+        var /** @type {?} */ additions = new Set();
+        styles.forEach(function (style) {
+            if (!_this._stylesSet.has(style)) {
+                _this._stylesSet.add(style);
+                additions.add(style);
+            }
+        });
+        this.onStylesAdded(additions);
+    };
+    /**
+     * @param {?} additions
+     * @return {?}
+     */
+    SharedStylesHost.prototype.onStylesAdded = function (additions) { };
+    /**
+     * @return {?}
+     */
+    SharedStylesHost.prototype.getAllStyles = function () { return Array.from(this._stylesSet); };
+    return SharedStylesHost;
+}());
+SharedStylesHost.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+SharedStylesHost.ctorParameters = function () { return []; };
+var DomSharedStylesHost = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](DomSharedStylesHost, _super);
+    /**
+     * @param {?} _doc
+     */
+    function DomSharedStylesHost(_doc) {
+        var _this = _super.call(this) || this;
+        _this._doc = _doc;
+        _this._hostNodes = new Set();
+        _this._styleNodes = new Set();
+        _this._hostNodes.add(_doc.head);
+        return _this;
+    }
+    /**
+     * @param {?} styles
+     * @param {?} host
+     * @return {?}
+     */
+    DomSharedStylesHost.prototype._addStylesToHost = function (styles, host) {
+        var _this = this;
+        styles.forEach(function (style) {
+            var /** @type {?} */ styleEl = _this._doc.createElement('style');
+            styleEl.textContent = style;
+            _this._styleNodes.add(host.appendChild(styleEl));
+        });
+    };
+    /**
+     * @param {?} hostNode
+     * @return {?}
+     */
+    DomSharedStylesHost.prototype.addHost = function (hostNode) {
+        this._addStylesToHost(this._stylesSet, hostNode);
+        this._hostNodes.add(hostNode);
+    };
+    /**
+     * @param {?} hostNode
+     * @return {?}
+     */
+    DomSharedStylesHost.prototype.removeHost = function (hostNode) { this._hostNodes.delete(hostNode); };
+    /**
+     * @param {?} additions
+     * @return {?}
+     */
+    DomSharedStylesHost.prototype.onStylesAdded = function (additions) {
+        var _this = this;
+        this._hostNodes.forEach(function (hostNode) { return _this._addStylesToHost(additions, hostNode); });
+    };
+    /**
+     * @return {?}
+     */
+    DomSharedStylesHost.prototype.ngOnDestroy = function () { this._styleNodes.forEach(function (styleNode) { return getDOM().remove(styleNode); }); };
+    return DomSharedStylesHost;
+}(SharedStylesHost));
+DomSharedStylesHost.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+DomSharedStylesHost.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var NAMESPACE_URIS = {
+    'svg': 'http://www.w3.org/2000/svg',
+    'xhtml': 'http://www.w3.org/1999/xhtml',
+    'xlink': 'http://www.w3.org/1999/xlink',
+    'xml': 'http://www.w3.org/XML/1998/namespace',
+    'xmlns': 'http://www.w3.org/2000/xmlns/',
+};
+var COMPONENT_REGEX = /%COMP%/g;
+var COMPONENT_VARIABLE = '%COMP%';
+var HOST_ATTR = "_nghost-" + COMPONENT_VARIABLE;
+var CONTENT_ATTR = "_ngcontent-" + COMPONENT_VARIABLE;
+/**
+ * @param {?} componentShortId
+ * @return {?}
+ */
+function shimContentAttribute(componentShortId) {
+    return CONTENT_ATTR.replace(COMPONENT_REGEX, componentShortId);
+}
+/**
+ * @param {?} componentShortId
+ * @return {?}
+ */
+function shimHostAttribute(componentShortId) {
+    return HOST_ATTR.replace(COMPONENT_REGEX, componentShortId);
+}
+/**
+ * @param {?} compId
+ * @param {?} styles
+ * @param {?} target
+ * @return {?}
+ */
+function flattenStyles(compId, styles, target) {
+    for (var /** @type {?} */ i = 0; i < styles.length; i++) {
+        var /** @type {?} */ style = styles[i];
+        if (Array.isArray(style)) {
+            flattenStyles(compId, style, target);
+        }
+        else {
+            style = style.replace(COMPONENT_REGEX, compId);
+            target.push(style);
+        }
+    }
+    return target;
+}
+/**
+ * @param {?} eventHandler
+ * @return {?}
+ */
+function decoratePreventDefault(eventHandler) {
+    return function (event) {
+        var /** @type {?} */ allowDefaultBehavior = eventHandler(event);
+        if (allowDefaultBehavior === false) {
+            // TODO(tbosch): move preventDefault into event plugins...
+            event.preventDefault();
+            event.returnValue = false;
+        }
+    };
+}
+var DomRendererFactory2 = (function () {
+    /**
+     * @param {?} eventManager
+     * @param {?} sharedStylesHost
+     */
+    function DomRendererFactory2(eventManager, sharedStylesHost) {
+        this.eventManager = eventManager;
+        this.sharedStylesHost = sharedStylesHost;
+        this.rendererByCompId = new Map();
+        this.defaultRenderer = new DefaultDomRenderer2(eventManager);
+    }
+    ;
+    /**
+     * @param {?} element
+     * @param {?} type
+     * @return {?}
+     */
+    DomRendererFactory2.prototype.createRenderer = function (element, type) {
+        if (!element || !type) {
+            return this.defaultRenderer;
+        }
+        switch (type.encapsulation) {
+            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewEncapsulation"].Emulated: {
+                var /** @type {?} */ renderer = this.rendererByCompId.get(type.id);
+                if (!renderer) {
+                    renderer =
+                        new EmulatedEncapsulationDomRenderer2(this.eventManager, this.sharedStylesHost, type);
+                    this.rendererByCompId.set(type.id, renderer);
+                }
+                ((renderer)).applyToHost(element);
+                return renderer;
+            }
+            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewEncapsulation"].Native:
+                return new ShadowDomRenderer(this.eventManager, this.sharedStylesHost, element, type);
+            default: {
+                if (!this.rendererByCompId.has(type.id)) {
+                    var /** @type {?} */ styles = flattenStyles(type.id, type.styles, []);
+                    this.sharedStylesHost.addStyles(styles);
+                    this.rendererByCompId.set(type.id, this.defaultRenderer);
+                }
+                return this.defaultRenderer;
+            }
+        }
+    };
+    /**
+     * @return {?}
+     */
+    DomRendererFactory2.prototype.begin = function () { };
+    /**
+     * @return {?}
+     */
+    DomRendererFactory2.prototype.end = function () { };
+    return DomRendererFactory2;
+}());
+DomRendererFactory2.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+DomRendererFactory2.ctorParameters = function () { return [
+    { type: EventManager, },
+    { type: DomSharedStylesHost, },
+]; };
+var DefaultDomRenderer2 = (function () {
+    /**
+     * @param {?} eventManager
+     */
+    function DefaultDomRenderer2(eventManager) {
+        this.eventManager = eventManager;
+        this.data = Object.create(null);
+    }
+    /**
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.destroy = function () { };
+    /**
+     * @param {?} name
+     * @param {?=} namespace
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.createElement = function (name, namespace) {
+        if (namespace) {
+            return document.createElementNS(NAMESPACE_URIS[namespace], name);
+        }
+        return document.createElement(name);
+    };
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.createComment = function (value) { return document.createComment(value); };
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.createText = function (value) { return document.createTextNode(value); };
+    /**
+     * @param {?} parent
+     * @param {?} newChild
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.appendChild = function (parent, newChild) { parent.appendChild(newChild); };
+    /**
+     * @param {?} parent
+     * @param {?} newChild
+     * @param {?} refChild
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.insertBefore = function (parent, newChild, refChild) {
+        if (parent) {
+            parent.insertBefore(newChild, refChild);
+        }
+    };
+    /**
+     * @param {?} parent
+     * @param {?} oldChild
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.removeChild = function (parent, oldChild) {
+        if (parent) {
+            parent.removeChild(oldChild);
+        }
+    };
+    /**
+     * @param {?} selectorOrNode
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.selectRootElement = function (selectorOrNode) {
+        var /** @type {?} */ el = typeof selectorOrNode === 'string' ? document.querySelector(selectorOrNode) :
+            selectorOrNode;
+        if (!el) {
+            throw new Error("The selector \"" + selectorOrNode + "\" did not match any elements");
+        }
+        el.textContent = '';
+        return el;
+    };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.parentNode = function (node) { return node.parentNode; };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.nextSibling = function (node) { return node.nextSibling; };
+    /**
+     * @param {?} el
+     * @param {?} name
+     * @param {?} value
+     * @param {?=} namespace
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.setAttribute = function (el, name, value, namespace) {
+        if (namespace) {
+            name = namespace + ":" + name;
+            var /** @type {?} */ namespaceUri = NAMESPACE_URIS[namespace];
+            if (namespaceUri) {
+                el.setAttributeNS(namespaceUri, name, value);
+            }
+            else {
+                el.setAttribute(name, value);
+            }
+        }
+        else {
+            el.setAttribute(name, value);
+        }
+    };
+    /**
+     * @param {?} el
+     * @param {?} name
+     * @param {?=} namespace
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.removeAttribute = function (el, name, namespace) {
+        if (namespace) {
+            var /** @type {?} */ namespaceUri = NAMESPACE_URIS[namespace];
+            if (namespaceUri) {
+                el.removeAttributeNS(namespaceUri, name);
+            }
+            else {
+                el.removeAttribute(namespace + ":" + name);
+            }
+        }
+        else {
+            el.removeAttribute(name);
+        }
+    };
+    /**
+     * @param {?} el
+     * @param {?} name
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.addClass = function (el, name) { el.classList.add(name); };
+    /**
+     * @param {?} el
+     * @param {?} name
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.removeClass = function (el, name) { el.classList.remove(name); };
+    /**
+     * @param {?} el
+     * @param {?} style
+     * @param {?} value
+     * @param {?} flags
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.setStyle = function (el, style, value, flags) {
+        if (flags & __WEBPACK_IMPORTED_MODULE_2__angular_core__["RendererStyleFlags2"].DashCase) {
+            el.style.setProperty(style, value, !!(flags & __WEBPACK_IMPORTED_MODULE_2__angular_core__["RendererStyleFlags2"].Important) ? 'important' : '');
+        }
+        else {
+            el.style[style] = value;
+        }
+    };
+    /**
+     * @param {?} el
+     * @param {?} style
+     * @param {?} flags
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.removeStyle = function (el, style, flags) {
+        if (flags & __WEBPACK_IMPORTED_MODULE_2__angular_core__["RendererStyleFlags2"].DashCase) {
+            el.style.removeProperty(style);
+        }
+        else {
+            // IE requires '' instead of null
+            // see https://github.com/angular/angular/issues/7916
+            el.style[style] = '';
+        }
+    };
+    /**
+     * @param {?} el
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.setProperty = function (el, name, value) {
+        checkNoSyntheticProp(name, 'property');
+        el[name] = value;
+    };
+    /**
+     * @param {?} node
+     * @param {?} value
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.setValue = function (node, value) { node.nodeValue = value; };
+    /**
+     * @param {?} target
+     * @param {?} event
+     * @param {?} callback
+     * @return {?}
+     */
+    DefaultDomRenderer2.prototype.listen = function (target, event, callback) {
+        checkNoSyntheticProp(event, 'listener');
+        if (typeof target === 'string') {
+            return (this.eventManager.addGlobalEventListener(target, event, decoratePreventDefault(callback)));
+        }
+        return ((this.eventManager.addEventListener(target, event, decoratePreventDefault(callback))));
+    };
+    return DefaultDomRenderer2;
+}());
+var AT_CHARCODE = '@'.charCodeAt(0);
+/**
+ * @param {?} name
+ * @param {?} nameKind
+ * @return {?}
+ */
+function checkNoSyntheticProp(name, nameKind) {
+    if (name.charCodeAt(0) === AT_CHARCODE) {
+        throw new Error("Found the synthetic " + nameKind + " " + name + ". Please include either \"BrowserAnimationsModule\" or \"NoopAnimationsModule\" in your application.");
+    }
+}
+var EmulatedEncapsulationDomRenderer2 = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](EmulatedEncapsulationDomRenderer2, _super);
+    /**
+     * @param {?} eventManager
+     * @param {?} sharedStylesHost
+     * @param {?} component
+     */
+    function EmulatedEncapsulationDomRenderer2(eventManager, sharedStylesHost, component) {
+        var _this = _super.call(this, eventManager) || this;
+        _this.component = component;
+        var styles = flattenStyles(component.id, component.styles, []);
+        sharedStylesHost.addStyles(styles);
+        _this.contentAttr = shimContentAttribute(component.id);
+        _this.hostAttr = shimHostAttribute(component.id);
+        return _this;
+    }
+    /**
+     * @param {?} element
+     * @return {?}
+     */
+    EmulatedEncapsulationDomRenderer2.prototype.applyToHost = function (element) { _super.prototype.setAttribute.call(this, element, this.hostAttr, ''); };
+    /**
+     * @param {?} parent
+     * @param {?} name
+     * @return {?}
+     */
+    EmulatedEncapsulationDomRenderer2.prototype.createElement = function (parent, name) {
+        var /** @type {?} */ el = _super.prototype.createElement.call(this, parent, name);
+        _super.prototype.setAttribute.call(this, el, this.contentAttr, '');
+        return el;
+    };
+    return EmulatedEncapsulationDomRenderer2;
+}(DefaultDomRenderer2));
+var ShadowDomRenderer = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](ShadowDomRenderer, _super);
+    /**
+     * @param {?} eventManager
+     * @param {?} sharedStylesHost
+     * @param {?} hostEl
+     * @param {?} component
+     */
+    function ShadowDomRenderer(eventManager, sharedStylesHost, hostEl, component) {
+        var _this = _super.call(this, eventManager) || this;
+        _this.sharedStylesHost = sharedStylesHost;
+        _this.hostEl = hostEl;
+        _this.component = component;
+        _this.shadowRoot = hostEl.createShadowRoot();
+        _this.sharedStylesHost.addHost(_this.shadowRoot);
+        var styles = flattenStyles(component.id, component.styles, []);
+        for (var i = 0; i < styles.length; i++) {
+            var styleEl = document.createElement('style');
+            styleEl.textContent = styles[i];
+            _this.shadowRoot.appendChild(styleEl);
+        }
+        return _this;
+    }
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    ShadowDomRenderer.prototype.nodeOrShadowRoot = function (node) { return node === this.hostEl ? this.shadowRoot : node; };
+    /**
+     * @return {?}
+     */
+    ShadowDomRenderer.prototype.destroy = function () { this.sharedStylesHost.removeHost(this.shadowRoot); };
+    /**
+     * @param {?} parent
+     * @param {?} newChild
+     * @return {?}
+     */
+    ShadowDomRenderer.prototype.appendChild = function (parent, newChild) {
+        return _super.prototype.appendChild.call(this, this.nodeOrShadowRoot(parent), newChild);
+    };
+    /**
+     * @param {?} parent
+     * @param {?} newChild
+     * @param {?} refChild
+     * @return {?}
+     */
+    ShadowDomRenderer.prototype.insertBefore = function (parent, newChild, refChild) {
+        return _super.prototype.insertBefore.call(this, this.nodeOrShadowRoot(parent), newChild, refChild);
+    };
+    /**
+     * @param {?} parent
+     * @param {?} oldChild
+     * @return {?}
+     */
+    ShadowDomRenderer.prototype.removeChild = function (parent, oldChild) {
+        return _super.prototype.removeChild.call(this, this.nodeOrShadowRoot(parent), oldChild);
+    };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    ShadowDomRenderer.prototype.parentNode = function (node) {
+        return this.nodeOrShadowRoot(_super.prototype.parentNode.call(this, this.nodeOrShadowRoot(node)));
+    };
+    return ShadowDomRenderer;
+}(DefaultDomRenderer2));
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var DomEventsPlugin = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](DomEventsPlugin, _super);
+    /**
+     * @param {?} doc
+     */
+    function DomEventsPlugin(doc) {
+        return _super.call(this, doc) || this;
+    }
+    /**
+     * @param {?} eventName
+     * @return {?}
+     */
+    DomEventsPlugin.prototype.supports = function (eventName) { return true; };
+    /**
+     * @param {?} element
+     * @param {?} eventName
+     * @param {?} handler
+     * @return {?}
+     */
+    DomEventsPlugin.prototype.addEventListener = function (element, eventName, handler) {
+        element.addEventListener(eventName, /** @type {?} */ (handler), false);
+        return function () { return element.removeEventListener(eventName, /** @type {?} */ (handler), false); };
+    };
+    return DomEventsPlugin;
+}(EventManagerPlugin));
+DomEventsPlugin.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+DomEventsPlugin.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var EVENT_NAMES = {
+    // pan
+    'pan': true,
+    'panstart': true,
+    'panmove': true,
+    'panend': true,
+    'pancancel': true,
+    'panleft': true,
+    'panright': true,
+    'panup': true,
+    'pandown': true,
+    // pinch
+    'pinch': true,
+    'pinchstart': true,
+    'pinchmove': true,
+    'pinchend': true,
+    'pinchcancel': true,
+    'pinchin': true,
+    'pinchout': true,
+    // press
+    'press': true,
+    'pressup': true,
+    // rotate
+    'rotate': true,
+    'rotatestart': true,
+    'rotatemove': true,
+    'rotateend': true,
+    'rotatecancel': true,
+    // swipe
+    'swipe': true,
+    'swipeleft': true,
+    'swiperight': true,
+    'swipeup': true,
+    'swipedown': true,
+    // tap
+    'tap': true,
+};
+/**
+ * A DI token that you can use to provide{\@link HammerGestureConfig} to Angular. Use it to configure
+ * Hammer gestures.
+ *
+ * \@experimental
+ */
+var HAMMER_GESTURE_CONFIG = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["InjectionToken"]('HammerGestureConfig');
+/**
+ * \@experimental
+ */
+var HammerGestureConfig = (function () {
+    function HammerGestureConfig() {
+        this.events = [];
+        this.overrides = {};
+    }
+    /**
+     * @param {?} element
+     * @return {?}
+     */
+    HammerGestureConfig.prototype.buildHammer = function (element) {
+        var /** @type {?} */ mc = new Hammer(element);
+        mc.get('pinch').set({ enable: true });
+        mc.get('rotate').set({ enable: true });
+        for (var /** @type {?} */ eventName in this.overrides) {
+            mc.get(eventName).set(this.overrides[eventName]);
+        }
+        return mc;
+    };
+    return HammerGestureConfig;
+}());
+HammerGestureConfig.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+HammerGestureConfig.ctorParameters = function () { return []; };
+var HammerGesturesPlugin = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](HammerGesturesPlugin, _super);
+    /**
+     * @param {?} doc
+     * @param {?} _config
+     */
+    function HammerGesturesPlugin(doc, _config) {
+        var _this = _super.call(this, doc) || this;
+        _this._config = _config;
+        return _this;
+    }
+    /**
+     * @param {?} eventName
+     * @return {?}
+     */
+    HammerGesturesPlugin.prototype.supports = function (eventName) {
+        if (!EVENT_NAMES.hasOwnProperty(eventName.toLowerCase()) && !this.isCustomEvent(eventName)) {
+            return false;
+        }
+        if (!((window)).Hammer) {
+            throw new Error("Hammer.js is not loaded, can not bind " + eventName + " event");
+        }
+        return true;
+    };
+    /**
+     * @param {?} element
+     * @param {?} eventName
+     * @param {?} handler
+     * @return {?}
+     */
+    HammerGesturesPlugin.prototype.addEventListener = function (element, eventName, handler) {
+        var _this = this;
+        var /** @type {?} */ zone = this.manager.getZone();
+        eventName = eventName.toLowerCase();
+        return zone.runOutsideAngular(function () {
+            // Creating the manager bind events, must be done outside of angular
+            var /** @type {?} */ mc = _this._config.buildHammer(element);
+            var /** @type {?} */ callback = function (eventObj) {
+                zone.runGuarded(function () { handler(eventObj); });
+            };
+            mc.on(eventName, callback);
+            return function () { return mc.off(eventName, callback); };
+        });
+    };
+    /**
+     * @param {?} eventName
+     * @return {?}
+     */
+    HammerGesturesPlugin.prototype.isCustomEvent = function (eventName) { return this._config.events.indexOf(eventName) > -1; };
+    return HammerGesturesPlugin;
+}(EventManagerPlugin));
+HammerGesturesPlugin.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+HammerGesturesPlugin.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
+    { type: HammerGestureConfig, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [HAMMER_GESTURE_CONFIG,] },] },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var MODIFIER_KEYS = ['alt', 'control', 'meta', 'shift'];
+var MODIFIER_KEY_GETTERS = {
+    'alt': function (event) { return event.altKey; },
+    'control': function (event) { return event.ctrlKey; },
+    'meta': function (event) { return event.metaKey; },
+    'shift': function (event) { return event.shiftKey; }
+};
+/**
+ * \@experimental
+ */
+var KeyEventsPlugin = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](KeyEventsPlugin, _super);
+    /**
+     * @param {?} doc
+     */
+    function KeyEventsPlugin(doc) {
+        return _super.call(this, doc) || this;
+    }
+    /**
+     * @param {?} eventName
+     * @return {?}
+     */
+    KeyEventsPlugin.prototype.supports = function (eventName) { return KeyEventsPlugin.parseEventName(eventName) != null; };
+    /**
+     * @param {?} element
+     * @param {?} eventName
+     * @param {?} handler
+     * @return {?}
+     */
+    KeyEventsPlugin.prototype.addEventListener = function (element, eventName, handler) {
+        var /** @type {?} */ parsedEvent = ((KeyEventsPlugin.parseEventName(eventName)));
+        var /** @type {?} */ outsideHandler = KeyEventsPlugin.eventCallback(parsedEvent['fullKey'], handler, this.manager.getZone());
+        return this.manager.getZone().runOutsideAngular(function () {
+            return getDOM().onAndCancel(element, parsedEvent['domEventName'], outsideHandler);
+        });
+    };
+    /**
+     * @param {?} eventName
+     * @return {?}
+     */
+    KeyEventsPlugin.parseEventName = function (eventName) {
+        var /** @type {?} */ parts = eventName.toLowerCase().split('.');
+        var /** @type {?} */ domEventName = parts.shift();
+        if ((parts.length === 0) || !(domEventName === 'keydown' || domEventName === 'keyup')) {
+            return null;
+        }
+        var /** @type {?} */ key = KeyEventsPlugin._normalizeKey(/** @type {?} */ ((parts.pop())));
+        var /** @type {?} */ fullKey = '';
+        MODIFIER_KEYS.forEach(function (modifierName) {
+            var /** @type {?} */ index = parts.indexOf(modifierName);
+            if (index > -1) {
+                parts.splice(index, 1);
+                fullKey += modifierName + '.';
+            }
+        });
+        fullKey += key;
+        if (parts.length != 0 || key.length === 0) {
+            // returning null instead of throwing to let another plugin process the event
+            return null;
+        }
+        var /** @type {?} */ result = {};
+        result['domEventName'] = domEventName;
+        result['fullKey'] = fullKey;
+        return result;
+    };
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    KeyEventsPlugin.getEventFullKey = function (event) {
+        var /** @type {?} */ fullKey = '';
+        var /** @type {?} */ key = getDOM().getEventKey(event);
+        key = key.toLowerCase();
+        if (key === ' ') {
+            key = 'space'; // for readability
+        }
+        else if (key === '.') {
+            key = 'dot'; // because '.' is used as a separator in event names
+        }
+        MODIFIER_KEYS.forEach(function (modifierName) {
+            if (modifierName != key) {
+                var /** @type {?} */ modifierGetter = MODIFIER_KEY_GETTERS[modifierName];
+                if (modifierGetter(event)) {
+                    fullKey += modifierName + '.';
+                }
+            }
+        });
+        fullKey += key;
+        return fullKey;
+    };
+    /**
+     * @param {?} fullKey
+     * @param {?} handler
+     * @param {?} zone
+     * @return {?}
+     */
+    KeyEventsPlugin.eventCallback = function (fullKey, handler, zone) {
+        return function (event /** TODO #9100 */) {
+            if (KeyEventsPlugin.getEventFullKey(event) === fullKey) {
+                zone.runGuarded(function () { return handler(event); });
+            }
+        };
+    };
+    /**
+     * \@internal
+     * @param {?} keyName
+     * @return {?}
+     */
+    KeyEventsPlugin._normalizeKey = function (keyName) {
+        // TODO: switch to a Map if the mapping grows too much
+        switch (keyName) {
+            case 'esc':
+                return 'escape';
+            default:
+                return keyName;
+        }
+    };
+    return KeyEventsPlugin;
+}(EventManagerPlugin));
+KeyEventsPlugin.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+KeyEventsPlugin.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A pattern that recognizes a commonly useful subset of URLs that are safe.
+ *
+ * This regular expression matches a subset of URLs that will not cause script
+ * execution if used in URL context within a HTML document. Specifically, this
+ * regular expression matches if (comment from here on and regex copied from
+ * Soy's EscapingConventions):
+ * (1) Either a protocol in a whitelist (http, https, mailto or ftp).
+ * (2) or no protocol.  A protocol must be followed by a colon. The below
+ *     allows that by allowing colons only after one of the characters [/?#].
+ *     A colon after a hash (#) must be in the fragment.
+ *     Otherwise, a colon after a (?) must be in a query.
+ *     Otherwise, a colon after a single solidus (/) must be in a path.
+ *     Otherwise, a colon after a double solidus (//) must be in the authority
+ *     (before port).
+ *
+ * The pattern disallows &, used in HTML entity declarations before
+ * one of the characters in [/?#]. This disallows HTML entities used in the
+ * protocol name, which should never happen, e.g. "h&#116;tp" for "http".
+ * It also disallows HTML entities in the first path part of a relative path,
+ * e.g. "foo&lt;bar/baz".  Our existing escaping functions should not produce
+ * that. More importantly, it disallows masking of a colon,
+ * e.g. "javascript&#58;...".
+ *
+ * This regular expression was taken from the Closure sanitization library.
+ */
+var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
+/**
+ * A pattern that matches safe data URLs. Only matches image, video and audio types.
+ */
+var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+\/]+=*$/i;
+/**
+ * @param {?} url
+ * @return {?}
+ */
+function sanitizeUrl(url) {
+    url = String(url);
+    if (url.match(SAFE_URL_PATTERN) || url.match(DATA_URL_PATTERN))
+        return url;
+    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])()) {
+        getDOM().log("WARNING: sanitizing unsafe URL value " + url + " (see http://g.co/ng/security#xss)");
+    }
+    return 'unsafe:' + url;
+}
+/**
+ * @param {?} srcset
+ * @return {?}
+ */
+function sanitizeSrcset(srcset) {
+    srcset = String(srcset);
+    return srcset.split(',').map(function (srcset) { return sanitizeUrl(srcset.trim()); }).join(', ');
+}
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A <body> element that can be safely used to parse untrusted HTML. Lazily initialized below.
+ */
+var inertElement = null;
+/**
+ * Lazily initialized to make sure the DOM adapter gets set before use.
+ */
+var DOM = null;
+/**
+ * Returns an HTML element that is guaranteed to not execute code when creating elements in it.
+ * @return {?}
+ */
+function getInertElement() {
+    if (inertElement)
+        return inertElement;
+    DOM = getDOM();
+    // Prefer using <template> element if supported.
+    var /** @type {?} */ templateEl = DOM.createElement('template');
+    if ('content' in templateEl)
+        return templateEl;
+    var /** @type {?} */ doc = DOM.createHtmlDocument();
+    inertElement = DOM.querySelector(doc, 'body');
+    if (inertElement == null) {
+        // usually there should be only one body element in the document, but IE doesn't have any, so we
+        // need to create one.
+        var /** @type {?} */ html = DOM.createElement('html', doc);
+        inertElement = DOM.createElement('body', doc);
+        DOM.appendChild(html, inertElement);
+        DOM.appendChild(doc, html);
+    }
+    return inertElement;
+}
+/**
+ * @param {?} tags
+ * @return {?}
+ */
+function tagSet(tags) {
+    var /** @type {?} */ res = {};
+    for (var _i = 0, _a = tags.split(','); _i < _a.length; _i++) {
+        var t = _a[_i];
+        res[t] = true;
+    }
+    return res;
+}
+/**
+ * @param {...?} sets
+ * @return {?}
+ */
+function merge() {
+    var sets = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        sets[_i] = arguments[_i];
+    }
+    var /** @type {?} */ res = {};
+    for (var _a = 0, sets_1 = sets; _a < sets_1.length; _a++) {
+        var s = sets_1[_a];
+        for (var /** @type {?} */ v in s) {
+            if (s.hasOwnProperty(v))
+                res[v] = true;
+        }
+    }
+    return res;
+}
+// Good source of info about elements and attributes
+// http://dev.w3.org/html5/spec/Overview.html#semantics
+// http://simon.html5.org/html-elements
+// Safe Void Elements - HTML5
+// http://dev.w3.org/html5/spec/Overview.html#void-elements
+var VOID_ELEMENTS = tagSet('area,br,col,hr,img,wbr');
+// Elements that you can, intentionally, leave open (and which close themselves)
+// http://dev.w3.org/html5/spec/Overview.html#optional-tags
+var OPTIONAL_END_TAG_BLOCK_ELEMENTS = tagSet('colgroup,dd,dt,li,p,tbody,td,tfoot,th,thead,tr');
+var OPTIONAL_END_TAG_INLINE_ELEMENTS = tagSet('rp,rt');
+var OPTIONAL_END_TAG_ELEMENTS = merge(OPTIONAL_END_TAG_INLINE_ELEMENTS, OPTIONAL_END_TAG_BLOCK_ELEMENTS);
+// Safe Block Elements - HTML5
+var BLOCK_ELEMENTS = merge(OPTIONAL_END_TAG_BLOCK_ELEMENTS, tagSet('address,article,' +
+    'aside,blockquote,caption,center,del,details,dialog,dir,div,dl,figure,figcaption,footer,h1,h2,h3,h4,h5,' +
+    'h6,header,hgroup,hr,ins,main,map,menu,nav,ol,pre,section,summary,table,ul'));
+// Inline Elements - HTML5
+var INLINE_ELEMENTS = merge(OPTIONAL_END_TAG_INLINE_ELEMENTS, tagSet('a,abbr,acronym,audio,b,' +
+    'bdi,bdo,big,br,cite,code,del,dfn,em,font,i,img,ins,kbd,label,map,mark,picture,q,ruby,rp,rt,s,' +
+    'samp,small,source,span,strike,strong,sub,sup,time,track,tt,u,var,video'));
+var VALID_ELEMENTS = merge(VOID_ELEMENTS, BLOCK_ELEMENTS, INLINE_ELEMENTS, OPTIONAL_END_TAG_ELEMENTS);
+// Attributes that have href and hence need to be sanitized
+var URI_ATTRS = tagSet('background,cite,href,itemtype,longdesc,poster,src,xlink:href');
+// Attributes that have special href set hence need to be sanitized
+var SRCSET_ATTRS = tagSet('srcset');
+var HTML_ATTRS = tagSet('abbr,accesskey,align,alt,autoplay,axis,bgcolor,border,cellpadding,cellspacing,class,clear,color,cols,colspan,' +
+    'compact,controls,coords,datetime,default,dir,download,face,headers,height,hidden,hreflang,hspace,' +
+    'ismap,itemscope,itemprop,kind,label,lang,language,loop,media,muted,nohref,nowrap,open,preload,rel,rev,role,rows,rowspan,rules,' +
+    'scope,scrolling,shape,size,sizes,span,srclang,start,summary,tabindex,target,title,translate,type,usemap,' +
+    'valign,value,vspace,width');
+// NB: This currently consciously doesn't support SVG. SVG sanitization has had several security
+// issues in the past, so it seems safer to leave it out if possible. If support for binding SVG via
+// innerHTML is required, SVG attributes should be added here.
+// NB: Sanitization does not allow <form> elements or other active elements (<button> etc). Those
+// can be sanitized, but they increase security surface area without a legitimate use case, so they
+// are left out here.
+var VALID_ATTRS = merge(URI_ATTRS, SRCSET_ATTRS, HTML_ATTRS);
+/**
+ * SanitizingHtmlSerializer serializes a DOM fragment, stripping out any unsafe elements and unsafe
+ * attributes.
+ */
+var SanitizingHtmlSerializer = (function () {
+    function SanitizingHtmlSerializer() {
+        this.sanitizedSomething = false;
+        this.buf = [];
+    }
+    /**
+     * @param {?} el
+     * @return {?}
+     */
+    SanitizingHtmlSerializer.prototype.sanitizeChildren = function (el) {
+        // This cannot use a TreeWalker, as it has to run on Angular's various DOM adapters.
+        // However this code never accesses properties off of `document` before deleting its contents
+        // again, so it shouldn't be vulnerable to DOM clobbering.
+        var /** @type {?} */ current = ((el.firstChild));
+        while (current) {
+            if (DOM.isElementNode(current)) {
+                this.startElement(/** @type {?} */ (current));
+            }
+            else if (DOM.isTextNode(current)) {
+                this.chars(/** @type {?} */ ((DOM.nodeValue(current))));
+            }
+            else {
+                // Strip non-element, non-text nodes.
+                this.sanitizedSomething = true;
+            }
+            if (DOM.firstChild(current)) {
+                current = ((DOM.firstChild(current)));
+                continue;
+            }
+            while (current) {
+                // Leaving the element. Walk up and to the right, closing tags as we go.
+                if (DOM.isElementNode(current)) {
+                    this.endElement(/** @type {?} */ (current));
+                }
+                var /** @type {?} */ next = checkClobberedElement(current, /** @type {?} */ ((DOM.nextSibling(current))));
+                if (next) {
+                    current = next;
+                    break;
+                }
+                current = checkClobberedElement(current, /** @type {?} */ ((DOM.parentElement(current))));
+            }
+        }
+        return this.buf.join('');
+    };
+    /**
+     * @param {?} element
+     * @return {?}
+     */
+    SanitizingHtmlSerializer.prototype.startElement = function (element) {
+        var _this = this;
+        var /** @type {?} */ tagName = DOM.nodeName(element).toLowerCase();
+        if (!VALID_ELEMENTS.hasOwnProperty(tagName)) {
+            this.sanitizedSomething = true;
+            return;
+        }
+        this.buf.push('<');
+        this.buf.push(tagName);
+        DOM.attributeMap(element).forEach(function (value, attrName) {
+            var /** @type {?} */ lower = attrName.toLowerCase();
+            if (!VALID_ATTRS.hasOwnProperty(lower)) {
+                _this.sanitizedSomething = true;
+                return;
+            }
+            // TODO(martinprobst): Special case image URIs for data:image/...
+            if (URI_ATTRS[lower])
+                value = sanitizeUrl(value);
+            if (SRCSET_ATTRS[lower])
+                value = sanitizeSrcset(value);
+            _this.buf.push(' ');
+            _this.buf.push(attrName);
+            _this.buf.push('="');
+            _this.buf.push(encodeEntities(value));
+            _this.buf.push('"');
+        });
+        this.buf.push('>');
+    };
+    /**
+     * @param {?} current
+     * @return {?}
+     */
+    SanitizingHtmlSerializer.prototype.endElement = function (current) {
+        var /** @type {?} */ tagName = DOM.nodeName(current).toLowerCase();
+        if (VALID_ELEMENTS.hasOwnProperty(tagName) && !VOID_ELEMENTS.hasOwnProperty(tagName)) {
+            this.buf.push('</');
+            this.buf.push(tagName);
+            this.buf.push('>');
+        }
+    };
+    /**
+     * @param {?} chars
+     * @return {?}
+     */
+    SanitizingHtmlSerializer.prototype.chars = function (chars) { this.buf.push(encodeEntities(chars)); };
+    return SanitizingHtmlSerializer;
+}());
+/**
+ * @param {?} node
+ * @param {?} nextNode
+ * @return {?}
+ */
+function checkClobberedElement(node, nextNode) {
+    if (nextNode && DOM.contains(node, nextNode)) {
+        throw new Error("Failed to sanitize html because the element is clobbered: " + DOM.getOuterHTML(node));
+    }
+    return nextNode;
+}
+// Regular Expressions for parsing tags and attributes
+var SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+// ! to ~ is the ASCII range.
+var NON_ALPHANUMERIC_REGEXP = /([^\#-~ |!])/g;
+/**
+ * Escapes all potentially dangerous characters, so that the
+ * resulting string can be safely inserted into attribute or
+ * element text.
+ * @param {?} value
+ * @return {?}
+ */
+function encodeEntities(value) {
+    return value.replace(/&/g, '&amp;')
+        .replace(SURROGATE_PAIR_REGEXP, function (match) {
+        var /** @type {?} */ hi = match.charCodeAt(0);
+        var /** @type {?} */ low = match.charCodeAt(1);
+        return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
+    })
+        .replace(NON_ALPHANUMERIC_REGEXP, function (match) { return '&#' + match.charCodeAt(0) + ';'; })
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+}
+/**
+ * When IE9-11 comes across an unknown namespaced attribute e.g. 'xlink:foo' it adds 'xmlns:ns1'
+ * attribute to declare ns1 namespace and prefixes the attribute with 'ns1' (e.g. 'ns1:xlink:foo').
+ *
+ * This is undesirable since we don't want to allow any of these custom attributes. This method
+ * strips them all.
+ * @param {?} el
+ * @return {?}
+ */
+function stripCustomNsAttrs(el) {
+    DOM.attributeMap(el).forEach(function (_, attrName) {
+        if (attrName === 'xmlns:ns1' || attrName.indexOf('ns1:') === 0) {
+            DOM.removeAttribute(el, attrName);
+        }
+    });
+    for (var _i = 0, _a = DOM.childNodesAsList(el); _i < _a.length; _i++) {
+        var n = _a[_i];
+        if (DOM.isElementNode(n))
+            stripCustomNsAttrs(/** @type {?} */ (n));
+    }
+}
+/**
+ * Sanitizes the given unsafe, untrusted HTML fragment, and returns HTML text that is safe to add to
+ * the DOM in a browser environment.
+ * @param {?} defaultDoc
+ * @param {?} unsafeHtmlInput
+ * @return {?}
+ */
+function sanitizeHtml(defaultDoc, unsafeHtmlInput) {
+    try {
+        var /** @type {?} */ containerEl = getInertElement();
+        // Make sure unsafeHtml is actually a string (TypeScript types are not enforced at runtime).
+        var /** @type {?} */ unsafeHtml = unsafeHtmlInput ? String(unsafeHtmlInput) : '';
+        // mXSS protection. Repeatedly parse the document to make sure it stabilizes, so that a browser
+        // trying to auto-correct incorrect HTML cannot cause formerly inert HTML to become dangerous.
+        var /** @type {?} */ mXSSAttempts = 5;
+        var /** @type {?} */ parsedHtml = unsafeHtml;
+        do {
+            if (mXSSAttempts === 0) {
+                throw new Error('Failed to sanitize html because the input is unstable');
+            }
+            mXSSAttempts--;
+            unsafeHtml = parsedHtml;
+            DOM.setInnerHTML(containerEl, unsafeHtml);
+            if (defaultDoc.documentMode) {
+                // strip custom-namespaced attributes on IE<=11
+                stripCustomNsAttrs(containerEl);
+            }
+            parsedHtml = DOM.getInnerHTML(containerEl);
+        } while (unsafeHtml !== parsedHtml);
+        var /** @type {?} */ sanitizer = new SanitizingHtmlSerializer();
+        var /** @type {?} */ safeHtml = sanitizer.sanitizeChildren(DOM.getTemplateContent(containerEl) || containerEl);
+        // Clear out the body element.
+        var /** @type {?} */ parent = DOM.getTemplateContent(containerEl) || containerEl;
+        for (var _i = 0, _a = DOM.childNodesAsList(parent); _i < _a.length; _i++) {
+            var child = _a[_i];
+            DOM.removeChild(parent, child);
+        }
+        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])() && sanitizer.sanitizedSomething) {
+            DOM.log('WARNING: sanitizing HTML stripped some content (see http://g.co/ng/security#xss).');
+        }
+        return safeHtml;
+    }
+    catch (e) {
+        // In case anything goes wrong, clear out inertElement to reset the entire DOM structure.
+        inertElement = null;
+        throw e;
+    }
+}
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Regular expression for safe style values.
+ *
+ * Quotes (" and ') are allowed, but a check must be done elsewhere to ensure they're balanced.
+ *
+ * ',' allows multiple values to be assigned to the same property (e.g. background-attachment or
+ * font-family) and hence could allow multiple values to get injected, but that should pose no risk
+ * of XSS.
+ *
+ * The function expression checks only for XSS safety, not for CSS validity.
+ *
+ * This regular expression was taken from the Closure sanitization library, and augmented for
+ * transformation values.
+ */
+var VALUES = '[-,."\'%_!# a-zA-Z0-9]+';
+var TRANSFORMATION_FNS = '(?:matrix|translate|scale|rotate|skew|perspective)(?:X|Y|3d)?';
+var COLOR_FNS = '(?:rgb|hsl)a?';
+var GRADIENTS = '(?:repeating-)?(?:linear|radial)-gradient';
+var CSS3_FNS = '(?:calc|attr)';
+var FN_ARGS = '\\([-0-9.%, #a-zA-Z]+\\)';
+var SAFE_STYLE_VALUE = new RegExp("^(" + VALUES + "|" +
+    ("(?:" + TRANSFORMATION_FNS + "|" + COLOR_FNS + "|" + GRADIENTS + "|" + CSS3_FNS + ")") +
+    (FN_ARGS + ")$"), 'g');
+/**
+ * Matches a `url(...)` value with an arbitrary argument as long as it does
+ * not contain parentheses.
+ *
+ * The URL value still needs to be sanitized separately.
+ *
+ * `url(...)` values are a very common use case, e.g. for `background-image`. With carefully crafted
+ * CSS style rules, it is possible to construct an information leak with `url` values in CSS, e.g.
+ * by observing whether scroll bars are displayed, or character ranges used by a font face
+ * definition.
+ *
+ * Angular only allows binding CSS values (as opposed to entire CSS rules), so it is unlikely that
+ * binding a URL value without further cooperation from the page will cause an information leak, and
+ * if so, it is just a leak, not a full blown XSS vulnerability.
+ *
+ * Given the common use case, low likelihood of attack vector, and low impact of an attack, this
+ * code is permissive and allows URLs that sanitize otherwise.
+ */
+var URL_RE = /^url\(([^)]+)\)$/;
+/**
+ * Checks that quotes (" and ') are properly balanced inside a string. Assumes
+ * that neither escape (\) nor any other character that could result in
+ * breaking out of a string parsing context are allowed;
+ * see http://www.w3.org/TR/css3-syntax/#string-token-diagram.
+ *
+ * This code was taken from the Closure sanitization library.
+ * @param {?} value
+ * @return {?}
+ */
+function hasBalancedQuotes(value) {
+    var /** @type {?} */ outsideSingle = true;
+    var /** @type {?} */ outsideDouble = true;
+    for (var /** @type {?} */ i = 0; i < value.length; i++) {
+        var /** @type {?} */ c = value.charAt(i);
+        if (c === '\'' && outsideDouble) {
+            outsideSingle = !outsideSingle;
+        }
+        else if (c === '"' && outsideSingle) {
+            outsideDouble = !outsideDouble;
+        }
+    }
+    return outsideSingle && outsideDouble;
+}
+/**
+ * Sanitizes the given untrusted CSS style property value (i.e. not an entire object, just a single
+ * value) and returns a value that is safe to use in a browser environment.
+ * @param {?} value
+ * @return {?}
+ */
+function sanitizeStyle(value) {
+    value = String(value).trim(); // Make sure it's actually a string.
+    if (!value)
+        return '';
+    // Single url(...) values are supported, but only for URLs that sanitize cleanly. See above for
+    // reasoning behind this.
+    var /** @type {?} */ urlMatch = value.match(URL_RE);
+    if ((urlMatch && sanitizeUrl(urlMatch[1]) === urlMatch[1]) ||
+        value.match(SAFE_STYLE_VALUE) && hasBalancedQuotes(value)) {
+        return value; // Safe style values.
+    }
+    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])()) {
+        getDOM().log("WARNING: sanitizing unsafe style value " + value + " (see http://g.co/ng/security#xss).");
+    }
+    return 'unsafe';
+}
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * DomSanitizer helps preventing Cross Site Scripting Security bugs (XSS) by sanitizing
+ * values to be safe to use in the different DOM contexts.
+ *
+ * For example, when binding a URL in an `<a [href]="someValue">` hyperlink, `someValue` will be
+ * sanitized so that an attacker cannot inject e.g. a `javascript:` URL that would execute code on
+ * the website.
+ *
+ * In specific situations, it might be necessary to disable sanitization, for example if the
+ * application genuinely needs to produce a `javascript:` style link with a dynamic value in it.
+ * Users can bypass security by constructing a value with one of the `bypassSecurityTrust...`
+ * methods, and then binding to that value from the template.
+ *
+ * These situations should be very rare, and extraordinary care must be taken to avoid creating a
+ * Cross Site Scripting (XSS) security bug!
+ *
+ * When using `bypassSecurityTrust...`, make sure to call the method as early as possible and as
+ * close as possible to the source of the value, to make it easy to verify no security bug is
+ * created by its use.
+ *
+ * It is not required (and not recommended) to bypass security if the value is safe, e.g. a URL that
+ * does not start with a suspicious protocol, or an HTML snippet that does not contain dangerous
+ * code. The sanitizer leaves safe values intact.
+ *
+ * \@security Calling any of the `bypassSecurityTrust...` APIs disables Angular's built-in
+ * sanitization for the value passed in. Carefully check and audit all values and code paths going
+ * into this call. Make sure any user data is appropriately escaped for this security context.
+ * For more detail, see the [Security Guide](http://g.co/ng/security).
+ *
+ * \@stable
+ * @abstract
+ */
+var DomSanitizer = (function () {
+    function DomSanitizer() {
+    }
+    /**
+     * Sanitizes a value for use in the given SecurityContext.
+     *
+     * If value is trusted for the context, this method will unwrap the contained safe value and use
+     * it directly. Otherwise, value will be sanitized to be safe in the given context, for example
+     * by replacing URLs that have an unsafe protocol part (such as `javascript:`). The implementation
+     * is responsible to make sure that the value can definitely be safely used in the given context.
+     * @abstract
+     * @param {?} context
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizer.prototype.sanitize = function (context, value) { };
+    /**
+     * Bypass security and trust the given value to be safe HTML. Only use this when the bound HTML
+     * is unsafe (e.g. contains `<script>` tags) and the code should be executed. The sanitizer will
+     * leave safe HTML intact, so in most situations this method should not be used.
+     *
+     * **WARNING:** calling this method with untrusted user data exposes your application to XSS
+     * security risks!
+     * @abstract
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizer.prototype.bypassSecurityTrustHtml = function (value) { };
+    /**
+     * Bypass security and trust the given value to be safe style value (CSS).
+     *
+     * **WARNING:** calling this method with untrusted user data exposes your application to XSS
+     * security risks!
+     * @abstract
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizer.prototype.bypassSecurityTrustStyle = function (value) { };
+    /**
+     * Bypass security and trust the given value to be safe JavaScript.
+     *
+     * **WARNING:** calling this method with untrusted user data exposes your application to XSS
+     * security risks!
+     * @abstract
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizer.prototype.bypassSecurityTrustScript = function (value) { };
+    /**
+     * Bypass security and trust the given value to be a safe style URL, i.e. a value that can be used
+     * in hyperlinks or `<img src>`.
+     *
+     * **WARNING:** calling this method with untrusted user data exposes your application to XSS
+     * security risks!
+     * @abstract
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizer.prototype.bypassSecurityTrustUrl = function (value) { };
+    /**
+     * Bypass security and trust the given value to be a safe resource URL, i.e. a location that may
+     * be used to load executable code from, like `<script src>`, or `<iframe src>`.
+     *
+     * **WARNING:** calling this method with untrusted user data exposes your application to XSS
+     * security risks!
+     * @abstract
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizer.prototype.bypassSecurityTrustResourceUrl = function (value) { };
+    return DomSanitizer;
+}());
+var DomSanitizerImpl = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](DomSanitizerImpl, _super);
+    /**
+     * @param {?} _doc
+     */
+    function DomSanitizerImpl(_doc) {
+        var _this = _super.call(this) || this;
+        _this._doc = _doc;
+        return _this;
+    }
+    /**
+     * @param {?} ctx
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizerImpl.prototype.sanitize = function (ctx, value) {
+        if (value == null)
+            return null;
+        switch (ctx) {
+            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].NONE:
+                return (value);
+            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].HTML:
+                if (value instanceof SafeHtmlImpl)
+                    return value.changingThisBreaksApplicationSecurity;
+                this.checkNotSafeValue(value, 'HTML');
+                return sanitizeHtml(this._doc, String(value));
+            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].STYLE:
+                if (value instanceof SafeStyleImpl)
+                    return value.changingThisBreaksApplicationSecurity;
+                this.checkNotSafeValue(value, 'Style');
+                return sanitizeStyle(/** @type {?} */ (value));
+            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].SCRIPT:
+                if (value instanceof SafeScriptImpl)
+                    return value.changingThisBreaksApplicationSecurity;
+                this.checkNotSafeValue(value, 'Script');
+                throw new Error('unsafe value used in a script context');
+            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].URL:
+                if (value instanceof SafeResourceUrlImpl || value instanceof SafeUrlImpl) {
+                    // Allow resource URLs in URL contexts, they are strictly more trusted.
+                    return value.changingThisBreaksApplicationSecurity;
+                }
+                this.checkNotSafeValue(value, 'URL');
+                return sanitizeUrl(String(value));
+            case __WEBPACK_IMPORTED_MODULE_2__angular_core__["SecurityContext"].RESOURCE_URL:
+                if (value instanceof SafeResourceUrlImpl) {
+                    return value.changingThisBreaksApplicationSecurity;
+                }
+                this.checkNotSafeValue(value, 'ResourceURL');
+                throw new Error('unsafe value used in a resource URL context (see http://g.co/ng/security#xss)');
+            default:
+                throw new Error("Unexpected SecurityContext " + ctx + " (see http://g.co/ng/security#xss)");
+        }
+    };
+    /**
+     * @param {?} value
+     * @param {?} expectedType
+     * @return {?}
+     */
+    DomSanitizerImpl.prototype.checkNotSafeValue = function (value, expectedType) {
+        if (value instanceof SafeValueImpl) {
+            throw new Error("Required a safe " + expectedType + ", got a " + value.getTypeName() + " " +
+                "(see http://g.co/ng/security#xss)");
+        }
+    };
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizerImpl.prototype.bypassSecurityTrustHtml = function (value) { return new SafeHtmlImpl(value); };
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizerImpl.prototype.bypassSecurityTrustStyle = function (value) { return new SafeStyleImpl(value); };
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizerImpl.prototype.bypassSecurityTrustScript = function (value) { return new SafeScriptImpl(value); };
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizerImpl.prototype.bypassSecurityTrustUrl = function (value) { return new SafeUrlImpl(value); };
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    DomSanitizerImpl.prototype.bypassSecurityTrustResourceUrl = function (value) {
+        return new SafeResourceUrlImpl(value);
+    };
+    return DomSanitizerImpl;
+}(DomSanitizer));
+DomSanitizerImpl.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+DomSanitizerImpl.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
+]; };
+/**
+ * @abstract
+ */
+var SafeValueImpl = (function () {
+    /**
+     * @param {?} changingThisBreaksApplicationSecurity
+     */
+    function SafeValueImpl(changingThisBreaksApplicationSecurity) {
+        this.changingThisBreaksApplicationSecurity = changingThisBreaksApplicationSecurity;
+        // empty
+    }
+    /**
+     * @abstract
+     * @return {?}
+     */
+    SafeValueImpl.prototype.getTypeName = function () { };
+    /**
+     * @return {?}
+     */
+    SafeValueImpl.prototype.toString = function () {
+        return "SafeValue must use [property]=binding: " + this.changingThisBreaksApplicationSecurity +
+            " (see http://g.co/ng/security#xss)";
+    };
+    return SafeValueImpl;
+}());
+var SafeHtmlImpl = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](SafeHtmlImpl, _super);
+    function SafeHtmlImpl() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * @return {?}
+     */
+    SafeHtmlImpl.prototype.getTypeName = function () { return 'HTML'; };
+    return SafeHtmlImpl;
+}(SafeValueImpl));
+var SafeStyleImpl = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](SafeStyleImpl, _super);
+    function SafeStyleImpl() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * @return {?}
+     */
+    SafeStyleImpl.prototype.getTypeName = function () { return 'Style'; };
+    return SafeStyleImpl;
+}(SafeValueImpl));
+var SafeScriptImpl = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](SafeScriptImpl, _super);
+    function SafeScriptImpl() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * @return {?}
+     */
+    SafeScriptImpl.prototype.getTypeName = function () { return 'Script'; };
+    return SafeScriptImpl;
+}(SafeValueImpl));
+var SafeUrlImpl = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](SafeUrlImpl, _super);
+    function SafeUrlImpl() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * @return {?}
+     */
+    SafeUrlImpl.prototype.getTypeName = function () { return 'URL'; };
+    return SafeUrlImpl;
+}(SafeValueImpl));
+var SafeResourceUrlImpl = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](SafeResourceUrlImpl, _super);
+    function SafeResourceUrlImpl() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * @return {?}
+     */
+    SafeResourceUrlImpl.prototype.getTypeName = function () { return 'ResourceURL'; };
+    return SafeResourceUrlImpl;
+}(SafeValueImpl));
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var INTERNAL_BROWSER_PLATFORM_PROVIDERS = [
+    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["PLATFORM_ID"], useValue: __WEBPACK_IMPORTED_MODULE_1__angular_common__["ɵPLATFORM_BROWSER_ID"] },
+    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["PLATFORM_INITIALIZER"], useValue: initDomAdapter, multi: true },
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_common__["PlatformLocation"], useClass: BrowserPlatformLocation },
+    { provide: DOCUMENT$1, useFactory: _document, deps: [] },
+];
+/**
+ * \@security Replacing built-in sanitization providers exposes the application to XSS risks.
+ * Attacker-controlled data introduced by an unsanitized provider could expose your
+ * application to XSS risks. For more detail, see the [Security Guide](http://g.co/ng/security).
+ * \@experimental
+ */
+var BROWSER_SANITIZATION_PROVIDERS = [
+    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Sanitizer"], useExisting: DomSanitizer },
+    { provide: DomSanitizer, useClass: DomSanitizerImpl },
+];
+/**
+ * \@stable
+ */
+var platformBrowser = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["createPlatformFactory"])(__WEBPACK_IMPORTED_MODULE_2__angular_core__["platformCore"], 'browser', INTERNAL_BROWSER_PLATFORM_PROVIDERS);
+/**
+ * @return {?}
+ */
+function initDomAdapter() {
+    BrowserDomAdapter.makeCurrent();
+    BrowserGetTestability.init();
+}
+/**
+ * @return {?}
+ */
+function errorHandler() {
+    return new __WEBPACK_IMPORTED_MODULE_2__angular_core__["ErrorHandler"]();
+}
+/**
+ * @return {?}
+ */
+function _document() {
+    return document;
+}
+/**
+ * The ng module for the browser.
+ *
+ * \@stable
+ */
+var BrowserModule = (function () {
+    /**
+     * @param {?} parentModule
+     */
+    function BrowserModule(parentModule) {
+        if (parentModule) {
+            throw new Error("BrowserModule has already been loaded. If you need access to common directives such as NgIf and NgFor from a lazy loaded module, import CommonModule instead.");
+        }
+    }
+    /**
+     * Configures a browser-based application to transition from a server-rendered app, if
+     * one is present on the page. The specified parameters must include an application id,
+     * which must match between the client and server applications.
+     *
+     * \@experimental
+     * @param {?} params
+     * @return {?}
+     */
+    BrowserModule.withServerTransition = function (params) {
+        return {
+            ngModule: BrowserModule,
+            providers: [
+                { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["APP_ID"], useValue: params.appId },
+                { provide: TRANSITION_ID, useExisting: __WEBPACK_IMPORTED_MODULE_2__angular_core__["APP_ID"] },
+                SERVER_TRANSITION_PROVIDERS,
+            ],
+        };
+    };
+    return BrowserModule;
+}());
+BrowserModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"], args: [{
+                providers: [
+                    BROWSER_SANITIZATION_PROVIDERS,
+                    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["ErrorHandler"], useFactory: errorHandler, deps: [] },
+                    { provide: EVENT_MANAGER_PLUGINS, useClass: DomEventsPlugin, multi: true },
+                    { provide: EVENT_MANAGER_PLUGINS, useClass: KeyEventsPlugin, multi: true },
+                    { provide: EVENT_MANAGER_PLUGINS, useClass: HammerGesturesPlugin, multi: true },
+                    { provide: HAMMER_GESTURE_CONFIG, useClass: HammerGestureConfig },
+                    DomRendererFactory2,
+                    { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["RendererFactory2"], useExisting: DomRendererFactory2 },
+                    { provide: SharedStylesHost, useExisting: DomSharedStylesHost },
+                    DomSharedStylesHost,
+                    __WEBPACK_IMPORTED_MODULE_2__angular_core__["Testability"],
+                    EventManager,
+                    ELEMENT_PROBE_PROVIDERS,
+                    Meta,
+                    Title,
+                ],
+                exports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"], __WEBPACK_IMPORTED_MODULE_2__angular_core__["ApplicationModule"]]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+BrowserModule.ctorParameters = function () { return [
+    { type: BrowserModule, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["Optional"] }, { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["SkipSelf"] },] },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var win = typeof window !== 'undefined' && window || {};
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var ChangeDetectionPerfRecord = (function () {
+    /**
+     * @param {?} msPerTick
+     * @param {?} numTicks
+     */
+    function ChangeDetectionPerfRecord(msPerTick, numTicks) {
+        this.msPerTick = msPerTick;
+        this.numTicks = numTicks;
+    }
+    return ChangeDetectionPerfRecord;
+}());
+/**
+ * Entry point for all Angular profiling-related debug tools. This object
+ * corresponds to the `ng.profiler` in the dev console.
+ */
+var AngularProfiler = (function () {
+    /**
+     * @param {?} ref
+     */
+    function AngularProfiler(ref) {
+        this.appRef = ref.injector.get(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ApplicationRef"]);
+    }
+    /**
+     * Exercises change detection in a loop and then prints the average amount of
+     * time in milliseconds how long a single round of change detection takes for
+     * the current state of the UI. It runs a minimum of 5 rounds for a minimum
+     * of 500 milliseconds.
+     *
+     * Optionally, a user may pass a `config` parameter containing a map of
+     * options. Supported options are:
+     *
+     * `record` (boolean) - causes the profiler to record a CPU profile while
+     * it exercises the change detector. Example:
+     *
+     * ```
+     * ng.profiler.timeChangeDetection({record: true})
+     * ```
+     * @param {?} config
+     * @return {?}
+     */
+    AngularProfiler.prototype.timeChangeDetection = function (config) {
+        var /** @type {?} */ record = config && config['record'];
+        var /** @type {?} */ profileName = 'Change Detection';
+        // Profiler is not available in Android browsers, nor in IE 9 without dev tools opened
+        var /** @type {?} */ isProfilerAvailable = win.console.profile != null;
+        if (record && isProfilerAvailable) {
+            win.console.profile(profileName);
+        }
+        var /** @type {?} */ start = getDOM().performanceNow();
+        var /** @type {?} */ numTicks = 0;
+        while (numTicks < 5 || (getDOM().performanceNow() - start) < 500) {
+            this.appRef.tick();
+            numTicks++;
+        }
+        var /** @type {?} */ end = getDOM().performanceNow();
+        if (record && isProfilerAvailable) {
+            // need to cast to <any> because type checker thinks there's no argument
+            // while in fact there is:
+            //
+            // https://developer.mozilla.org/en-US/docs/Web/API/Console/profileEnd
+            ((win.console.profileEnd))(profileName);
+        }
+        var /** @type {?} */ msPerTick = (end - start) / numTicks;
+        win.console.log("ran " + numTicks + " change detection cycles");
+        win.console.log(msPerTick.toFixed(2) + " ms per check");
+        return new ChangeDetectionPerfRecord(msPerTick, numTicks);
+    };
+    return AngularProfiler;
+}());
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var PROFILER_GLOBAL_NAME = 'profiler';
+/**
+ * Enabled Angular debug tools that are accessible via your browser's
+ * developer console.
+ *
+ * Usage:
+ *
+ * 1. Open developer console (e.g. in Chrome Ctrl + Shift + j)
+ * 1. Type `ng.` (usually the console will show auto-complete suggestion)
+ * 1. Try the change detection profiler `ng.profiler.timeChangeDetection()`
+ *    then hit Enter.
+ *
+ * \@experimental All debugging apis are currently experimental.
+ * @template T
+ * @param {?} ref
+ * @return {?}
+ */
+function enableDebugTools(ref) {
+    exportNgVar(PROFILER_GLOBAL_NAME, new AngularProfiler(ref));
+    return ref;
+}
+/**
+ * Disables Angular tools.
+ *
+ * \@experimental All debugging apis are currently experimental.
+ * @return {?}
+ */
+function disableDebugTools() {
+    exportNgVar(PROFILER_GLOBAL_NAME, null);
+}
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Predicates for use with {\@link DebugElement}'s query functions.
+ *
+ * \@experimental All debugging apis are currently experimental.
+ */
+var By = (function () {
+    function By() {
+    }
+    /**
+     * Match all elements.
+     *
+     * ## Example
+     *
+     * {\@example platform-browser/dom/debug/ts/by/by.ts region='by_all'}
+     * @return {?}
+     */
+    By.all = function () { return function (debugElement) { return true; }; };
+    /**
+     * Match elements by the given CSS selector.
+     *
+     * ## Example
+     *
+     * {\@example platform-browser/dom/debug/ts/by/by.ts region='by_css'}
+     * @param {?} selector
+     * @return {?}
+     */
+    By.css = function (selector) {
+        return function (debugElement) {
+            return debugElement.nativeElement != null ?
+                getDOM().elementMatches(debugElement.nativeElement, selector) :
+                false;
+        };
+    };
+    /**
+     * Match elements that have the given directive present.
+     *
+     * ## Example
+     *
+     * {\@example platform-browser/dom/debug/ts/by/by.ts region='by_directive'}
+     * @param {?} type
+     * @return {?}
+     */
+    By.directive = function (type) {
+        return function (debugElement) { return ((debugElement.providerTokens)).indexOf(type) !== -1; };
+    };
+    return By;
+}());
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @module
+ * @description
+ * Entry point for all public APIs of the common package.
+ */
+/**
+ * \@stable
+ */
+var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.2.6');
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @module
+ * @description
+ * Entry point for all public APIs of the platform-browser package.
+ */
+// This file only reexports content of the `src` folder. Keep it that way.
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+//# sourceMappingURL=platform-browser.es5.js.map
 
 
 /***/ }),
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26785,22 +26592,2477 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(173));
-__export(__webpack_require__(174));
+__export(__webpack_require__(175));
+__export(__webpack_require__(176));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Observable_1 = __webpack_require__(7);
+var Subscriber_1 = __webpack_require__(14);
+var Subscription_1 = __webpack_require__(70);
+var ObjectUnsubscribedError_1 = __webpack_require__(157);
+var SubjectSubscription_1 = __webpack_require__(362);
+var rxSubscriber_1 = __webpack_require__(104);
+/**
+ * @class SubjectSubscriber<T>
+ */
+var SubjectSubscriber = (function (_super) {
+    __extends(SubjectSubscriber, _super);
+    function SubjectSubscriber(destination) {
+        _super.call(this, destination);
+        this.destination = destination;
+    }
+    return SubjectSubscriber;
+}(Subscriber_1.Subscriber));
+exports.SubjectSubscriber = SubjectSubscriber;
+/**
+ * @class Subject<T>
+ */
+var Subject = (function (_super) {
+    __extends(Subject, _super);
+    function Subject() {
+        _super.call(this);
+        this.observers = [];
+        this.closed = false;
+        this.isStopped = false;
+        this.hasError = false;
+        this.thrownError = null;
+    }
+    Subject.prototype[rxSubscriber_1.rxSubscriber] = function () {
+        return new SubjectSubscriber(this);
+    };
+    Subject.prototype.lift = function (operator) {
+        var subject = new AnonymousSubject(this, this);
+        subject.operator = operator;
+        return subject;
+    };
+    Subject.prototype.next = function (value) {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        if (!this.isStopped) {
+            var observers = this.observers;
+            var len = observers.length;
+            var copy = observers.slice();
+            for (var i = 0; i < len; i++) {
+                copy[i].next(value);
+            }
+        }
+    };
+    Subject.prototype.error = function (err) {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        this.hasError = true;
+        this.thrownError = err;
+        this.isStopped = true;
+        var observers = this.observers;
+        var len = observers.length;
+        var copy = observers.slice();
+        for (var i = 0; i < len; i++) {
+            copy[i].error(err);
+        }
+        this.observers.length = 0;
+    };
+    Subject.prototype.complete = function () {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        this.isStopped = true;
+        var observers = this.observers;
+        var len = observers.length;
+        var copy = observers.slice();
+        for (var i = 0; i < len; i++) {
+            copy[i].complete();
+        }
+        this.observers.length = 0;
+    };
+    Subject.prototype.unsubscribe = function () {
+        this.isStopped = true;
+        this.closed = true;
+        this.observers = null;
+    };
+    Subject.prototype._trySubscribe = function (subscriber) {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        else {
+            return _super.prototype._trySubscribe.call(this, subscriber);
+        }
+    };
+    Subject.prototype._subscribe = function (subscriber) {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        else if (this.hasError) {
+            subscriber.error(this.thrownError);
+            return Subscription_1.Subscription.EMPTY;
+        }
+        else if (this.isStopped) {
+            subscriber.complete();
+            return Subscription_1.Subscription.EMPTY;
+        }
+        else {
+            this.observers.push(subscriber);
+            return new SubjectSubscription_1.SubjectSubscription(this, subscriber);
+        }
+    };
+    Subject.prototype.asObservable = function () {
+        var observable = new Observable_1.Observable();
+        observable.source = this;
+        return observable;
+    };
+    Subject.create = function (destination, source) {
+        return new AnonymousSubject(destination, source);
+    };
+    return Subject;
+}(Observable_1.Observable));
+exports.Subject = Subject;
+/**
+ * @class AnonymousSubject<T>
+ */
+var AnonymousSubject = (function (_super) {
+    __extends(AnonymousSubject, _super);
+    function AnonymousSubject(destination, source) {
+        _super.call(this);
+        this.destination = destination;
+        this.source = source;
+    }
+    AnonymousSubject.prototype.next = function (value) {
+        var destination = this.destination;
+        if (destination && destination.next) {
+            destination.next(value);
+        }
+    };
+    AnonymousSubject.prototype.error = function (err) {
+        var destination = this.destination;
+        if (destination && destination.error) {
+            this.destination.error(err);
+        }
+    };
+    AnonymousSubject.prototype.complete = function () {
+        var destination = this.destination;
+        if (destination && destination.complete) {
+            this.destination.complete();
+        }
+    };
+    AnonymousSubject.prototype._subscribe = function (subscriber) {
+        var source = this.source;
+        if (source) {
+            return this.source.subscribe(subscriber);
+        }
+        else {
+            return Subscription_1.Subscription.EMPTY;
+        }
+    };
+    return AnonymousSubject;
+}(Subject));
+exports.AnonymousSubject = AnonymousSubject;
+//# sourceMappingURL=Subject.js.map
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+// CommonJS / Node have global context exposed as "global" variable.
+// We don't want to include the whole node.d.ts this this compilation unit so we'll just fake
+// the global "global" var for now.
+var __window = typeof window !== 'undefined' && window;
+var __self = typeof self !== 'undefined' && typeof WorkerGlobalScope !== 'undefined' &&
+    self instanceof WorkerGlobalScope && self;
+var __global = typeof global !== 'undefined' && global;
+var _root = __window || __global || __self;
+exports.root = _root;
+// Workaround Closure Compiler restriction: The body of a goog.module cannot use throw.
+// This is needed when used with angular/tsickle which inserts a goog.module statement.
+// Wrap in IIFE
+(function () {
+    if (!_root) {
+        throw new Error('RxJS could not find any global context (window, self, global)');
+    }
+})();
+//# sourceMappingURL=root.js.map
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(75)))
+
+/***/ }),
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(38);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserXhr", function() { return BrowserXhr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JSONPBackend", function() { return JSONPBackend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JSONPConnection", function() { return JSONPConnection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CookieXSRFStrategy", function() { return CookieXSRFStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XHRBackend", function() { return XHRBackend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XHRConnection", function() { return XHRConnection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseRequestOptions", function() { return BaseRequestOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RequestOptions", function() { return RequestOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseResponseOptions", function() { return BaseResponseOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResponseOptions", function() { return ResponseOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadyState", function() { return ReadyState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RequestMethod", function() { return RequestMethod; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResponseContentType", function() { return ResponseContentType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResponseType", function() { return ResponseType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Headers", function() { return Headers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Http", function() { return Http; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Jsonp", function() { return Jsonp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpModule", function() { return HttpModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsonpModule", function() { return JsonpModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Connection", function() { return Connection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConnectionBackend", function() { return ConnectionBackend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XSRFStrategy", function() { return XSRFStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Request", function() { return Request; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Response", function() { return Response; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QueryEncoder", function() { return QueryEncoder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "URLSearchParams", function() { return URLSearchParams; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return BrowserJsonp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return JSONPBackend_; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return Body; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return _createDefaultCookieXSRFStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return httpFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return jsonpFactory; });
+
+/**
+ * @license Angular v4.2.6
+ * (c) 2010-2017 Google, Inc. https://angular.io/
+ * License: MIT
+ */
+
+
+
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A backend for http that uses the `XMLHttpRequest` browser API.
+ *
+ * Take care not to evaluate this in non-browser contexts.
+ *
+ * \@experimental
+ */
+var BrowserXhr = (function () {
+    function BrowserXhr() {
+    }
+    /**
+     * @return {?}
+     */
+    BrowserXhr.prototype.build = function () { return ((new XMLHttpRequest())); };
+    return BrowserXhr;
+}());
+BrowserXhr.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+BrowserXhr.ctorParameters = function () { return []; };
+var RequestMethod = {};
+RequestMethod.Get = 0;
+RequestMethod.Post = 1;
+RequestMethod.Put = 2;
+RequestMethod.Delete = 3;
+RequestMethod.Options = 4;
+RequestMethod.Head = 5;
+RequestMethod.Patch = 6;
+RequestMethod[RequestMethod.Get] = "Get";
+RequestMethod[RequestMethod.Post] = "Post";
+RequestMethod[RequestMethod.Put] = "Put";
+RequestMethod[RequestMethod.Delete] = "Delete";
+RequestMethod[RequestMethod.Options] = "Options";
+RequestMethod[RequestMethod.Head] = "Head";
+RequestMethod[RequestMethod.Patch] = "Patch";
+var ReadyState = {};
+ReadyState.Unsent = 0;
+ReadyState.Open = 1;
+ReadyState.HeadersReceived = 2;
+ReadyState.Loading = 3;
+ReadyState.Done = 4;
+ReadyState.Cancelled = 5;
+ReadyState[ReadyState.Unsent] = "Unsent";
+ReadyState[ReadyState.Open] = "Open";
+ReadyState[ReadyState.HeadersReceived] = "HeadersReceived";
+ReadyState[ReadyState.Loading] = "Loading";
+ReadyState[ReadyState.Done] = "Done";
+ReadyState[ReadyState.Cancelled] = "Cancelled";
+var ResponseType = {};
+ResponseType.Basic = 0;
+ResponseType.Cors = 1;
+ResponseType.Default = 2;
+ResponseType.Error = 3;
+ResponseType.Opaque = 4;
+ResponseType[ResponseType.Basic] = "Basic";
+ResponseType[ResponseType.Cors] = "Cors";
+ResponseType[ResponseType.Default] = "Default";
+ResponseType[ResponseType.Error] = "Error";
+ResponseType[ResponseType.Opaque] = "Opaque";
+var ContentType = {};
+ContentType.NONE = 0;
+ContentType.JSON = 1;
+ContentType.FORM = 2;
+ContentType.FORM_DATA = 3;
+ContentType.TEXT = 4;
+ContentType.BLOB = 5;
+ContentType.ARRAY_BUFFER = 6;
+ContentType[ContentType.NONE] = "NONE";
+ContentType[ContentType.JSON] = "JSON";
+ContentType[ContentType.FORM] = "FORM";
+ContentType[ContentType.FORM_DATA] = "FORM_DATA";
+ContentType[ContentType.TEXT] = "TEXT";
+ContentType[ContentType.BLOB] = "BLOB";
+ContentType[ContentType.ARRAY_BUFFER] = "ARRAY_BUFFER";
+var ResponseContentType = {};
+ResponseContentType.Text = 0;
+ResponseContentType.Json = 1;
+ResponseContentType.ArrayBuffer = 2;
+ResponseContentType.Blob = 3;
+ResponseContentType[ResponseContentType.Text] = "Text";
+ResponseContentType[ResponseContentType.Json] = "Json";
+ResponseContentType[ResponseContentType.ArrayBuffer] = "ArrayBuffer";
+ResponseContentType[ResponseContentType.Blob] = "Blob";
+/**
+ * Polyfill for [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers), as
+ * specified in the [Fetch Spec](https://fetch.spec.whatwg.org/#headers-class).
+ *
+ * The only known difference between this `Headers` implementation and the spec is the
+ * lack of an `entries` method.
+ *
+ * ### Example
+ *
+ * ```
+ * import {Headers} from '\@angular/http';
+ *
+ * var firstHeaders = new Headers();
+ * firstHeaders.append('Content-Type', 'image/jpeg');
+ * console.log(firstHeaders.get('Content-Type')) //'image/jpeg'
+ *
+ * // Create headers from Plain Old JavaScript Object
+ * var secondHeaders = new Headers({
+ *   'X-My-Custom-Header': 'Angular'
+ * });
+ * console.log(secondHeaders.get('X-My-Custom-Header')); //'Angular'
+ *
+ * var thirdHeaders = new Headers(secondHeaders);
+ * console.log(thirdHeaders.get('X-My-Custom-Header')); //'Angular'
+ * ```
+ *
+ * \@experimental
+ */
+var Headers = (function () {
+    /**
+     * @param {?=} headers
+     */
+    function Headers(headers) {
+        var _this = this;
+        /**
+         * \@internal header names are lower case
+         */
+        this._headers = new Map();
+        /**
+         * \@internal map lower case names to actual names
+         */
+        this._normalizedNames = new Map();
+        if (!headers) {
+            return;
+        }
+        if (headers instanceof Headers) {
+            headers.forEach(function (values, name) {
+                values.forEach(function (value) { return _this.append(name, value); });
+            });
+            return;
+        }
+        Object.keys(headers).forEach(function (name) {
+            var values = Array.isArray(headers[name]) ? headers[name] : [headers[name]];
+            _this.delete(name);
+            values.forEach(function (value) { return _this.append(name, value); });
+        });
+    }
+    /**
+     * Returns a new Headers instance from the given DOMString of Response Headers
+     * @param {?} headersString
+     * @return {?}
+     */
+    Headers.fromResponseHeaderString = function (headersString) {
+        var /** @type {?} */ headers = new Headers();
+        headersString.split('\n').forEach(function (line) {
+            var /** @type {?} */ index = line.indexOf(':');
+            if (index > 0) {
+                var /** @type {?} */ name = line.slice(0, index);
+                var /** @type {?} */ value = line.slice(index + 1).trim();
+                headers.set(name, value);
+            }
+        });
+        return headers;
+    };
+    /**
+     * Appends a header to existing list of header values for a given header name.
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    Headers.prototype.append = function (name, value) {
+        var /** @type {?} */ values = this.getAll(name);
+        if (values === null) {
+            this.set(name, value);
+        }
+        else {
+            values.push(value);
+        }
+    };
+    /**
+     * Deletes all header values for the given name.
+     * @param {?} name
+     * @return {?}
+     */
+    Headers.prototype.delete = function (name) {
+        var /** @type {?} */ lcName = name.toLowerCase();
+        this._normalizedNames.delete(lcName);
+        this._headers.delete(lcName);
+    };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    Headers.prototype.forEach = function (fn) {
+        var _this = this;
+        this._headers.forEach(function (values, lcName) { return fn(values, _this._normalizedNames.get(lcName), _this._headers); });
+    };
+    /**
+     * Returns first header that matches given name.
+     * @param {?} name
+     * @return {?}
+     */
+    Headers.prototype.get = function (name) {
+        var /** @type {?} */ values = this.getAll(name);
+        if (values === null) {
+            return null;
+        }
+        return values.length > 0 ? values[0] : null;
+    };
+    /**
+     * Checks for existence of header by given name.
+     * @param {?} name
+     * @return {?}
+     */
+    Headers.prototype.has = function (name) { return this._headers.has(name.toLowerCase()); };
+    /**
+     * Returns the names of the headers
+     * @return {?}
+     */
+    Headers.prototype.keys = function () { return Array.from(this._normalizedNames.values()); };
+    /**
+     * Sets or overrides header value for given name.
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    Headers.prototype.set = function (name, value) {
+        if (Array.isArray(value)) {
+            if (value.length) {
+                this._headers.set(name.toLowerCase(), [value.join(',')]);
+            }
+        }
+        else {
+            this._headers.set(name.toLowerCase(), [value]);
+        }
+        this.mayBeSetNormalizedName(name);
+    };
+    /**
+     * Returns values of all headers.
+     * @return {?}
+     */
+    Headers.prototype.values = function () { return Array.from(this._headers.values()); };
+    /**
+     * @return {?}
+     */
+    Headers.prototype.toJSON = function () {
+        var _this = this;
+        var /** @type {?} */ serialized = {};
+        this._headers.forEach(function (values, name) {
+            var /** @type {?} */ split = [];
+            values.forEach(function (v) { return split.push.apply(split, v.split(',')); });
+            serialized[((_this._normalizedNames.get(name)))] = split;
+        });
+        return serialized;
+    };
+    /**
+     * Returns list of header values for a given name.
+     * @param {?} name
+     * @return {?}
+     */
+    Headers.prototype.getAll = function (name) {
+        return this.has(name) ? this._headers.get(name.toLowerCase()) || null : null;
+    };
+    /**
+     * This method is not implemented.
+     * @return {?}
+     */
+    Headers.prototype.entries = function () { throw new Error('"entries" method is not implemented on Headers class'); };
+    /**
+     * @param {?} name
+     * @return {?}
+     */
+    Headers.prototype.mayBeSetNormalizedName = function (name) {
+        var /** @type {?} */ lcName = name.toLowerCase();
+        if (!this._normalizedNames.has(lcName)) {
+            this._normalizedNames.set(lcName, name);
+        }
+    };
+    return Headers;
+}());
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Creates a response options object to be optionally provided when instantiating a
+ * {\@link Response}.
+ *
+ * This class is based on the `ResponseInit` description in the [Fetch
+ * Spec](https://fetch.spec.whatwg.org/#responseinit).
+ *
+ * All values are null by default. Typical defaults can be found in the
+ * {\@link BaseResponseOptions} class, which sub-classes `ResponseOptions`.
+ *
+ * This class may be used in tests to build {\@link Response Responses} for
+ * mock responses (see {\@link MockBackend}).
+ *
+ * ### Example ([live demo](http://plnkr.co/edit/P9Jkk8e8cz6NVzbcxEsD?p=preview))
+ *
+ * ```typescript
+ * import {ResponseOptions, Response} from '\@angular/http';
+ *
+ * var options = new ResponseOptions({
+ *   body: '{"name":"Jeff"}'
+ * });
+ * var res = new Response(options);
+ *
+ * console.log('res.json():', res.json()); // Object {name: "Jeff"}
+ * ```
+ *
+ * \@experimental
+ */
+var ResponseOptions = (function () {
+    /**
+     * @param {?=} opts
+     */
+    function ResponseOptions(opts) {
+        if (opts === void 0) { opts = {}; }
+        var body = opts.body, status = opts.status, headers = opts.headers, statusText = opts.statusText, type = opts.type, url = opts.url;
+        this.body = body != null ? body : null;
+        this.status = status != null ? status : null;
+        this.headers = headers != null ? headers : null;
+        this.statusText = statusText != null ? statusText : null;
+        this.type = type != null ? type : null;
+        this.url = url != null ? url : null;
+    }
+    /**
+     * Creates a copy of the `ResponseOptions` instance, using the optional input as values to
+     * override
+     * existing values. This method will not change the values of the instance on which it is being
+     * called.
+     *
+     * This may be useful when sharing a base `ResponseOptions` object inside tests,
+     * where certain properties may change from test to test.
+     *
+     * ### Example ([live demo](http://plnkr.co/edit/1lXquqFfgduTFBWjNoRE?p=preview))
+     *
+     * ```typescript
+     * import {ResponseOptions, Response} from '\@angular/http';
+     *
+     * var options = new ResponseOptions({
+     *   body: {name: 'Jeff'}
+     * });
+     * var res = new Response(options.merge({
+     *   url: 'https://google.com'
+     * }));
+     * console.log('options.url:', options.url); // null
+     * console.log('res.json():', res.json()); // Object {name: "Jeff"}
+     * console.log('res.url:', res.url); // https://google.com
+     * ```
+     * @param {?=} options
+     * @return {?}
+     */
+    ResponseOptions.prototype.merge = function (options) {
+        return new ResponseOptions({
+            body: options && options.body != null ? options.body : this.body,
+            status: options && options.status != null ? options.status : this.status,
+            headers: options && options.headers != null ? options.headers : this.headers,
+            statusText: options && options.statusText != null ? options.statusText : this.statusText,
+            type: options && options.type != null ? options.type : this.type,
+            url: options && options.url != null ? options.url : this.url,
+        });
+    };
+    return ResponseOptions;
+}());
+/**
+ * Subclass of {\@link ResponseOptions}, with default values.
+ *
+ * Default values:
+ *  * status: 200
+ *  * headers: empty {\@link Headers} object
+ *
+ * This class could be extended and bound to the {\@link ResponseOptions} class
+ * when configuring an {\@link Injector}, in order to override the default options
+ * used by {\@link Http} to create {\@link Response Responses}.
+ *
+ * ### Example ([live demo](http://plnkr.co/edit/qv8DLT?p=preview))
+ *
+ * ```typescript
+ * import {provide} from '\@angular/core';
+ * import {bootstrap} from '\@angular/platform-browser/browser';
+ * import {HTTP_PROVIDERS, Headers, Http, BaseResponseOptions, ResponseOptions} from
+ * '\@angular/http';
+ * import {App} from './myapp';
+ *
+ * class MyOptions extends BaseResponseOptions {
+ *   headers:Headers = new Headers({network: 'github'});
+ * }
+ *
+ * bootstrap(App, [HTTP_PROVIDERS, {provide: ResponseOptions, useClass: MyOptions}]);
+ * ```
+ *
+ * The options could also be extended when manually creating a {\@link Response}
+ * object.
+ *
+ * ### Example ([live demo](http://plnkr.co/edit/VngosOWiaExEtbstDoix?p=preview))
+ *
+ * ```
+ * import {BaseResponseOptions, Response} from '\@angular/http';
+ *
+ * var options = new BaseResponseOptions();
+ * var res = new Response(options.merge({
+ *   body: 'Angular',
+ *   headers: new Headers({framework: 'angular'})
+ * }));
+ * console.log('res.headers.get("framework"):', res.headers.get('framework')); // angular
+ * console.log('res.text():', res.text()); // Angular;
+ * ```
+ *
+ * \@experimental
+ */
+var BaseResponseOptions = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](BaseResponseOptions, _super);
+    function BaseResponseOptions() {
+        return _super.call(this, { status: 200, statusText: 'Ok', type: ResponseType.Default, headers: new Headers() }) || this;
+    }
+    return BaseResponseOptions;
+}(ResponseOptions));
+BaseResponseOptions.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+BaseResponseOptions.ctorParameters = function () { return []; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Abstract class from which real backends are derived.
+ *
+ * The primary purpose of a `ConnectionBackend` is to create new connections to fulfill a given
+ * {\@link Request}.
+ *
+ * \@experimental
+ * @abstract
+ */
+var ConnectionBackend = (function () {
+    function ConnectionBackend() {
+    }
+    /**
+     * @abstract
+     * @param {?} request
+     * @return {?}
+     */
+    ConnectionBackend.prototype.createConnection = function (request) { };
+    return ConnectionBackend;
+}());
+/**
+ * Abstract class from which real connections are derived.
+ *
+ * \@experimental
+ * @abstract
+ */
+var Connection = (function () {
+    function Connection() {
+    }
+    return Connection;
+}());
+/**
+ * An XSRFStrategy configures XSRF protection (e.g. via headers) on an HTTP request.
+ *
+ * \@experimental
+ * @abstract
+ */
+var XSRFStrategy = (function () {
+    function XSRFStrategy() {
+    }
+    /**
+     * @abstract
+     * @param {?} req
+     * @return {?}
+     */
+    XSRFStrategy.prototype.configureRequest = function (req) { };
+    return XSRFStrategy;
+}());
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @param {?} method
+ * @return {?}
+ */
+function normalizeMethodName(method) {
+    if (typeof method !== 'string')
+        return method;
+    switch (method.toUpperCase()) {
+        case 'GET':
+            return RequestMethod.Get;
+        case 'POST':
+            return RequestMethod.Post;
+        case 'PUT':
+            return RequestMethod.Put;
+        case 'DELETE':
+            return RequestMethod.Delete;
+        case 'OPTIONS':
+            return RequestMethod.Options;
+        case 'HEAD':
+            return RequestMethod.Head;
+        case 'PATCH':
+            return RequestMethod.Patch;
+    }
+    throw new Error("Invalid request method. The method \"" + method + "\" is not supported.");
+}
+var isSuccess = function (status) { return (status >= 200 && status < 300); };
+/**
+ * @param {?} xhr
+ * @return {?}
+ */
+function getResponseURL(xhr) {
+    if ('responseURL' in xhr) {
+        return xhr.responseURL;
+    }
+    if (/^X-Request-URL:/m.test(xhr.getAllResponseHeaders())) {
+        return xhr.getResponseHeader('X-Request-URL');
+    }
+    return null;
+}
+/**
+ * @param {?} input
+ * @return {?}
+ */
+/**
+ * @param {?} input
+ * @return {?}
+ */
+function stringToArrayBuffer(input) {
+    var /** @type {?} */ view = new Uint16Array(input.length);
+    for (var /** @type {?} */ i = 0, /** @type {?} */ strLen = input.length; i < strLen; i++) {
+        view[i] = input.charCodeAt(i);
+    }
+    return view.buffer;
+}
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ * @param {?=} rawParams
+ * @return {?}
+ */
+function paramParser(rawParams) {
+    if (rawParams === void 0) { rawParams = ''; }
+    var /** @type {?} */ map = new Map();
+    if (rawParams.length > 0) {
+        var /** @type {?} */ params = rawParams.split('&');
+        params.forEach(function (param) {
+            var /** @type {?} */ eqIdx = param.indexOf('=');
+            var _a = eqIdx == -1 ? [param, ''] : [param.slice(0, eqIdx), param.slice(eqIdx + 1)], key = _a[0], val = _a[1];
+            var /** @type {?} */ list = map.get(key) || [];
+            list.push(val);
+            map.set(key, list);
+        });
+    }
+    return map;
+}
+/**
+ * \@experimental
+ *
+ */
+var QueryEncoder = (function () {
+    function QueryEncoder() {
+    }
+    /**
+     * @param {?} k
+     * @return {?}
+     */
+    QueryEncoder.prototype.encodeKey = function (k) { return standardEncoding(k); };
+    /**
+     * @param {?} v
+     * @return {?}
+     */
+    QueryEncoder.prototype.encodeValue = function (v) { return standardEncoding(v); };
+    return QueryEncoder;
+}());
+/**
+ * @param {?} v
+ * @return {?}
+ */
+function standardEncoding(v) {
+    return encodeURIComponent(v)
+        .replace(/%40/gi, '@')
+        .replace(/%3A/gi, ':')
+        .replace(/%24/gi, '$')
+        .replace(/%2C/gi, ',')
+        .replace(/%3B/gi, ';')
+        .replace(/%2B/gi, '+')
+        .replace(/%3D/gi, '=')
+        .replace(/%3F/gi, '?')
+        .replace(/%2F/gi, '/');
+}
+/**
+ * Map-like representation of url search parameters, based on
+ * [URLSearchParams](https://url.spec.whatwg.org/#urlsearchparams) in the url living standard,
+ * with several extensions for merging URLSearchParams objects:
+ *   - setAll()
+ *   - appendAll()
+ *   - replaceAll()
+ *
+ * This class accepts an optional second parameter of ${\@link QueryEncoder},
+ * which is used to serialize parameters before making a request. By default,
+ * `QueryEncoder` encodes keys and values of parameters using `encodeURIComponent`,
+ * and then un-encodes certain characters that are allowed to be part of the query
+ * according to IETF RFC 3986: https://tools.ietf.org/html/rfc3986.
+ *
+ * These are the characters that are not encoded: `! $ \' ( ) * + , ; A 9 - . _ ~ ? /`
+ *
+ * If the set of allowed query characters is not acceptable for a particular backend,
+ * `QueryEncoder` can be subclassed and provided as the 2nd argument to URLSearchParams.
+ *
+ * ```
+ * import {URLSearchParams, QueryEncoder} from '\@angular/http';
+ * class MyQueryEncoder extends QueryEncoder {
+ *   encodeKey(k: string): string {
+ *     return myEncodingFunction(k);
+ *   }
+ *
+ *   encodeValue(v: string): string {
+ *     return myEncodingFunction(v);
+ *   }
+ * }
+ *
+ * let params = new URLSearchParams('', new MyQueryEncoder());
+ * ```
+ * \@experimental
+ */
+var URLSearchParams = (function () {
+    /**
+     * @param {?=} rawParams
+     * @param {?=} queryEncoder
+     */
+    function URLSearchParams(rawParams, queryEncoder) {
+        if (rawParams === void 0) { rawParams = ''; }
+        if (queryEncoder === void 0) { queryEncoder = new QueryEncoder(); }
+        this.rawParams = rawParams;
+        this.queryEncoder = queryEncoder;
+        this.paramsMap = paramParser(rawParams);
+    }
+    /**
+     * @return {?}
+     */
+    URLSearchParams.prototype.clone = function () {
+        var /** @type {?} */ clone = new URLSearchParams('', this.queryEncoder);
+        clone.appendAll(this);
+        return clone;
+    };
+    /**
+     * @param {?} param
+     * @return {?}
+     */
+    URLSearchParams.prototype.has = function (param) { return this.paramsMap.has(param); };
+    /**
+     * @param {?} param
+     * @return {?}
+     */
+    URLSearchParams.prototype.get = function (param) {
+        var /** @type {?} */ storedParam = this.paramsMap.get(param);
+        return Array.isArray(storedParam) ? storedParam[0] : null;
+    };
+    /**
+     * @param {?} param
+     * @return {?}
+     */
+    URLSearchParams.prototype.getAll = function (param) { return this.paramsMap.get(param) || []; };
+    /**
+     * @param {?} param
+     * @param {?} val
+     * @return {?}
+     */
+    URLSearchParams.prototype.set = function (param, val) {
+        if (val === void 0 || val === null) {
+            this.delete(param);
+            return;
+        }
+        var /** @type {?} */ list = this.paramsMap.get(param) || [];
+        list.length = 0;
+        list.push(val);
+        this.paramsMap.set(param, list);
+    };
+    /**
+     * @param {?} searchParams
+     * @return {?}
+     */
+    URLSearchParams.prototype.setAll = function (searchParams) {
+        var _this = this;
+        searchParams.paramsMap.forEach(function (value, param) {
+            var /** @type {?} */ list = _this.paramsMap.get(param) || [];
+            list.length = 0;
+            list.push(value[0]);
+            _this.paramsMap.set(param, list);
+        });
+    };
+    /**
+     * @param {?} param
+     * @param {?} val
+     * @return {?}
+     */
+    URLSearchParams.prototype.append = function (param, val) {
+        if (val === void 0 || val === null)
+            return;
+        var /** @type {?} */ list = this.paramsMap.get(param) || [];
+        list.push(val);
+        this.paramsMap.set(param, list);
+    };
+    /**
+     * @param {?} searchParams
+     * @return {?}
+     */
+    URLSearchParams.prototype.appendAll = function (searchParams) {
+        var _this = this;
+        searchParams.paramsMap.forEach(function (value, param) {
+            var /** @type {?} */ list = _this.paramsMap.get(param) || [];
+            for (var /** @type {?} */ i = 0; i < value.length; ++i) {
+                list.push(value[i]);
+            }
+            _this.paramsMap.set(param, list);
+        });
+    };
+    /**
+     * @param {?} searchParams
+     * @return {?}
+     */
+    URLSearchParams.prototype.replaceAll = function (searchParams) {
+        var _this = this;
+        searchParams.paramsMap.forEach(function (value, param) {
+            var /** @type {?} */ list = _this.paramsMap.get(param) || [];
+            list.length = 0;
+            for (var /** @type {?} */ i = 0; i < value.length; ++i) {
+                list.push(value[i]);
+            }
+            _this.paramsMap.set(param, list);
+        });
+    };
+    /**
+     * @return {?}
+     */
+    URLSearchParams.prototype.toString = function () {
+        var _this = this;
+        var /** @type {?} */ paramsList = [];
+        this.paramsMap.forEach(function (values, k) {
+            values.forEach(function (v) { return paramsList.push(_this.queryEncoder.encodeKey(k) + '=' + _this.queryEncoder.encodeValue(v)); });
+        });
+        return paramsList.join('&');
+    };
+    /**
+     * @param {?} param
+     * @return {?}
+     */
+    URLSearchParams.prototype.delete = function (param) { this.paramsMap.delete(param); };
+    return URLSearchParams;
+}());
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * HTTP request body used by both {\@link Request} and {\@link Response}
+ * https://fetch.spec.whatwg.org/#body
+ * @abstract
+ */
+var Body = (function () {
+    function Body() {
+    }
+    /**
+     * Attempts to return body as parsed `JSON` object, or raises an exception.
+     * @return {?}
+     */
+    Body.prototype.json = function () {
+        if (typeof this._body === 'string') {
+            return JSON.parse(/** @type {?} */ (this._body));
+        }
+        if (this._body instanceof ArrayBuffer) {
+            return JSON.parse(this.text());
+        }
+        return this._body;
+    };
+    /**
+     * Returns the body as a string, presuming `toString()` can be called on the response body.
+     *
+     * When decoding an `ArrayBuffer`, the optional `encodingHint` parameter determines how the
+     * bytes in the buffer will be interpreted. Valid values are:
+     *
+     * - `legacy` - incorrectly interpret the bytes as UTF-16 (technically, UCS-2). Only characters
+     *   in the Basic Multilingual Plane are supported, surrogate pairs are not handled correctly.
+     *   In addition, the endianness of the 16-bit octet pairs in the `ArrayBuffer` is not taken
+     *   into consideration. This is the default behavior to avoid breaking apps, but should be
+     *   considered deprecated.
+     *
+     * - `iso-8859` - interpret the bytes as ISO-8859 (which can be used for ASCII encoded text).
+     * @param {?=} encodingHint
+     * @return {?}
+     */
+    Body.prototype.text = function (encodingHint) {
+        if (encodingHint === void 0) { encodingHint = 'legacy'; }
+        if (this._body instanceof URLSearchParams) {
+            return this._body.toString();
+        }
+        if (this._body instanceof ArrayBuffer) {
+            switch (encodingHint) {
+                case 'legacy':
+                    return String.fromCharCode.apply(null, new Uint16Array(/** @type {?} */ (this._body)));
+                case 'iso-8859':
+                    return String.fromCharCode.apply(null, new Uint8Array(/** @type {?} */ (this._body)));
+                default:
+                    throw new Error("Invalid value for encodingHint: " + encodingHint);
+            }
+        }
+        if (this._body == null) {
+            return '';
+        }
+        if (typeof this._body === 'object') {
+            return JSON.stringify(this._body, null, 2);
+        }
+        return this._body.toString();
+    };
+    /**
+     * Return the body as an ArrayBuffer
+     * @return {?}
+     */
+    Body.prototype.arrayBuffer = function () {
+        if (this._body instanceof ArrayBuffer) {
+            return (this._body);
+        }
+        return stringToArrayBuffer(this.text());
+    };
+    /**
+     * Returns the request's body as a Blob, assuming that body exists.
+     * @return {?}
+     */
+    Body.prototype.blob = function () {
+        if (this._body instanceof Blob) {
+            return (this._body);
+        }
+        if (this._body instanceof ArrayBuffer) {
+            return new Blob([this._body]);
+        }
+        throw new Error('The request body isn\'t either a blob or an array buffer');
+    };
+    return Body;
+}());
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Creates `Response` instances from provided values.
+ *
+ * Though this object isn't
+ * usually instantiated by end-users, it is the primary object interacted with when it comes time to
+ * add data to a view.
+ *
+ * ### Example
+ *
+ * ```
+ * http.request('my-friends.txt').subscribe(response => this.friends = response.text());
+ * ```
+ *
+ * The Response's interface is inspired by the Response constructor defined in the [Fetch
+ * Spec](https://fetch.spec.whatwg.org/#response-class), but is considered a static value whose body
+ * can be accessed many times. There are other differences in the implementation, but this is the
+ * most significant.
+ *
+ * \@experimental
+ */
+var Response = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](Response, _super);
+    /**
+     * @param {?} responseOptions
+     */
+    function Response(responseOptions) {
+        var _this = _super.call(this) || this;
+        _this._body = responseOptions.body;
+        _this.status = responseOptions.status;
+        _this.ok = (_this.status >= 200 && _this.status <= 299);
+        _this.statusText = responseOptions.statusText;
+        _this.headers = responseOptions.headers;
+        _this.type = responseOptions.type;
+        _this.url = responseOptions.url;
+        return _this;
+    }
+    /**
+     * @return {?}
+     */
+    Response.prototype.toString = function () {
+        return "Response with status: " + this.status + " " + this.statusText + " for URL: " + this.url;
+    };
+    return Response;
+}(Body));
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var _nextRequestId = 0;
+var JSONP_HOME = '__ng_jsonp__';
+var _jsonpConnections = null;
+/**
+ * @return {?}
+ */
+function _getJsonpConnections() {
+    var /** @type {?} */ w = typeof window == 'object' ? window : {};
+    if (_jsonpConnections === null) {
+        _jsonpConnections = w[JSONP_HOME] = {};
+    }
+    return _jsonpConnections;
+}
+var BrowserJsonp = (function () {
+    function BrowserJsonp() {
+    }
+    /**
+     * @param {?} url
+     * @return {?}
+     */
+    BrowserJsonp.prototype.build = function (url) {
+        var /** @type {?} */ node = document.createElement('script');
+        node.src = url;
+        return node;
+    };
+    /**
+     * @return {?}
+     */
+    BrowserJsonp.prototype.nextRequestID = function () { return "__req" + _nextRequestId++; };
+    /**
+     * @param {?} id
+     * @return {?}
+     */
+    BrowserJsonp.prototype.requestCallback = function (id) { return JSONP_HOME + "." + id + ".finished"; };
+    /**
+     * @param {?} id
+     * @param {?} connection
+     * @return {?}
+     */
+    BrowserJsonp.prototype.exposeConnection = function (id, connection) {
+        var /** @type {?} */ connections = _getJsonpConnections();
+        connections[id] = connection;
+    };
+    /**
+     * @param {?} id
+     * @return {?}
+     */
+    BrowserJsonp.prototype.removeConnection = function (id) {
+        var /** @type {?} */ connections = _getJsonpConnections();
+        connections[id] = null;
+    };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserJsonp.prototype.send = function (node) { document.body.appendChild(/** @type {?} */ ((node))); };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    BrowserJsonp.prototype.cleanup = function (node) {
+        if (node.parentNode) {
+            node.parentNode.removeChild(/** @type {?} */ ((node)));
+        }
+    };
+    return BrowserJsonp;
+}());
+BrowserJsonp.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+BrowserJsonp.ctorParameters = function () { return []; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var JSONP_ERR_NO_CALLBACK = 'JSONP injected script did not invoke callback.';
+var JSONP_ERR_WRONG_METHOD = 'JSONP requests must use GET request method.';
+/**
+ * Abstract base class for an in-flight JSONP request.
+ *
+ * \@experimental
+ * @abstract
+ */
+var JSONPConnection = (function () {
+    function JSONPConnection() {
+    }
+    /**
+     * Callback called when the JSONP request completes, to notify the application
+     * of the new data.
+     * @abstract
+     * @param {?=} data
+     * @return {?}
+     */
+    JSONPConnection.prototype.finished = function (data) { };
+    return JSONPConnection;
+}());
+var JSONPConnection_ = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](JSONPConnection_, _super);
+    /**
+     * @param {?} req
+     * @param {?} _dom
+     * @param {?=} baseResponseOptions
+     */
+    function JSONPConnection_(req, _dom, baseResponseOptions) {
+        var _this = _super.call(this) || this;
+        _this._dom = _dom;
+        _this.baseResponseOptions = baseResponseOptions;
+        _this._finished = false;
+        if (req.method !== RequestMethod.Get) {
+            throw new TypeError(JSONP_ERR_WRONG_METHOD);
+        }
+        _this.request = req;
+        _this.response = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"](function (responseObserver) {
+            _this.readyState = ReadyState.Loading;
+            var id = _this._id = _dom.nextRequestID();
+            _dom.exposeConnection(id, _this);
+            // Workaround Dart
+            // url = url.replace(/=JSONP_CALLBACK(&|$)/, `generated method`);
+            var callback = _dom.requestCallback(_this._id);
+            var url = req.url;
+            if (url.indexOf('=JSONP_CALLBACK&') > -1) {
+                url = url.replace('=JSONP_CALLBACK&', "=" + callback + "&");
+            }
+            else if (url.lastIndexOf('=JSONP_CALLBACK') === url.length - '=JSONP_CALLBACK'.length) {
+                url = url.substring(0, url.length - '=JSONP_CALLBACK'.length) + ("=" + callback);
+            }
+            var script = _this._script = _dom.build(url);
+            var onLoad = function (event) {
+                if (_this.readyState === ReadyState.Cancelled)
+                    return;
+                _this.readyState = ReadyState.Done;
+                _dom.cleanup(script);
+                if (!_this._finished) {
+                    var responseOptions_1 = new ResponseOptions({ body: JSONP_ERR_NO_CALLBACK, type: ResponseType.Error, url: url });
+                    if (baseResponseOptions) {
+                        responseOptions_1 = baseResponseOptions.merge(responseOptions_1);
+                    }
+                    responseObserver.error(new Response(responseOptions_1));
+                    return;
+                }
+                var responseOptions = new ResponseOptions({ body: _this._responseData, url: url });
+                if (_this.baseResponseOptions) {
+                    responseOptions = _this.baseResponseOptions.merge(responseOptions);
+                }
+                responseObserver.next(new Response(responseOptions));
+                responseObserver.complete();
+            };
+            var onError = function (error) {
+                if (_this.readyState === ReadyState.Cancelled)
+                    return;
+                _this.readyState = ReadyState.Done;
+                _dom.cleanup(script);
+                var responseOptions = new ResponseOptions({ body: error.message, type: ResponseType.Error });
+                if (baseResponseOptions) {
+                    responseOptions = baseResponseOptions.merge(responseOptions);
+                }
+                responseObserver.error(new Response(responseOptions));
+            };
+            script.addEventListener('load', onLoad);
+            script.addEventListener('error', onError);
+            _dom.send(script);
+            return function () {
+                _this.readyState = ReadyState.Cancelled;
+                script.removeEventListener('load', onLoad);
+                script.removeEventListener('error', onError);
+                _this._dom.cleanup(script);
+            };
+        });
+        return _this;
+    }
+    /**
+     * @param {?=} data
+     * @return {?}
+     */
+    JSONPConnection_.prototype.finished = function (data) {
+        // Don't leak connections
+        this._finished = true;
+        this._dom.removeConnection(this._id);
+        if (this.readyState === ReadyState.Cancelled)
+            return;
+        this._responseData = data;
+    };
+    return JSONPConnection_;
+}(JSONPConnection));
+/**
+ * A {\@link ConnectionBackend} that uses the JSONP strategy of making requests.
+ *
+ * \@experimental
+ * @abstract
+ */
+var JSONPBackend = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](JSONPBackend, _super);
+    function JSONPBackend() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return JSONPBackend;
+}(ConnectionBackend));
+var JSONPBackend_ = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](JSONPBackend_, _super);
+    /**
+     * @param {?} _browserJSONP
+     * @param {?} _baseResponseOptions
+     */
+    function JSONPBackend_(_browserJSONP, _baseResponseOptions) {
+        var _this = _super.call(this) || this;
+        _this._browserJSONP = _browserJSONP;
+        _this._baseResponseOptions = _baseResponseOptions;
+        return _this;
+    }
+    /**
+     * @param {?} request
+     * @return {?}
+     */
+    JSONPBackend_.prototype.createConnection = function (request) {
+        return new JSONPConnection_(request, this._browserJSONP, this._baseResponseOptions);
+    };
+    return JSONPBackend_;
+}(JSONPBackend));
+JSONPBackend_.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+JSONPBackend_.ctorParameters = function () { return [
+    { type: BrowserJsonp, },
+    { type: ResponseOptions, },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var XSSI_PREFIX = /^\)\]\}',?\n/;
+/**
+ * Creates connections using `XMLHttpRequest`. Given a fully-qualified
+ * request, an `XHRConnection` will immediately create an `XMLHttpRequest` object and send the
+ * request.
+ *
+ * This class would typically not be created or interacted with directly inside applications, though
+ * the {\@link MockConnection} may be interacted with in tests.
+ *
+ * \@experimental
+ */
+var XHRConnection = (function () {
+    /**
+     * @param {?} req
+     * @param {?} browserXHR
+     * @param {?=} baseResponseOptions
+     */
+    function XHRConnection(req, browserXHR, baseResponseOptions) {
+        var _this = this;
+        this.request = req;
+        this.response = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"](function (responseObserver) {
+            var _xhr = browserXHR.build();
+            _xhr.open(RequestMethod[req.method].toUpperCase(), req.url);
+            if (req.withCredentials != null) {
+                _xhr.withCredentials = req.withCredentials;
+            }
+            // load event handler
+            var onLoad = function () {
+                // normalize IE9 bug (http://bugs.jquery.com/ticket/1450)
+                var status = _xhr.status === 1223 ? 204 : _xhr.status;
+                var body = null;
+                // HTTP 204 means no content
+                if (status !== 204) {
+                    // responseText is the old-school way of retrieving response (supported by IE8 & 9)
+                    // response/responseType properties were introduced in ResourceLoader Level2 spec
+                    // (supported by IE10)
+                    body = (typeof _xhr.response === 'undefined') ? _xhr.responseText : _xhr.response;
+                    // Implicitly strip a potential XSSI prefix.
+                    if (typeof body === 'string') {
+                        body = body.replace(XSSI_PREFIX, '');
+                    }
+                }
+                // fix status code when it is 0 (0 status is undocumented).
+                // Occurs when accessing file resources or on Android 4.1 stock browser
+                // while retrieving files from application cache.
+                if (status === 0) {
+                    status = body ? 200 : 0;
+                }
+                var headers = Headers.fromResponseHeaderString(_xhr.getAllResponseHeaders());
+                // IE 9 does not provide the way to get URL of response
+                var url = getResponseURL(_xhr) || req.url;
+                var statusText = _xhr.statusText || 'OK';
+                var responseOptions = new ResponseOptions({ body: body, status: status, headers: headers, statusText: statusText, url: url });
+                if (baseResponseOptions != null) {
+                    responseOptions = baseResponseOptions.merge(responseOptions);
+                }
+                var response = new Response(responseOptions);
+                response.ok = isSuccess(status);
+                if (response.ok) {
+                    responseObserver.next(response);
+                    // TODO(gdi2290): defer complete if array buffer until done
+                    responseObserver.complete();
+                    return;
+                }
+                responseObserver.error(response);
+            };
+            // error event handler
+            var onError = function (err) {
+                var responseOptions = new ResponseOptions({
+                    body: err,
+                    type: ResponseType.Error,
+                    status: _xhr.status,
+                    statusText: _xhr.statusText,
+                });
+                if (baseResponseOptions != null) {
+                    responseOptions = baseResponseOptions.merge(responseOptions);
+                }
+                responseObserver.error(new Response(responseOptions));
+            };
+            _this.setDetectedContentType(req, _xhr);
+            if (req.headers == null) {
+                req.headers = new Headers();
+            }
+            if (!req.headers.has('Accept')) {
+                req.headers.append('Accept', 'application/json, text/plain, */*');
+            }
+            req.headers.forEach(function (values, name) { return _xhr.setRequestHeader(name, values.join(',')); });
+            // Select the correct buffer type to store the response
+            if (req.responseType != null && _xhr.responseType != null) {
+                switch (req.responseType) {
+                    case ResponseContentType.ArrayBuffer:
+                        _xhr.responseType = 'arraybuffer';
+                        break;
+                    case ResponseContentType.Json:
+                        _xhr.responseType = 'json';
+                        break;
+                    case ResponseContentType.Text:
+                        _xhr.responseType = 'text';
+                        break;
+                    case ResponseContentType.Blob:
+                        _xhr.responseType = 'blob';
+                        break;
+                    default:
+                        throw new Error('The selected responseType is not supported');
+                }
+            }
+            _xhr.addEventListener('load', onLoad);
+            _xhr.addEventListener('error', onError);
+            _xhr.send(_this.request.getBody());
+            return function () {
+                _xhr.removeEventListener('load', onLoad);
+                _xhr.removeEventListener('error', onError);
+                _xhr.abort();
+            };
+        });
+    }
+    /**
+     * @param {?} req
+     * @param {?} _xhr
+     * @return {?}
+     */
+    XHRConnection.prototype.setDetectedContentType = function (req /** TODO Request */, _xhr /** XMLHttpRequest */) {
+        // Skip if a custom Content-Type header is provided
+        if (req.headers != null && req.headers.get('Content-Type') != null) {
+            return;
+        }
+        // Set the detected content type
+        switch (req.contentType) {
+            case ContentType.NONE:
+                break;
+            case ContentType.JSON:
+                _xhr.setRequestHeader('content-type', 'application/json');
+                break;
+            case ContentType.FORM:
+                _xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                break;
+            case ContentType.TEXT:
+                _xhr.setRequestHeader('content-type', 'text/plain');
+                break;
+            case ContentType.BLOB:
+                var /** @type {?} */ blob = req.blob();
+                if (blob.type) {
+                    _xhr.setRequestHeader('content-type', blob.type);
+                }
+                break;
+        }
+    };
+    return XHRConnection;
+}());
+/**
+ * `XSRFConfiguration` sets up Cross Site Request Forgery (XSRF) protection for the application
+ * using a cookie. See https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
+ * for more information on XSRF.
+ *
+ * Applications can configure custom cookie and header names by binding an instance of this class
+ * with different `cookieName` and `headerName` values. See the main HTTP documentation for more
+ * details.
+ *
+ * \@experimental
+ */
+var CookieXSRFStrategy = (function () {
+    /**
+     * @param {?=} _cookieName
+     * @param {?=} _headerName
+     */
+    function CookieXSRFStrategy(_cookieName, _headerName) {
+        if (_cookieName === void 0) { _cookieName = 'XSRF-TOKEN'; }
+        if (_headerName === void 0) { _headerName = 'X-XSRF-TOKEN'; }
+        this._cookieName = _cookieName;
+        this._headerName = _headerName;
+    }
+    /**
+     * @param {?} req
+     * @return {?}
+     */
+    CookieXSRFStrategy.prototype.configureRequest = function (req) {
+        var /** @type {?} */ xsrfToken = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["ɵgetDOM"])().getCookie(this._cookieName);
+        if (xsrfToken) {
+            req.headers.set(this._headerName, xsrfToken);
+        }
+    };
+    return CookieXSRFStrategy;
+}());
+/**
+ * Creates {\@link XHRConnection} instances.
+ *
+ * This class would typically not be used by end users, but could be
+ * overridden if a different backend implementation should be used,
+ * such as in a node backend.
+ *
+ * ### Example
+ *
+ * ```
+ * import {Http, MyNodeBackend, HTTP_PROVIDERS, BaseRequestOptions} from '\@angular/http';
+ * \@Component({
+ *   viewProviders: [
+ *     HTTP_PROVIDERS,
+ *     {provide: Http, useFactory: (backend, options) => {
+ *       return new Http(backend, options);
+ *     }, deps: [MyNodeBackend, BaseRequestOptions]}]
+ * })
+ * class MyComponent {
+ *   constructor(http:Http) {
+ *     http.request('people.json').subscribe(res => this.people = res.json());
+ *   }
+ * }
+ * ```
+ * \@experimental
+ */
+var XHRBackend = (function () {
+    /**
+     * @param {?} _browserXHR
+     * @param {?} _baseResponseOptions
+     * @param {?} _xsrfStrategy
+     */
+    function XHRBackend(_browserXHR, _baseResponseOptions, _xsrfStrategy) {
+        this._browserXHR = _browserXHR;
+        this._baseResponseOptions = _baseResponseOptions;
+        this._xsrfStrategy = _xsrfStrategy;
+    }
+    /**
+     * @param {?} request
+     * @return {?}
+     */
+    XHRBackend.prototype.createConnection = function (request) {
+        this._xsrfStrategy.configureRequest(request);
+        return new XHRConnection(request, this._browserXHR, this._baseResponseOptions);
+    };
+    return XHRBackend;
+}());
+XHRBackend.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+XHRBackend.ctorParameters = function () { return [
+    { type: BrowserXhr, },
+    { type: ResponseOptions, },
+    { type: XSRFStrategy, },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Creates a request options object to be optionally provided when instantiating a
+ * {\@link Request}.
+ *
+ * This class is based on the `RequestInit` description in the [Fetch
+ * Spec](https://fetch.spec.whatwg.org/#requestinit).
+ *
+ * All values are null by default. Typical defaults can be found in the {\@link BaseRequestOptions}
+ * class, which sub-classes `RequestOptions`.
+ *
+ * ```typescript
+ * import {RequestOptions, Request, RequestMethod} from '\@angular/http';
+ *
+ * const options = new RequestOptions({
+ *   method: RequestMethod.Post,
+ *   url: 'https://google.com'
+ * });
+ * const req = new Request(options);
+ * console.log('req.method:', RequestMethod[req.method]); // Post
+ * console.log('options.url:', options.url); // https://google.com
+ * ```
+ *
+ * \@experimental
+ */
+var RequestOptions = (function () {
+    /**
+     * @param {?=} opts
+     */
+    function RequestOptions(opts) {
+        if (opts === void 0) { opts = {}; }
+        var method = opts.method, headers = opts.headers, body = opts.body, url = opts.url, search = opts.search, params = opts.params, withCredentials = opts.withCredentials, responseType = opts.responseType;
+        this.method = method != null ? normalizeMethodName(method) : null;
+        this.headers = headers != null ? headers : null;
+        this.body = body != null ? body : null;
+        this.url = url != null ? url : null;
+        this.params = this._mergeSearchParams(params || search);
+        this.withCredentials = withCredentials != null ? withCredentials : null;
+        this.responseType = responseType != null ? responseType : null;
+    }
+    Object.defineProperty(RequestOptions.prototype, "search", {
+        /**
+         * @deprecated from 4.0.0. Use params instead.
+         * @return {?}
+         */
+        get: function () { return this.params; },
+        /**
+         * @deprecated from 4.0.0. Use params instead.
+         * @param {?} params
+         * @return {?}
+         */
+        set: function (params) { this.params = params; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Creates a copy of the `RequestOptions` instance, using the optional input as values to override
+     * existing values. This method will not change the values of the instance on which it is being
+     * called.
+     *
+     * Note that `headers` and `search` will override existing values completely if present in
+     * the `options` object. If these values should be merged, it should be done prior to calling
+     * `merge` on the `RequestOptions` instance.
+     *
+     * ```typescript
+     * import {RequestOptions, Request, RequestMethod} from '\@angular/http';
+     *
+     * const options = new RequestOptions({
+     *   method: RequestMethod.Post
+     * });
+     * const req = new Request(options.merge({
+     *   url: 'https://google.com'
+     * }));
+     * console.log('req.method:', RequestMethod[req.method]); // Post
+     * console.log('options.url:', options.url); // null
+     * console.log('req.url:', req.url); // https://google.com
+     * ```
+     * @param {?=} options
+     * @return {?}
+     */
+    RequestOptions.prototype.merge = function (options) {
+        return new RequestOptions({
+            method: options && options.method != null ? options.method : this.method,
+            headers: options && options.headers != null ? options.headers : new Headers(this.headers),
+            body: options && options.body != null ? options.body : this.body,
+            url: options && options.url != null ? options.url : this.url,
+            params: options && this._mergeSearchParams(options.params || options.search),
+            withCredentials: options && options.withCredentials != null ? options.withCredentials :
+                this.withCredentials,
+            responseType: options && options.responseType != null ? options.responseType :
+                this.responseType
+        });
+    };
+    /**
+     * @param {?=} params
+     * @return {?}
+     */
+    RequestOptions.prototype._mergeSearchParams = function (params) {
+        if (!params)
+            return this.params;
+        if (params instanceof URLSearchParams) {
+            return params.clone();
+        }
+        if (typeof params === 'string') {
+            return new URLSearchParams(params);
+        }
+        return this._parseParams(params);
+    };
+    /**
+     * @param {?=} objParams
+     * @return {?}
+     */
+    RequestOptions.prototype._parseParams = function (objParams) {
+        var _this = this;
+        if (objParams === void 0) { objParams = {}; }
+        var /** @type {?} */ params = new URLSearchParams();
+        Object.keys(objParams).forEach(function (key) {
+            var /** @type {?} */ value = objParams[key];
+            if (Array.isArray(value)) {
+                value.forEach(function (item) { return _this._appendParam(key, item, params); });
+            }
+            else {
+                _this._appendParam(key, value, params);
+            }
+        });
+        return params;
+    };
+    /**
+     * @param {?} key
+     * @param {?} value
+     * @param {?} params
+     * @return {?}
+     */
+    RequestOptions.prototype._appendParam = function (key, value, params) {
+        if (typeof value !== 'string') {
+            value = JSON.stringify(value);
+        }
+        params.append(key, value);
+    };
+    return RequestOptions;
+}());
+/**
+ * Subclass of {\@link RequestOptions}, with default values.
+ *
+ * Default values:
+ *  * method: {\@link RequestMethod RequestMethod.Get}
+ *  * headers: empty {\@link Headers} object
+ *
+ * This class could be extended and bound to the {\@link RequestOptions} class
+ * when configuring an {\@link Injector}, in order to override the default options
+ * used by {\@link Http} to create and send {\@link Request Requests}.
+ *
+ * ```typescript
+ * import {BaseRequestOptions, RequestOptions} from '\@angular/http';
+ *
+ * class MyOptions extends BaseRequestOptions {
+ *   search: string = 'coreTeam=true';
+ * }
+ *
+ * {provide: RequestOptions, useClass: MyOptions};
+ * ```
+ *
+ * The options could also be extended when manually creating a {\@link Request}
+ * object.
+ *
+ * ```
+ * import {BaseRequestOptions, Request, RequestMethod} from '\@angular/http';
+ *
+ * const options = new BaseRequestOptions();
+ * const req = new Request(options.merge({
+ *   method: RequestMethod.Post,
+ *   url: 'https://google.com'
+ * }));
+ * console.log('req.method:', RequestMethod[req.method]); // Post
+ * console.log('options.url:', options.url); // null
+ * console.log('req.url:', req.url); // https://google.com
+ * ```
+ *
+ * \@experimental
+ */
+var BaseRequestOptions = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](BaseRequestOptions, _super);
+    function BaseRequestOptions() {
+        return _super.call(this, { method: RequestMethod.Get, headers: new Headers() }) || this;
+    }
+    return BaseRequestOptions;
+}(RequestOptions));
+BaseRequestOptions.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+BaseRequestOptions.ctorParameters = function () { return []; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Creates `Request` instances from provided values.
+ *
+ * The Request's interface is inspired by the Request constructor defined in the [Fetch
+ * Spec](https://fetch.spec.whatwg.org/#request-class),
+ * but is considered a static value whose body can be accessed many times. There are other
+ * differences in the implementation, but this is the most significant.
+ *
+ * `Request` instances are typically created by higher-level classes, like {\@link Http} and
+ * {\@link Jsonp}, but it may occasionally be useful to explicitly create `Request` instances.
+ * One such example is when creating services that wrap higher-level services, like {\@link Http},
+ * where it may be useful to generate a `Request` with arbitrary headers and search params.
+ *
+ * ```typescript
+ * import {Injectable, Injector} from '\@angular/core';
+ * import {HTTP_PROVIDERS, Http, Request, RequestMethod} from '\@angular/http';
+ *
+ * \@Injectable()
+ * class AutoAuthenticator {
+ *   constructor(public http:Http) {}
+ *   request(url:string) {
+ *     return this.http.request(new Request({
+ *       method: RequestMethod.Get,
+ *       url: url,
+ *       search: 'password=123'
+ *     }));
+ *   }
+ * }
+ *
+ * var injector = Injector.resolveAndCreate([HTTP_PROVIDERS, AutoAuthenticator]);
+ * var authenticator = injector.get(AutoAuthenticator);
+ * authenticator.request('people.json').subscribe(res => {
+ *   //URL should have included '?password=123'
+ *   console.log('people', res.json());
+ * });
+ * ```
+ *
+ * \@experimental
+ */
+var Request = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](Request, _super);
+    /**
+     * @param {?} requestOptions
+     */
+    function Request(requestOptions) {
+        var _this = _super.call(this) || this;
+        // TODO: assert that url is present
+        var url = requestOptions.url;
+        _this.url = requestOptions.url;
+        var paramsArg = requestOptions.params || requestOptions.search;
+        if (paramsArg) {
+            var params = void 0;
+            if (typeof paramsArg === 'object' && !(paramsArg instanceof URLSearchParams)) {
+                params = urlEncodeParams(paramsArg).toString();
+            }
+            else {
+                params = paramsArg.toString();
+            }
+            if (params.length > 0) {
+                var prefix = '?';
+                if (_this.url.indexOf('?') != -1) {
+                    prefix = (_this.url[_this.url.length - 1] == '&') ? '' : '&';
+                }
+                // TODO: just delete search-query-looking string in url?
+                _this.url = url + prefix + params;
+            }
+        }
+        _this._body = requestOptions.body;
+        _this.method = normalizeMethodName(requestOptions.method);
+        // TODO(jeffbcross): implement behavior
+        // Defaults to 'omit', consistent with browser
+        _this.headers = new Headers(requestOptions.headers);
+        _this.contentType = _this.detectContentType();
+        _this.withCredentials = requestOptions.withCredentials;
+        _this.responseType = requestOptions.responseType;
+        return _this;
+    }
+    /**
+     * Returns the content type enum based on header options.
+     * @return {?}
+     */
+    Request.prototype.detectContentType = function () {
+        switch (this.headers.get('content-type')) {
+            case 'application/json':
+                return ContentType.JSON;
+            case 'application/x-www-form-urlencoded':
+                return ContentType.FORM;
+            case 'multipart/form-data':
+                return ContentType.FORM_DATA;
+            case 'text/plain':
+            case 'text/html':
+                return ContentType.TEXT;
+            case 'application/octet-stream':
+                return this._body instanceof ArrayBuffer$1 ? ContentType.ARRAY_BUFFER : ContentType.BLOB;
+            default:
+                return this.detectContentTypeFromBody();
+        }
+    };
+    /**
+     * Returns the content type of request's body based on its type.
+     * @return {?}
+     */
+    Request.prototype.detectContentTypeFromBody = function () {
+        if (this._body == null) {
+            return ContentType.NONE;
+        }
+        else if (this._body instanceof URLSearchParams) {
+            return ContentType.FORM;
+        }
+        else if (this._body instanceof FormData) {
+            return ContentType.FORM_DATA;
+        }
+        else if (this._body instanceof Blob$1) {
+            return ContentType.BLOB;
+        }
+        else if (this._body instanceof ArrayBuffer$1) {
+            return ContentType.ARRAY_BUFFER;
+        }
+        else if (this._body && typeof this._body === 'object') {
+            return ContentType.JSON;
+        }
+        else {
+            return ContentType.TEXT;
+        }
+    };
+    /**
+     * Returns the request's body according to its type. If body is undefined, return
+     * null.
+     * @return {?}
+     */
+    Request.prototype.getBody = function () {
+        switch (this.contentType) {
+            case ContentType.JSON:
+                return this.text();
+            case ContentType.FORM:
+                return this.text();
+            case ContentType.FORM_DATA:
+                return this._body;
+            case ContentType.TEXT:
+                return this.text();
+            case ContentType.BLOB:
+                return this.blob();
+            case ContentType.ARRAY_BUFFER:
+                return this.arrayBuffer();
+            default:
+                return null;
+        }
+    };
+    return Request;
+}(Body));
+/**
+ * @param {?} params
+ * @return {?}
+ */
+function urlEncodeParams(params) {
+    var /** @type {?} */ searchParams = new URLSearchParams();
+    Object.keys(params).forEach(function (key) {
+        var /** @type {?} */ value = params[key];
+        if (value && Array.isArray(value)) {
+            value.forEach(function (element) { return searchParams.append(key, element.toString()); });
+        }
+        else {
+            searchParams.append(key, value.toString());
+        }
+    });
+    return searchParams;
+}
+var noop = function () { };
+var w = typeof window == 'object' ? window : noop;
+var FormData = ((w) /** TODO #9100 */)['FormData'] || noop;
+var Blob$1 = ((w) /** TODO #9100 */)['Blob'] || noop;
+var ArrayBuffer$1 = ((w) /** TODO #9100 */)['ArrayBuffer'] || noop;
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @param {?} backend
+ * @param {?} request
+ * @return {?}
+ */
+function httpRequest(backend, request) {
+    return backend.createConnection(request).response;
+}
+/**
+ * @param {?} defaultOpts
+ * @param {?} providedOpts
+ * @param {?} method
+ * @param {?} url
+ * @return {?}
+ */
+function mergeOptions(defaultOpts, providedOpts, method, url) {
+    var /** @type {?} */ newOptions = defaultOpts;
+    if (providedOpts) {
+        // Hack so Dart can used named parameters
+        return (newOptions.merge(new RequestOptions({
+            method: providedOpts.method || method,
+            url: providedOpts.url || url,
+            search: providedOpts.search,
+            params: providedOpts.params,
+            headers: providedOpts.headers,
+            body: providedOpts.body,
+            withCredentials: providedOpts.withCredentials,
+            responseType: providedOpts.responseType
+        })));
+    }
+    return (newOptions.merge(new RequestOptions({ method: method, url: url })));
+}
+/**
+ * Performs http requests using `XMLHttpRequest` as the default backend.
+ *
+ * `Http` is available as an injectable class, with methods to perform http requests. Calling
+ * `request` returns an `Observable` which will emit a single {\@link Response} when a
+ * response is received.
+ *
+ * ### Example
+ *
+ * ```typescript
+ * import {Http, HTTP_PROVIDERS} from '\@angular/http';
+ * import 'rxjs/add/operator/map'
+ * \@Component({
+ *   selector: 'http-app',
+ *   viewProviders: [HTTP_PROVIDERS],
+ *   templateUrl: 'people.html'
+ * })
+ * class PeopleComponent {
+ *   constructor(http: Http) {
+ *     http.get('people.json')
+ *       // Call map on the response observable to get the parsed people object
+ *       .map(res => res.json())
+ *       // Subscribe to the observable to get the parsed people object and attach it to the
+ *       // component
+ *       .subscribe(people => this.people = people);
+ *   }
+ * }
+ * ```
+ *
+ *
+ * ### Example
+ *
+ * ```
+ * http.get('people.json').subscribe((res:Response) => this.people = res.json());
+ * ```
+ *
+ * The default construct used to perform requests, `XMLHttpRequest`, is abstracted as a "Backend" (
+ * {\@link XHRBackend} in this case), which could be mocked with dependency injection by replacing
+ * the {\@link XHRBackend} provider, as in the following example:
+ *
+ * ### Example
+ *
+ * ```typescript
+ * import {BaseRequestOptions, Http} from '\@angular/http';
+ * import {MockBackend} from '\@angular/http/testing';
+ * var injector = Injector.resolveAndCreate([
+ *   BaseRequestOptions,
+ *   MockBackend,
+ *   {provide: Http, useFactory:
+ *       function(backend, defaultOptions) {
+ *         return new Http(backend, defaultOptions);
+ *       },
+ *       deps: [MockBackend, BaseRequestOptions]}
+ * ]);
+ * var http = injector.get(Http);
+ * http.get('request-from-mock-backend.json').subscribe((res:Response) => doSomething(res));
+ * ```
+ *
+ * \@experimental
+ */
+var Http = (function () {
+    /**
+     * @param {?} _backend
+     * @param {?} _defaultOptions
+     */
+    function Http(_backend, _defaultOptions) {
+        this._backend = _backend;
+        this._defaultOptions = _defaultOptions;
+    }
+    /**
+     * Performs any type of http request. First argument is required, and can either be a url or
+     * a {\@link Request} instance. If the first argument is a url, an optional {\@link RequestOptions}
+     * object can be provided as the 2nd argument. The options object will be merged with the values
+     * of {\@link BaseRequestOptions} before performing the request.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    Http.prototype.request = function (url, options) {
+        var /** @type {?} */ responseObservable;
+        if (typeof url === 'string') {
+            responseObservable = httpRequest(this._backend, new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Get, /** @type {?} */ (url))));
+        }
+        else if (url instanceof Request) {
+            responseObservable = httpRequest(this._backend, url);
+        }
+        else {
+            throw new Error('First argument must be a url string or Request instance.');
+        }
+        return responseObservable;
+    };
+    /**
+     * Performs a request with `get` http method.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    Http.prototype.get = function (url, options) {
+        return this.request(new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Get, url)));
+    };
+    /**
+     * Performs a request with `post` http method.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    Http.prototype.post = function (url, body, options) {
+        return this.request(new Request(mergeOptions(this._defaultOptions.merge(new RequestOptions({ body: body })), options, RequestMethod.Post, url)));
+    };
+    /**
+     * Performs a request with `put` http method.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    Http.prototype.put = function (url, body, options) {
+        return this.request(new Request(mergeOptions(this._defaultOptions.merge(new RequestOptions({ body: body })), options, RequestMethod.Put, url)));
+    };
+    /**
+     * Performs a request with `delete` http method.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    Http.prototype.delete = function (url, options) {
+        return this.request(new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Delete, url)));
+    };
+    /**
+     * Performs a request with `patch` http method.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    Http.prototype.patch = function (url, body, options) {
+        return this.request(new Request(mergeOptions(this._defaultOptions.merge(new RequestOptions({ body: body })), options, RequestMethod.Patch, url)));
+    };
+    /**
+     * Performs a request with `head` http method.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    Http.prototype.head = function (url, options) {
+        return this.request(new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Head, url)));
+    };
+    /**
+     * Performs a request with `options` http method.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    Http.prototype.options = function (url, options) {
+        return this.request(new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Options, url)));
+    };
+    return Http;
+}());
+Http.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+Http.ctorParameters = function () { return [
+    { type: ConnectionBackend, },
+    { type: RequestOptions, },
+]; };
+/**
+ * \@experimental
+ */
+var Jsonp = (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](Jsonp, _super);
+    /**
+     * @param {?} backend
+     * @param {?} defaultOptions
+     */
+    function Jsonp(backend, defaultOptions) {
+        return _super.call(this, backend, defaultOptions) || this;
+    }
+    /**
+     * Performs any type of http request. First argument is required, and can either be a url or
+     * a {\@link Request} instance. If the first argument is a url, an optional {\@link RequestOptions}
+     * object can be provided as the 2nd argument. The options object will be merged with the values
+     * of {\@link BaseRequestOptions} before performing the request.
+     *
+     * \@security Regular XHR is the safest alternative to JSONP for most applications, and is
+     * supported by all current browsers. Because JSONP creates a `<script>` element with
+     * contents retrieved from a remote source, attacker-controlled data introduced by an untrusted
+     * source could expose your application to XSS risks. Data exposed by JSONP may also be
+     * readable by malicious third-party websites. In addition, JSONP introduces potential risk for
+     * future security issues (e.g. content sniffing).  For more detail, see the
+     * [Security Guide](http://g.co/ng/security).
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    Jsonp.prototype.request = function (url, options) {
+        var /** @type {?} */ responseObservable;
+        if (typeof url === 'string') {
+            url =
+                new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Get, /** @type {?} */ (url)));
+        }
+        if (url instanceof Request) {
+            if (url.method !== RequestMethod.Get) {
+                throw new Error('JSONP requests must use GET request method.');
+            }
+            responseObservable = httpRequest(this._backend, url);
+        }
+        else {
+            throw new Error('First argument must be a url string or Request instance.');
+        }
+        return responseObservable;
+    };
+    return Jsonp;
+}(Http));
+Jsonp.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+];
+/**
+ * @nocollapse
+ */
+Jsonp.ctorParameters = function () { return [
+    { type: ConnectionBackend, },
+    { type: RequestOptions, },
+]; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @module
+ * @description
+ * The http module provides services to perform http requests. To get started, see the {@link Http}
+ * class.
+ */
+/**
+ * @return {?}
+ */
+function _createDefaultCookieXSRFStrategy() {
+    return new CookieXSRFStrategy();
+}
+/**
+ * @param {?} xhrBackend
+ * @param {?} requestOptions
+ * @return {?}
+ */
+function httpFactory(xhrBackend, requestOptions) {
+    return new Http(xhrBackend, requestOptions);
+}
+/**
+ * @param {?} jsonpBackend
+ * @param {?} requestOptions
+ * @return {?}
+ */
+function jsonpFactory(jsonpBackend, requestOptions) {
+    return new Jsonp(jsonpBackend, requestOptions);
+}
+/**
+ * The module that includes http's providers
+ *
+ * \@experimental
+ */
+var HttpModule = (function () {
+    function HttpModule() {
+    }
+    return HttpModule;
+}());
+HttpModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
+                providers: [
+                    // TODO(pascal): use factory type annotations once supported in DI
+                    // issue: https://github.com/angular/angular/issues/3183
+                    { provide: Http, useFactory: httpFactory, deps: [XHRBackend, RequestOptions] },
+                    BrowserXhr,
+                    { provide: RequestOptions, useClass: BaseRequestOptions },
+                    { provide: ResponseOptions, useClass: BaseResponseOptions },
+                    XHRBackend,
+                    { provide: XSRFStrategy, useFactory: _createDefaultCookieXSRFStrategy },
+                ],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+HttpModule.ctorParameters = function () { return []; };
+/**
+ * The module that includes jsonp's providers
+ *
+ * \@experimental
+ */
+var JsonpModule = (function () {
+    function JsonpModule() {
+    }
+    return JsonpModule;
+}());
+JsonpModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
+                providers: [
+                    // TODO(pascal): use factory type annotations once supported in DI
+                    // issue: https://github.com/angular/angular/issues/3183
+                    { provide: Jsonp, useFactory: jsonpFactory, deps: [JSONPBackend, RequestOptions] },
+                    BrowserJsonp,
+                    { provide: RequestOptions, useClass: BaseRequestOptions },
+                    { provide: ResponseOptions, useClass: BaseResponseOptions },
+                    { provide: JSONPBackend, useClass: JSONPBackend_ },
+                ],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+JsonpModule.ctorParameters = function () { return []; };
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @module
+ * @description
+ * Entry point for all public APIs of the common package.
+ */
+/**
+ * \@stable
+ */
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.2.6');
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @module
+ * @description
+ * Entry point for all public APIs of the http package.
+ */
+// This file only reexports content of the `src` folder. Keep it that way.
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+//# sourceMappingURL=http.es5.js.map
+
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(180));
+__export(__webpack_require__(178));
+__export(__webpack_require__(177));
+__export(__webpack_require__(179));
+
+
+/***/ }),
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgLocaleLocalization", function() { return NgLocaleLocalization; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgLocalization", function() { return NgLocalization; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommonModule", function() { return CommonModule; });
@@ -30806,7 +33068,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.2.6'
 
 
 /***/ }),
-/* 57 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30818,9 +33080,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var Subject_1 = __webpack_require__(41);
-var icons_1 = __webpack_require__(108);
+var core_1 = __webpack_require__(1);
+var Subject_1 = __webpack_require__(44);
+var icons_1 = __webpack_require__(111);
 var NotificationsService = (function () {
     function NotificationsService() {
         this.emitter = new Subject_1.Subject();
@@ -30882,21 +33144,6 @@ exports.NotificationsService = NotificationsService;
 //# sourceMappingURL=notifications.service.js.map
 
 /***/ }),
-/* 58 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(177));
-__export(__webpack_require__(176));
-
-
-/***/ }),
-/* 59 */,
 /* 60 */,
 /* 61 */,
 /* 62 */,
@@ -30905,7 +33152,8 @@ __export(__webpack_require__(176));
 /* 65 */,
 /* 66 */,
 /* 67 */,
-/* 68 */
+/* 68 */,
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30915,7 +33163,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(13);
+var Subscriber_1 = __webpack_require__(14);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -30941,17 +33189,17 @@ exports.OuterSubscriber = OuterSubscriber;
 //# sourceMappingURL=OuterSubscriber.js.map
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var isArray_1 = __webpack_require__(103);
-var isObject_1 = __webpack_require__(159);
-var isFunction_1 = __webpack_require__(158);
-var tryCatch_1 = __webpack_require__(375);
-var errorObject_1 = __webpack_require__(156);
-var UnsubscriptionError_1 = __webpack_require__(373);
+var isArray_1 = __webpack_require__(106);
+var isObject_1 = __webpack_require__(161);
+var isFunction_1 = __webpack_require__(160);
+var tryCatch_1 = __webpack_require__(386);
+var errorObject_1 = __webpack_require__(158);
+var UnsubscriptionError_1 = __webpack_require__(384);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -31140,19 +33388,54 @@ function flattenUnsubscriptionErrors(errors) {
 //# sourceMappingURL=Subscription.js.map
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var root_1 = __webpack_require__(42);
-var isArrayLike_1 = __webpack_require__(157);
-var isPromise_1 = __webpack_require__(160);
-var isObject_1 = __webpack_require__(159);
 var Observable_1 = __webpack_require__(7);
-var iterator_1 = __webpack_require__(99);
-var InnerSubscriber_1 = __webpack_require__(349);
-var observable_1 = __webpack_require__(100);
+var catch_1 = __webpack_require__(155);
+Observable_1.Observable.prototype.catch = catch_1._catch;
+Observable_1.Observable.prototype._catch = catch_1._catch;
+//# sourceMappingURL=catch.js.map
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(7);
+var do_1 = __webpack_require__(374);
+Observable_1.Observable.prototype.do = do_1._do;
+Observable_1.Observable.prototype._do = do_1._do;
+//# sourceMappingURL=do.js.map
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(7);
+var map_1 = __webpack_require__(100);
+Observable_1.Observable.prototype.map = map_1.map;
+//# sourceMappingURL=map.js.map
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var root_1 = __webpack_require__(45);
+var isArrayLike_1 = __webpack_require__(159);
+var isPromise_1 = __webpack_require__(162);
+var isObject_1 = __webpack_require__(161);
+var Observable_1 = __webpack_require__(7);
+var iterator_1 = __webpack_require__(102);
+var InnerSubscriber_1 = __webpack_require__(360);
+var observable_1 = __webpack_require__(103);
 function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
     var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
     if (destination.closed) {
@@ -31224,7 +33507,7 @@ exports.subscribeToResult = subscribeToResult;
 //# sourceMappingURL=subscribeToResult.js.map
 
 /***/ }),
-/* 71 */
+/* 75 */
 /***/ (function(module, exports) {
 
 var g;
@@ -31251,7 +33534,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 72 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32505,2238 +34788,6 @@ var ɵPRE_STYLE = '!';
 
 
 /***/ }),
-/* 73 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(36);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserXhr", function() { return BrowserXhr; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JSONPBackend", function() { return JSONPBackend; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JSONPConnection", function() { return JSONPConnection; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CookieXSRFStrategy", function() { return CookieXSRFStrategy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XHRBackend", function() { return XHRBackend; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XHRConnection", function() { return XHRConnection; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseRequestOptions", function() { return BaseRequestOptions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RequestOptions", function() { return RequestOptions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseResponseOptions", function() { return BaseResponseOptions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResponseOptions", function() { return ResponseOptions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadyState", function() { return ReadyState; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RequestMethod", function() { return RequestMethod; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResponseContentType", function() { return ResponseContentType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResponseType", function() { return ResponseType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Headers", function() { return Headers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Http", function() { return Http; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Jsonp", function() { return Jsonp; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpModule", function() { return HttpModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsonpModule", function() { return JsonpModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Connection", function() { return Connection; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConnectionBackend", function() { return ConnectionBackend; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XSRFStrategy", function() { return XSRFStrategy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Request", function() { return Request; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Response", function() { return Response; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QueryEncoder", function() { return QueryEncoder; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "URLSearchParams", function() { return URLSearchParams; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return BrowserJsonp; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return JSONPBackend_; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return Body; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return _createDefaultCookieXSRFStrategy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return httpFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return jsonpFactory; });
-
-/**
- * @license Angular v4.2.6
- * (c) 2010-2017 Google, Inc. https://angular.io/
- * License: MIT
- */
-
-
-
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * A backend for http that uses the `XMLHttpRequest` browser API.
- *
- * Take care not to evaluate this in non-browser contexts.
- *
- * \@experimental
- */
-var BrowserXhr = (function () {
-    function BrowserXhr() {
-    }
-    /**
-     * @return {?}
-     */
-    BrowserXhr.prototype.build = function () { return ((new XMLHttpRequest())); };
-    return BrowserXhr;
-}());
-BrowserXhr.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-BrowserXhr.ctorParameters = function () { return []; };
-var RequestMethod = {};
-RequestMethod.Get = 0;
-RequestMethod.Post = 1;
-RequestMethod.Put = 2;
-RequestMethod.Delete = 3;
-RequestMethod.Options = 4;
-RequestMethod.Head = 5;
-RequestMethod.Patch = 6;
-RequestMethod[RequestMethod.Get] = "Get";
-RequestMethod[RequestMethod.Post] = "Post";
-RequestMethod[RequestMethod.Put] = "Put";
-RequestMethod[RequestMethod.Delete] = "Delete";
-RequestMethod[RequestMethod.Options] = "Options";
-RequestMethod[RequestMethod.Head] = "Head";
-RequestMethod[RequestMethod.Patch] = "Patch";
-var ReadyState = {};
-ReadyState.Unsent = 0;
-ReadyState.Open = 1;
-ReadyState.HeadersReceived = 2;
-ReadyState.Loading = 3;
-ReadyState.Done = 4;
-ReadyState.Cancelled = 5;
-ReadyState[ReadyState.Unsent] = "Unsent";
-ReadyState[ReadyState.Open] = "Open";
-ReadyState[ReadyState.HeadersReceived] = "HeadersReceived";
-ReadyState[ReadyState.Loading] = "Loading";
-ReadyState[ReadyState.Done] = "Done";
-ReadyState[ReadyState.Cancelled] = "Cancelled";
-var ResponseType = {};
-ResponseType.Basic = 0;
-ResponseType.Cors = 1;
-ResponseType.Default = 2;
-ResponseType.Error = 3;
-ResponseType.Opaque = 4;
-ResponseType[ResponseType.Basic] = "Basic";
-ResponseType[ResponseType.Cors] = "Cors";
-ResponseType[ResponseType.Default] = "Default";
-ResponseType[ResponseType.Error] = "Error";
-ResponseType[ResponseType.Opaque] = "Opaque";
-var ContentType = {};
-ContentType.NONE = 0;
-ContentType.JSON = 1;
-ContentType.FORM = 2;
-ContentType.FORM_DATA = 3;
-ContentType.TEXT = 4;
-ContentType.BLOB = 5;
-ContentType.ARRAY_BUFFER = 6;
-ContentType[ContentType.NONE] = "NONE";
-ContentType[ContentType.JSON] = "JSON";
-ContentType[ContentType.FORM] = "FORM";
-ContentType[ContentType.FORM_DATA] = "FORM_DATA";
-ContentType[ContentType.TEXT] = "TEXT";
-ContentType[ContentType.BLOB] = "BLOB";
-ContentType[ContentType.ARRAY_BUFFER] = "ARRAY_BUFFER";
-var ResponseContentType = {};
-ResponseContentType.Text = 0;
-ResponseContentType.Json = 1;
-ResponseContentType.ArrayBuffer = 2;
-ResponseContentType.Blob = 3;
-ResponseContentType[ResponseContentType.Text] = "Text";
-ResponseContentType[ResponseContentType.Json] = "Json";
-ResponseContentType[ResponseContentType.ArrayBuffer] = "ArrayBuffer";
-ResponseContentType[ResponseContentType.Blob] = "Blob";
-/**
- * Polyfill for [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers), as
- * specified in the [Fetch Spec](https://fetch.spec.whatwg.org/#headers-class).
- *
- * The only known difference between this `Headers` implementation and the spec is the
- * lack of an `entries` method.
- *
- * ### Example
- *
- * ```
- * import {Headers} from '\@angular/http';
- *
- * var firstHeaders = new Headers();
- * firstHeaders.append('Content-Type', 'image/jpeg');
- * console.log(firstHeaders.get('Content-Type')) //'image/jpeg'
- *
- * // Create headers from Plain Old JavaScript Object
- * var secondHeaders = new Headers({
- *   'X-My-Custom-Header': 'Angular'
- * });
- * console.log(secondHeaders.get('X-My-Custom-Header')); //'Angular'
- *
- * var thirdHeaders = new Headers(secondHeaders);
- * console.log(thirdHeaders.get('X-My-Custom-Header')); //'Angular'
- * ```
- *
- * \@experimental
- */
-var Headers = (function () {
-    /**
-     * @param {?=} headers
-     */
-    function Headers(headers) {
-        var _this = this;
-        /**
-         * \@internal header names are lower case
-         */
-        this._headers = new Map();
-        /**
-         * \@internal map lower case names to actual names
-         */
-        this._normalizedNames = new Map();
-        if (!headers) {
-            return;
-        }
-        if (headers instanceof Headers) {
-            headers.forEach(function (values, name) {
-                values.forEach(function (value) { return _this.append(name, value); });
-            });
-            return;
-        }
-        Object.keys(headers).forEach(function (name) {
-            var values = Array.isArray(headers[name]) ? headers[name] : [headers[name]];
-            _this.delete(name);
-            values.forEach(function (value) { return _this.append(name, value); });
-        });
-    }
-    /**
-     * Returns a new Headers instance from the given DOMString of Response Headers
-     * @param {?} headersString
-     * @return {?}
-     */
-    Headers.fromResponseHeaderString = function (headersString) {
-        var /** @type {?} */ headers = new Headers();
-        headersString.split('\n').forEach(function (line) {
-            var /** @type {?} */ index = line.indexOf(':');
-            if (index > 0) {
-                var /** @type {?} */ name = line.slice(0, index);
-                var /** @type {?} */ value = line.slice(index + 1).trim();
-                headers.set(name, value);
-            }
-        });
-        return headers;
-    };
-    /**
-     * Appends a header to existing list of header values for a given header name.
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    Headers.prototype.append = function (name, value) {
-        var /** @type {?} */ values = this.getAll(name);
-        if (values === null) {
-            this.set(name, value);
-        }
-        else {
-            values.push(value);
-        }
-    };
-    /**
-     * Deletes all header values for the given name.
-     * @param {?} name
-     * @return {?}
-     */
-    Headers.prototype.delete = function (name) {
-        var /** @type {?} */ lcName = name.toLowerCase();
-        this._normalizedNames.delete(lcName);
-        this._headers.delete(lcName);
-    };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    Headers.prototype.forEach = function (fn) {
-        var _this = this;
-        this._headers.forEach(function (values, lcName) { return fn(values, _this._normalizedNames.get(lcName), _this._headers); });
-    };
-    /**
-     * Returns first header that matches given name.
-     * @param {?} name
-     * @return {?}
-     */
-    Headers.prototype.get = function (name) {
-        var /** @type {?} */ values = this.getAll(name);
-        if (values === null) {
-            return null;
-        }
-        return values.length > 0 ? values[0] : null;
-    };
-    /**
-     * Checks for existence of header by given name.
-     * @param {?} name
-     * @return {?}
-     */
-    Headers.prototype.has = function (name) { return this._headers.has(name.toLowerCase()); };
-    /**
-     * Returns the names of the headers
-     * @return {?}
-     */
-    Headers.prototype.keys = function () { return Array.from(this._normalizedNames.values()); };
-    /**
-     * Sets or overrides header value for given name.
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    Headers.prototype.set = function (name, value) {
-        if (Array.isArray(value)) {
-            if (value.length) {
-                this._headers.set(name.toLowerCase(), [value.join(',')]);
-            }
-        }
-        else {
-            this._headers.set(name.toLowerCase(), [value]);
-        }
-        this.mayBeSetNormalizedName(name);
-    };
-    /**
-     * Returns values of all headers.
-     * @return {?}
-     */
-    Headers.prototype.values = function () { return Array.from(this._headers.values()); };
-    /**
-     * @return {?}
-     */
-    Headers.prototype.toJSON = function () {
-        var _this = this;
-        var /** @type {?} */ serialized = {};
-        this._headers.forEach(function (values, name) {
-            var /** @type {?} */ split = [];
-            values.forEach(function (v) { return split.push.apply(split, v.split(',')); });
-            serialized[((_this._normalizedNames.get(name)))] = split;
-        });
-        return serialized;
-    };
-    /**
-     * Returns list of header values for a given name.
-     * @param {?} name
-     * @return {?}
-     */
-    Headers.prototype.getAll = function (name) {
-        return this.has(name) ? this._headers.get(name.toLowerCase()) || null : null;
-    };
-    /**
-     * This method is not implemented.
-     * @return {?}
-     */
-    Headers.prototype.entries = function () { throw new Error('"entries" method is not implemented on Headers class'); };
-    /**
-     * @param {?} name
-     * @return {?}
-     */
-    Headers.prototype.mayBeSetNormalizedName = function (name) {
-        var /** @type {?} */ lcName = name.toLowerCase();
-        if (!this._normalizedNames.has(lcName)) {
-            this._normalizedNames.set(lcName, name);
-        }
-    };
-    return Headers;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Creates a response options object to be optionally provided when instantiating a
- * {\@link Response}.
- *
- * This class is based on the `ResponseInit` description in the [Fetch
- * Spec](https://fetch.spec.whatwg.org/#responseinit).
- *
- * All values are null by default. Typical defaults can be found in the
- * {\@link BaseResponseOptions} class, which sub-classes `ResponseOptions`.
- *
- * This class may be used in tests to build {\@link Response Responses} for
- * mock responses (see {\@link MockBackend}).
- *
- * ### Example ([live demo](http://plnkr.co/edit/P9Jkk8e8cz6NVzbcxEsD?p=preview))
- *
- * ```typescript
- * import {ResponseOptions, Response} from '\@angular/http';
- *
- * var options = new ResponseOptions({
- *   body: '{"name":"Jeff"}'
- * });
- * var res = new Response(options);
- *
- * console.log('res.json():', res.json()); // Object {name: "Jeff"}
- * ```
- *
- * \@experimental
- */
-var ResponseOptions = (function () {
-    /**
-     * @param {?=} opts
-     */
-    function ResponseOptions(opts) {
-        if (opts === void 0) { opts = {}; }
-        var body = opts.body, status = opts.status, headers = opts.headers, statusText = opts.statusText, type = opts.type, url = opts.url;
-        this.body = body != null ? body : null;
-        this.status = status != null ? status : null;
-        this.headers = headers != null ? headers : null;
-        this.statusText = statusText != null ? statusText : null;
-        this.type = type != null ? type : null;
-        this.url = url != null ? url : null;
-    }
-    /**
-     * Creates a copy of the `ResponseOptions` instance, using the optional input as values to
-     * override
-     * existing values. This method will not change the values of the instance on which it is being
-     * called.
-     *
-     * This may be useful when sharing a base `ResponseOptions` object inside tests,
-     * where certain properties may change from test to test.
-     *
-     * ### Example ([live demo](http://plnkr.co/edit/1lXquqFfgduTFBWjNoRE?p=preview))
-     *
-     * ```typescript
-     * import {ResponseOptions, Response} from '\@angular/http';
-     *
-     * var options = new ResponseOptions({
-     *   body: {name: 'Jeff'}
-     * });
-     * var res = new Response(options.merge({
-     *   url: 'https://google.com'
-     * }));
-     * console.log('options.url:', options.url); // null
-     * console.log('res.json():', res.json()); // Object {name: "Jeff"}
-     * console.log('res.url:', res.url); // https://google.com
-     * ```
-     * @param {?=} options
-     * @return {?}
-     */
-    ResponseOptions.prototype.merge = function (options) {
-        return new ResponseOptions({
-            body: options && options.body != null ? options.body : this.body,
-            status: options && options.status != null ? options.status : this.status,
-            headers: options && options.headers != null ? options.headers : this.headers,
-            statusText: options && options.statusText != null ? options.statusText : this.statusText,
-            type: options && options.type != null ? options.type : this.type,
-            url: options && options.url != null ? options.url : this.url,
-        });
-    };
-    return ResponseOptions;
-}());
-/**
- * Subclass of {\@link ResponseOptions}, with default values.
- *
- * Default values:
- *  * status: 200
- *  * headers: empty {\@link Headers} object
- *
- * This class could be extended and bound to the {\@link ResponseOptions} class
- * when configuring an {\@link Injector}, in order to override the default options
- * used by {\@link Http} to create {\@link Response Responses}.
- *
- * ### Example ([live demo](http://plnkr.co/edit/qv8DLT?p=preview))
- *
- * ```typescript
- * import {provide} from '\@angular/core';
- * import {bootstrap} from '\@angular/platform-browser/browser';
- * import {HTTP_PROVIDERS, Headers, Http, BaseResponseOptions, ResponseOptions} from
- * '\@angular/http';
- * import {App} from './myapp';
- *
- * class MyOptions extends BaseResponseOptions {
- *   headers:Headers = new Headers({network: 'github'});
- * }
- *
- * bootstrap(App, [HTTP_PROVIDERS, {provide: ResponseOptions, useClass: MyOptions}]);
- * ```
- *
- * The options could also be extended when manually creating a {\@link Response}
- * object.
- *
- * ### Example ([live demo](http://plnkr.co/edit/VngosOWiaExEtbstDoix?p=preview))
- *
- * ```
- * import {BaseResponseOptions, Response} from '\@angular/http';
- *
- * var options = new BaseResponseOptions();
- * var res = new Response(options.merge({
- *   body: 'Angular',
- *   headers: new Headers({framework: 'angular'})
- * }));
- * console.log('res.headers.get("framework"):', res.headers.get('framework')); // angular
- * console.log('res.text():', res.text()); // Angular;
- * ```
- *
- * \@experimental
- */
-var BaseResponseOptions = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](BaseResponseOptions, _super);
-    function BaseResponseOptions() {
-        return _super.call(this, { status: 200, statusText: 'Ok', type: ResponseType.Default, headers: new Headers() }) || this;
-    }
-    return BaseResponseOptions;
-}(ResponseOptions));
-BaseResponseOptions.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-BaseResponseOptions.ctorParameters = function () { return []; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Abstract class from which real backends are derived.
- *
- * The primary purpose of a `ConnectionBackend` is to create new connections to fulfill a given
- * {\@link Request}.
- *
- * \@experimental
- * @abstract
- */
-var ConnectionBackend = (function () {
-    function ConnectionBackend() {
-    }
-    /**
-     * @abstract
-     * @param {?} request
-     * @return {?}
-     */
-    ConnectionBackend.prototype.createConnection = function (request) { };
-    return ConnectionBackend;
-}());
-/**
- * Abstract class from which real connections are derived.
- *
- * \@experimental
- * @abstract
- */
-var Connection = (function () {
-    function Connection() {
-    }
-    return Connection;
-}());
-/**
- * An XSRFStrategy configures XSRF protection (e.g. via headers) on an HTTP request.
- *
- * \@experimental
- * @abstract
- */
-var XSRFStrategy = (function () {
-    function XSRFStrategy() {
-    }
-    /**
-     * @abstract
-     * @param {?} req
-     * @return {?}
-     */
-    XSRFStrategy.prototype.configureRequest = function (req) { };
-    return XSRFStrategy;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @param {?} method
- * @return {?}
- */
-function normalizeMethodName(method) {
-    if (typeof method !== 'string')
-        return method;
-    switch (method.toUpperCase()) {
-        case 'GET':
-            return RequestMethod.Get;
-        case 'POST':
-            return RequestMethod.Post;
-        case 'PUT':
-            return RequestMethod.Put;
-        case 'DELETE':
-            return RequestMethod.Delete;
-        case 'OPTIONS':
-            return RequestMethod.Options;
-        case 'HEAD':
-            return RequestMethod.Head;
-        case 'PATCH':
-            return RequestMethod.Patch;
-    }
-    throw new Error("Invalid request method. The method \"" + method + "\" is not supported.");
-}
-var isSuccess = function (status) { return (status >= 200 && status < 300); };
-/**
- * @param {?} xhr
- * @return {?}
- */
-function getResponseURL(xhr) {
-    if ('responseURL' in xhr) {
-        return xhr.responseURL;
-    }
-    if (/^X-Request-URL:/m.test(xhr.getAllResponseHeaders())) {
-        return xhr.getResponseHeader('X-Request-URL');
-    }
-    return null;
-}
-/**
- * @param {?} input
- * @return {?}
- */
-/**
- * @param {?} input
- * @return {?}
- */
-function stringToArrayBuffer(input) {
-    var /** @type {?} */ view = new Uint16Array(input.length);
-    for (var /** @type {?} */ i = 0, /** @type {?} */ strLen = input.length; i < strLen; i++) {
-        view[i] = input.charCodeAt(i);
-    }
-    return view.buffer;
-}
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- * @param {?=} rawParams
- * @return {?}
- */
-function paramParser(rawParams) {
-    if (rawParams === void 0) { rawParams = ''; }
-    var /** @type {?} */ map = new Map();
-    if (rawParams.length > 0) {
-        var /** @type {?} */ params = rawParams.split('&');
-        params.forEach(function (param) {
-            var /** @type {?} */ eqIdx = param.indexOf('=');
-            var _a = eqIdx == -1 ? [param, ''] : [param.slice(0, eqIdx), param.slice(eqIdx + 1)], key = _a[0], val = _a[1];
-            var /** @type {?} */ list = map.get(key) || [];
-            list.push(val);
-            map.set(key, list);
-        });
-    }
-    return map;
-}
-/**
- * \@experimental
- *
- */
-var QueryEncoder = (function () {
-    function QueryEncoder() {
-    }
-    /**
-     * @param {?} k
-     * @return {?}
-     */
-    QueryEncoder.prototype.encodeKey = function (k) { return standardEncoding(k); };
-    /**
-     * @param {?} v
-     * @return {?}
-     */
-    QueryEncoder.prototype.encodeValue = function (v) { return standardEncoding(v); };
-    return QueryEncoder;
-}());
-/**
- * @param {?} v
- * @return {?}
- */
-function standardEncoding(v) {
-    return encodeURIComponent(v)
-        .replace(/%40/gi, '@')
-        .replace(/%3A/gi, ':')
-        .replace(/%24/gi, '$')
-        .replace(/%2C/gi, ',')
-        .replace(/%3B/gi, ';')
-        .replace(/%2B/gi, '+')
-        .replace(/%3D/gi, '=')
-        .replace(/%3F/gi, '?')
-        .replace(/%2F/gi, '/');
-}
-/**
- * Map-like representation of url search parameters, based on
- * [URLSearchParams](https://url.spec.whatwg.org/#urlsearchparams) in the url living standard,
- * with several extensions for merging URLSearchParams objects:
- *   - setAll()
- *   - appendAll()
- *   - replaceAll()
- *
- * This class accepts an optional second parameter of ${\@link QueryEncoder},
- * which is used to serialize parameters before making a request. By default,
- * `QueryEncoder` encodes keys and values of parameters using `encodeURIComponent`,
- * and then un-encodes certain characters that are allowed to be part of the query
- * according to IETF RFC 3986: https://tools.ietf.org/html/rfc3986.
- *
- * These are the characters that are not encoded: `! $ \' ( ) * + , ; A 9 - . _ ~ ? /`
- *
- * If the set of allowed query characters is not acceptable for a particular backend,
- * `QueryEncoder` can be subclassed and provided as the 2nd argument to URLSearchParams.
- *
- * ```
- * import {URLSearchParams, QueryEncoder} from '\@angular/http';
- * class MyQueryEncoder extends QueryEncoder {
- *   encodeKey(k: string): string {
- *     return myEncodingFunction(k);
- *   }
- *
- *   encodeValue(v: string): string {
- *     return myEncodingFunction(v);
- *   }
- * }
- *
- * let params = new URLSearchParams('', new MyQueryEncoder());
- * ```
- * \@experimental
- */
-var URLSearchParams = (function () {
-    /**
-     * @param {?=} rawParams
-     * @param {?=} queryEncoder
-     */
-    function URLSearchParams(rawParams, queryEncoder) {
-        if (rawParams === void 0) { rawParams = ''; }
-        if (queryEncoder === void 0) { queryEncoder = new QueryEncoder(); }
-        this.rawParams = rawParams;
-        this.queryEncoder = queryEncoder;
-        this.paramsMap = paramParser(rawParams);
-    }
-    /**
-     * @return {?}
-     */
-    URLSearchParams.prototype.clone = function () {
-        var /** @type {?} */ clone = new URLSearchParams('', this.queryEncoder);
-        clone.appendAll(this);
-        return clone;
-    };
-    /**
-     * @param {?} param
-     * @return {?}
-     */
-    URLSearchParams.prototype.has = function (param) { return this.paramsMap.has(param); };
-    /**
-     * @param {?} param
-     * @return {?}
-     */
-    URLSearchParams.prototype.get = function (param) {
-        var /** @type {?} */ storedParam = this.paramsMap.get(param);
-        return Array.isArray(storedParam) ? storedParam[0] : null;
-    };
-    /**
-     * @param {?} param
-     * @return {?}
-     */
-    URLSearchParams.prototype.getAll = function (param) { return this.paramsMap.get(param) || []; };
-    /**
-     * @param {?} param
-     * @param {?} val
-     * @return {?}
-     */
-    URLSearchParams.prototype.set = function (param, val) {
-        if (val === void 0 || val === null) {
-            this.delete(param);
-            return;
-        }
-        var /** @type {?} */ list = this.paramsMap.get(param) || [];
-        list.length = 0;
-        list.push(val);
-        this.paramsMap.set(param, list);
-    };
-    /**
-     * @param {?} searchParams
-     * @return {?}
-     */
-    URLSearchParams.prototype.setAll = function (searchParams) {
-        var _this = this;
-        searchParams.paramsMap.forEach(function (value, param) {
-            var /** @type {?} */ list = _this.paramsMap.get(param) || [];
-            list.length = 0;
-            list.push(value[0]);
-            _this.paramsMap.set(param, list);
-        });
-    };
-    /**
-     * @param {?} param
-     * @param {?} val
-     * @return {?}
-     */
-    URLSearchParams.prototype.append = function (param, val) {
-        if (val === void 0 || val === null)
-            return;
-        var /** @type {?} */ list = this.paramsMap.get(param) || [];
-        list.push(val);
-        this.paramsMap.set(param, list);
-    };
-    /**
-     * @param {?} searchParams
-     * @return {?}
-     */
-    URLSearchParams.prototype.appendAll = function (searchParams) {
-        var _this = this;
-        searchParams.paramsMap.forEach(function (value, param) {
-            var /** @type {?} */ list = _this.paramsMap.get(param) || [];
-            for (var /** @type {?} */ i = 0; i < value.length; ++i) {
-                list.push(value[i]);
-            }
-            _this.paramsMap.set(param, list);
-        });
-    };
-    /**
-     * @param {?} searchParams
-     * @return {?}
-     */
-    URLSearchParams.prototype.replaceAll = function (searchParams) {
-        var _this = this;
-        searchParams.paramsMap.forEach(function (value, param) {
-            var /** @type {?} */ list = _this.paramsMap.get(param) || [];
-            list.length = 0;
-            for (var /** @type {?} */ i = 0; i < value.length; ++i) {
-                list.push(value[i]);
-            }
-            _this.paramsMap.set(param, list);
-        });
-    };
-    /**
-     * @return {?}
-     */
-    URLSearchParams.prototype.toString = function () {
-        var _this = this;
-        var /** @type {?} */ paramsList = [];
-        this.paramsMap.forEach(function (values, k) {
-            values.forEach(function (v) { return paramsList.push(_this.queryEncoder.encodeKey(k) + '=' + _this.queryEncoder.encodeValue(v)); });
-        });
-        return paramsList.join('&');
-    };
-    /**
-     * @param {?} param
-     * @return {?}
-     */
-    URLSearchParams.prototype.delete = function (param) { this.paramsMap.delete(param); };
-    return URLSearchParams;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * HTTP request body used by both {\@link Request} and {\@link Response}
- * https://fetch.spec.whatwg.org/#body
- * @abstract
- */
-var Body = (function () {
-    function Body() {
-    }
-    /**
-     * Attempts to return body as parsed `JSON` object, or raises an exception.
-     * @return {?}
-     */
-    Body.prototype.json = function () {
-        if (typeof this._body === 'string') {
-            return JSON.parse(/** @type {?} */ (this._body));
-        }
-        if (this._body instanceof ArrayBuffer) {
-            return JSON.parse(this.text());
-        }
-        return this._body;
-    };
-    /**
-     * Returns the body as a string, presuming `toString()` can be called on the response body.
-     *
-     * When decoding an `ArrayBuffer`, the optional `encodingHint` parameter determines how the
-     * bytes in the buffer will be interpreted. Valid values are:
-     *
-     * - `legacy` - incorrectly interpret the bytes as UTF-16 (technically, UCS-2). Only characters
-     *   in the Basic Multilingual Plane are supported, surrogate pairs are not handled correctly.
-     *   In addition, the endianness of the 16-bit octet pairs in the `ArrayBuffer` is not taken
-     *   into consideration. This is the default behavior to avoid breaking apps, but should be
-     *   considered deprecated.
-     *
-     * - `iso-8859` - interpret the bytes as ISO-8859 (which can be used for ASCII encoded text).
-     * @param {?=} encodingHint
-     * @return {?}
-     */
-    Body.prototype.text = function (encodingHint) {
-        if (encodingHint === void 0) { encodingHint = 'legacy'; }
-        if (this._body instanceof URLSearchParams) {
-            return this._body.toString();
-        }
-        if (this._body instanceof ArrayBuffer) {
-            switch (encodingHint) {
-                case 'legacy':
-                    return String.fromCharCode.apply(null, new Uint16Array(/** @type {?} */ (this._body)));
-                case 'iso-8859':
-                    return String.fromCharCode.apply(null, new Uint8Array(/** @type {?} */ (this._body)));
-                default:
-                    throw new Error("Invalid value for encodingHint: " + encodingHint);
-            }
-        }
-        if (this._body == null) {
-            return '';
-        }
-        if (typeof this._body === 'object') {
-            return JSON.stringify(this._body, null, 2);
-        }
-        return this._body.toString();
-    };
-    /**
-     * Return the body as an ArrayBuffer
-     * @return {?}
-     */
-    Body.prototype.arrayBuffer = function () {
-        if (this._body instanceof ArrayBuffer) {
-            return (this._body);
-        }
-        return stringToArrayBuffer(this.text());
-    };
-    /**
-     * Returns the request's body as a Blob, assuming that body exists.
-     * @return {?}
-     */
-    Body.prototype.blob = function () {
-        if (this._body instanceof Blob) {
-            return (this._body);
-        }
-        if (this._body instanceof ArrayBuffer) {
-            return new Blob([this._body]);
-        }
-        throw new Error('The request body isn\'t either a blob or an array buffer');
-    };
-    return Body;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Creates `Response` instances from provided values.
- *
- * Though this object isn't
- * usually instantiated by end-users, it is the primary object interacted with when it comes time to
- * add data to a view.
- *
- * ### Example
- *
- * ```
- * http.request('my-friends.txt').subscribe(response => this.friends = response.text());
- * ```
- *
- * The Response's interface is inspired by the Response constructor defined in the [Fetch
- * Spec](https://fetch.spec.whatwg.org/#response-class), but is considered a static value whose body
- * can be accessed many times. There are other differences in the implementation, but this is the
- * most significant.
- *
- * \@experimental
- */
-var Response = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](Response, _super);
-    /**
-     * @param {?} responseOptions
-     */
-    function Response(responseOptions) {
-        var _this = _super.call(this) || this;
-        _this._body = responseOptions.body;
-        _this.status = responseOptions.status;
-        _this.ok = (_this.status >= 200 && _this.status <= 299);
-        _this.statusText = responseOptions.statusText;
-        _this.headers = responseOptions.headers;
-        _this.type = responseOptions.type;
-        _this.url = responseOptions.url;
-        return _this;
-    }
-    /**
-     * @return {?}
-     */
-    Response.prototype.toString = function () {
-        return "Response with status: " + this.status + " " + this.statusText + " for URL: " + this.url;
-    };
-    return Response;
-}(Body));
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var _nextRequestId = 0;
-var JSONP_HOME = '__ng_jsonp__';
-var _jsonpConnections = null;
-/**
- * @return {?}
- */
-function _getJsonpConnections() {
-    var /** @type {?} */ w = typeof window == 'object' ? window : {};
-    if (_jsonpConnections === null) {
-        _jsonpConnections = w[JSONP_HOME] = {};
-    }
-    return _jsonpConnections;
-}
-var BrowserJsonp = (function () {
-    function BrowserJsonp() {
-    }
-    /**
-     * @param {?} url
-     * @return {?}
-     */
-    BrowserJsonp.prototype.build = function (url) {
-        var /** @type {?} */ node = document.createElement('script');
-        node.src = url;
-        return node;
-    };
-    /**
-     * @return {?}
-     */
-    BrowserJsonp.prototype.nextRequestID = function () { return "__req" + _nextRequestId++; };
-    /**
-     * @param {?} id
-     * @return {?}
-     */
-    BrowserJsonp.prototype.requestCallback = function (id) { return JSONP_HOME + "." + id + ".finished"; };
-    /**
-     * @param {?} id
-     * @param {?} connection
-     * @return {?}
-     */
-    BrowserJsonp.prototype.exposeConnection = function (id, connection) {
-        var /** @type {?} */ connections = _getJsonpConnections();
-        connections[id] = connection;
-    };
-    /**
-     * @param {?} id
-     * @return {?}
-     */
-    BrowserJsonp.prototype.removeConnection = function (id) {
-        var /** @type {?} */ connections = _getJsonpConnections();
-        connections[id] = null;
-    };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserJsonp.prototype.send = function (node) { document.body.appendChild(/** @type {?} */ ((node))); };
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    BrowserJsonp.prototype.cleanup = function (node) {
-        if (node.parentNode) {
-            node.parentNode.removeChild(/** @type {?} */ ((node)));
-        }
-    };
-    return BrowserJsonp;
-}());
-BrowserJsonp.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-BrowserJsonp.ctorParameters = function () { return []; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var JSONP_ERR_NO_CALLBACK = 'JSONP injected script did not invoke callback.';
-var JSONP_ERR_WRONG_METHOD = 'JSONP requests must use GET request method.';
-/**
- * Abstract base class for an in-flight JSONP request.
- *
- * \@experimental
- * @abstract
- */
-var JSONPConnection = (function () {
-    function JSONPConnection() {
-    }
-    /**
-     * Callback called when the JSONP request completes, to notify the application
-     * of the new data.
-     * @abstract
-     * @param {?=} data
-     * @return {?}
-     */
-    JSONPConnection.prototype.finished = function (data) { };
-    return JSONPConnection;
-}());
-var JSONPConnection_ = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](JSONPConnection_, _super);
-    /**
-     * @param {?} req
-     * @param {?} _dom
-     * @param {?=} baseResponseOptions
-     */
-    function JSONPConnection_(req, _dom, baseResponseOptions) {
-        var _this = _super.call(this) || this;
-        _this._dom = _dom;
-        _this.baseResponseOptions = baseResponseOptions;
-        _this._finished = false;
-        if (req.method !== RequestMethod.Get) {
-            throw new TypeError(JSONP_ERR_WRONG_METHOD);
-        }
-        _this.request = req;
-        _this.response = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"](function (responseObserver) {
-            _this.readyState = ReadyState.Loading;
-            var id = _this._id = _dom.nextRequestID();
-            _dom.exposeConnection(id, _this);
-            // Workaround Dart
-            // url = url.replace(/=JSONP_CALLBACK(&|$)/, `generated method`);
-            var callback = _dom.requestCallback(_this._id);
-            var url = req.url;
-            if (url.indexOf('=JSONP_CALLBACK&') > -1) {
-                url = url.replace('=JSONP_CALLBACK&', "=" + callback + "&");
-            }
-            else if (url.lastIndexOf('=JSONP_CALLBACK') === url.length - '=JSONP_CALLBACK'.length) {
-                url = url.substring(0, url.length - '=JSONP_CALLBACK'.length) + ("=" + callback);
-            }
-            var script = _this._script = _dom.build(url);
-            var onLoad = function (event) {
-                if (_this.readyState === ReadyState.Cancelled)
-                    return;
-                _this.readyState = ReadyState.Done;
-                _dom.cleanup(script);
-                if (!_this._finished) {
-                    var responseOptions_1 = new ResponseOptions({ body: JSONP_ERR_NO_CALLBACK, type: ResponseType.Error, url: url });
-                    if (baseResponseOptions) {
-                        responseOptions_1 = baseResponseOptions.merge(responseOptions_1);
-                    }
-                    responseObserver.error(new Response(responseOptions_1));
-                    return;
-                }
-                var responseOptions = new ResponseOptions({ body: _this._responseData, url: url });
-                if (_this.baseResponseOptions) {
-                    responseOptions = _this.baseResponseOptions.merge(responseOptions);
-                }
-                responseObserver.next(new Response(responseOptions));
-                responseObserver.complete();
-            };
-            var onError = function (error) {
-                if (_this.readyState === ReadyState.Cancelled)
-                    return;
-                _this.readyState = ReadyState.Done;
-                _dom.cleanup(script);
-                var responseOptions = new ResponseOptions({ body: error.message, type: ResponseType.Error });
-                if (baseResponseOptions) {
-                    responseOptions = baseResponseOptions.merge(responseOptions);
-                }
-                responseObserver.error(new Response(responseOptions));
-            };
-            script.addEventListener('load', onLoad);
-            script.addEventListener('error', onError);
-            _dom.send(script);
-            return function () {
-                _this.readyState = ReadyState.Cancelled;
-                script.removeEventListener('load', onLoad);
-                script.removeEventListener('error', onError);
-                _this._dom.cleanup(script);
-            };
-        });
-        return _this;
-    }
-    /**
-     * @param {?=} data
-     * @return {?}
-     */
-    JSONPConnection_.prototype.finished = function (data) {
-        // Don't leak connections
-        this._finished = true;
-        this._dom.removeConnection(this._id);
-        if (this.readyState === ReadyState.Cancelled)
-            return;
-        this._responseData = data;
-    };
-    return JSONPConnection_;
-}(JSONPConnection));
-/**
- * A {\@link ConnectionBackend} that uses the JSONP strategy of making requests.
- *
- * \@experimental
- * @abstract
- */
-var JSONPBackend = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](JSONPBackend, _super);
-    function JSONPBackend() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return JSONPBackend;
-}(ConnectionBackend));
-var JSONPBackend_ = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](JSONPBackend_, _super);
-    /**
-     * @param {?} _browserJSONP
-     * @param {?} _baseResponseOptions
-     */
-    function JSONPBackend_(_browserJSONP, _baseResponseOptions) {
-        var _this = _super.call(this) || this;
-        _this._browserJSONP = _browserJSONP;
-        _this._baseResponseOptions = _baseResponseOptions;
-        return _this;
-    }
-    /**
-     * @param {?} request
-     * @return {?}
-     */
-    JSONPBackend_.prototype.createConnection = function (request) {
-        return new JSONPConnection_(request, this._browserJSONP, this._baseResponseOptions);
-    };
-    return JSONPBackend_;
-}(JSONPBackend));
-JSONPBackend_.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-JSONPBackend_.ctorParameters = function () { return [
-    { type: BrowserJsonp, },
-    { type: ResponseOptions, },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var XSSI_PREFIX = /^\)\]\}',?\n/;
-/**
- * Creates connections using `XMLHttpRequest`. Given a fully-qualified
- * request, an `XHRConnection` will immediately create an `XMLHttpRequest` object and send the
- * request.
- *
- * This class would typically not be created or interacted with directly inside applications, though
- * the {\@link MockConnection} may be interacted with in tests.
- *
- * \@experimental
- */
-var XHRConnection = (function () {
-    /**
-     * @param {?} req
-     * @param {?} browserXHR
-     * @param {?=} baseResponseOptions
-     */
-    function XHRConnection(req, browserXHR, baseResponseOptions) {
-        var _this = this;
-        this.request = req;
-        this.response = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"](function (responseObserver) {
-            var _xhr = browserXHR.build();
-            _xhr.open(RequestMethod[req.method].toUpperCase(), req.url);
-            if (req.withCredentials != null) {
-                _xhr.withCredentials = req.withCredentials;
-            }
-            // load event handler
-            var onLoad = function () {
-                // normalize IE9 bug (http://bugs.jquery.com/ticket/1450)
-                var status = _xhr.status === 1223 ? 204 : _xhr.status;
-                var body = null;
-                // HTTP 204 means no content
-                if (status !== 204) {
-                    // responseText is the old-school way of retrieving response (supported by IE8 & 9)
-                    // response/responseType properties were introduced in ResourceLoader Level2 spec
-                    // (supported by IE10)
-                    body = (typeof _xhr.response === 'undefined') ? _xhr.responseText : _xhr.response;
-                    // Implicitly strip a potential XSSI prefix.
-                    if (typeof body === 'string') {
-                        body = body.replace(XSSI_PREFIX, '');
-                    }
-                }
-                // fix status code when it is 0 (0 status is undocumented).
-                // Occurs when accessing file resources or on Android 4.1 stock browser
-                // while retrieving files from application cache.
-                if (status === 0) {
-                    status = body ? 200 : 0;
-                }
-                var headers = Headers.fromResponseHeaderString(_xhr.getAllResponseHeaders());
-                // IE 9 does not provide the way to get URL of response
-                var url = getResponseURL(_xhr) || req.url;
-                var statusText = _xhr.statusText || 'OK';
-                var responseOptions = new ResponseOptions({ body: body, status: status, headers: headers, statusText: statusText, url: url });
-                if (baseResponseOptions != null) {
-                    responseOptions = baseResponseOptions.merge(responseOptions);
-                }
-                var response = new Response(responseOptions);
-                response.ok = isSuccess(status);
-                if (response.ok) {
-                    responseObserver.next(response);
-                    // TODO(gdi2290): defer complete if array buffer until done
-                    responseObserver.complete();
-                    return;
-                }
-                responseObserver.error(response);
-            };
-            // error event handler
-            var onError = function (err) {
-                var responseOptions = new ResponseOptions({
-                    body: err,
-                    type: ResponseType.Error,
-                    status: _xhr.status,
-                    statusText: _xhr.statusText,
-                });
-                if (baseResponseOptions != null) {
-                    responseOptions = baseResponseOptions.merge(responseOptions);
-                }
-                responseObserver.error(new Response(responseOptions));
-            };
-            _this.setDetectedContentType(req, _xhr);
-            if (req.headers == null) {
-                req.headers = new Headers();
-            }
-            if (!req.headers.has('Accept')) {
-                req.headers.append('Accept', 'application/json, text/plain, */*');
-            }
-            req.headers.forEach(function (values, name) { return _xhr.setRequestHeader(name, values.join(',')); });
-            // Select the correct buffer type to store the response
-            if (req.responseType != null && _xhr.responseType != null) {
-                switch (req.responseType) {
-                    case ResponseContentType.ArrayBuffer:
-                        _xhr.responseType = 'arraybuffer';
-                        break;
-                    case ResponseContentType.Json:
-                        _xhr.responseType = 'json';
-                        break;
-                    case ResponseContentType.Text:
-                        _xhr.responseType = 'text';
-                        break;
-                    case ResponseContentType.Blob:
-                        _xhr.responseType = 'blob';
-                        break;
-                    default:
-                        throw new Error('The selected responseType is not supported');
-                }
-            }
-            _xhr.addEventListener('load', onLoad);
-            _xhr.addEventListener('error', onError);
-            _xhr.send(_this.request.getBody());
-            return function () {
-                _xhr.removeEventListener('load', onLoad);
-                _xhr.removeEventListener('error', onError);
-                _xhr.abort();
-            };
-        });
-    }
-    /**
-     * @param {?} req
-     * @param {?} _xhr
-     * @return {?}
-     */
-    XHRConnection.prototype.setDetectedContentType = function (req /** TODO Request */, _xhr /** XMLHttpRequest */) {
-        // Skip if a custom Content-Type header is provided
-        if (req.headers != null && req.headers.get('Content-Type') != null) {
-            return;
-        }
-        // Set the detected content type
-        switch (req.contentType) {
-            case ContentType.NONE:
-                break;
-            case ContentType.JSON:
-                _xhr.setRequestHeader('content-type', 'application/json');
-                break;
-            case ContentType.FORM:
-                _xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
-                break;
-            case ContentType.TEXT:
-                _xhr.setRequestHeader('content-type', 'text/plain');
-                break;
-            case ContentType.BLOB:
-                var /** @type {?} */ blob = req.blob();
-                if (blob.type) {
-                    _xhr.setRequestHeader('content-type', blob.type);
-                }
-                break;
-        }
-    };
-    return XHRConnection;
-}());
-/**
- * `XSRFConfiguration` sets up Cross Site Request Forgery (XSRF) protection for the application
- * using a cookie. See https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
- * for more information on XSRF.
- *
- * Applications can configure custom cookie and header names by binding an instance of this class
- * with different `cookieName` and `headerName` values. See the main HTTP documentation for more
- * details.
- *
- * \@experimental
- */
-var CookieXSRFStrategy = (function () {
-    /**
-     * @param {?=} _cookieName
-     * @param {?=} _headerName
-     */
-    function CookieXSRFStrategy(_cookieName, _headerName) {
-        if (_cookieName === void 0) { _cookieName = 'XSRF-TOKEN'; }
-        if (_headerName === void 0) { _headerName = 'X-XSRF-TOKEN'; }
-        this._cookieName = _cookieName;
-        this._headerName = _headerName;
-    }
-    /**
-     * @param {?} req
-     * @return {?}
-     */
-    CookieXSRFStrategy.prototype.configureRequest = function (req) {
-        var /** @type {?} */ xsrfToken = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["ɵgetDOM"])().getCookie(this._cookieName);
-        if (xsrfToken) {
-            req.headers.set(this._headerName, xsrfToken);
-        }
-    };
-    return CookieXSRFStrategy;
-}());
-/**
- * Creates {\@link XHRConnection} instances.
- *
- * This class would typically not be used by end users, but could be
- * overridden if a different backend implementation should be used,
- * such as in a node backend.
- *
- * ### Example
- *
- * ```
- * import {Http, MyNodeBackend, HTTP_PROVIDERS, BaseRequestOptions} from '\@angular/http';
- * \@Component({
- *   viewProviders: [
- *     HTTP_PROVIDERS,
- *     {provide: Http, useFactory: (backend, options) => {
- *       return new Http(backend, options);
- *     }, deps: [MyNodeBackend, BaseRequestOptions]}]
- * })
- * class MyComponent {
- *   constructor(http:Http) {
- *     http.request('people.json').subscribe(res => this.people = res.json());
- *   }
- * }
- * ```
- * \@experimental
- */
-var XHRBackend = (function () {
-    /**
-     * @param {?} _browserXHR
-     * @param {?} _baseResponseOptions
-     * @param {?} _xsrfStrategy
-     */
-    function XHRBackend(_browserXHR, _baseResponseOptions, _xsrfStrategy) {
-        this._browserXHR = _browserXHR;
-        this._baseResponseOptions = _baseResponseOptions;
-        this._xsrfStrategy = _xsrfStrategy;
-    }
-    /**
-     * @param {?} request
-     * @return {?}
-     */
-    XHRBackend.prototype.createConnection = function (request) {
-        this._xsrfStrategy.configureRequest(request);
-        return new XHRConnection(request, this._browserXHR, this._baseResponseOptions);
-    };
-    return XHRBackend;
-}());
-XHRBackend.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-XHRBackend.ctorParameters = function () { return [
-    { type: BrowserXhr, },
-    { type: ResponseOptions, },
-    { type: XSRFStrategy, },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Creates a request options object to be optionally provided when instantiating a
- * {\@link Request}.
- *
- * This class is based on the `RequestInit` description in the [Fetch
- * Spec](https://fetch.spec.whatwg.org/#requestinit).
- *
- * All values are null by default. Typical defaults can be found in the {\@link BaseRequestOptions}
- * class, which sub-classes `RequestOptions`.
- *
- * ```typescript
- * import {RequestOptions, Request, RequestMethod} from '\@angular/http';
- *
- * const options = new RequestOptions({
- *   method: RequestMethod.Post,
- *   url: 'https://google.com'
- * });
- * const req = new Request(options);
- * console.log('req.method:', RequestMethod[req.method]); // Post
- * console.log('options.url:', options.url); // https://google.com
- * ```
- *
- * \@experimental
- */
-var RequestOptions = (function () {
-    /**
-     * @param {?=} opts
-     */
-    function RequestOptions(opts) {
-        if (opts === void 0) { opts = {}; }
-        var method = opts.method, headers = opts.headers, body = opts.body, url = opts.url, search = opts.search, params = opts.params, withCredentials = opts.withCredentials, responseType = opts.responseType;
-        this.method = method != null ? normalizeMethodName(method) : null;
-        this.headers = headers != null ? headers : null;
-        this.body = body != null ? body : null;
-        this.url = url != null ? url : null;
-        this.params = this._mergeSearchParams(params || search);
-        this.withCredentials = withCredentials != null ? withCredentials : null;
-        this.responseType = responseType != null ? responseType : null;
-    }
-    Object.defineProperty(RequestOptions.prototype, "search", {
-        /**
-         * @deprecated from 4.0.0. Use params instead.
-         * @return {?}
-         */
-        get: function () { return this.params; },
-        /**
-         * @deprecated from 4.0.0. Use params instead.
-         * @param {?} params
-         * @return {?}
-         */
-        set: function (params) { this.params = params; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Creates a copy of the `RequestOptions` instance, using the optional input as values to override
-     * existing values. This method will not change the values of the instance on which it is being
-     * called.
-     *
-     * Note that `headers` and `search` will override existing values completely if present in
-     * the `options` object. If these values should be merged, it should be done prior to calling
-     * `merge` on the `RequestOptions` instance.
-     *
-     * ```typescript
-     * import {RequestOptions, Request, RequestMethod} from '\@angular/http';
-     *
-     * const options = new RequestOptions({
-     *   method: RequestMethod.Post
-     * });
-     * const req = new Request(options.merge({
-     *   url: 'https://google.com'
-     * }));
-     * console.log('req.method:', RequestMethod[req.method]); // Post
-     * console.log('options.url:', options.url); // null
-     * console.log('req.url:', req.url); // https://google.com
-     * ```
-     * @param {?=} options
-     * @return {?}
-     */
-    RequestOptions.prototype.merge = function (options) {
-        return new RequestOptions({
-            method: options && options.method != null ? options.method : this.method,
-            headers: options && options.headers != null ? options.headers : new Headers(this.headers),
-            body: options && options.body != null ? options.body : this.body,
-            url: options && options.url != null ? options.url : this.url,
-            params: options && this._mergeSearchParams(options.params || options.search),
-            withCredentials: options && options.withCredentials != null ? options.withCredentials :
-                this.withCredentials,
-            responseType: options && options.responseType != null ? options.responseType :
-                this.responseType
-        });
-    };
-    /**
-     * @param {?=} params
-     * @return {?}
-     */
-    RequestOptions.prototype._mergeSearchParams = function (params) {
-        if (!params)
-            return this.params;
-        if (params instanceof URLSearchParams) {
-            return params.clone();
-        }
-        if (typeof params === 'string') {
-            return new URLSearchParams(params);
-        }
-        return this._parseParams(params);
-    };
-    /**
-     * @param {?=} objParams
-     * @return {?}
-     */
-    RequestOptions.prototype._parseParams = function (objParams) {
-        var _this = this;
-        if (objParams === void 0) { objParams = {}; }
-        var /** @type {?} */ params = new URLSearchParams();
-        Object.keys(objParams).forEach(function (key) {
-            var /** @type {?} */ value = objParams[key];
-            if (Array.isArray(value)) {
-                value.forEach(function (item) { return _this._appendParam(key, item, params); });
-            }
-            else {
-                _this._appendParam(key, value, params);
-            }
-        });
-        return params;
-    };
-    /**
-     * @param {?} key
-     * @param {?} value
-     * @param {?} params
-     * @return {?}
-     */
-    RequestOptions.prototype._appendParam = function (key, value, params) {
-        if (typeof value !== 'string') {
-            value = JSON.stringify(value);
-        }
-        params.append(key, value);
-    };
-    return RequestOptions;
-}());
-/**
- * Subclass of {\@link RequestOptions}, with default values.
- *
- * Default values:
- *  * method: {\@link RequestMethod RequestMethod.Get}
- *  * headers: empty {\@link Headers} object
- *
- * This class could be extended and bound to the {\@link RequestOptions} class
- * when configuring an {\@link Injector}, in order to override the default options
- * used by {\@link Http} to create and send {\@link Request Requests}.
- *
- * ```typescript
- * import {BaseRequestOptions, RequestOptions} from '\@angular/http';
- *
- * class MyOptions extends BaseRequestOptions {
- *   search: string = 'coreTeam=true';
- * }
- *
- * {provide: RequestOptions, useClass: MyOptions};
- * ```
- *
- * The options could also be extended when manually creating a {\@link Request}
- * object.
- *
- * ```
- * import {BaseRequestOptions, Request, RequestMethod} from '\@angular/http';
- *
- * const options = new BaseRequestOptions();
- * const req = new Request(options.merge({
- *   method: RequestMethod.Post,
- *   url: 'https://google.com'
- * }));
- * console.log('req.method:', RequestMethod[req.method]); // Post
- * console.log('options.url:', options.url); // null
- * console.log('req.url:', req.url); // https://google.com
- * ```
- *
- * \@experimental
- */
-var BaseRequestOptions = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](BaseRequestOptions, _super);
-    function BaseRequestOptions() {
-        return _super.call(this, { method: RequestMethod.Get, headers: new Headers() }) || this;
-    }
-    return BaseRequestOptions;
-}(RequestOptions));
-BaseRequestOptions.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-BaseRequestOptions.ctorParameters = function () { return []; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Creates `Request` instances from provided values.
- *
- * The Request's interface is inspired by the Request constructor defined in the [Fetch
- * Spec](https://fetch.spec.whatwg.org/#request-class),
- * but is considered a static value whose body can be accessed many times. There are other
- * differences in the implementation, but this is the most significant.
- *
- * `Request` instances are typically created by higher-level classes, like {\@link Http} and
- * {\@link Jsonp}, but it may occasionally be useful to explicitly create `Request` instances.
- * One such example is when creating services that wrap higher-level services, like {\@link Http},
- * where it may be useful to generate a `Request` with arbitrary headers and search params.
- *
- * ```typescript
- * import {Injectable, Injector} from '\@angular/core';
- * import {HTTP_PROVIDERS, Http, Request, RequestMethod} from '\@angular/http';
- *
- * \@Injectable()
- * class AutoAuthenticator {
- *   constructor(public http:Http) {}
- *   request(url:string) {
- *     return this.http.request(new Request({
- *       method: RequestMethod.Get,
- *       url: url,
- *       search: 'password=123'
- *     }));
- *   }
- * }
- *
- * var injector = Injector.resolveAndCreate([HTTP_PROVIDERS, AutoAuthenticator]);
- * var authenticator = injector.get(AutoAuthenticator);
- * authenticator.request('people.json').subscribe(res => {
- *   //URL should have included '?password=123'
- *   console.log('people', res.json());
- * });
- * ```
- *
- * \@experimental
- */
-var Request = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](Request, _super);
-    /**
-     * @param {?} requestOptions
-     */
-    function Request(requestOptions) {
-        var _this = _super.call(this) || this;
-        // TODO: assert that url is present
-        var url = requestOptions.url;
-        _this.url = requestOptions.url;
-        var paramsArg = requestOptions.params || requestOptions.search;
-        if (paramsArg) {
-            var params = void 0;
-            if (typeof paramsArg === 'object' && !(paramsArg instanceof URLSearchParams)) {
-                params = urlEncodeParams(paramsArg).toString();
-            }
-            else {
-                params = paramsArg.toString();
-            }
-            if (params.length > 0) {
-                var prefix = '?';
-                if (_this.url.indexOf('?') != -1) {
-                    prefix = (_this.url[_this.url.length - 1] == '&') ? '' : '&';
-                }
-                // TODO: just delete search-query-looking string in url?
-                _this.url = url + prefix + params;
-            }
-        }
-        _this._body = requestOptions.body;
-        _this.method = normalizeMethodName(requestOptions.method);
-        // TODO(jeffbcross): implement behavior
-        // Defaults to 'omit', consistent with browser
-        _this.headers = new Headers(requestOptions.headers);
-        _this.contentType = _this.detectContentType();
-        _this.withCredentials = requestOptions.withCredentials;
-        _this.responseType = requestOptions.responseType;
-        return _this;
-    }
-    /**
-     * Returns the content type enum based on header options.
-     * @return {?}
-     */
-    Request.prototype.detectContentType = function () {
-        switch (this.headers.get('content-type')) {
-            case 'application/json':
-                return ContentType.JSON;
-            case 'application/x-www-form-urlencoded':
-                return ContentType.FORM;
-            case 'multipart/form-data':
-                return ContentType.FORM_DATA;
-            case 'text/plain':
-            case 'text/html':
-                return ContentType.TEXT;
-            case 'application/octet-stream':
-                return this._body instanceof ArrayBuffer$1 ? ContentType.ARRAY_BUFFER : ContentType.BLOB;
-            default:
-                return this.detectContentTypeFromBody();
-        }
-    };
-    /**
-     * Returns the content type of request's body based on its type.
-     * @return {?}
-     */
-    Request.prototype.detectContentTypeFromBody = function () {
-        if (this._body == null) {
-            return ContentType.NONE;
-        }
-        else if (this._body instanceof URLSearchParams) {
-            return ContentType.FORM;
-        }
-        else if (this._body instanceof FormData) {
-            return ContentType.FORM_DATA;
-        }
-        else if (this._body instanceof Blob$1) {
-            return ContentType.BLOB;
-        }
-        else if (this._body instanceof ArrayBuffer$1) {
-            return ContentType.ARRAY_BUFFER;
-        }
-        else if (this._body && typeof this._body === 'object') {
-            return ContentType.JSON;
-        }
-        else {
-            return ContentType.TEXT;
-        }
-    };
-    /**
-     * Returns the request's body according to its type. If body is undefined, return
-     * null.
-     * @return {?}
-     */
-    Request.prototype.getBody = function () {
-        switch (this.contentType) {
-            case ContentType.JSON:
-                return this.text();
-            case ContentType.FORM:
-                return this.text();
-            case ContentType.FORM_DATA:
-                return this._body;
-            case ContentType.TEXT:
-                return this.text();
-            case ContentType.BLOB:
-                return this.blob();
-            case ContentType.ARRAY_BUFFER:
-                return this.arrayBuffer();
-            default:
-                return null;
-        }
-    };
-    return Request;
-}(Body));
-/**
- * @param {?} params
- * @return {?}
- */
-function urlEncodeParams(params) {
-    var /** @type {?} */ searchParams = new URLSearchParams();
-    Object.keys(params).forEach(function (key) {
-        var /** @type {?} */ value = params[key];
-        if (value && Array.isArray(value)) {
-            value.forEach(function (element) { return searchParams.append(key, element.toString()); });
-        }
-        else {
-            searchParams.append(key, value.toString());
-        }
-    });
-    return searchParams;
-}
-var noop = function () { };
-var w = typeof window == 'object' ? window : noop;
-var FormData = ((w) /** TODO #9100 */)['FormData'] || noop;
-var Blob$1 = ((w) /** TODO #9100 */)['Blob'] || noop;
-var ArrayBuffer$1 = ((w) /** TODO #9100 */)['ArrayBuffer'] || noop;
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @param {?} backend
- * @param {?} request
- * @return {?}
- */
-function httpRequest(backend, request) {
-    return backend.createConnection(request).response;
-}
-/**
- * @param {?} defaultOpts
- * @param {?} providedOpts
- * @param {?} method
- * @param {?} url
- * @return {?}
- */
-function mergeOptions(defaultOpts, providedOpts, method, url) {
-    var /** @type {?} */ newOptions = defaultOpts;
-    if (providedOpts) {
-        // Hack so Dart can used named parameters
-        return (newOptions.merge(new RequestOptions({
-            method: providedOpts.method || method,
-            url: providedOpts.url || url,
-            search: providedOpts.search,
-            params: providedOpts.params,
-            headers: providedOpts.headers,
-            body: providedOpts.body,
-            withCredentials: providedOpts.withCredentials,
-            responseType: providedOpts.responseType
-        })));
-    }
-    return (newOptions.merge(new RequestOptions({ method: method, url: url })));
-}
-/**
- * Performs http requests using `XMLHttpRequest` as the default backend.
- *
- * `Http` is available as an injectable class, with methods to perform http requests. Calling
- * `request` returns an `Observable` which will emit a single {\@link Response} when a
- * response is received.
- *
- * ### Example
- *
- * ```typescript
- * import {Http, HTTP_PROVIDERS} from '\@angular/http';
- * import 'rxjs/add/operator/map'
- * \@Component({
- *   selector: 'http-app',
- *   viewProviders: [HTTP_PROVIDERS],
- *   templateUrl: 'people.html'
- * })
- * class PeopleComponent {
- *   constructor(http: Http) {
- *     http.get('people.json')
- *       // Call map on the response observable to get the parsed people object
- *       .map(res => res.json())
- *       // Subscribe to the observable to get the parsed people object and attach it to the
- *       // component
- *       .subscribe(people => this.people = people);
- *   }
- * }
- * ```
- *
- *
- * ### Example
- *
- * ```
- * http.get('people.json').subscribe((res:Response) => this.people = res.json());
- * ```
- *
- * The default construct used to perform requests, `XMLHttpRequest`, is abstracted as a "Backend" (
- * {\@link XHRBackend} in this case), which could be mocked with dependency injection by replacing
- * the {\@link XHRBackend} provider, as in the following example:
- *
- * ### Example
- *
- * ```typescript
- * import {BaseRequestOptions, Http} from '\@angular/http';
- * import {MockBackend} from '\@angular/http/testing';
- * var injector = Injector.resolveAndCreate([
- *   BaseRequestOptions,
- *   MockBackend,
- *   {provide: Http, useFactory:
- *       function(backend, defaultOptions) {
- *         return new Http(backend, defaultOptions);
- *       },
- *       deps: [MockBackend, BaseRequestOptions]}
- * ]);
- * var http = injector.get(Http);
- * http.get('request-from-mock-backend.json').subscribe((res:Response) => doSomething(res));
- * ```
- *
- * \@experimental
- */
-var Http = (function () {
-    /**
-     * @param {?} _backend
-     * @param {?} _defaultOptions
-     */
-    function Http(_backend, _defaultOptions) {
-        this._backend = _backend;
-        this._defaultOptions = _defaultOptions;
-    }
-    /**
-     * Performs any type of http request. First argument is required, and can either be a url or
-     * a {\@link Request} instance. If the first argument is a url, an optional {\@link RequestOptions}
-     * object can be provided as the 2nd argument. The options object will be merged with the values
-     * of {\@link BaseRequestOptions} before performing the request.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    Http.prototype.request = function (url, options) {
-        var /** @type {?} */ responseObservable;
-        if (typeof url === 'string') {
-            responseObservable = httpRequest(this._backend, new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Get, /** @type {?} */ (url))));
-        }
-        else if (url instanceof Request) {
-            responseObservable = httpRequest(this._backend, url);
-        }
-        else {
-            throw new Error('First argument must be a url string or Request instance.');
-        }
-        return responseObservable;
-    };
-    /**
-     * Performs a request with `get` http method.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    Http.prototype.get = function (url, options) {
-        return this.request(new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Get, url)));
-    };
-    /**
-     * Performs a request with `post` http method.
-     * @param {?} url
-     * @param {?} body
-     * @param {?=} options
-     * @return {?}
-     */
-    Http.prototype.post = function (url, body, options) {
-        return this.request(new Request(mergeOptions(this._defaultOptions.merge(new RequestOptions({ body: body })), options, RequestMethod.Post, url)));
-    };
-    /**
-     * Performs a request with `put` http method.
-     * @param {?} url
-     * @param {?} body
-     * @param {?=} options
-     * @return {?}
-     */
-    Http.prototype.put = function (url, body, options) {
-        return this.request(new Request(mergeOptions(this._defaultOptions.merge(new RequestOptions({ body: body })), options, RequestMethod.Put, url)));
-    };
-    /**
-     * Performs a request with `delete` http method.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    Http.prototype.delete = function (url, options) {
-        return this.request(new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Delete, url)));
-    };
-    /**
-     * Performs a request with `patch` http method.
-     * @param {?} url
-     * @param {?} body
-     * @param {?=} options
-     * @return {?}
-     */
-    Http.prototype.patch = function (url, body, options) {
-        return this.request(new Request(mergeOptions(this._defaultOptions.merge(new RequestOptions({ body: body })), options, RequestMethod.Patch, url)));
-    };
-    /**
-     * Performs a request with `head` http method.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    Http.prototype.head = function (url, options) {
-        return this.request(new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Head, url)));
-    };
-    /**
-     * Performs a request with `options` http method.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    Http.prototype.options = function (url, options) {
-        return this.request(new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Options, url)));
-    };
-    return Http;
-}());
-Http.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-Http.ctorParameters = function () { return [
-    { type: ConnectionBackend, },
-    { type: RequestOptions, },
-]; };
-/**
- * \@experimental
- */
-var Jsonp = (function (_super) {
-    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](Jsonp, _super);
-    /**
-     * @param {?} backend
-     * @param {?} defaultOptions
-     */
-    function Jsonp(backend, defaultOptions) {
-        return _super.call(this, backend, defaultOptions) || this;
-    }
-    /**
-     * Performs any type of http request. First argument is required, and can either be a url or
-     * a {\@link Request} instance. If the first argument is a url, an optional {\@link RequestOptions}
-     * object can be provided as the 2nd argument. The options object will be merged with the values
-     * of {\@link BaseRequestOptions} before performing the request.
-     *
-     * \@security Regular XHR is the safest alternative to JSONP for most applications, and is
-     * supported by all current browsers. Because JSONP creates a `<script>` element with
-     * contents retrieved from a remote source, attacker-controlled data introduced by an untrusted
-     * source could expose your application to XSS risks. Data exposed by JSONP may also be
-     * readable by malicious third-party websites. In addition, JSONP introduces potential risk for
-     * future security issues (e.g. content sniffing).  For more detail, see the
-     * [Security Guide](http://g.co/ng/security).
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    Jsonp.prototype.request = function (url, options) {
-        var /** @type {?} */ responseObservable;
-        if (typeof url === 'string') {
-            url =
-                new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Get, /** @type {?} */ (url)));
-        }
-        if (url instanceof Request) {
-            if (url.method !== RequestMethod.Get) {
-                throw new Error('JSONP requests must use GET request method.');
-            }
-            responseObservable = httpRequest(this._backend, url);
-        }
-        else {
-            throw new Error('First argument must be a url string or Request instance.');
-        }
-        return responseObservable;
-    };
-    return Jsonp;
-}(Http));
-Jsonp.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
-];
-/**
- * @nocollapse
- */
-Jsonp.ctorParameters = function () { return [
-    { type: ConnectionBackend, },
-    { type: RequestOptions, },
-]; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @module
- * @description
- * The http module provides services to perform http requests. To get started, see the {@link Http}
- * class.
- */
-/**
- * @return {?}
- */
-function _createDefaultCookieXSRFStrategy() {
-    return new CookieXSRFStrategy();
-}
-/**
- * @param {?} xhrBackend
- * @param {?} requestOptions
- * @return {?}
- */
-function httpFactory(xhrBackend, requestOptions) {
-    return new Http(xhrBackend, requestOptions);
-}
-/**
- * @param {?} jsonpBackend
- * @param {?} requestOptions
- * @return {?}
- */
-function jsonpFactory(jsonpBackend, requestOptions) {
-    return new Jsonp(jsonpBackend, requestOptions);
-}
-/**
- * The module that includes http's providers
- *
- * \@experimental
- */
-var HttpModule = (function () {
-    function HttpModule() {
-    }
-    return HttpModule;
-}());
-HttpModule.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
-                providers: [
-                    // TODO(pascal): use factory type annotations once supported in DI
-                    // issue: https://github.com/angular/angular/issues/3183
-                    { provide: Http, useFactory: httpFactory, deps: [XHRBackend, RequestOptions] },
-                    BrowserXhr,
-                    { provide: RequestOptions, useClass: BaseRequestOptions },
-                    { provide: ResponseOptions, useClass: BaseResponseOptions },
-                    XHRBackend,
-                    { provide: XSRFStrategy, useFactory: _createDefaultCookieXSRFStrategy },
-                ],
-            },] },
-];
-/**
- * @nocollapse
- */
-HttpModule.ctorParameters = function () { return []; };
-/**
- * The module that includes jsonp's providers
- *
- * \@experimental
- */
-var JsonpModule = (function () {
-    function JsonpModule() {
-    }
-    return JsonpModule;
-}());
-JsonpModule.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
-                providers: [
-                    // TODO(pascal): use factory type annotations once supported in DI
-                    // issue: https://github.com/angular/angular/issues/3183
-                    { provide: Jsonp, useFactory: jsonpFactory, deps: [JSONPBackend, RequestOptions] },
-                    BrowserJsonp,
-                    { provide: RequestOptions, useClass: BaseRequestOptions },
-                    { provide: ResponseOptions, useClass: BaseResponseOptions },
-                    { provide: JSONPBackend, useClass: JSONPBackend_ },
-                ],
-            },] },
-];
-/**
- * @nocollapse
- */
-JsonpModule.ctorParameters = function () { return []; };
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @module
- * @description
- * Entry point for all public APIs of the common package.
- */
-/**
- * \@stable
- */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.2.6');
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @module
- * @description
- * Entry point for all public APIs of the http package.
- */
-// This file only reexports content of the `src` folder. Keep it that way.
-/**
- * Generated bundle index. Do not edit.
- */
-
-//# sourceMappingURL=http.es5.js.map
-
-
-/***/ }),
-/* 74 */,
-/* 75 */,
-/* 76 */,
 /* 77 */,
 /* 78 */,
 /* 79 */,
@@ -34755,7 +34806,10 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.2.6'
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34766,9 +34820,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(7);
-var ScalarObservable_1 = __webpack_require__(151);
-var EmptyObservable_1 = __webpack_require__(96);
-var isScheduler_1 = __webpack_require__(161);
+var ScalarObservable_1 = __webpack_require__(153);
+var EmptyObservable_1 = __webpack_require__(99);
+var isScheduler_1 = __webpack_require__(163);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -34883,7 +34937,7 @@ exports.ArrayObservable = ArrayObservable;
 //# sourceMappingURL=ArrayObservable.js.map
 
 /***/ }),
-/* 96 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34970,7 +35024,7 @@ exports.EmptyObservable = EmptyObservable;
 //# sourceMappingURL=EmptyObservable.js.map
 
 /***/ }),
-/* 97 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34980,7 +35034,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(13);
+var Subscriber_1 = __webpack_require__(14);
 /**
  * Applies a given `project` function to each value emitted by the source
  * Observable, and emits the resulting values as an Observable.
@@ -35063,7 +35117,7 @@ var MapSubscriber = (function (_super) {
 //# sourceMappingURL=map.js.map
 
 /***/ }),
-/* 98 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35073,8 +35127,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var OuterSubscriber_1 = __webpack_require__(68);
-var subscribeToResult_1 = __webpack_require__(70);
+var OuterSubscriber_1 = __webpack_require__(69);
+var subscribeToResult_1 = __webpack_require__(74);
 /**
  * Converts a higher-order Observable into a first-order Observable which
  * concurrently delivers all values that are emitted on the inner Observables.
@@ -35180,12 +35234,12 @@ exports.MergeAllSubscriber = MergeAllSubscriber;
 //# sourceMappingURL=mergeAll.js.map
 
 /***/ }),
-/* 99 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var root_1 = __webpack_require__(42);
+var root_1 = __webpack_require__(45);
 function symbolIteratorPonyfill(root) {
     var Symbol = root.Symbol;
     if (typeof Symbol === 'function') {
@@ -35224,12 +35278,12 @@ exports.$$iterator = exports.iterator;
 //# sourceMappingURL=iterator.js.map
 
 /***/ }),
-/* 100 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var root_1 = __webpack_require__(42);
+var root_1 = __webpack_require__(45);
 function getSymbolObservable(context) {
     var $$observable;
     var Symbol = context.Symbol;
@@ -35256,12 +35310,12 @@ exports.$$observable = exports.observable;
 //# sourceMappingURL=observable.js.map
 
 /***/ }),
-/* 101 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var root_1 = __webpack_require__(42);
+var root_1 = __webpack_require__(45);
 var Symbol = root_1.root.Symbol;
 exports.rxSubscriber = (typeof Symbol === 'function' && typeof Symbol.for === 'function') ?
     Symbol.for('rxSubscriber') : '@@rxSubscriber';
@@ -35272,7 +35326,7 @@ exports.$$rxSubscriber = exports.rxSubscriber;
 //# sourceMappingURL=rxSubscriber.js.map
 
 /***/ }),
-/* 102 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35306,7 +35360,7 @@ exports.EmptyError = EmptyError;
 //# sourceMappingURL=EmptyError.js.map
 
 /***/ }),
-/* 103 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35315,7 +35369,7 @@ exports.isArray = Array.isArray || (function (x) { return x && typeof x.length =
 //# sourceMappingURL=isArray.js.map
 
 /***/ }),
-/* 104 */
+/* 107 */
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -35324,11 +35378,11 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 104;
+webpackEmptyContext.id = 107;
 
 
 /***/ }),
-/* 105 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35343,7 +35397,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(1);
 var Observable_1 = __webpack_require__(7);
 var PushNotificationsService = (function () {
     function PushNotificationsService() {
@@ -35385,7 +35439,7 @@ exports.PushNotificationsService = PushNotificationsService;
 //# sourceMappingURL=push-notifications.service.js.map
 
 /***/ }),
-/* 106 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35400,10 +35454,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var animations_1 = __webpack_require__(72);
-var platform_browser_1 = __webpack_require__(36);
-var notifications_service_1 = __webpack_require__(57);
+var core_1 = __webpack_require__(1);
+var animations_1 = __webpack_require__(76);
+var platform_browser_1 = __webpack_require__(38);
+var notifications_service_1 = __webpack_require__(59);
 var NotificationComponent = (function () {
     function NotificationComponent(notificationService, domSanitizer, zone) {
         var _this = this;
@@ -35597,7 +35651,7 @@ exports.NotificationComponent = NotificationComponent;
 //# sourceMappingURL=notification.component.js.map
 
 /***/ }),
-/* 107 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35612,8 +35666,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var notifications_service_1 = __webpack_require__(57);
+var core_1 = __webpack_require__(1);
+var notifications_service_1 = __webpack_require__(59);
 var SimpleNotificationsComponent = (function () {
     function SimpleNotificationsComponent(_service) {
         this._service = _service;
@@ -35810,7 +35864,7 @@ exports.SimpleNotificationsComponent = SimpleNotificationsComponent;
 //# sourceMappingURL=simple-notifications.component.js.map
 
 /***/ }),
-/* 108 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35826,7 +35880,7 @@ exports.defaultIcons = {
 //# sourceMappingURL=icons.js.map
 
 /***/ }),
-/* 109 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35838,7 +35892,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(1);
 var MaxPipe = (function () {
     function MaxPipe() {
     }
@@ -35866,7 +35920,7 @@ exports.MaxPipe = MaxPipe;
 //# sourceMappingURL=max.pipe.js.map
 
 /***/ }),
-/* 110 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35881,8 +35935,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var router_1 = __webpack_require__(43);
+var core_1 = __webpack_require__(1);
+var router_1 = __webpack_require__(32);
+var AdminGuard = (function () {
+    function AdminGuard(router) {
+        this.router = router;
+    }
+    AdminGuard.prototype.canActivate = function (route, state) {
+        var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+        if (loggedUser && (loggedUser.roles === "ROLE_ADMIN")) {
+            return true;
+        }
+        return false;
+    };
+    return AdminGuard;
+}());
+AdminGuard = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [router_1.Router])
+], AdminGuard);
+exports.AdminGuard = AdminGuard;
+
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var router_1 = __webpack_require__(32);
 var AuthGuard = (function () {
     function AuthGuard(router) {
         this.router = router;
@@ -35892,7 +35984,7 @@ var AuthGuard = (function () {
             return true;
         }
         // not logged in so redirect to login page with the return url
-        this.router.navigate(['/login']);
+        this.router.navigate(['/auth/login']);
         return false;
     };
     return AuthGuard;
@@ -35905,7 +35997,7 @@ exports.AuthGuard = AuthGuard;
 
 
 /***/ }),
-/* 111 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35914,12 +36006,12 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(175));
-__export(__webpack_require__(110));
+__export(__webpack_require__(113));
+__export(__webpack_require__(114));
 
 
 /***/ }),
-/* 112 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35934,15 +36026,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var http_1 = __webpack_require__(73);
-__webpack_require__(149);
-__webpack_require__(148);
-__webpack_require__(147);
-var Subject_1 = __webpack_require__(41);
-var app_config_1 = __webpack_require__(44);
-var index_1 = __webpack_require__(58);
-var index_2 = __webpack_require__(23);
+var core_1 = __webpack_require__(1);
+var http_1 = __webpack_require__(52);
+__webpack_require__(73);
+__webpack_require__(72);
+__webpack_require__(71);
+var Subject_1 = __webpack_require__(44);
+var app_config_1 = __webpack_require__(15);
+var index_1 = __webpack_require__(53);
+var index_2 = __webpack_require__(11);
 var AuthService = (function () {
     function AuthService(http, helper) {
         this.http = http;
@@ -35977,63 +36069,7 @@ exports.AuthService = AuthService;
 
 
 /***/ }),
-/* 113 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var ContactComponent = (function () {
-    function ContactComponent() {
-    }
-    return ContactComponent;
-}());
-ContactComponent = __decorate([
-    core_1.Component({
-        selector: 'contact',
-        template: __webpack_require__(341)
-    })
-], ContactComponent);
-exports.ContactComponent = ContactComponent;
-
-
-/***/ }),
-/* 114 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var HomeComponent = (function () {
-    function HomeComponent() {
-    }
-    return HomeComponent;
-}());
-HomeComponent = __decorate([
-    core_1.Component({
-        selector: 'home',
-        template: __webpack_require__(342)
-    })
-], HomeComponent);
-exports.HomeComponent = HomeComponent;
-
-
-/***/ }),
-/* 115 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36042,19 +36078,91 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(186));
 __export(__webpack_require__(187));
 __export(__webpack_require__(188));
-__export(__webpack_require__(189));
-__export(__webpack_require__(185));
 
 
 /***/ }),
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var ContactComponent = (function () {
+    function ContactComponent() {
+    }
+    return ContactComponent;
+}());
+ContactComponent = __decorate([
+    core_1.Component({
+        selector: 'contact',
+        template: __webpack_require__(350)
+    })
+], ContactComponent);
+exports.ContactComponent = ContactComponent;
+
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(11);
+var HomeComponent = (function () {
+    function HomeComponent(authService) {
+        this.authService = authService;
+        this.loggedUser = authService.loggedUser;
+    }
+    return HomeComponent;
+}());
+HomeComponent = __decorate([
+    core_1.Component({
+        selector: 'home',
+        template: __webpack_require__(351)
+    }),
+    __metadata("design:paramtypes", [index_1.AuthService])
+], HomeComponent);
+exports.HomeComponent = HomeComponent;
+
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(193));
+__export(__webpack_require__(194));
+__export(__webpack_require__(195));
+__export(__webpack_require__(196));
+__export(__webpack_require__(192));
+
+
+/***/ }),
 /* 121 */,
 /* 122 */,
 /* 123 */,
@@ -36080,7 +36188,12 @@ __export(__webpack_require__(185));
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36094,42 +36207,7 @@ exports.empty = {
 //# sourceMappingURL=Observer.js.map
 
 /***/ }),
-/* 147 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(7);
-var catch_1 = __webpack_require__(153);
-Observable_1.Observable.prototype.catch = catch_1._catch;
-Observable_1.Observable.prototype._catch = catch_1._catch;
-//# sourceMappingURL=catch.js.map
-
-/***/ }),
-/* 148 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(7);
-var do_1 = __webpack_require__(363);
-Observable_1.Observable.prototype.do = do_1._do;
-Observable_1.Observable.prototype._do = do_1._do;
-//# sourceMappingURL=do.js.map
-
-/***/ }),
-/* 149 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(7);
-var map_1 = __webpack_require__(97);
-Observable_1.Observable.prototype.map = map_1.map;
-//# sourceMappingURL=map.js.map
-
-/***/ }),
-/* 150 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36139,7 +36217,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var root_1 = __webpack_require__(42);
+var root_1 = __webpack_require__(45);
 var Observable_1 = __webpack_require__(7);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -36256,7 +36334,7 @@ function dispatchError(arg) {
 //# sourceMappingURL=PromiseObservable.js.map
 
 /***/ }),
-/* 151 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36320,17 +36398,17 @@ exports.ScalarObservable = ScalarObservable;
 //# sourceMappingURL=ScalarObservable.js.map
 
 /***/ }),
-/* 152 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var PromiseObservable_1 = __webpack_require__(150);
+var PromiseObservable_1 = __webpack_require__(152);
 exports.fromPromise = PromiseObservable_1.PromiseObservable.create;
 //# sourceMappingURL=fromPromise.js.map
 
 /***/ }),
-/* 153 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36340,8 +36418,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var OuterSubscriber_1 = __webpack_require__(68);
-var subscribeToResult_1 = __webpack_require__(70);
+var OuterSubscriber_1 = __webpack_require__(69);
+var subscribeToResult_1 = __webpack_require__(74);
 /**
  * Catches errors on the observable to be handled by returning a new observable or throwing an error.
  *
@@ -36452,7 +36530,7 @@ var CatchSubscriber = (function (_super) {
 //# sourceMappingURL=catch.js.map
 
 /***/ }),
-/* 154 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36462,8 +36540,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var subscribeToResult_1 = __webpack_require__(70);
-var OuterSubscriber_1 = __webpack_require__(68);
+var subscribeToResult_1 = __webpack_require__(74);
+var OuterSubscriber_1 = __webpack_require__(69);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -36629,7 +36707,7 @@ exports.MergeMapSubscriber = MergeMapSubscriber;
 //# sourceMappingURL=mergeMap.js.map
 
 /***/ }),
-/* 155 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36662,7 +36740,7 @@ exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
 //# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ }),
-/* 156 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36672,7 +36750,7 @@ exports.errorObject = { e: {} };
 //# sourceMappingURL=errorObject.js.map
 
 /***/ }),
-/* 157 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36681,7 +36759,7 @@ exports.isArrayLike = (function (x) { return x && typeof x.length === 'number'; 
 //# sourceMappingURL=isArrayLike.js.map
 
 /***/ }),
-/* 158 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36693,7 +36771,7 @@ exports.isFunction = isFunction;
 //# sourceMappingURL=isFunction.js.map
 
 /***/ }),
-/* 159 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36705,7 +36783,7 @@ exports.isObject = isObject;
 //# sourceMappingURL=isObject.js.map
 
 /***/ }),
-/* 160 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36717,7 +36795,7 @@ exports.isPromise = isPromise;
 //# sourceMappingURL=isPromise.js.map
 
 /***/ }),
-/* 161 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36729,16 +36807,16 @@ exports.isScheduler = isScheduler;
 //# sourceMappingURL=isScheduler.js.map
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_compiler__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_compiler__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__(38);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RESOURCE_CACHE_PROVIDER", function() { return RESOURCE_CACHE_PROVIDER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "platformBrowserDynamic", function() { return platformBrowserDynamic; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
@@ -36913,7 +36991,7 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__
 
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36925,21 +37003,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var platform_browser_1 = __webpack_require__(36);
-var animations_1 = __webpack_require__(172);
-var forms_1 = __webpack_require__(171);
-var http_1 = __webpack_require__(73);
-var router_1 = __webpack_require__(43);
-var index_1 = __webpack_require__(111);
-var angular2_notifications_1 = __webpack_require__(51);
-var route_module_1 = __webpack_require__(178);
-var app_component_1 = __webpack_require__(181);
-var index_2 = __webpack_require__(182);
-var home_component_1 = __webpack_require__(114);
-var index_3 = __webpack_require__(115);
-var contact_component_1 = __webpack_require__(113);
-var index_4 = __webpack_require__(23);
+var core_1 = __webpack_require__(1);
+var platform_browser_1 = __webpack_require__(38);
+var animations_1 = __webpack_require__(174);
+var forms_1 = __webpack_require__(173);
+var http_1 = __webpack_require__(52);
+var router_1 = __webpack_require__(32);
+var index_1 = __webpack_require__(115);
+var angular2_notifications_1 = __webpack_require__(39);
+var route_module_1 = __webpack_require__(181);
+var app_component_1 = __webpack_require__(186);
+var index_2 = __webpack_require__(189);
+var home_component_1 = __webpack_require__(119);
+var index_3 = __webpack_require__(120);
+var index_4 = __webpack_require__(117);
+var contact_component_1 = __webpack_require__(118);
+var index_5 = __webpack_require__(11);
 var AppModule = (function () {
     function AppModule() {
     }
@@ -36953,9 +37032,9 @@ AppModule = __decorate([
         ],
         declarations: [
             app_component_1.AppComponent, index_2.NavigationComponent, index_2.MenuComponent, home_component_1.HomeComponent, index_3.RegistrationComponent, index_3.LoginComponent,
-            contact_component_1.ContactComponent, index_3.ProfilComponent, index_3.UserListComponent, index_3.EditComponent
+            contact_component_1.ContactComponent, index_3.ProfilComponent, index_3.UserListComponent, index_3.EditComponent, index_4.BrandListComponent, index_4.EditComponent
         ],
-        providers: [index_4.Helper, index_4.UserService, index_1.AuthGuard, index_4.AuthService, index_1.AdminGuard],
+        providers: [index_5.Helper, index_5.UserService, index_1.AuthGuard, index_5.AuthService, index_1.AdminGuard, index_5.BrandService, index_5.ModelService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
@@ -36963,17 +37042,17 @@ exports.AppModule = AppModule;
 
 
 /***/ }),
-/* 164 */,
-/* 165 */,
 /* 166 */,
 /* 167 */,
 /* 168 */,
-/* 169 */
+/* 169 */,
+/* 170 */,
+/* 171 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__(76);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AnimationDriver; });
 /* unused harmony export ɵAnimation */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return AnimationStyleNormalizer; });
@@ -41895,12 +41974,12 @@ function supportsWebAnimations() {
 
 
 /***/ }),
-/* 170 */
+/* 172 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* unused harmony export VERSION */
 /* unused harmony export TEMPLATE_TRANSFORMS */
 /* unused harmony export CompilerConfig */
@@ -69656,20 +69735,20 @@ function _mergeArrays(parts) {
 //# sourceMappingURL=compiler.es5.js.map
 
 /***/ }),
-/* 171 */
+/* 173 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__ = __webpack_require__(368);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__ = __webpack_require__(154);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(38);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractControlDirective", function() { return AbstractControlDirective; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractFormGroupDirective", function() { return AbstractFormGroupDirective; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckboxControlValueAccessor", function() { return CheckboxControlValueAccessor; });
@@ -75760,16 +75839,16 @@ ReactiveFormsModule.ctorParameters = function () { return []; };
 
 
 /***/ }),
-/* 172 */
+/* 174 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_animations__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_animations_browser__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_animations__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_animations_browser__ = __webpack_require__(171);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserAnimationsModule", function() { return BrowserAnimationsModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NoopAnimationsModule", function() { return NoopAnimationsModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBrowserAnimationBuilder", function() { return BrowserAnimationBuilder; });
@@ -76496,7 +76575,7 @@ NoopAnimationsModule.ctorParameters = function () { return []; };
 
 
 /***/ }),
-/* 173 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76511,9 +76590,9 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var push_notifications_service_1 = __webpack_require__(105);
-__export(__webpack_require__(105));
+var core_1 = __webpack_require__(1);
+var push_notifications_service_1 = __webpack_require__(108);
+__export(__webpack_require__(108));
 var PushNotificationsModule = (function () {
     function PushNotificationsModule() {
     }
@@ -76528,7 +76607,7 @@ exports.PushNotificationsModule = PushNotificationsModule;
 //# sourceMappingURL=push-notifications.module.js.map
 
 /***/ }),
-/* 174 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76543,17 +76622,17 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var common_1 = __webpack_require__(56);
-var simple_notifications_component_1 = __webpack_require__(107);
-var notification_component_1 = __webpack_require__(106);
-var max_pipe_1 = __webpack_require__(109);
-var notifications_service_1 = __webpack_require__(57);
-__export(__webpack_require__(108));
-__export(__webpack_require__(107));
-__export(__webpack_require__(106));
+var core_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(58);
+var simple_notifications_component_1 = __webpack_require__(110);
+var notification_component_1 = __webpack_require__(109);
+var max_pipe_1 = __webpack_require__(112);
+var notifications_service_1 = __webpack_require__(59);
+__export(__webpack_require__(111));
+__export(__webpack_require__(110));
 __export(__webpack_require__(109));
-__export(__webpack_require__(57));
+__export(__webpack_require__(112));
+__export(__webpack_require__(59));
 var SimpleNotificationsModule = SimpleNotificationsModule_1 = (function () {
     function SimpleNotificationsModule() {
     }
@@ -76583,45 +76662,24 @@ var SimpleNotificationsModule_1;
 //# sourceMappingURL=simple-notifications.module.js.map
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var router_1 = __webpack_require__(43);
-var AdminGuard = (function () {
-    function AdminGuard(router) {
-        this.router = router;
+var Brand = (function () {
+    function Brand(data) {
+        this.id = data.id;
+        this.name = data.name;
     }
-    AdminGuard.prototype.canActivate = function (route, state) {
-        var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-        if (loggedUser && (loggedUser.roles[0] === "ROLE_ADMIN")) {
-            return true;
-        }
-        return false;
-    };
-    return AdminGuard;
+    return Brand;
 }());
-AdminGuard = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [router_1.Router])
-], AdminGuard);
-exports.AdminGuard = AdminGuard;
+exports.Brand = Brand;
 
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76639,7 +76697,25 @@ exports.Login = Login;
 
 
 /***/ }),
-/* 177 */
+/* 179 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Model = (function () {
+    function Model(data) {
+        this.id = data.id;
+        this.brand_id = data.brand_id;
+        this.name = data.name;
+    }
+    return Model;
+}());
+exports.Model = Model;
+
+
+/***/ }),
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76664,30 +76740,95 @@ exports.User = User;
 
 
 /***/ }),
-/* 178 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var home_component_1 = __webpack_require__(114);
-var index_1 = __webpack_require__(115);
-var contact_component_1 = __webpack_require__(113);
-var auth_guard_1 = __webpack_require__(110);
+var home_component_1 = __webpack_require__(119);
+var index_1 = __webpack_require__(120);
+var index_2 = __webpack_require__(117);
+var contact_component_1 = __webpack_require__(118);
+var auth_guard_1 = __webpack_require__(114);
+var admin_guard_1 = __webpack_require__(113);
 exports.appRoutes = [
     { path: '', component: home_component_1.HomeComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'accueil', component: home_component_1.HomeComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'utilisateurs/ajouter', component: index_1.RegistrationComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'utilisateurs/modifier/:id', component: index_1.EditComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'utilisateurs/ajouter', component: index_1.RegistrationComponent, canActivate: [admin_guard_1.AdminGuard] },
+    { path: 'utilisateurs/modifier/:id', component: index_1.EditComponent, canActivate: [admin_guard_1.AdminGuard] },
+    { path: 'utilisateurs/liste', component: index_1.UserListComponent, canActivate: [admin_guard_1.AdminGuard] },
     { path: 'contact', component: contact_component_1.ContactComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'utilisateur/profil', component: index_1.ProfilComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'utilisateurs/liste', component: index_1.UserListComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'login', component: index_1.LoginComponent },
+    { path: 'marques/liste', component: index_2.BrandListComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'marques/enregistrer/:id', component: index_2.EditComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'marques/modifier/:id', component: index_2.EditComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'auth/login', component: index_1.LoginComponent },
 ];
 
 
 /***/ }),
-/* 179 */
+/* 182 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var http_1 = __webpack_require__(52);
+__webpack_require__(73);
+__webpack_require__(72);
+__webpack_require__(71);
+var app_config_1 = __webpack_require__(15);
+var index_1 = __webpack_require__(11);
+var BrandService = (function () {
+    function BrandService(http, helper) {
+        this.http = http;
+        this.helper = helper;
+        this.headers = new http_1.Headers();
+        this.headers.append('X-Requested-With', 'XMLHttpRequest');
+    }
+    BrandService.prototype.findOne = function (id) {
+        return this.http.get(app_config_1.Config.API_ROUTE.brand_edit + "/" + id, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    BrandService.prototype.removeBrand = function (id) {
+        return this.http.get(app_config_1.Config.API_ROUTE.brand_remove + "/" + id, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    BrandService.prototype.getListe = function () {
+        return this.http.get(app_config_1.Config.API_ROUTE.brand_list, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    BrandService.prototype.saveBrand = function (data) {
+        var url = (data.id === 0) ? app_config_1.Config.API_ROUTE.brand_add : app_config_1.Config.API_ROUTE.brand_edit + "/" + data.id;
+        return this.http.post(url, data, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    return BrandService;
+}());
+BrandService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http, index_1.Helper])
+], BrandService);
+exports.BrandService = BrandService;
+
+
+/***/ }),
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76699,7 +76840,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(1);
 var Observable_1 = __webpack_require__(7);
 var Helper = (function () {
     function Helper() {
@@ -76730,6 +76871,19 @@ var Helper = (function () {
         else
             document.getElementById("animationload").style.display = "none";
     };
+    Helper.prototype.isImage = function (file) {
+        var extensions = file.name.split('.');
+        var extension = '.' + extensions[extensions.length - 1];
+        if (extension !== '.jpg' && extension !== '.JPG' && extension !== '.png' && extension !== '.jpeg') {
+            return false;
+        }
+        return true;
+    };
+    Helper.prototype.currentMenu = function (id) {
+        var element = document.getElementById(id);
+        if (element.classList.contains('collapsed'))
+            element.click();
+    };
     return Helper;
 }());
 Helper = __decorate([
@@ -76739,7 +76893,7 @@ exports.Helper = Helper;
 
 
 /***/ }),
-/* 180 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76754,13 +76908,87 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var http_1 = __webpack_require__(73);
-__webpack_require__(149);
-__webpack_require__(148);
-__webpack_require__(147);
-var app_config_1 = __webpack_require__(44);
-var index_1 = __webpack_require__(23);
+var core_1 = __webpack_require__(1);
+var http_1 = __webpack_require__(52);
+__webpack_require__(73);
+__webpack_require__(72);
+__webpack_require__(71);
+var app_config_1 = __webpack_require__(15);
+var index_1 = __webpack_require__(11);
+var ModelService = (function () {
+    function ModelService(http, helper) {
+        this.http = http;
+        this.helper = helper;
+        this.headers = new http_1.Headers();
+        this.headers.append('X-Requested-With', 'XMLHttpRequest');
+    }
+    ModelService.prototype.findOne = function (id) {
+        return this.http.get(app_config_1.Config.API_ROUTE.model_edit + "/" + id, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.removeModel = function (id) {
+        return this.http.get(app_config_1.Config.API_ROUTE.model_remove + "/" + id, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.getListe = function () {
+        return this.http.get(app_config_1.Config.API_ROUTE.model_list, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.createModel = function (data) {
+        return this.http.post(app_config_1.Config.API_ROUTE.registration, data, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.editModel = function (data) {
+        return this.http.post(app_config_1.Config.API_ROUTE.model_edit + '/' + data.id, data, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.getRoles = function () {
+        return this.http.get(app_config_1.Config.API_ROUTE.roles, { headers: this.headers }).map(function (response) {
+            return response.json();
+        }).catch(this.helper.handleError);
+    };
+    ModelService.prototype.uploadPhoto = function (id, formData) {
+        return this.http.post(app_config_1.Config.API_ROUTE.upload_photo + "/" + id, formData).map(function (response) {
+            return response.json();
+        });
+    };
+    return ModelService;
+}());
+ModelService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http, index_1.Helper])
+], ModelService);
+exports.ModelService = ModelService;
+
+
+/***/ }),
+/* 185 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var http_1 = __webpack_require__(52);
+__webpack_require__(73);
+__webpack_require__(72);
+__webpack_require__(71);
+var app_config_1 = __webpack_require__(15);
+var index_1 = __webpack_require__(11);
 var UserService = (function () {
     function UserService(http, helper) {
         this.http = http;
@@ -76774,7 +77002,7 @@ var UserService = (function () {
         }).catch(this.helper.handleError);
     };
     UserService.prototype.removeUser = function (id) {
-        return this.http.delete(app_config_1.Config.API_ROUTE.user_remove + "/" + id, { headers: this.headers }).map(function (response) {
+        return this.http.get(app_config_1.Config.API_ROUTE.user_remove + "/" + id, { headers: this.headers }).map(function (response) {
             return response.json();
         }).catch(this.helper.handleError);
     };
@@ -76799,17 +77027,7 @@ var UserService = (function () {
         }).catch(this.helper.handleError);
     };
     UserService.prototype.uploadPhoto = function (id, formData) {
-        /* var xhr = new XMLHttpRequest();
-         xhr.open('POST', Config.API_ROUTE.upload_photo + "/" + id, true);
-         xhr.onload = function () {
-             if (xhr.status === 200) {
-                 console.log(xhr.response);
-             } else {
-                 alert('An error occurred!');
-             }
-         };
-         xhr.send(formData);*/
-        return this.http.post(app_config_1.Config.API_ROUTE.upload_photo + "/" + id, formData, { headers: this.headers }).map(function (response) {
+        return this.http.post(app_config_1.Config.API_ROUTE.upload_photo + "/" + id, formData).map(function (response) {
             return response.json();
         });
     };
@@ -76823,7 +77041,7 @@ exports.UserService = UserService;
 
 
 /***/ }),
-/* 181 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76838,8 +77056,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var auth_service_1 = __webpack_require__(112);
+var core_1 = __webpack_require__(1);
+var auth_service_1 = __webpack_require__(116);
 var AppComponent = (function () {
     function AppComponent(authService) {
         var _this = this;
@@ -76851,13 +77069,17 @@ var AppComponent = (function () {
     AppComponent.prototype.ngOnInit = function () {
         this.loggedUser = this.authService.loggedUser;
         this.isUserLogged = this.authService.isLogged;
+        if (localStorage.getItem('first_login') === "true") {
+            localStorage.setItem("first_login", "false");
+            window.location.reload();
+        }
     };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'ng-app',
-        template: __webpack_require__(340)
+        template: __webpack_require__(347)
     }),
     __metadata("design:paramtypes", [auth_service_1.AuthService])
 ], AppComponent);
@@ -76865,21 +77087,7 @@ exports.AppComponent = AppComponent;
 
 
 /***/ }),
-/* 182 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(183));
-__export(__webpack_require__(184));
-
-
-/***/ }),
-/* 183 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76894,10 +77102,171 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var index_1 = __webpack_require__(23);
-var router_1 = __webpack_require__(43);
-var app_config_1 = __webpack_require__(44);
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(53);
+var index_2 = __webpack_require__(11);
+var angular2_notifications_1 = __webpack_require__(39);
+var router_1 = __webpack_require__(32);
+var app_config_1 = __webpack_require__(15);
+var EditComponent = (function () {
+    function EditComponent(brandService, helper, _notificationsService, route) {
+        this.brandService = brandService;
+        this.helper = helper;
+        this._notificationsService = _notificationsService;
+        this.route = route;
+        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
+        this.app_name = app_config_1.Config.APP_NAME;
+        this.app_icon = this.app_name.charAt(0);
+        this.loading = app_config_1.Config.API_ROUTE.loading;
+        this.helper.currentMenu("a_collapse_brands");
+        this.resetCurrentBrand();
+    }
+    EditComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.paramMap.subscribe(function (params) {
+            _this.helper.toggleLoadding(true);
+            _this.brandService.findOne(params.get('id')).subscribe(function (response) {
+                if (response !== null)
+                    _this.currentBrand = response;
+                _this.helper.toggleLoadding(false);
+            });
+        });
+    };
+    EditComponent.prototype.resetCurrentBrand = function () {
+        this.currentBrand = new index_1.Brand({
+            id: 0,
+            name: '',
+        });
+    };
+    EditComponent.prototype.handleSubmit = function (event) {
+        var _this = this;
+        event.preventDefault();
+        this.helper.toggleLoadding(true);
+        this.brandService.saveBrand(this.currentBrand).subscribe(function (response) {
+            _this.helper.toggleLoadding(false);
+            if (response.success)
+                _this._notificationsService.success('Succès', response.message);
+            else
+                _this._notificationsService.error('Erreur', response.message);
+        });
+    };
+    return EditComponent;
+}());
+EditComponent = __decorate([
+    core_1.Component({
+        selector: 'edit',
+        template: __webpack_require__(348)
+    }),
+    __metadata("design:paramtypes", [index_2.BrandService, index_2.Helper, angular2_notifications_1.NotificationsService, router_1.ActivatedRoute])
+], EditComponent);
+exports.EditComponent = EditComponent;
+
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(11);
+var angular2_notifications_1 = __webpack_require__(39);
+var app_config_1 = __webpack_require__(15);
+var BrandListComponent = (function () {
+    function BrandListComponent(brandService, helper, _notificationsService) {
+        this.brandService = brandService;
+        this.helper = helper;
+        this._notificationsService = _notificationsService;
+        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
+        this.helper.setPageInfo("Liste marques", "Liste des marques");
+        this.helper.currentMenu("a_collapse_brands");
+        this.getList();
+    }
+    BrandListComponent.prototype.filterBrands = function (event) {
+        var _this = this;
+        this.filtredBrands = this.brands.filter(function (brand) {
+            return brand.name.toLocaleLowerCase().indexOf(_this.textFilter.toLocaleLowerCase()) !== -1;
+        });
+        this.brandCount = this.filtredBrands.length;
+    };
+    BrandListComponent.prototype.getList = function () {
+        var _this = this;
+        this.brandService.getListe().subscribe(function (response) {
+            _this.brands = response;
+            _this.filtredBrands = _this.brands;
+            _this.brandCount = _this.brands.length;
+        });
+    };
+    BrandListComponent.prototype.removeBrand = function (event, brand) {
+        var _this = this;
+        event.preventDefault();
+        if (confirm("Supprimer la marque")) {
+            this.brandService.removeBrand(brand.id).subscribe(function (response) {
+                if (response.success) {
+                    _this.getList();
+                    _this._notificationsService.success('Succès', response.message);
+                }
+                else
+                    _this._notificationsService.error('Erreur', response.message);
+            });
+        }
+    };
+    return BrandListComponent;
+}());
+BrandListComponent = __decorate([
+    core_1.Component({
+        selector: "brand-list",
+        template: __webpack_require__(349)
+    }),
+    __metadata("design:paramtypes", [index_1.BrandService, index_1.Helper, angular2_notifications_1.NotificationsService])
+], BrandListComponent);
+exports.BrandListComponent = BrandListComponent;
+
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(190));
+__export(__webpack_require__(191));
+
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(11);
+var router_1 = __webpack_require__(32);
+var app_config_1 = __webpack_require__(15);
 var MenuComponent = (function () {
     function MenuComponent(authService, router) {
         this.authService = authService;
@@ -76911,7 +77280,7 @@ var MenuComponent = (function () {
         this.authService.logout().subscribe(function () {
             localStorage.removeItem('loggedUser');
             _this.authService.onAuth();
-            _this.router.navigate(['/login']);
+            _this.router.navigate(['/auth/login']);
         });
     };
     return MenuComponent;
@@ -76919,7 +77288,7 @@ var MenuComponent = (function () {
 MenuComponent = __decorate([
     core_1.Component({
         selector: 'menu',
-        template: "\n        <nav id=\"toolbar\" class=\"fixed-top bg-white\">\n\n            <div class=\"row no-gutters align-items-center flex-nowrap\">\n                <div class=\"col\">\n                    <div class=\"row no-gutters align-items-center flex-nowrap\">\n                        <button type=\"button\" class=\"toggle-aside-button btn btn-icon d-block d-lg-none\"\n                                data-fuse-bar-toggle=\"aside\">\n                            <i class=\"icon icon-menu\"></i>\n                        </button>\n                        <div class=\"toolbar-separator d-block d-lg-none\"></div>\n                        <div class=\"shortcuts-wrapper row no-gutters align-items-center px-0 px-sm-2\">\n\n                            <div class=\"shortcuts row no-gutters align-items-center d-none d-md-flex\">\n\n                                <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\n                                    <i class=\"icon icon-hangouts\"></i>\n                                </a>\n\n                                <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\n                                    <i class=\"icon icon-account-box\"></i>\n                                </a>\n\n                                <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\n                                    <i class=\"icon icon-email\"></i>\n                                </a>\n\n                            </div>\n\n                            <div class=\"add-shortcut-menu-button dropdown px-1 px-sm-3\">\n\n                                <div class=\"dropdown-toggle btn btn-icon\" role=\"button\"\n                                     id=\"dropdownShortcutMenu\"\n                                     data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                                    <i class=\"icon icon-star text-amber-600\"></i>\n                                </div>\n\n                                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownShortcutMenu\">\n\n                                    <a class=\"dropdown-item\" href=\"#\">\n                                        <div\n                                                class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\n                                            <div class=\"row no-gutters align-items-center flex-nowrap\">\n                                                <i class=\"icon icon-calendar-today\"></i>\n                                                <span class=\"px-3\">Calendar</span>\n                                            </div>\n                                            <i class=\"icon icon-pin s-5 ml-2\"></i>\n                                        </div>\n                                    </a>\n\n                                    <a class=\"dropdown-item\" href=\"#\">\n                                        <div\n                                                class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\n                                            <div class=\"row no-gutters align-items-center flex-nowrap\">\n                                                <i class=\"icon icon-folder\"></i>\n                                                <span class=\"px-3\">File Manager</span>\n                                            </div>\n                                            <i class=\"icon icon-pin s-5 ml-2\"></i>\n                                        </div>\n                                    </a>\n\n                                    <a class=\"dropdown-item\" href=\"#\">\n                                        <div class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\n                                            <div class=\"row no-gutters align-items-center flex-nowrap\">\n                                                <i class=\"icon icon-checkbox-marked\"></i>\n                                                <span class=\"px-3\">To-Do</span>\n                                            </div>\n                                            <i class=\"icon icon-pin s-5 ml-2\"></i>\n                                        </div>\n                                    </a>\n\n                                </div>\n                            </div>\n                        </div>\n\n                        <div class=\"toolbar-separator\"></div>\n\n                    </div>\n                </div>\n                <div class=\"col-auto\">\n                    <div class=\"row no-gutters align-items-center justify-content-end\">\n                        <div class=\"user-menu-button dropdown\">\n\n                            <div class=\"dropdown-toggle ripple row align-items-center no-gutters px-2 px-sm-4\"\n                                 role=\"button\" id=\"dropdownUserMenu\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                                <div class=\"avatar-wrapper\">\n                                    <img class=\"avatar\" [src]=\"upload_folder+loggedUser.photo\"/>\n                                    <i class=\"status text-green icon-checkbox-marked-circle s-4\"></i>\n                                </div>\n                                <span class=\"username mx-3 d-none d-md-block\">{{loggedUser.name}}</span>\n                            </div>\n\n                            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownUserMenu\">\n                               \n                                <a class=\"dropdown-item\" [routerLink]=\"['/profil']\">\n                                    <div class=\"row no-gutters align-items-center flex-nowrap\">\n                                        <i class=\"icon-account\"></i>\n                                        <span class=\"px-3\">Mon Profil</span>\n                                    </div>\n                                </a>\n\n                                <div class=\"dropdown-divider\"></div>\n\n                                <a class=\"dropdown-item\" (click)=\"logout($event)\">\n                                    <div class=\"row no-gutters align-items-center flex-nowrap\">\n                                        <i class=\"icon-logout\"></i>\n                                        <span class=\"px-3\">Logout</span>\n                                    </div>\n                                </a>\n\n                            </div>\n                        </div>\n\n                    </div>\n                </div>\n            </div>\n        </nav>\n    "
+        template: __webpack_require__(352)
     }),
     __metadata("design:paramtypes", [index_1.AuthService, router_1.Router])
 ], MenuComponent);
@@ -76927,7 +77296,7 @@ exports.MenuComponent = MenuComponent;
 
 
 /***/ }),
-/* 184 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76942,30 +77311,45 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var index_1 = __webpack_require__(23);
-var index_2 = __webpack_require__(111);
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(11);
+var index_2 = __webpack_require__(115);
+var app_config_1 = __webpack_require__(15);
+var router_1 = __webpack_require__(32);
 var NavigationComponent = (function () {
-    function NavigationComponent(authService, adminGuard) {
+    function NavigationComponent(authService, adminGuard, authGuard, router) {
         this.authService = authService;
         this.adminGuard = adminGuard;
+        this.authGuard = authGuard;
+        this.router = router;
+        this.app_name = app_config_1.Config.APP_NAME;
+        this.app_icon = this.app_name.charAt(0);
+        this.upload_folder = app_config_1.Config.UPLOAD_FOLDER;
         this.loggedUser = authService.loggedUser;
-        this.loggedUserIcon = this.loggedUser.name.charAt(0);
     }
+    NavigationComponent.prototype.logout = function (event) {
+        var _this = this;
+        event.preventDefault();
+        this.authService.logout().subscribe(function () {
+            localStorage.removeItem('loggedUser');
+            _this.authService.onAuth();
+            _this.router.navigate(['/auth/login']);
+        });
+    };
     return NavigationComponent;
 }());
 NavigationComponent = __decorate([
     core_1.Component({
         selector: 'navigation',
-        template: "\n        <aside id=\"aside\" class=\"aside aside-left\" data-fuse-bar=\"aside\" data-fuse-bar-media-step=\"md\" data-fuse-bar-position=\"left\">\n            <div class=\"aside-content-wrapper\">\n                <div class=\"aside-content\">\n                    <div class=\"aside-toolbar\">\n                        <div class=\"logo\">\n                            <span class=\"logo-icon\">{{ loggedUserIcon | uppercase}}</span><span class=\"logo-text\">{{loggedUser.name}}</span>\n                        </div>\n                        <button id=\"toggle-fold-aside-button\" type=\"button\" class=\"btn btn-icon d-none d-lg-block\" data-fuse-aside-toggle-fold=\"\">\n                            <i class=\"icon icon-backburger\"></i>\n                        </button>\n                    </div>\n                    <ul class=\"nav flex-column custom-scrollbar\" id=\"sidenav\" data-children=\".nav-item\">\n                        <li class=\"subheader\">\n                            <span>APPS</span>\n                        </li>\n\n                        <li class=\"nav-item\" role=\"tab\" id=\"heading-dashboards\">\n                            <a class=\"nav-link ripple with-arrow \" data-toggle=\"collapse\" data-target=\"#collapse-dashboards\" href=\"#\" aria-expanded=\"true\" aria-controls=\"collapse-dashboards\">\n                                <i class=\"icon s-4 icon-tile-four\"></i>\n                                <span>Tableau de bord</span>\n                            </a>\n                            <ul id=\"collapse-dashboards\" class=\"collapse show\" role=\"tabpanel\" aria-labelledby=\"heading-dashboards\" data-children=\".nav-item\">\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link ripple\" [routerLink]=\"['/']\">\n                                        <span>Project Dashboard</span>\n                                    </a>\n                                </li>\n                            </ul>\n                        </li>\n                        <li class=\"nav-item\" role=\"tab\" id=\"heading-ecommerce\">\n                            <a class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-ecommerce\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-ecommerce\">\n                                <i class=\"icon s-4 icon-cart\"></i>\n                                <span>Ecommerce</span>\n                            </a>\n                            <ul id=\"collapse-ecommerce\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-ecommerce\" data-children=\".nav-item\">\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link ripple \">\n                                        <span>Orders</span>\n                                    </a>\n                                </li>\n                            </ul>\n                        </li>\n                        <li class=\"nav-item\">\n                            <a class=\"nav-link ripple \">\n                                <i class=\"icon s-4 icon-email\"></i>\n                                <span>Mail</span>\n                            </a>\n                        </li>\n                        <li class=\"subheader\">\n                            <span>PAGES</span>\n                        </li>\n                        <li class=\"nav-item\" role=\"tab\" id=\"heading-authentication\" *ngIf=\"adminGuard.canActivate()\">\n                            <a class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-authentication\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-authentication\">\n                                <i class=\"icon s-4 icon-account-box\"></i>\n                                <span>Utilisateurs</span>\n                            </a>\n                            <ul id=\"collapse-authentication\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-authentication\" data-children=\".nav-item\">\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/liste']\">\n                                        <i class=\"icon s-4 icon-account\"></i>\n                                        <span>Liste utilisateurs</span>\n                                    </a>\n                                </li>\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/ajouter']\">\n                                        <i class=\"icon s-4 icon-pencil-circle\"></i>\n                                        <span>Ajouter un utilisateur</span>\n                                    </a>\n                                </li>\n                            </ul>\n                        </li>\n                    </ul>\n                </div>\n            </div>\n        </aside>\n    "
+        template: __webpack_require__(353)
     }),
-    __metadata("design:paramtypes", [index_1.AuthService, index_2.AdminGuard])
+    __metadata("design:paramtypes", [index_1.AuthService, index_2.AdminGuard, index_2.AuthGuard, router_1.Router])
 ], NavigationComponent);
 exports.NavigationComponent = NavigationComponent;
 
 
 /***/ }),
-/* 185 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76980,12 +77364,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var index_1 = __webpack_require__(58);
-var index_2 = __webpack_require__(23);
-var angular2_notifications_1 = __webpack_require__(51);
-var router_1 = __webpack_require__(43);
-var app_config_1 = __webpack_require__(44);
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(53);
+var index_2 = __webpack_require__(11);
+var angular2_notifications_1 = __webpack_require__(39);
+var router_1 = __webpack_require__(32);
+var app_config_1 = __webpack_require__(15);
 var EditComponent = (function () {
     function EditComponent(userService, helper, _notificationsService, route) {
         this.userService = userService;
@@ -76995,8 +77379,11 @@ var EditComponent = (function () {
         this.uploading = false;
         this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
         this.upload_folder = app_config_1.Config.UPLOAD_FOLDER;
+        this.app_name = app_config_1.Config.APP_NAME;
+        this.app_icon = this.app_name.charAt(0);
         this.showPassword = true;
         this.loading = app_config_1.Config.API_ROUTE.loading;
+        this.helper.currentMenu("a_collapse_users");
         this.resetCurrentUser();
     }
     EditComponent.prototype.ngOnInit = function () {
@@ -77004,10 +77391,11 @@ var EditComponent = (function () {
         this.route.paramMap.subscribe(function (params) {
             _this.helper.toggleLoadding(true);
             _this.userService.findOne(params.get('id')).subscribe(function (response) {
-                var user = JSON.parse(response);
-                _this.currentUser = JSON.parse(response);
-                _this.currentUser.plainPassword = "";
-                _this.currentUser.phone = user.phone || "";
+                if (response) {
+                    var user = _this.currentUser = response;
+                    _this.currentUser.plainPassword = "";
+                    _this.currentUser.phone = user.phone || "";
+                }
                 _this.helper.toggleLoadding(false);
             });
         });
@@ -77029,18 +77417,23 @@ var EditComponent = (function () {
     };
     EditComponent.prototype.loadImage = function () {
         var _this = this;
-        this.uploading = true;
         var formData = new FormData();
         var file = document.getElementById("fileElement").files[0];
-        formData.append("photo", file);
-        this.userService.uploadPhoto(this.currentUser.id, formData).subscribe(function (response) {
-            if (response.success) {
-                _this._notificationsService.success('Succès', response.message);
-            }
-            else
-                _this._notificationsService.error('Erreur', response.message);
-            _this.uploading = false;
-        });
+        if (this.helper.isImage(file)) {
+            this.uploading = true;
+            formData.append("photo", file);
+            this.userService.uploadPhoto(this.currentUser.id, formData).subscribe(function (response) {
+                if (response.success) {
+                    _this.currentUser.photo = response.photo;
+                    _this._notificationsService.success('Succès', response.message);
+                }
+                else
+                    _this._notificationsService.error('Erreur', response.message);
+                _this.uploading = false;
+            });
+        }
+        else
+            this._notificationsService.error('Erreur', "Format image incorrecte");
     };
     EditComponent.prototype.browse = function () {
         document.getElementById('fileElement').click();
@@ -77073,7 +77466,7 @@ var EditComponent = (function () {
 EditComponent = __decorate([
     core_1.Component({
         selector: 'edit',
-        template: __webpack_require__(343)
+        template: __webpack_require__(354)
     }),
     __metadata("design:paramtypes", [index_2.UserService, index_2.Helper, angular2_notifications_1.NotificationsService, router_1.ActivatedRoute])
 ], EditComponent);
@@ -77081,7 +77474,7 @@ exports.EditComponent = EditComponent;
 
 
 /***/ }),
-/* 186 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77096,24 +77489,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var index_1 = __webpack_require__(58);
-var index_2 = __webpack_require__(23);
-var router_1 = __webpack_require__(43);
-var angular2_notifications_1 = __webpack_require__(51);
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(53);
+var index_2 = __webpack_require__(11);
+var router_1 = __webpack_require__(32);
+var angular2_notifications_1 = __webpack_require__(39);
+var app_config_1 = __webpack_require__(15);
 var LoginComponent = (function () {
     function LoginComponent(authService, router, helper, _notificationsService) {
         this.authService = authService;
         this.router = router;
         this.helper = helper;
         this._notificationsService = _notificationsService;
-        this.options = {
-            position: ["middle", "right"],
-            timeOut: 5000,
-            lastOnBottom: true,
-            pauseOnHover: true,
-            clickToClose: true
-        };
+        this.app_name = app_config_1.Config.APP_NAME;
+        this.app_icon = this.app_name.charAt(0);
+        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
         this.currentUser = new index_1.Login({ email: "", password: "", remember_me: false });
     }
     LoginComponent.prototype.ngOnInit = function () {
@@ -77126,12 +77516,13 @@ var LoginComponent = (function () {
         this.authService.login(this.currentUser).subscribe(function (response) {
             if (response.success) {
                 localStorage.setItem("loggedUser", JSON.stringify(response.loggedUser));
+                localStorage.setItem("first_login", "true");
                 _this.authService.onAuth();
                 _this.router.navigate(['/']);
-                _this.helper.toggleLoadding(false);
             }
             else
                 _this._notificationsService.error('Erreur', response.message);
+            _this.helper.toggleLoadding(false);
         });
     };
     return LoginComponent;
@@ -77139,7 +77530,7 @@ var LoginComponent = (function () {
 LoginComponent = __decorate([
     core_1.Component({
         selector: 'login',
-        template: __webpack_require__(344)
+        template: __webpack_require__(355)
     }),
     __metadata("design:paramtypes", [index_2.AuthService, router_1.Router, index_2.Helper, angular2_notifications_1.NotificationsService])
 ], LoginComponent);
@@ -77147,7 +77538,7 @@ exports.LoginComponent = LoginComponent;
 
 
 /***/ }),
-/* 187 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77159,7 +77550,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(1);
 var ProfilComponent = (function () {
     function ProfilComponent() {
     }
@@ -77168,14 +77559,14 @@ var ProfilComponent = (function () {
 ProfilComponent = __decorate([
     core_1.Component({
         selector: 'profil',
-        template: __webpack_require__(345)
+        template: __webpack_require__(356)
     })
 ], ProfilComponent);
 exports.ProfilComponent = ProfilComponent;
 
 
 /***/ }),
-/* 188 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77190,19 +77581,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var index_1 = __webpack_require__(58);
-var index_2 = __webpack_require__(23);
-var angular2_notifications_1 = __webpack_require__(51);
-var app_config_1 = __webpack_require__(44);
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(53);
+var index_2 = __webpack_require__(11);
+var angular2_notifications_1 = __webpack_require__(39);
+var app_config_1 = __webpack_require__(15);
 var RegistrationComponent = (function () {
     function RegistrationComponent(userService, helper, _notificationsService) {
         this.userService = userService;
         this.helper = helper;
         this._notificationsService = _notificationsService;
+        this.app_name = app_config_1.Config.APP_NAME;
+        this.app_icon = this.app_name.charAt(0);
         this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
         this.showPassword = true;
         this.helper.setPageInfo("Ajouter un utilisateur", "Ajouter un utilisateur");
+        this.helper.currentMenu("a_collapse_users");
         this.resetCurrentUser();
     }
     RegistrationComponent.prototype.resetCurrentUser = function () {
@@ -77213,7 +77607,7 @@ var RegistrationComponent = (function () {
             email: '',
             plainPassword: this.helper.getPassword(),
             roles: 'ROLE_USER',
-            photo: "photos/user.png"
+            photo: app_config_1.Config.API_ROUTE.user_default_image
         });
         this.userService.getRoles().subscribe(function (response) {
             _this.userRoles = response;
@@ -77247,7 +77641,7 @@ var RegistrationComponent = (function () {
 RegistrationComponent = __decorate([
     core_1.Component({
         selector: 'registration',
-        template: __webpack_require__(346)
+        template: __webpack_require__(357)
     }),
     __metadata("design:paramtypes", [index_2.UserService, index_2.Helper, angular2_notifications_1.NotificationsService])
 ], RegistrationComponent);
@@ -77255,7 +77649,7 @@ exports.RegistrationComponent = RegistrationComponent;
 
 
 /***/ }),
-/* 189 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77270,10 +77664,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var index_1 = __webpack_require__(23);
-var angular2_notifications_1 = __webpack_require__(51);
-var app_config_1 = __webpack_require__(44);
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(11);
+var angular2_notifications_1 = __webpack_require__(39);
+var app_config_1 = __webpack_require__(15);
 var UserListComponent = (function () {
     function UserListComponent(userService, helper, _notificationsService) {
         this.userService = userService;
@@ -77282,6 +77676,7 @@ var UserListComponent = (function () {
         this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
         this.upload_folder = app_config_1.Config.UPLOAD_FOLDER;
         this.helper.setPageInfo("Liste utilisateurs", "Liste des utilisateurs");
+        this.helper.currentMenu("a_collapse_users");
         this.getList();
     }
     UserListComponent.prototype.filterUsers = function (event) {
@@ -77318,7 +77713,7 @@ var UserListComponent = (function () {
 UserListComponent = __decorate([
     core_1.Component({
         selector: "user-list",
-        template: __webpack_require__(347)
+        template: __webpack_require__(358)
     }),
     __metadata("design:paramtypes", [index_1.UserService, index_1.Helper, angular2_notifications_1.NotificationsService])
 ], UserListComponent);
@@ -77326,13 +77721,6 @@ exports.UserListComponent = UserListComponent;
 
 
 /***/ }),
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
 /* 197 */,
 /* 198 */,
 /* 199 */,
@@ -77476,55 +77864,86 @@ exports.UserListComponent = UserListComponent;
 /* 337 */,
 /* 338 */,
 /* 339 */,
-/* 340 */
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */
 /***/ (function(module, exports) {
 
 module.exports = "<div id=\"wrapper\">\r\n    <navigation style=\"z-index:1030\" *ngIf=\"isUserLogged\"></navigation>\r\n    <div class=\"content-wrapper\">\r\n        <menu *ngIf=\"isUserLogged\"></menu>\r\n\r\n        <div class=\"content\">\r\n           <router-outlet></router-outlet>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 341 */
+/* 348 */
+/***/ (function(module, exports) {
+
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n  <div class=\"intro col-12 col-md\">\r\n      <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n          <div class=\"logo bg-primary mb-8\">\r\n              <span>{{app_icon}}</span>\r\n          </div>\r\n\r\n          <div class=\"title\">\r\n              {{app_name}}\r\n          </div>\r\n\r\n          <div class=\"description pt-2\">\r\n              Enregistrer une marque\r\n          </div>\r\n\r\n      </div>\r\n  </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Enregistrer une marque</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #brandForm=\"ngForm\">\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!name.valid || (!name.pristine && brandForm.submitted)\">\r\n                    <textarea style=\"height: 280px;\" class=\"form-control\"  [class.md-has-value]=\"currentBrand.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentBrand.name\" #name=\"ngModel\"  rows=\"3\"></textarea>\r\n                    <label for=\"name\">Marques séparées par une virgule</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !brandForm.submitted)\">Nom invalide</div>\r\n                </div>\r\n\r\n                <button [disabled]=\"!brandForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Enregistrer\">\r\n                    ENREGISTRER\r\n                </button>\r\n                <a [routerLink]=\"['/marques/liste']\" title=\"Annuler et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 349 */
+/***/ (function(module, exports) {
+
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div class=\"page-layout carded full-width\">\r\n    <div class=\"top-bg\"></div>\r\n    <!-- CONTENT -->\r\n    <div class=\"page-content\">\r\n\r\n        <!-- HEADER -->\r\n        <div class=\"header text-auto row no-gutters align-items-center justify-content-between\">\r\n\r\n            <!-- APP TITLE -->\r\n            <div class=\"col-12 col-sm\">\r\n\r\n                <div class=\"logo row no-gutters align-items-start\">\r\n                    <div class=\"logo-icon mr-3 mt-1\">\r\n                        <i class=\"icon-cube-outline s-6\"></i>\r\n                    </div>\r\n                    <div class=\"logo-text\">\r\n                        <div class=\"h4\">Liste marques</div>\r\n                        <div class=\"\">Total marques: {{brandCount}}</div>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / APP TITLE -->\r\n\r\n            <!-- SEARCH -->\r\n            <div class=\"col search-wrapper px-2\">\r\n\r\n                <div class=\"input-group\">\r\n                    <span class=\"input-group-btn\">\r\n                        <button type=\"button\" class=\"btn btn-icon\">\r\n                            <i class=\"icon icon-magnify\"></i>\r\n                        </button>\r\n                    </span>\r\n                    <input [(ngModel)]=\"textFilter\" type=\"text\" (keyup)=\"filterBrands($event)\" class=\"form-control\" placeholder=\"rechercher\" aria-label=\"Search\">\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / SEARCH -->\r\n\r\n            <div class=\"col-auto\">\r\n                <a [routerLink]=\"['/marques/enregistrer/0']\" class=\"btn btn-secondary\">Ajouter une nouvelle</a>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- / HEADER -->\r\n        <div class=\"page-content-card\">\r\n\r\n            <table id=\"e-commerce-products-table\" class=\"table table-responsive\">\r\n                <thead>\r\n                <tr>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ID</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">MARQUE</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\"></span>\r\n                        </div>\r\n                    </th>\r\n                </tr>\r\n                </thead>\r\n                <tbody>\r\n                <tr *ngFor=\"let brand of filtredBrands\">\r\n                    <td>{{brand.id}}</td>\r\n                    <td>{{brand.name}}</td>\r\n                    <td>\r\n                        <a [routerLink]=\"['/marques/modifier/',brand.id]\" class=\"btn btn-icon\" title=\"Modifier la marque\">\r\n                            <i class=\"icon icon-pencil s-4\"></i>\r\n                        </a>\r\n                        <a class=\"btn btn-icon btn-sm\" title=\"Supprimer la marque\" (click)=\"removeBrand($event,brand)\">\r\n                            <i class=\"icon icon-trash s-4\"></i>\r\n                        </a>\r\n                    </td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n    <!-- / CONTENT -->\r\n</div>";
+
+/***/ }),
+/* 350 */
 /***/ (function(module, exports) {
 
 module.exports = "<div id=\"contacts\" class=\"page-layout simple left-sidebar-floating\">\r\n\r\n    <div class=\"page-header bg-primary text-auto row no-gutters align-items-center justify-content-between p-4 p-sm-6\">\r\n\r\n        <div class=\"col\">\r\n\r\n            <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n\r\n                <button type=\"button\" class=\"sidebar-toggle-button btn btn-icon d-inline-block d-lg-none mr-2\" data-fuse-bar-toggle=\"contacts-sidebar\">\r\n                    <i class=\"icon icon-menu\"></i>\r\n                </button>\r\n\r\n                <!-- APP TITLE -->\r\n                <div class=\"logo row no-gutters align-items-center flex-nowrap\">\r\n                    <span class=\"logo-icon mr-4\">\r\n                        <i class=\"icon-account-box s-6\"></i>\r\n                    </span>\r\n                    <span class=\"logo-text h4\">Liste utilisateurs</span>\r\n                </div>\r\n            </div>\r\n            <!-- / APP TITLE -->\r\n        </div>\r\n\r\n        <!-- SEARCH -->\r\n        <div class=\"col search-wrapper\">\r\n\r\n            <div class=\"input-group\">\r\n\r\n                <span class=\"input-group-btn\">\r\n\r\n                    <button type=\"button\" class=\"btn btn-icon\">\r\n                        <i class=\"icon icon-magnify\"></i>\r\n                    </button>\r\n\r\n                </span>\r\n\r\n                <input id=\"contacts-search-input\" type=\"text\" class=\"form-control\" placeholder=\"Search for anyone\" aria-label=\"Search for anyone\">\r\n\r\n            </div>\r\n        </div>\r\n        <!-- / SEARCH -->\r\n    </div>\r\n    <!-- / HEADER -->\r\n\r\n    <div class=\"page-content-wrapper\">\r\n\r\n        <aside class=\"page-sidebar p-6\" data-fuse-bar=\"contacts-sidebar\" data-fuse-bar-media-step=\"md\">\r\n            <div class=\"page-sidebar-card\">\r\n                <!-- SIDENAV HEADER -->\r\n                <div class=\"header p-4\">\r\n\r\n                    <!-- USER -->\r\n                    <div class=\"row no-gutters align-items-center\">\r\n                        <img class=\"avatar mr-4\" alt=\"John Doe\">\r\n                        <span class=\"font-weight-bold\">John Doe</span>\r\n                    </div>\r\n                    <!-- / USER -->\r\n\r\n                </div>\r\n                <!-- / SIDENAV HEADER -->\r\n\r\n                <div class=\"divider\"></div>\r\n\r\n                <!-- SIDENAV CONTENT -->\r\n                <div class=\"content\">\r\n\r\n                    <ul class=\"nav flex-column\">\r\n\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" href=\"#\">\r\n                                <span>Starred contacts</span>\r\n                            </a>\r\n                        </li>\r\n\r\n                        <div class=\"divider\"></div>\r\n\r\n                        <li class=\"subheader\">Groups</li>\r\n\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" href=\"#\">\r\n                                <span class=\"pl-2\">Friends</span>\r\n                            </a>\r\n                        </li>\r\n\r\n                    </ul>\r\n                </div>\r\n                <!-- / SIDENAV CONTENT -->\r\n            </div>\r\n        </aside>\r\n\r\n        <!-- CONTENT -->\r\n        <div class=\"page-content p-4 p-sm-6\">\r\n            <!-- CONTACT LIST -->\r\n            <div class=\"contacts-list card\">\r\n\r\n                <!-- CONTACT LIST HEADER -->\r\n                <div class=\"contacts-list-header p-4\">\r\n\r\n                    <div class=\"row no-gutters align-items-center justify-content-between\">\r\n\r\n                        <div class=\"list-title text-muted\">\r\n                            All contacts (25)\r\n                        </div>\r\n\r\n                        <button type=\"button\" class=\"btn btn-icon\">\r\n                            <i class=\"icon icon-sort-alphabetical\"></i>\r\n                        </button>\r\n                    </div>\r\n\r\n                </div>\r\n                <!-- / CONTACT LIST HEADER -->\r\n\r\n                <!-- CONTACT ITEM -->\r\n                <div class=\"contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6\">\r\n\r\n                    <label class=\"custom-control custom-checkbox\">\r\n                        <input type=\"checkbox\" class=\"custom-control-input\">\r\n                        <span class=\"custom-control-indicator\"></span>\r\n                    </label>\r\n\r\n                    <img class=\"avatar mx-4\" alt=\"Abbott\">\r\n\r\n                    <div class=\"col text-truncate font-weight-bold\">Abbott Keitch</div>\r\n\r\n                    <div class=\"col email text-truncate px-1 d-none d-xl-flex\">\r\n                        abbott@withinpixels.com\r\n                    </div>\r\n\r\n                    <div class=\"col phone text-truncate px-1 d-none d-xl-flex\">\r\n                        +1-202-555-0175\r\n                    </div>\r\n\r\n                    <div class=\"col job-title text-truncate px-1 d-none d-sm-flex\">\r\n                        Digital Archivist\r\n                    </div>\r\n\r\n                    <div class=\"col company text-truncate px-1 d-none d-sm-flex\">\r\n                        Saois\r\n                    </div>\r\n\r\n                    <div class=\"col-auto actions\">\r\n\r\n                        <div class=\"row no-gutters\">\r\n\r\n                            <button type=\"button\" class=\"btn btn-icon\">\r\n\r\n                                <i class=\"icon-star-outline\"></i>\r\n\r\n                            </button>\r\n\r\n                            <button type=\"button\" class=\"btn btn-icon\">\r\n                                <i class=\"icon icon-dots-vertical\"></i>\r\n                            </button>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n\r\n\r\n            </div>\r\n            <!-- / CONTACT LIST -->\r\n        </div>\r\n        <!-- / CONTENT -->\r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 342 */
+/* 351 */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"project-dashboard\" class=\"page-layout simple right-sidebar tabbed\">\r\n    <div class=\"page-content-wrapper\">\r\n        <div  class=\"page-header bg-primary text-auto d-flex flex-column justify-content-between px-6 pt-4 pb-0\">\r\n\r\n            <div class=\"row no-gutters align-items-start justify-content-between flex-nowrap\">\r\n\r\n                <div>\r\n                    <span class=\"h2\">Welcome back, John!</span>\r\n                </div>\r\n\r\n                <button type=\"button\" class=\"sidebar-toggle-button btn btn-icon d-block d-xl-none\"\r\n                        data-fuse-bar-toggle=\"dashboard-project-sidebar\"\r\n                        aria-label=\"Toggle sidebar\">\r\n                    <i class=\"icon icon-menu\"></i>\r\n                </button>\r\n            </div>\r\n\r\n            <div class=\"row no-gutters align-items-center project-selection\">\r\n\r\n                <div class=\"selected-project h6 px-4 py-2\">ACME Corp. Backend App</div>\r\n\r\n                <div class=\"project-selector\">\r\n                    <button type=\"button\" class=\"btn btn-icon\">\r\n                        <i class=\"icon icon-dots-horizontal\"></i>\r\n                    </button>\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<div id=\"project-dashboard\" class=\"page-layout simple right-sidebar tabbed\">\r\n    <div class=\"page-content-wrapper\">\r\n        <div  class=\"page-header text-auto d-flex flex-column justify-content-between px-6 pt-4 pb-0\">\r\n\r\n            <div class=\"row no-gutters align-items-start justify-content-between flex-nowrap\">\r\n\r\n                <div>\r\n                    <span class=\"h2\">Bonjour {{loggedUser.name}}!</span>\r\n                </div>\r\n\r\n                <button type=\"button\" class=\"sidebar-toggle-button btn btn-icon d-block d-xl-none\"\r\n                        data-fuse-bar-toggle=\"dashboard-project-sidebar\"\r\n                        aria-label=\"Toggle sidebar\">\r\n                    <i class=\"icon icon-menu\"></i>\r\n                </button>\r\n            </div>\r\n\r\n            <div class=\"row no-gutters align-items-center project-selection\">\r\n\r\n                <div class=\"selected-project h6 px-4 py-2\">ACME Corp. Backend App</div>\r\n\r\n                <div class=\"project-selector\">\r\n                    <button type=\"button\" class=\"btn btn-icon\">\r\n                        <i class=\"icon icon-dots-horizontal\"></i>\r\n                    </button>\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 343 */
+/* 352 */
 /***/ (function(module, exports) {
 
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register\" class=\"row no-gutters\">\r\n    <div class=\"form-wrapper md-elevation-8 p-8\">\r\n\r\n        <div class=\"logo\">\r\n            <img [src]=\"upload_folder+currentUser.photo\" alt=\"currentUser.name\" style=\"cursor: pointer;width: 128px;height: 128px\" data-toggle=\"tooltip\" data-original-title=\"Modifier photo\" (click)=\"browse()\">\r\n            <input type=\"file\" id=\"fileElement\" name=\"image\" (change)=\"loadImage($event)\" style=\"display: none\"/>\r\n            <img [src]=\"loading\" alt=\"loading\" [hidden]=\"!uploading\" />\r\n        </div>\r\n\r\n        <div class=\"title mt-4 mb-8\">{{currentUser.name}}</div>\r\n\r\n        <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"/>\r\n                <label for=\"name\">Nom</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom\r\n                    invalide\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"/>\r\n                <label for=\"email\">Email</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">\r\n                    Adresse email invalide\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!phone.valid || (!phone.pristine && userForm.submitted)\">\r\n                <input type=\"tel\" class=\"form-control\" [class.md-has-value]=\"currentUser.phone.length\"  name=\"phone\" id=\"phone\" #phone=\"ngModel\" [(ngModel)]=\"currentUser.phone\"/>\r\n                <label for=\"email\">Téléphone</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"phone.valid || (phone.pristine && !userForm.submitted)\">\r\n                    Téléphone invalide\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group mb-4\" [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                    <option value=\"\"></option>\r\n                    <option *ngFor=\"let role of userRoles\">{{role}}</option>\r\n                </select>\r\n                <label for=\"roles\">Rôle utilisateur</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un\r\n                    utilisateur doit avoir un rôle\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                <label for=\"plainPassword\">Mot de passe</label>\r\n                <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n            </div>\r\n\r\n            <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                <div class=\"form-check remember-me mb-4\">\r\n                    <label class=\"form-check-label\">\r\n                        <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                        <span class=\"checkbox-icon\"></span>\r\n                        <span data-toggle=\"tooltip\" data-original-title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                    </label>\r\n                </div>\r\n                <a href=\"#\" data-toggle=\"tooltip\" data-original-title=\"Générer un nouveau mot de passe\" class=\"btn btn-primary fuse-ripple-ready\" (click)=\"generatePassword($event)\">Générer</a>\r\n            </div>\r\n\r\n            <button type=\"submit\" [disabled]=\"!userForm.form.valid\" class=\"submit-button btn btn-block btn-primary my-4 mx-auto\" aria-label=\"LOG IN\">\r\n                ENREGISTRER\r\n            </button>\r\n\r\n        </form>\r\n\r\n    </div>\r\n</div>";
+module.exports = "<nav id=\"toolbar\" class=\"fixed-top bg-white\">\r\n\r\n    <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n        <div class=\"col\">\r\n            <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                <button type=\"button\" class=\"toggle-aside-button btn btn-icon d-block d-lg-none\"\r\n                        data-fuse-bar-toggle=\"aside\">\r\n                    <i class=\"icon icon-menu\"></i>\r\n                </button>\r\n                <div class=\"toolbar-separator d-block d-lg-none\"></div>\r\n                <div class=\"shortcuts-wrapper row no-gutters align-items-center px-0 px-sm-2\">\r\n\r\n                    <div class=\"shortcuts row no-gutters align-items-center d-none d-md-flex\">\r\n\r\n                        <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\r\n                            <i class=\"icon icon-hangouts\"></i>\r\n                        </a>\r\n\r\n                        <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\r\n                            <i class=\"icon icon-account-box\"></i>\r\n                        </a>\r\n\r\n                        <a href=\"#\" class=\"shortcut-button btn btn-icon mx-1\">\r\n                            <i class=\"icon icon-email\"></i>\r\n                        </a>\r\n\r\n                    </div>\r\n\r\n                    <div class=\"add-shortcut-menu-button dropdown px-1 px-sm-3\">\r\n\r\n                        <div class=\"dropdown-toggle btn btn-icon\" role=\"button\"\r\n                             id=\"dropdownShortcutMenu\"\r\n                             data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                            <i class=\"icon icon-star text-amber-600\"></i>\r\n                        </div>\r\n\r\n                        <div class=\"dropdown-menu\" aria-labelledby=\"dropdownShortcutMenu\">\r\n\r\n                            <a class=\"dropdown-item\" href=\"#\">\r\n                                <div\r\n                                        class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\r\n                                    <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                                        <i class=\"icon icon-calendar-today\"></i>\r\n                                        <span class=\"px-3\">Calendar</span>\r\n                                    </div>\r\n                                    <i class=\"icon icon-pin s-5 ml-2\"></i>\r\n                                </div>\r\n                            </a>\r\n\r\n                            <a class=\"dropdown-item\" href=\"#\">\r\n                                <div\r\n                                        class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\r\n                                    <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                                        <i class=\"icon icon-folder\"></i>\r\n                                        <span class=\"px-3\">File Manager</span>\r\n                                    </div>\r\n                                    <i class=\"icon icon-pin s-5 ml-2\"></i>\r\n                                </div>\r\n                            </a>\r\n\r\n                            <a class=\"dropdown-item\" href=\"#\">\r\n                                <div class=\"row no-gutters align-items-center justify-content-between flex-nowrap\">\r\n                                    <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                                        <i class=\"icon icon-checkbox-marked\"></i>\r\n                                        <span class=\"px-3\">To-Do</span>\r\n                                    </div>\r\n                                    <i class=\"icon icon-pin s-5 ml-2\"></i>\r\n                                </div>\r\n                            </a>\r\n\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"toolbar-separator\"></div>\r\n\r\n            </div>\r\n        </div>\r\n        <div class=\"col-auto\">\r\n            <div class=\"row no-gutters align-items-center justify-content-end\">\r\n                <div class=\"user-menu-button dropdown\">\r\n\r\n                    <div class=\"dropdown-toggle ripple row align-items-center no-gutters px-2 px-sm-4\"\r\n                         role=\"button\" id=\"dropdownUserMenu\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                        <div class=\"avatar-wrapper\">\r\n                            <img class=\"avatar\" [src]=\"upload_folder+loggedUser.photo\"/>\r\n                            <i class=\"status text-green icon-checkbox-marked-circle s-4\"></i>\r\n                        </div>\r\n                        <span class=\"username mx-3 d-none d-md-block\">{{loggedUser.name}}</span>\r\n                    </div>\r\n\r\n                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownUserMenu\">\r\n\r\n                        <a class=\"dropdown-item\" [routerLink]=\"['/profil']\">\r\n                            <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                                <i class=\"icon-account\"></i>\r\n                                <span class=\"px-3\">Mon Profil</span>\r\n                            </div>\r\n                        </a>\r\n\r\n                        <div class=\"dropdown-divider\"></div>\r\n\r\n                        <a class=\"dropdown-item\" (click)=\"logout($event)\">\r\n                            <div class=\"row no-gutters align-items-center flex-nowrap\">\r\n                                <i class=\"icon-logout\"></i>\r\n                                <span class=\"px-3\">Se deconnecter</span>\r\n                            </div>\r\n                        </a>\r\n\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n</nav>";
 
 /***/ }),
-/* 344 */
+/* 353 */
 /***/ (function(module, exports) {
 
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"login-v2\" class=\"row no-gutters\">\r\n    <div class=\"intro col-12 col-md\">\r\n        <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n            <div class=\"logo bg-primary mb-8\">\r\n                <span>P</span>\r\n            </div>\r\n\r\n            <div class=\"title\">\r\n                PARC\r\n            </div>\r\n\r\n            <div class=\"description pt-2\">\r\n                Connexion utilisateur\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-32 px-12\">\r\n\r\n            <div class=\"title h5\">Connexion à votre compte</div>\r\n\r\n            <div class=\"description mt-2\">Connexion pour bénéficier de nos services</div>\r\n\r\n            <form name=\"loginForm\" class=\"mt-8\" #loginForm=\"ngForm\" (submit)=\"login($event)\">\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!email.valid || (!email.pristine && loginForm.submitted)\">\r\n                    <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" />\r\n                    <label for=\"email\">Email</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !loginForm.submitted)\">Adresse email invalide </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && loginForm.submitted)\">\r\n                    <input type=\"password\" class=\"form-control\" [class.md-has-value]=\"currentUser.password.length\"  required name=\"password\" id=\"password\" [(ngModel)]=\"currentUser.password\" #password=\"ngModel\" />\r\n                    <label for=\"password\">Mot de passe</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !loginForm.submitted)\">Mot de passe incorrect</div>\r\n                </div>\r\n\r\n                <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                    <div class=\"form-check remember-me mb-4\">\r\n                        <label class=\"form-check-label\">\r\n                            <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Maintenir la connexion\" name=\"remember_me\" id=\"remember_me\" [(ngModel)]=\"currentUser.remember_me\" >\r\n                            <span class=\"checkbox-icon\"></span>\r\n                            <span class=\"form-check-description\">Maintenir la connexion</span>\r\n                        </label>\r\n                    </div>\r\n                </div>\r\n\r\n                <button type=\"submit\" class=\"submit-button btn btn-block btn-primary my-4 mx-auto\" aria-label=\"SE CONNECTER\">\r\n                    SE CONNECTER\r\n                </button>\r\n            </form>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<aside id=\"aside\" class=\"aside aside-left\" data-fuse-bar=\"aside\" data-fuse-bar-media-step=\"md\" data-fuse-bar-position=\"left\">\r\n    <div class=\"aside-content-wrapper\">\r\n        <div class=\"aside-content\">\r\n            <div class=\"aside-toolbar\">\r\n                <!--<div class=\"logo\">\r\n                    <span class=\"logo-icon\">{{ loggedUserIcon | uppercase}}</span><span class=\"logo-text\">{{loggedUser.name}}</span>\r\n                </div>-->\r\n                <div class=\"logo\">\r\n                    <span class=\"logo-icon\">{{app_icon}}</span><span class=\"logo-text\">{{app_name}}</span>\r\n                </div>\r\n                <button id=\"toggle-fold-aside-button\" type=\"button\" class=\"btn btn-icon d-none d-lg-block\" data-fuse-aside-toggle-fold=\"\">\r\n                    <i class=\"icon icon-backburger\" style=\"color:#fff\"></i>\r\n                </button>\r\n            </div>\r\n            <ul class=\"nav flex-column custom-scrollbar\" id=\"sidenav\" data-children=\".nav-item\">\r\n                <li class=\"subheader\">\r\n                    <span>APPS</span>\r\n                </li>\r\n\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-dashboards\">\r\n                    <a class=\"nav-link ripple with-arrow \" data-toggle=\"collapse\" data-target=\"#collapse-dashboards\" href=\"#\" aria-expanded=\"true\" aria-controls=\"collapse-dashboards\">\r\n                        <i class=\"icon s-4 icon-tile-four\"></i>\r\n                        <span>Tableau de bord</span>\r\n                    </a>\r\n                    <ul id=\"collapse-dashboards\" class=\"collapse show\" role=\"tabpanel\" aria-labelledby=\"heading-dashboards\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" [routerLink]=\"['/']\">\r\n                                <span>Project Dashboard</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-ecommerce\">\r\n                    <a class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-ecommerce\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-ecommerce\">\r\n                        <i class=\"icon s-4 icon-cart\"></i>\r\n                        <span>Ecommerce</span>\r\n                    </a>\r\n                    <ul id=\"collapse-ecommerce\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-ecommerce\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple \">\r\n                                <span>Orders</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link ripple \">\r\n                        <i class=\"icon s-4 icon-email\"></i>\r\n                        <span>Mail</span>\r\n                    </a>\r\n                </li>\r\n                <li class=\"subheader\">\r\n                    <span>PAGES</span>\r\n                </li>\r\n                <li class=\"nav-item\" id=\"heading-brands\" role=\"tab\"  *ngIf=\"authGuard.canActivate()\">\r\n                    <a id=\"a_collapse_brands\" class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-brands\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-brands\">\r\n                        <i class=\"icon s-4 icon-car\"></i>\r\n                        <span>Marques et models</span>\r\n                    </a>\r\n                    <ul id=\"collapse-brands\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-brands\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/marques/liste']\">\r\n                                <i class=\"icon s-4 icon-car\"></i>\r\n                                <span>Liste marques</span>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/marques/enregistrer/0']\">\r\n                                <i class=\"icon s-4 icon-pencil-circle\"></i>\r\n                                <span>Ajouter une marque</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-users\" *ngIf=\"adminGuard.canActivate()\">\r\n                    <a id=\"a_collapse_users\" class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-users\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-users\">\r\n                        <i class=\"icon s-4 icon-account-box\"></i>\r\n                        <span>Utilisateurs</span>\r\n                    </a>\r\n                    <ul id=\"collapse-users\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-users\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/liste']\">\r\n                                <i class=\"icon s-4 icon-account\"></i>\r\n                                <span>Liste utilisateurs</span>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/ajouter']\">\r\n                                <i class=\"icon s-4 icon-pencil-circle\"></i>\r\n                                <span>Ajouter un utilisateur</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n            <!--<div class=\"btn-group dropup\">\r\n                <button style=\"background-color:#0747a6;margin-top: 20px;\" type=\"button\" class=\"btn btn-secondary dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                   <div class=\"avatar-wrapper\">\r\n                        <img class=\"avatar\" [src]=\"upload_folder+loggedUser.photo\"/>\r\n                    </div>\r\n                </button>\r\n                <div class=\"dropdown-menu\">\r\n                    <p style=\"padding:0 10px\">{{loggedUser.name | uppercase}}</p>\r\n                    <a class=\"dropdown-item\" href=\"#\">Mon profil</a>\r\n                    <div class=\"dropdown-divider\"></div>\r\n                    <a class=\"dropdown-item\" href=\"#\" (click)=\"logout($event)\">Se deconnecter</a>\r\n                </div>\r\n            </div>-->\r\n        </div>\r\n    </div>\r\n</aside>";
 
 /***/ }),
-/* 345 */
+/* 354 */
+/***/ (function(module, exports) {
+
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n    <div class=\"intro col-12 col-md\">\r\n        <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n            <div class=\"logo bg-primary mb-8\">\r\n                <span>{{app_icon}}</span>\r\n            </div>\r\n\r\n            <div class=\"title\">\r\n                {{app_name}}\r\n            </div>\r\n\r\n            <div class=\"description pt-2\">\r\n                Modifier l'utilisateur {{currentUser.name}}\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Modifier l'utilisateur</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n                <div class=\"logo\">\r\n                    <img [src]=\"upload_folder+currentUser.photo\" alt=\"currentUser.name\" style=\"cursor: pointer;width: 128px;height: 128px;border-radius:70px\" data-toggle=\"tooltip\" data-original-title=\"Modifier photo\" (click)=\"browse()\">\r\n                    <input type=\"file\" id=\"fileElement\" name=\"image\" (change)=\"loadImage($event)\" style=\"display: none\"/>\r\n                    <img [src]=\"loading\" alt=\"loading\" [hidden]=\"!uploading\" />\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"/>\r\n                    <label for=\"name\">Nom</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom\r\n                        invalide\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                    <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"/>\r\n                    <label for=\"email\">Email</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">\r\n                        Adresse email invalide\r\n                    </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!phone.valid || (!phone.pristine && userForm.submitted)\">\r\n                    <input type=\"tel\" class=\"form-control\" [class.md-has-value]=\"currentUser.phone.length\"  name=\"phone\" id=\"phone\" #phone=\"ngModel\" [(ngModel)]=\"currentUser.phone\"/>\r\n                    <label for=\"email\">Téléphone</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"phone.valid || (phone.pristine && !userForm.submitted)\">\r\n                        Téléphone invalide\r\n                    </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\" [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                    <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                        <option value=\"\"></option>\r\n                        <option *ngFor=\"let role of userRoles\" [ngValue]=\"role\">{{role}}</option>\r\n                    </select>\r\n                    <label for=\"roles\">Rôle utilisateur</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un\r\n                        utilisateur doit avoir un rôle\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                    <label for=\"plainPassword\">Mot de passe</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n                </div>\r\n\r\n                <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                    <div class=\"form-check remember-me mb-4\">\r\n                        <label class=\"form-check-label\">\r\n                            <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                            <span class=\"checkbox-icon\"></span>\r\n                            <span title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                        </label>\r\n                    </div>\r\n                    <a href=\"#\" title=\"Nouveau mot de passe\" class=\"btn btn-sm btn-primary\" (click)=\"generatePassword($event)\">Générer</a>\r\n                </div>\r\n\r\n                <button [disabled]=\"!userForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Enregistrer\">\r\n                    ENREGISTRER\r\n                </button>\r\n                <a [routerLink]=\"['/utilisateurs/liste']\" title=\"Annuller et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 355 */
+/***/ (function(module, exports) {
+
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"login-v2\" class=\"row no-gutters\">\r\n    <div class=\"intro col-12 col-md\">\r\n        <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n            <div class=\"logo bg-primary mb-8\">\r\n                <span>{{app_icon}}</span>\r\n            </div>\r\n            <div class=\"title\">\r\n                {{app_name | uppercase}}\r\n            </div>\r\n            <div class=\"description pt-2\">\r\n                Connexion utilisateur\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-32 px-12\">\r\n            <div class=\"title h5\">Connexion à votre compte</div>\r\n            <div class=\"description mt-2\">Connexion pour bénéficier de nos services</div>\r\n            <form name=\"loginForm\" class=\"mt-8\" #loginForm=\"ngForm\" (submit)=\"login($event)\">\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!email.valid || (!email.pristine && loginForm.submitted)\">\r\n                    <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" />\r\n                    <label for=\"email\">Email</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !loginForm.submitted)\">Adresse email invalide </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && loginForm.submitted)\">\r\n                    <input type=\"password\" class=\"form-control\" [class.md-has-value]=\"currentUser.password.length\"  required name=\"password\" id=\"password\" [(ngModel)]=\"currentUser.password\" #password=\"ngModel\" />\r\n                    <label for=\"password\">Mot de passe</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !loginForm.submitted)\">Mot de passe incorrect</div>\r\n                </div>\r\n                <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                    <div class=\"form-check remember-me mb-4\">\r\n                        <label class=\"form-check-label\">\r\n                            <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Maintenir la connexion\" name=\"remember_me\" id=\"remember_me\" [(ngModel)]=\"currentUser.remember_me\" >\r\n                            <span class=\"checkbox-icon\"></span>\r\n                            <span class=\"form-check-description\">Maintenir la connexion</span>\r\n                        </label>\r\n                    </div>\r\n                </div>\r\n                <button type=\"submit\" class=\"submit-button btn btn-block btn-primary my-4 mx-auto\" aria-label=\"SE CONNECTER\">\r\n                    SE CONNECTER\r\n                </button>\r\n            </form>\r\n        </div>\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 356 */
 /***/ (function(module, exports) {
 
 module.exports = "<div id=\"profile\" class=\"page-layout simple tabbed\">\r\n\r\n    <!-- HEADER -->\r\n    <div class=\"page-header light-fg d-flex flex-column justify-content-center justify-content-lg-end p-6\">\r\n\r\n        <div class=\"flex-column row flex-lg-row align-items-center align-items-lg-end no-gutters justify-content-between\">\r\n\r\n            <div class=\"user-info flex-column row flex-lg-row no-gutters align-items-center\">\r\n\r\n                <img class=\"profile-image avatar huge mr-6\" >\r\n\r\n                <div class=\"name h2 my-6\">Katherine Wilson</div>\r\n\r\n            </div>\r\n\r\n            <div class=\"actions row align-items-center no-gutters\">\r\n\r\n                <button type=\"button\" class=\"btn btn-primary\" aria-label=\"Follow\">Follow</button>\r\n\r\n                <button type=\"button\" class=\"btn btn-secondary ml-2\" aria-label=\"Send Message\">Send\r\n                    Message\r\n                </button>\r\n\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <!-- / HEADER -->\r\n\r\n    <!-- CONTENT -->\r\n    <div class=\"page-content\">\r\n\r\n        <ul class=\"nav nav-tabs\" id=\"myTab\" role=\"tablist\">\r\n\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link btn active\" id=\"timeline-tab\" data-toggle=\"tab\" href=\"#timeline-tab-pane\" role=\"tab\" aria-controls=\"timeline-tab-pane\" aria-expanded=\"true\">Timeline</a>\r\n            </li>\r\n\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link btn\" id=\"about-tab\" data-toggle=\"tab\" href=\"#about-tab-pane\" role=\"tab\" aria-controls=\"about-tab-pane\">About</a>\r\n            </li>\r\n\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link btn\" id=\"photos-videos-tab\" data-toggle=\"tab\" href=\"#photos-videos-tab-pane\" role=\"tab\" aria-controls=\"photos-tab-pane\">Photos &amp; Videos</a>\r\n            </li>\r\n\r\n        </ul>\r\n\r\n        <div class=\"tab-content\">\r\n\r\n            <div role=\"tabpanel\" class=\"tab-pane fade show active\" id=\"timeline-tab-pane\" aria-labelledby=\"timeline-tab\">\r\n\r\n                <div class=\"row\">\r\n\r\n                    <div class=\"timeline col-12 col-sm-7 col-xl-9\">\r\n\r\n                        <div class=\"profile-box add-post card\">\r\n\r\n                            <div class=\"form\">\r\n\r\n                                <textarea class=\"w-100 p-4\" placeholder=\"Write something..\"></textarea>\r\n\r\n                                <footer class=\"row no-gutters align-items-center justify-content-between bg-faded p-2\">\r\n\r\n                                    <div class=\"row no-gutters\">\r\n\r\n                                        <button type=\"button\" class=\"btn btn-icon\" aria-label=\"insert photo\">\r\n                                            <i class=\"icon icon-file-image-box\"></i>\r\n                                        </button>\r\n\r\n                                        <button type=\"button\" class=\"btn btn-icon\" aria-label=\"add person\">\r\n                                            <i class=\"icon icon-person-plus\"></i>\r\n                                        </button>\r\n\r\n                                        <button type=\"button\" class=\"btn btn-icon\" aria-label=\"add person\">\r\n                                            <i class=\"icon icon-map-marker\"></i>\r\n                                        </button>\r\n\r\n                                    </div>\r\n\r\n                                    <button type=\"post-button button\" class=\"btn btn-primary\" aria-label=\"post\">\r\n                                        POST\r\n                                    </button>\r\n\r\n                                </footer>\r\n                            </div>\r\n                        </div>\r\n\r\n                        <div class=\"divider my-8\"></div>\r\n\r\n                        <div class=\"timeline-item card mb-6\">\r\n\r\n                            <header class=\"row no-gutters align-items-center justify-content-between p-4\">\r\n\r\n                                <div class=\"user col\">\r\n\r\n                                    <div class=\"row no-gutters align-items-center justify-content-start\">\r\n\r\n                                        <img class=\"avatar col-auto mr-2\">\r\n\r\n                                        <div class=\"col\">\r\n\r\n                                            <div class=\"title font-weight-bold\">\r\n\r\n                                                <span class=\"username\">Garry Newman</span>\r\n\r\n                                                <span>posted on your timeline</span>\r\n\r\n                                            </div>\r\n\r\n                                            <div class=\"time text-muted\">32 minutes ago</div>\r\n\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <button type=\"button\" class=\"col-auto btn btn-icon\" aria-label=\"more\">\r\n                                    <i class=\"icon icon-dots-vertical\"></i>\r\n                                </button>\r\n\r\n                            </header>\r\n\r\n                            <div class=\"content\">\r\n\r\n                                <div class=\"message py-2 px-4\">\r\n                                    Remember the place we were talking about the other night? Found\r\n                                    it!\r\n                                </div>\r\n\r\n                                <div class=\"post-media py-2 px-4\">\r\n\r\n                                    <img class=\"media-img\">\r\n\r\n                                </div>\r\n\r\n                                <div class=\"row no-gutters align-items-center py-2 px-4\">\r\n\r\n                                    <button type=\"button\" class=\"like-button btn btn-link\">\r\n                                        <i class=\"icon-heart-outline s-4\"></i>\r\n                                        <span>Like (5)</span>\r\n                                    </button>\r\n\r\n                                    <button type=\"button\" class=\"share-button btn btn-link\">\r\n                                        <i class=\"icon-share s-4\"></i>\r\n                                        <span>Share (21)</span>\r\n                                    </button>\r\n\r\n                                </div>\r\n                            </div>\r\n\r\n                            <footer class=\"bg-faded p-4\">\r\n\r\n                                <div class=\"comment-count mb-4\">\r\n                                    1 comments\r\n                                </div>\r\n\r\n                                <div class=\"comment row no-gutters mb-6\">\r\n\r\n                                    <img  class=\"col-auto avatar mr-2\">\r\n\r\n                                    <div class=\"col\">\r\n\r\n                                        <div class=\"row no-gutters align-items-center\">\r\n\r\n                                            <span class=\"username font-weight-bold mr-1\">Alice Freeman</span>\r\n\r\n                                            <span class=\"time text-muted\">June 10, 2015</span>\r\n\r\n                                        </div>\r\n\r\n                                        <div class=\"message\">\r\n                                            That’s a wonderful place. Lorem ipsum dolor sit amet,\r\n                                            consectetur adipiscing elit. Fusce et eleifend ligula.\r\n                                            Fusce posuere in sapien ac facilisis. Etiam sit amet\r\n                                            justo non felis ornare feugiat.\r\n                                        </div>\r\n\r\n                                        <div class=\"actions row no-gutters align-items-center justify-content-start\">\r\n\r\n                                            <a href=\"#\" class=\"reply-button\">Reply</a>\r\n\r\n                                            <button type=\"button\" class=\"btn btn-icon\">\r\n                                                <i class=\"icon icon-flag s-4\"></i>\r\n                                            </button>\r\n\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <div class=\"reply row no-gutters\">\r\n\r\n                                    <img  class=\"col-auto avatar mr-2\">\r\n\r\n                                    <form class=\"col\">\r\n\r\n                                        <textarea class=\"p-2 mb-2 w-100\" placeholder=\"Add a comment...\"></textarea>\r\n\r\n                                        <button type=\"button\" class=\"post-comment-button btn btn-sm btn-primary\" aria-label=\"Post Comment\">Post\r\n                                            Comment\r\n                                        </button>\r\n\r\n                                    </form>\r\n\r\n                                </div>\r\n                            </footer>\r\n                        </div>\r\n\r\n                        <div class=\"timeline-item card mb-6\">\r\n\r\n                            <header class=\"row no-gutters align-items-center justify-content-between p-4\">\r\n\r\n                                <div class=\"user col\">\r\n\r\n                                    <div class=\"row no-gutters align-items-center justify-content-start\">\r\n\r\n                                        <img class=\"avatar col-auto mr-2\" >\r\n\r\n                                        <div class=\"col\">\r\n\r\n                                            <div class=\"title font-weight-bold\">\r\n\r\n                                                <span class=\"username\">Andrew Green</span>\r\n\r\n                                                <span>shared an article with you</span>\r\n\r\n                                            </div>\r\n\r\n                                            <div class=\"time text-muted\">June 12, 2015</div>\r\n\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <button type=\"button\" class=\"col-auto btn btn-icon\" aria-label=\"more\">\r\n                                    <i class=\"icon icon-dots-vertical\"></i>\r\n                                </button>\r\n\r\n                            </header>\r\n\r\n                            <div class=\"content\">\r\n\r\n                                <div class=\"message py-2 px-4\">\r\n                                    Hey, man! Check this, it’s pretty awesome!\r\n                                </div>\r\n\r\n                                <div class=\"article py-2 px-4\">\r\n\r\n                                    <div class=\"post-media\">\r\n                                        <img class=\"media-img\" >\r\n                                    </div>\r\n\r\n                                    <div class=\"title px-4 pt-4\">The Fallout 4 Pip-Boy Edition Is\r\n                                        Back In Stock Now\r\n                                    </div>\r\n\r\n                                    <div class=\"subtitle px-4 pt-1\">Kotaku</div>\r\n\r\n                                    <div class=\"excerpt p-4\">The Fallout 4 Pip-Boy edition is back\r\n                                        in stock at Gamestop, for all 3 platforms. Additionally,\r\n                                        Walmart also has it in stock for the PS4 and Xbox One as of\r\n                                        this writing, as does Best Buy.\r\n                                    </div>\r\n\r\n                                </div>\r\n\r\n                                <div class=\"row no-gutters align-items-center py-2 px-4\">\r\n\r\n                                    <button type=\"button\" class=\"like-button btn btn-link\">\r\n                                        <i class=\"icon-heart-outline s-4\"></i>\r\n                                        <span>Like (98)</span>\r\n                                    </button>\r\n\r\n                                    <button type=\"button\" class=\"share-button btn btn-link\">\r\n                                        <i class=\"icon-share s-4\"></i>\r\n                                        <span>Share (6)</span>\r\n                                    </button>\r\n\r\n                                </div>\r\n                            </div>\r\n\r\n                            <footer class=\"bg-faded p-4\">\r\n\r\n                                <div class=\"comment-count mb-4\">\r\n                                    1 comments\r\n                                </div>\r\n\r\n                                <div class=\"comment row no-gutters mb-6\">\r\n\r\n                                    <img class=\"col-auto avatar mr-2\">\r\n\r\n                                    <div class=\"col\">\r\n\r\n                                        <div class=\"row no-gutters align-items-center\">\r\n\r\n                                            <span class=\"username font-weight-bold mr-1\">Alice Freeman</span>\r\n\r\n                                            <span class=\"time text-muted\">June 10, 2015</span>\r\n\r\n                                        </div>\r\n\r\n                                        <div class=\"message\">\r\n                                            That’s a wonderful place. Lorem ipsum dolor sit amet,\r\n                                            consectetur adipiscing elit. Fusce et eleifend ligula.\r\n                                            Fusce posuere in sapien ac facilisis. Etiam sit amet\r\n                                            justo non felis ornare feugiat.\r\n                                        </div>\r\n\r\n                                        <div class=\"actions row no-gutters align-items-center justify-content-start\">\r\n\r\n                                            <a href=\"#\" class=\"reply-button\">Reply</a>\r\n\r\n                                            <button type=\"button\" class=\"btn btn-icon\">\r\n                                                <i class=\"icon icon-flag s-4\"></i>\r\n                                            </button>\r\n\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <div class=\"reply row no-gutters\">\r\n\r\n                                    <img  class=\"col-auto avatar mr-2\">\r\n\r\n                                    <form class=\"col\">\r\n\r\n                                        <textarea class=\"p-2 mb-2 w-100\" placeholder=\"Add a comment...\"></textarea>\r\n\r\n                                        <button type=\"button\" class=\"post-comment-button btn btn-sm btn-primary\" aria-label=\"Post Comment\">Post\r\n                                            Comment\r\n                                        </button>\r\n\r\n                                    </form>\r\n\r\n                                </div>\r\n                            </footer>\r\n                        </div>\r\n\r\n                    \r\n\r\n                    </div>\r\n\r\n                    <div class=\"timeline-sidebar col-12 col-sm-5 col-xl-3\">\r\n\r\n                        <div class=\"profile-box latest-activity card\">\r\n\r\n                            <header class=\"row no-gutters align-items-center justify-content-between bg-primary text-auto p-4\">\r\n\r\n                                <div class=\"title h6\">Latest Activity</div>\r\n\r\n                                <div class=\"more text-muted\">See All</div>\r\n\r\n                            </header>\r\n\r\n                            <div class=\"content activities p-4\">\r\n\r\n                                <div class=\"activity row no-gutters py-4\">\r\n\r\n                                    <img  class=\"col-auto avatar mr-4\" alt=\"Alice Freeman\">\r\n\r\n                                    <div class=\"col\">\r\n\r\n                                        <div>\r\n\r\n                                            <span class=\"username md-accent-color\">Alice Freeman</span>\r\n\r\n                                            <span class=\"message\"> started following you.</span>\r\n\r\n                                        </div>\r\n\r\n                                        <span class=\"time text-muted\">13 mins. ago</span>\r\n\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <div class=\"activity row no-gutters py-4\">\r\n\r\n                                    <img  class=\"col-auto avatar mr-4\" alt=\"Andrew Green\">\r\n\r\n                                    <div class=\"col\">\r\n\r\n                                        <div>\r\n\r\n                                            <span class=\"username md-accent-color\">Andrew Green</span>\r\n\r\n                                            <span class=\"message\"> sent you a message.</span>\r\n\r\n                                        </div>\r\n\r\n                                        <span class=\"time text-muted\">June 10,2015</span>\r\n\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <div class=\"activity row no-gutters py-4\">\r\n\r\n                                    <img  class=\"col-auto avatar mr-4\" alt=\"Garry Newman\">\r\n\r\n                                    <div class=\"col\">\r\n\r\n                                        <div>\r\n\r\n                                            <span class=\"username md-accent-color\">Garry Newman</span>\r\n\r\n                                            <span class=\"message\"> shared a public post with your group.</span>\r\n\r\n                                        </div>\r\n\r\n                                        <span class=\"time text-muted\">June 9,2015</span>\r\n\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <div class=\"activity row no-gutters py-4\">\r\n\r\n                                    <img  class=\"col-auto avatar mr-4\" alt=\"Carl Henderson\">\r\n\r\n                                    <div class=\"col\">\r\n\r\n                                        <div>\r\n\r\n                                            <span class=\"username md-accent-color\">Carl Henderson</span>\r\n\r\n                                            <span class=\"message\"> wants to play Fallout Shelter with you.</span>\r\n\r\n                                        </div>\r\n\r\n                                        <span class=\"time text-muted\">June 8,2015</span>\r\n\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <div class=\"activity row no-gutters py-4\">\r\n\r\n                                    <img  class=\"col-auto avatar mr-4\" alt=\"Jane Dean\">\r\n\r\n                                    <div class=\"col\">\r\n\r\n                                        <div>\r\n\r\n                                            <span class=\"username md-accent-color\">Jane Dean</span>\r\n\r\n                                            <span class=\"message\"> started following you.</span>\r\n\r\n                                        </div>\r\n\r\n                                        <span class=\"time text-muted\">June 7,2015</span>\r\n\r\n                                    </div>\r\n                                </div>\r\n\r\n                               \r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"tab-pane fade\" id=\"about-tab-pane\" role=\"tabpanel\" aria-labelledby=\"about-tab\">\r\n\r\n                <div class=\"row\">\r\n\r\n                    <div class=\"about col-12 col-md-7 col-xl-9\">\r\n\r\n                        <div class=\"profile-box info-box general card mb-4\">\r\n\r\n                            <header class=\"h6 bg-primary text-auto p-4\">\r\n                                <div class=\"title\">General Information</div>\r\n                            </header>\r\n\r\n                            <div class=\"content p-4\">\r\n\r\n                                <div class=\"info-line mb-6\">\r\n                                    <div class=\"title font-weight-bold mb-1\">Gender</div>\r\n                                    <div class=\"info\">Female</div>\r\n                                </div>\r\n\r\n                                <div class=\"info-line mb-6\">\r\n                                    <div class=\"title font-weight-bold mb-1\">Birthday</div>\r\n                                    <div class=\"info\">12.01.1987</div>\r\n                                </div>\r\n\r\n                                <div class=\"info-line mb-6\">\r\n                                    <div class=\"title font-weight-bold mb-1\">Locations</div>\r\n\r\n                                    <div class=\"info location\">\r\n                                        <span>Istanbul, Turkey</span>\r\n                                        <i class=\"icon-map-marker s-4\"></i>\r\n                                    </div>\r\n\r\n                                    <div class=\"info location\">\r\n                                        <span>New York, USA</span>\r\n                                        <i class=\"icon-map-marker s-4\"></i>\r\n                                    </div>\r\n\r\n                                </div>\r\n\r\n                                <div class=\"info-line\">\r\n                                    <div class=\"title font-weight-bold mb-1\">About Me</div>\r\n                                    <div class=\"info\">Lorem ipsum dolor sit amet, consectetur\r\n                                        adipiscing elit. Duis eget pharetra felis, sed ullamcorper\r\n                                        dui. Sed et elementum neque. Vestibulum pellente viverra\r\n                                        ultrices. Etiam justo augue, vehicula ac gravida a, interdum\r\n                                        sit amet nisl. Integer vitae nisi id nibh dictum mollis in\r\n                                        vitae tortor.\r\n                                    </div>\r\n                                </div>\r\n\r\n                            </div>\r\n                        </div>\r\n\r\n                        <div class=\"profile-box info-box work card mb-4\">\r\n\r\n                            <header class=\"h6 bg-primary text-auto p-4\">\r\n                                <div class=\"title\">Work</div>\r\n                            </header>\r\n\r\n                            <div class=\"content p-4\">\r\n\r\n                                <div class=\"info-line mb-6\">\r\n                                    <div class=\"title font-weight-bold mb-1\">Occupation</div>\r\n                                    <div class=\"info\">Developer</div>\r\n                                </div>\r\n\r\n                                <div class=\"info-line mb-6\">\r\n                                    <div class=\"title font-weight-bold mb-1\">Skills</div>\r\n                                    <div class=\"info\">C#, PHP, Javascript, Angular, JS, HTML, CSS\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <div class=\"info-line mb-6\">\r\n                                    <div class=\"title font-weight-bold mb-1\">Jobs</div>\r\n                                    <table class=\"info jobs\">\r\n\r\n                                        <tbody><tr class=\"job\">\r\n                                            <td class=\"company font-weight-bold pr-4\">\r\n                                                Self-Employed\r\n                                            </td>\r\n                                            <td class=\"date\">2010 - Now</td>\r\n                                        </tr>\r\n\r\n                                        <tr class=\"job\">\r\n                                            <td class=\"company font-weight-bold pr-4\">Google</td>\r\n                                            <td class=\"date\">2008 - 2010</td>\r\n                                        </tr>\r\n\r\n                                        </tbody></table>\r\n                                </div>\r\n\r\n                            </div>\r\n                        </div>\r\n\r\n                        <div class=\"profile-box info-box contact card mb-4\">\r\n\r\n                            <header class=\"h6 bg-primary text-auto p-4\">\r\n                                <div class=\"title\">Contact</div>\r\n                            </header>\r\n\r\n                            <div class=\"content p-4\">\r\n\r\n                                <div class=\"info-line mb-6\">\r\n                                    <div class=\"title font-weight-bold mb-1\">Address</div>\r\n                                    <div class=\"info\">Ut pharetra luctus est quis sodales. Duis nisi\r\n                                        tortor, bibendum eget tincidunt, aliquam ac elit. Mauris nec\r\n                                        euismod odio.\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <div class=\"info-line mb-6\">\r\n                                    <div class=\"title font-weight-bold mb-1\">Tel.</div>\r\n\r\n                                    <div class=\"info\">\r\n                                        <span>+6 555 6600</span>\r\n                                    </div>\r\n\r\n                                    <div class=\"info\">\r\n                                        <span>+9 555 5255</span>\r\n                                    </div>\r\n\r\n                                </div>\r\n\r\n                                <div class=\"info-line mb-6\">\r\n                                    <div class=\"title font-weight-bold mb-1\">Website</div>\r\n\r\n                                    <div class=\"info\">\r\n                                        <span>withinpixels.com</span>\r\n                                    </div>\r\n\r\n                                </div>\r\n\r\n                                <div class=\"info-line mb-6\">\r\n                                    <div class=\"title font-weight-bold mb-1\">Emails</div>\r\n\r\n                                    <div class=\"info\" ng-repeat=\"email in vm.about.contact.emails\">\r\n                                        <span>mail@withinpixels.com</span>\r\n                                    </div>\r\n\r\n                                    <div class=\"info\" ng-repeat=\"email in vm.about.contact.emails\">\r\n                                        <span>mail@creapond.com</span>\r\n                                    </div>\r\n\r\n                                </div>\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"about-sidebar col-12 col-md-5 col-xl-3\">\r\n\r\n                        <div class=\"profile-box friends card mb-4\">\r\n\r\n                            <header class=\"row no-gutters align-items-center justify-content-between bg-primary text-auto p-4\">\r\n                                <div class=\"title h6\">Friends</div>\r\n                                <div class=\"more text-muted\">\r\n                                    <span>See</span>\r\n                                    <span>454</span>\r\n                                    <span>More</span>\r\n                                </div>\r\n                            </header>\r\n\r\n                            <div class=\"content row no-gutters p-4\">\r\n\r\n                                <div class=\"friend col-3 p-1\">\r\n                                    <img class=\"w-100\">\r\n                                </div>\r\n\r\n                              \r\n                            </div>\r\n\r\n                        </div>\r\n\r\n                        <div class=\"profile-box groups card mb-4\">\r\n\r\n                            <header class=\"row no-gutters align-items-center justify-content-between bg-primary text-auto p-4\">\r\n                                <div class=\"title h6\">Joined Groups</div>\r\n                                <div class=\"more text-muted\">\r\n                                    <span>See</span>\r\n                                    <span>6</span>\r\n                                    <span>More</span>\r\n                                </div>\r\n                            </header>\r\n\r\n                            <div class=\"content p-4\">\r\n\r\n                                <div class=\"group row no-gutters align-items-center justify-content-between mb-4\">\r\n\r\n                                    <div class=\"col\">\r\n\r\n                                        <div class=\"row no-gutters align-items-center\">\r\n\r\n                                            <img class=\"logo col-auto mr-4\" alt=\"Android\">\r\n\r\n                                            <div class=\"col\">\r\n                                                <div class=\"name\">Android</div>\r\n                                                <div class=\"category\">Technology</div>\r\n                                                <div class=\"members mt-4\">1.856.546 people</div>\r\n                                            </div>\r\n\r\n                                        </div>\r\n                                    </div>\r\n\r\n                                    <div class=\"col-auto\">\r\n                                        <button type=\"button\" class=\"btn btn-icon\" aria-label=\"more\">\r\n                                            <i class=\"icon icon-dots-vertical\"></i>\r\n                                        </button>\r\n                                    </div>\r\n\r\n                                </div>\r\n\r\n                                <div class=\"group row no-gutters align-items-center justify-content-between mb-4\">\r\n\r\n                                    <div class=\"col\">\r\n\r\n                                        <div class=\"row no-gutters align-items-center\">\r\n\r\n                                            <img class=\"logo col-auto mr-4\"  alt=\"Google\">\r\n\r\n                                            <div class=\"col\">\r\n                                                <div class=\"name\">Google</div>\r\n                                                <div class=\"category\">Web</div>\r\n                                                <div class=\"members mt-4\">1.226.121 people</div>\r\n                                            </div>\r\n\r\n                                        </div>\r\n                                    </div>\r\n\r\n                                    <div class=\"col-auto\">\r\n                                        <button type=\"button\" class=\"btn btn-icon\" aria-label=\"more\">\r\n                                            <i class=\"icon icon-dots-vertical\"></i>\r\n                                        </button>\r\n                                    </div>\r\n\r\n                                </div>\r\n\r\n                                <div class=\"group row no-gutters align-items-center justify-content-between mb-4\">\r\n\r\n                                    <div class=\"col\">\r\n\r\n                                        <div class=\"row no-gutters align-items-center\">\r\n\r\n                                            <img class=\"logo col-auto mr-4\" alt=\"Fallout\">\r\n\r\n                                            <div class=\"col\">\r\n                                                <div class=\"name\">Fallout</div>\r\n                                                <div class=\"category\">Games</div>\r\n                                                <div class=\"members mt-4\">526.142 people</div>\r\n                                            </div>\r\n\r\n                                        </div>\r\n                                    </div>\r\n\r\n                                    <div class=\"col-auto\">\r\n                                        <button type=\"button\" class=\"btn btn-icon\" aria-label=\"more\">\r\n                                            <i class=\"icon icon-dots-vertical\"></i>\r\n                                        </button>\r\n                                    </div>\r\n\r\n                                </div>\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"tab-pane fade\" id=\"photos-videos-tab-pane\" role=\"tabpanel\" aria-labelledby=\"photos-videos-tab\">\r\n\r\n                <div class=\"photos-videos\">\r\n\r\n                    <div class=\"period mb-8\">\r\n\r\n                        <div class=\"period-title mb-6\">\r\n                            <span class=\"name h5\">June 2015</span>\r\n                            <span class=\"info text-muted ml-4\">5 Photos</span>\r\n                        </div>\r\n\r\n                        <div class=\"period-media row no-gutters\">\r\n\r\n                            <div class=\"media mr-4 mb-4\">\r\n\r\n                                <img class=\"preview w-100\"  title=\"Mountain Sunset\">\r\n\r\n                                <div class=\"title p-4\">Mountain Sunset</div>\r\n\r\n                            </div>\r\n\r\n                            <div class=\"media mr-4 mb-4\">\r\n\r\n                                <img class=\"preview w-100\"  title=\"Mountain Lake\">\r\n\r\n                                <div class=\"title p-4\">Mountain Lake</div>\r\n\r\n                            </div>\r\n\r\n                            \r\n\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"period mb-8\">\r\n\r\n                        <div class=\"period-title mb-6\">\r\n                            <span class=\"name h5\">May 2015</span>\r\n                            <span class=\"info text-muted ml-4\">7 Photos, 3 Videos</span>\r\n                        </div>\r\n\r\n                        <div class=\"period-media row no-gutters\">\r\n\r\n                            <div class=\"media mr-4 mb-4\">\r\n\r\n                                <img class=\"preview w-100\"  title=\"Mountain Sunset\">\r\n\r\n                                <div class=\"title p-4\">Mountain Sunset</div>\r\n\r\n                            </div>\r\n\r\n                           \r\n                    \r\n\r\n                        </div>\r\n                    </div>\r\n\r\n                   \r\n\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <!-- / CONTENT -->\r\n</div>";
 
 /***/ }),
-/* 346 */
+/* 357 */
 /***/ (function(module, exports) {
 
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n  <div class=\"intro col-12 col-md\">\r\n      <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n          <div class=\"logo bg-primary mb-8\">\r\n              <span>D</span>\r\n          </div>\r\n\r\n          <div class=\"title\">\r\n              PARC\r\n          </div>\r\n\r\n          <div class=\"description pt-2\">\r\n              Enregistrer un nouvel utilisateur dans l'application\r\n          </div>\r\n\r\n      </div>\r\n  </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-32 px-12\">\r\n            <div class=\"title h5\">Enregistrer un utilisateur</div>\r\n\r\n            <div class=\"description mt-2\">\r\n                Ajouter un nouvel utilisateur\r\n            </div>\r\n\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"  />\r\n                    <label for=\"name\">Nom</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom invalide</div>\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                    <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" />\r\n                    <label for=\"email\">Email</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">Adresse email invalide </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                    <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                        <option value=\"\"></option>\r\n                        <option  *ngFor=\"let role of userRoles\">{{role}}</option>\r\n                    </select>\r\n                    <label for=\"roles\">Rôle utilisateur</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un utilisateur doit avoir un rôle </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" required name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                    <label for=\"plainPassword\">Mot de passe</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n                </div>\r\n                <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                    <div class=\"form-check remember-me mb-4\">\r\n                        <label class=\"form-check-label\">\r\n                            <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                            <span class=\"checkbox-icon\"></span>\r\n                            <span data-toggle=\"tooltip\" data-original-title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                        </label>\r\n                    </div>\r\n                    <a href=\"#\" data-toggle=\"tooltip\" data-original-title=\"Générer un nouveau mot de passe\" class=\"btn btn-primary fuse-ripple-ready\" (click)=\"generatePassword($event)\">Générer</a>\r\n                </div>\r\n\r\n                <button type=\"submit\" [disabled]=\"!userForm.form.valid\" class=\"submit-button btn btn-block btn-primary my-4 mx-auto\" aria-label=\"LOG IN\">\r\n                    CREER UN COMPTE\r\n                </button>\r\n\r\n            </form>\r\n\r\n            <!--<div class=\"login d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto\">\r\n                <span class=\"text mr-sm-2\">Already have an account?</span>\r\n                <a class=\"link text-primary\" href=\"#\">Connexion</a>\r\n            </div>-->\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n  <div class=\"intro col-12 col-md\">\r\n      <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n          <div class=\"logo bg-primary mb-8\">\r\n              <span>{{app_icon}}</span>\r\n          </div>\r\n\r\n          <div class=\"title\">\r\n              {{app_name}}\r\n          </div>\r\n\r\n          <div class=\"description pt-2\">\r\n              Enregistrer un nouvel utilisateur dans l'application\r\n          </div>\r\n\r\n      </div>\r\n  </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Ajouter un utilisateur</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #userForm=\"ngForm\">\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!name.valid || (!name.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentUser.name\" #name=\"ngModel\"  />\r\n                    <label for=\"name\">Nom</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !userForm.submitted)\">Nom invalide</div>\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!email.valid || (!email.pristine && userForm.submitted)\">\r\n                    <input type=\"email\" class=\"form-control\" [class.md-has-value]=\"currentUser.email.length\" required name=\"email\" id=\"email\" #email=\"ngModel\" [(ngModel)]=\"currentUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" />\r\n                    <label for=\"email\">Email</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"email.valid || (email.pristine && !userForm.submitted)\">Adresse email invalide </div>\r\n                </div>\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!roles.valid || (!roles.pristine && userForm.submitted)\">\r\n                    <select name=\"roles\" id=\"roles\" class=\"form-control\" [class.md-has-value]=\"currentUser.roles.length\" [(ngModel)]=\"currentUser.roles\" #roles=\"ngModel\" required>\r\n                        <option value=\"\"></option>\r\n                        <option  *ngFor=\"let role of userRoles\">{{role}}</option>\r\n                    </select>\r\n                    <label for=\"roles\">Rôle utilisateur</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"roles.valid || (roles.pristine && !userForm.submitted)\">Un utilisateur doit avoir un rôle </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!password.valid || (!password.pristine && userForm.submitted)\">\r\n                    <input type=\"text\" class=\"form-control\" [class.md-has-value]=\"currentUser.plainPassword.length\" minlength=\"8\" required name=\"plainPassword\" id=\"plainPassword\" [(ngModel)]=\"currentUser.plainPassword\" #password=\"ngModel\" />\r\n                    <label for=\"plainPassword\">Mot de passe</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"password.valid || (password.pristine && !userForm.submitted)\">Mot de passe incorrect (8 caractères min) </div>\r\n                </div>\r\n                <div class=\"remember-forgot-password row no-gutters align-items-center justify-content-between pt-4\">\r\n                    <div class=\"form-check remember-me mb-4\">\r\n                        <label class=\"form-check-label\">\r\n                            <input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Afficher\" [checked]=\"showPassword\" (change)=\"toggleShowPassword()\"/>\r\n                            <span class=\"checkbox-icon\"></span>\r\n                            <span title=\"Afficher le mot de passe\">\r\n                                Afficher\r\n                            </span>\r\n                        </label>\r\n                    </div>\r\n                    <a href=\"#\" title=\"Nouveau mot de passe\" class=\"btn btn-sm btn-primary\" (click)=\"generatePassword($event)\">Générer</a>\r\n                </div>\r\n                <button [disabled]=\"!userForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Créer un compte\">\r\n                    CREER UN COMPTE\r\n                </button>\r\n                <a [routerLink]=\"['/utilisateurs/liste']\" title=\"Annuler et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 347 */
+/* 358 */
 /***/ (function(module, exports) {
 
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div class=\"page-layout carded full-width\">\r\n    <div class=\"top-bg bg-primary\"></div>\r\n    <!-- CONTENT -->\r\n    <div class=\"page-content\">\r\n\r\n        <!-- HEADER -->\r\n        <div class=\"header bg-primary text-auto row no-gutters align-items-center justify-content-between\">\r\n\r\n            <!-- APP TITLE -->\r\n            <div class=\"col-12 col-sm\">\r\n\r\n                <div class=\"logo row no-gutters align-items-start\">\r\n                    <div class=\"logo-icon mr-3 mt-1\">\r\n                        <i class=\"icon-cube-outline s-6\"></i>\r\n                    </div>\r\n                    <div class=\"logo-text\">\r\n                        <div class=\"h4\">Liste utilisateurs</div>\r\n                        <div class=\"\">Total utilisateurs: {{userCount}}</div>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / APP TITLE -->\r\n\r\n            <!-- SEARCH -->\r\n            <div class=\"col search-wrapper px-2\">\r\n\r\n                <div class=\"input-group\">\r\n                    <span class=\"input-group-btn\">\r\n                        <button type=\"button\" class=\"btn btn-icon\">\r\n                            <i class=\"icon icon-magnify\"></i>\r\n                        </button>\r\n                    </span>\r\n                    <input [(ngModel)]=\"textFilter\" type=\"text\" (keyup)=\"filterUsers($event)\" class=\"form-control\" placeholder=\"rechercher\" aria-label=\"Search\">\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / SEARCH -->\r\n\r\n            <div class=\"col-auto\">\r\n                <a [routerLink]=\"['/utilisateurs/ajouter']\" class=\"btn btn-secondary\">Ajouter un nouveau</a>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- / HEADER -->\r\n\r\n        <div class=\"page-content-card\">\r\n\r\n            <table id=\"e-commerce-products-table\" class=\"table dataTable\">\r\n\r\n                <thead>\r\n\r\n                <tr>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ID</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">IMAGE</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">NOM</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">EMAIL</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ROLE</span>\r\n                        </div>\r\n                    </th>\r\n\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\"></span>\r\n                        </div>\r\n                    </th>\r\n\r\n                </tr>\r\n                </thead>\r\n\r\n                <tbody>\r\n\r\n                <tr *ngFor=\"let user of filtredUsers\">\r\n                    <td>{{user.id}}</td>\r\n                    <td>\r\n                        <img class=\"product-image\" [src]=\"upload_folder+user.photo\" [alt]=\"user.name\" style=\"width: 55px;height: 55px\">\r\n                    </td>\r\n                    <td>{{user.name}}</td>\r\n                    <td>{{user.email}}</td>\r\n                    <td>{{user.roles}}</td>\r\n                    <td>\r\n                        <a [routerLink]=\"['/utilisateurs/modifier/',user.id]\" class=\"btn btn-icon\" data-toggle=\"tooltip\" data-original-title=\"Modifier l'utilisateur\">\r\n                            <i class=\"icon icon-pencil s-4\"></i>\r\n                        </a>\r\n                        <a class=\"btn btn-icon btn-sm\" data-toggle=\"tooltip\" data-original-title=\"Supprimer l'utilisateur\" (click)=\"removeUser($event,user)\">\r\n                            <i class=\"icon icon-trash s-4\"></i>\r\n                        </a>\r\n                    </td>\r\n                </tr>\r\n\r\n\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n    <!-- / CONTENT -->\r\n</div>";
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div class=\"page-layout carded full-width\">\r\n    <div class=\"top-bg\"></div>\r\n    <!-- CONTENT -->\r\n    <div class=\"page-content\">\r\n\r\n        <!-- HEADER -->\r\n        <div class=\"header text-auto row no-gutters align-items-center justify-content-between\">\r\n\r\n            <!-- APP TITLE -->\r\n            <div class=\"col-12 col-sm\">\r\n\r\n                <div class=\"logo row no-gutters align-items-start\">\r\n                    <div class=\"logo-icon mr-3 mt-1\">\r\n                        <i class=\"icon-cube-outline s-6\"></i>\r\n                    </div>\r\n                    <div class=\"logo-text\">\r\n                        <div class=\"h4\">Liste utilisateurs</div>\r\n                        <div class=\"\">Total utilisateurs: {{userCount}}</div>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / APP TITLE -->\r\n\r\n            <!-- SEARCH -->\r\n            <div class=\"col search-wrapper px-2\">\r\n\r\n                <div class=\"input-group\">\r\n                    <span class=\"input-group-btn\">\r\n                        <button type=\"button\" class=\"btn btn-icon\">\r\n                            <i class=\"icon icon-magnify\"></i>\r\n                        </button>\r\n                    </span>\r\n                    <input [(ngModel)]=\"textFilter\" type=\"text\" (keyup)=\"filterUsers($event)\" class=\"form-control\" placeholder=\"rechercher\" aria-label=\"Search\">\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / SEARCH -->\r\n\r\n            <div class=\"col-auto\">\r\n                <a [routerLink]=\"['/utilisateurs/ajouter']\" class=\"btn btn-secondary\">Ajouter un nouveau</a>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- / HEADER -->\r\n        <div class=\"page-content-card\">\r\n\r\n            <table id=\"e-commerce-products-table\" class=\"table table-responsive\">\r\n                <thead>\r\n                <tr>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ID</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">IMAGE</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">NOM</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">EMAIL</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ROLE</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\"></span>\r\n                        </div>\r\n                    </th>\r\n                </tr>\r\n                </thead>\r\n                <tbody>\r\n                <tr *ngFor=\"let user of filtredUsers\">\r\n                    <td>{{user.id}}</td>\r\n                    <td>\r\n                        <img class=\"product-image\" [src]=\"upload_folder+user.photo\" [alt]=\"user.name\" style=\"border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;width: 55px;height: 55px\">\r\n                    </td>\r\n                    <td>{{user.name}}</td>\r\n                    <td>{{user.email}}</td>\r\n                    <td>{{user.roles}}</td>\r\n                    <td>\r\n                        <a [routerLink]=\"['/utilisateurs/modifier/',user.id]\" class=\"btn btn-icon\" title=\"Modifier l'utilisateur\">\r\n                            <i class=\"icon icon-pencil s-4\"></i>\r\n                        </a>\r\n                        <a class=\"btn btn-icon btn-sm\" title=\"Supprimer l'utilisateur\" (click)=\"removeUser($event,user)\">\r\n                            <i class=\"icon icon-trash s-4\"></i>\r\n                        </a>\r\n                    </td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n    <!-- / CONTENT -->\r\n</div>";
 
 /***/ }),
-/* 348 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77534,8 +77953,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subject_1 = __webpack_require__(41);
-var ObjectUnsubscribedError_1 = __webpack_require__(155);
+var Subject_1 = __webpack_require__(44);
+var ObjectUnsubscribedError_1 = __webpack_require__(157);
 /**
  * @class BehaviorSubject<T>
  */
@@ -77579,7 +77998,7 @@ exports.BehaviorSubject = BehaviorSubject;
 //# sourceMappingURL=BehaviorSubject.js.map
 
 /***/ }),
-/* 349 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77589,7 +78008,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(13);
+var Subscriber_1 = __webpack_require__(14);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -77621,7 +78040,7 @@ exports.InnerSubscriber = InnerSubscriber;
 //# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ }),
-/* 350 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77754,7 +78173,7 @@ exports.Notification = Notification;
 //# sourceMappingURL=Notification.js.map
 
 /***/ }),
-/* 351 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77764,7 +78183,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(69);
+var Subscription_1 = __webpack_require__(70);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -77800,7 +78219,7 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ }),
-/* 352 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77811,8 +78230,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(7);
-var ScalarObservable_1 = __webpack_require__(151);
-var EmptyObservable_1 = __webpack_require__(96);
+var ScalarObservable_1 = __webpack_require__(153);
+var EmptyObservable_1 = __webpack_require__(99);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -77876,7 +78295,7 @@ exports.ArrayLikeObservable = ArrayLikeObservable;
 //# sourceMappingURL=ArrayLikeObservable.js.map
 
 /***/ }),
-/* 353 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77886,10 +78305,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subject_1 = __webpack_require__(41);
+var Subject_1 = __webpack_require__(44);
 var Observable_1 = __webpack_require__(7);
-var Subscriber_1 = __webpack_require__(13);
-var Subscription_1 = __webpack_require__(69);
+var Subscriber_1 = __webpack_require__(14);
+var Subscription_1 = __webpack_require__(70);
 /**
  * @class ConnectableObservable<T>
  */
@@ -78051,7 +78470,7 @@ var RefCountSubscriber = (function (_super) {
 //# sourceMappingURL=ConnectableObservable.js.map
 
 /***/ }),
-/* 354 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78062,10 +78481,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(7);
-var EmptyObservable_1 = __webpack_require__(96);
-var isArray_1 = __webpack_require__(103);
-var subscribeToResult_1 = __webpack_require__(70);
-var OuterSubscriber_1 = __webpack_require__(68);
+var EmptyObservable_1 = __webpack_require__(99);
+var isArray_1 = __webpack_require__(106);
+var subscribeToResult_1 = __webpack_require__(74);
+var OuterSubscriber_1 = __webpack_require__(69);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -78169,7 +78588,7 @@ var ForkJoinSubscriber = (function (_super) {
 //# sourceMappingURL=ForkJoinObservable.js.map
 
 /***/ }),
-/* 355 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78179,17 +78598,17 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var isArray_1 = __webpack_require__(103);
-var isArrayLike_1 = __webpack_require__(157);
-var isPromise_1 = __webpack_require__(160);
-var PromiseObservable_1 = __webpack_require__(150);
-var IteratorObservable_1 = __webpack_require__(356);
-var ArrayObservable_1 = __webpack_require__(95);
-var ArrayLikeObservable_1 = __webpack_require__(352);
-var iterator_1 = __webpack_require__(99);
+var isArray_1 = __webpack_require__(106);
+var isArrayLike_1 = __webpack_require__(159);
+var isPromise_1 = __webpack_require__(162);
+var PromiseObservable_1 = __webpack_require__(152);
+var IteratorObservable_1 = __webpack_require__(367);
+var ArrayObservable_1 = __webpack_require__(98);
+var ArrayLikeObservable_1 = __webpack_require__(363);
+var iterator_1 = __webpack_require__(102);
 var Observable_1 = __webpack_require__(7);
-var observeOn_1 = __webpack_require__(370);
-var observable_1 = __webpack_require__(100);
+var observeOn_1 = __webpack_require__(381);
+var observable_1 = __webpack_require__(103);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -78297,7 +78716,7 @@ exports.FromObservable = FromObservable;
 //# sourceMappingURL=FromObservable.js.map
 
 /***/ }),
-/* 356 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78307,9 +78726,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var root_1 = __webpack_require__(42);
+var root_1 = __webpack_require__(45);
 var Observable_1 = __webpack_require__(7);
-var iterator_1 = __webpack_require__(99);
+var iterator_1 = __webpack_require__(102);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -78466,52 +78885,52 @@ function sign(value) {
 //# sourceMappingURL=IteratorObservable.js.map
 
 /***/ }),
-/* 357 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ForkJoinObservable_1 = __webpack_require__(354);
+var ForkJoinObservable_1 = __webpack_require__(365);
 exports.forkJoin = ForkJoinObservable_1.ForkJoinObservable.create;
 //# sourceMappingURL=forkJoin.js.map
 
 /***/ }),
-/* 358 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var FromObservable_1 = __webpack_require__(355);
+var FromObservable_1 = __webpack_require__(366);
 exports.from = FromObservable_1.FromObservable.create;
 //# sourceMappingURL=from.js.map
 
 /***/ }),
-/* 359 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var merge_1 = __webpack_require__(368);
+var merge_1 = __webpack_require__(379);
 exports.merge = merge_1.mergeStatic;
 //# sourceMappingURL=merge.js.map
 
 /***/ }),
-/* 360 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ArrayObservable_1 = __webpack_require__(95);
+var ArrayObservable_1 = __webpack_require__(98);
 exports.of = ArrayObservable_1.ArrayObservable.of;
 //# sourceMappingURL=of.js.map
 
 /***/ }),
-/* 361 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var mergeAll_1 = __webpack_require__(98);
+var mergeAll_1 = __webpack_require__(101);
 /* tslint:enable:max-line-length */
 /**
  * Converts a higher-order Observable into a first-order Observable by
@@ -78568,12 +78987,12 @@ exports.concatAll = concatAll;
 //# sourceMappingURL=concatAll.js.map
 
 /***/ }),
-/* 362 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var mergeMap_1 = __webpack_require__(154);
+var mergeMap_1 = __webpack_require__(156);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -78641,7 +79060,7 @@ exports.concatMap = concatMap;
 //# sourceMappingURL=concatMap.js.map
 
 /***/ }),
-/* 363 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78651,7 +79070,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(13);
+var Subscriber_1 = __webpack_require__(14);
 /* tslint:enable:max-line-length */
 /**
  * Perform a side effect for every emission on the source Observable, but return
@@ -78760,7 +79179,7 @@ var DoSubscriber = (function (_super) {
 //# sourceMappingURL=do.js.map
 
 /***/ }),
-/* 364 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78770,7 +79189,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(13);
+var Subscriber_1 = __webpack_require__(14);
 /**
  * Returns an Observable that emits whether or not every item of the source satisfies the condition specified.
  *
@@ -78840,7 +79259,7 @@ var EverySubscriber = (function (_super) {
 //# sourceMappingURL=every.js.map
 
 /***/ }),
-/* 365 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78850,7 +79269,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(13);
+var Subscriber_1 = __webpack_require__(14);
 /* tslint:enable:max-line-length */
 /**
  * Filter items emitted by the source Observable by only emitting those that
@@ -78939,7 +79358,7 @@ var FilterSubscriber = (function (_super) {
 //# sourceMappingURL=filter.js.map
 
 /***/ }),
-/* 366 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78949,8 +79368,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(13);
-var EmptyError_1 = __webpack_require__(102);
+var Subscriber_1 = __webpack_require__(14);
+var EmptyError_1 = __webpack_require__(105);
 /**
  * Emits only the first value (or the first value that meets some condition)
  * emitted by the source Observable.
@@ -79097,7 +79516,7 @@ var FirstSubscriber = (function (_super) {
 //# sourceMappingURL=first.js.map
 
 /***/ }),
-/* 367 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79107,8 +79526,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(13);
-var EmptyError_1 = __webpack_require__(102);
+var Subscriber_1 = __webpack_require__(14);
+var EmptyError_1 = __webpack_require__(105);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits only the last item emitted by the source Observable.
@@ -79222,15 +79641,15 @@ var LastSubscriber = (function (_super) {
 //# sourceMappingURL=last.js.map
 
 /***/ }),
-/* 368 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Observable_1 = __webpack_require__(7);
-var ArrayObservable_1 = __webpack_require__(95);
-var mergeAll_1 = __webpack_require__(98);
-var isScheduler_1 = __webpack_require__(161);
+var ArrayObservable_1 = __webpack_require__(98);
+var mergeAll_1 = __webpack_require__(101);
+var isScheduler_1 = __webpack_require__(163);
 /* tslint:enable:max-line-length */
 /**
  * Creates an output Observable which concurrently emits all values from every
@@ -79373,12 +79792,12 @@ exports.mergeStatic = mergeStatic;
 //# sourceMappingURL=merge.js.map
 
 /***/ }),
-/* 369 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ConnectableObservable_1 = __webpack_require__(353);
+var ConnectableObservable_1 = __webpack_require__(364);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits the results of invoking a specified selector on items
@@ -79436,7 +79855,7 @@ exports.MulticastOperator = MulticastOperator;
 //# sourceMappingURL=multicast.js.map
 
 /***/ }),
-/* 370 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79446,8 +79865,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(13);
-var Notification_1 = __webpack_require__(350);
+var Subscriber_1 = __webpack_require__(14);
+var Notification_1 = __webpack_require__(361);
 /**
  *
  * Re-emits all notifications from source Observable with specified scheduler.
@@ -79555,7 +79974,7 @@ exports.ObserveOnMessage = ObserveOnMessage;
 //# sourceMappingURL=observeOn.js.map
 
 /***/ }),
-/* 371 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79565,7 +79984,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(13);
+var Subscriber_1 = __webpack_require__(14);
 /* tslint:enable:max-line-length */
 /**
  * Applies an accumulator function over the source Observable, and returns the
@@ -79687,13 +80106,13 @@ exports.ReduceSubscriber = ReduceSubscriber;
 //# sourceMappingURL=reduce.js.map
 
 /***/ }),
-/* 372 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var multicast_1 = __webpack_require__(369);
-var Subject_1 = __webpack_require__(41);
+var multicast_1 = __webpack_require__(380);
+var Subject_1 = __webpack_require__(44);
 function shareSubjectFactory() {
     return new Subject_1.Subject();
 }
@@ -79717,7 +80136,7 @@ exports.share = share;
 //# sourceMappingURL=share.js.map
 
 /***/ }),
-/* 373 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79748,14 +80167,14 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ }),
-/* 374 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var Subscriber_1 = __webpack_require__(13);
-var rxSubscriber_1 = __webpack_require__(101);
-var Observer_1 = __webpack_require__(146);
+var Subscriber_1 = __webpack_require__(14);
+var rxSubscriber_1 = __webpack_require__(104);
+var Observer_1 = __webpack_require__(151);
 function toSubscriber(nextOrObserver, error, complete) {
     if (nextOrObserver) {
         if (nextOrObserver instanceof Subscriber_1.Subscriber) {
@@ -79774,12 +80193,12 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ }),
-/* 375 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var errorObject_1 = __webpack_require__(156);
+var errorObject_1 = __webpack_require__(158);
 var tryCatchTarget;
 function tryCatcher() {
     try {
@@ -79799,15 +80218,15 @@ exports.tryCatch = tryCatch;
 //# sourceMappingURL=tryCatch.js.map
 
 /***/ }),
-/* 376 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var platform_browser_dynamic_1 = __webpack_require__(162);
+var platform_browser_dynamic_1 = __webpack_require__(164);
 //import {enableProdMode} from '@angular/core'
-var app_module_1 = __webpack_require__(163);
+var app_module_1 = __webpack_require__(165);
 //enableProdMode();
 platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 

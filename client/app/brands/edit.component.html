@@ -1,0 +1,39 @@
+<simple-notifications [options]="options" style="z-index:9999"></simple-notifications>
+<div id="register-v2" class="row no-gutters">
+  <div class="intro col-12 col-md">
+      <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12">
+
+          <div class="logo bg-primary mb-8">
+              <span>{{app_icon}}</span>
+          </div>
+
+          <div class="title">
+              {{app_name}}
+          </div>
+
+          <div class="description pt-2">
+              Enregistrer une marque
+          </div>
+
+      </div>
+  </div>
+    <div class="form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0">
+        <div class="form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12">
+            <div class="title h5">Enregistrer une marque</div>
+            <form name="registerForm" class="mt-8" (submit)="handleSubmit($event)" #brandForm="ngForm">
+                <div class="form-group mb-4"  [class.has-danger]="!name.valid || (!name.pristine && brandForm.submitted)">
+                    <textarea style="height: 280px;" class="form-control"  [class.md-has-value]="currentBrand.name.length" required name="name" id="name" [(ngModel)]="currentBrand.name" #name="ngModel"  rows="3"></textarea>
+                    <label for="name">Marques séparées par une virgule</label>
+                    <div class="form-control-feedback" [hidden]="name.valid || (name.pristine && !brandForm.submitted)">Nom invalide</div>
+                </div>
+
+                <button [disabled]="!brandForm.form.valid" class="btn btn-primary my-4 mx-auto" aria-label="Enregistrer">
+                    ENREGISTRER
+                </button>
+                <a [routerLink]="['/marques/liste']" title="Annuler et revenir à la liste">ANNULLER</a>
+
+            </form>
+
+        </div>
+    </div>
+</div>

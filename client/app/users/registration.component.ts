@@ -15,11 +15,14 @@ export class RegistrationComponent {
     private currentUser: User;
     private showPassword: boolean;
     private userRoles: string[];
+    private app_name:string=Config.APP_NAME;
+    private app_icon:string= this.app_name.charAt(0);
     public options = Config.NOTIFICATION_OPTIONS;
 
     constructor(private userService: UserService, private helper: Helper, private _notificationsService: NotificationsService) {
         this.showPassword = true;
         this.helper.setPageInfo("Ajouter un utilisateur","Ajouter un utilisateur");
+        this.helper.currentMenu("a_collapse_users");
         this.resetCurrentUser();
     }
 
@@ -30,7 +33,7 @@ export class RegistrationComponent {
             email: '',
             plainPassword: this.helper.getPassword(),
             roles: 'ROLE_USER',
-            photo: "photos/user.png"
+            photo: Config.API_ROUTE.user_default_image
         });
         this.userService.getRoles().subscribe(response => {
             this.userRoles = response;

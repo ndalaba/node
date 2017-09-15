@@ -16,8 +16,9 @@ import {NavigationComponent, MenuComponent} from './../layout/index';
 
 import {HomeComponent} from './../home/home.component';
 import {RegistrationComponent, ProfilComponent, LoginComponent, UserListComponent, EditComponent} from '../users/index';
+import {BrandListComponent,EditComponent as EditBrand} from "../brands/index";
 import {ContactComponent} from '../contact/contact.component';
-import {Helper, UserService, AuthService} from '../_services/index';
+import {Helper, UserService, AuthService, BrandService, ModelService} from '../_services/index';
 
 
 @NgModule({
@@ -27,10 +28,10 @@ import {Helper, UserService, AuthService} from '../_services/index';
     ],
     declarations: [
         AppComponent, NavigationComponent, MenuComponent, HomeComponent, RegistrationComponent, LoginComponent,
-        ContactComponent, ProfilComponent, UserListComponent, EditComponent
+        ContactComponent, ProfilComponent, UserListComponent, EditComponent, BrandListComponent,EditBrand
 
     ],
-    providers: [Helper, UserService, AuthGuard, AuthService, AdminGuard],
+    providers: [Helper, UserService, AuthGuard, AuthService, AdminGuard, BrandService, ModelService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

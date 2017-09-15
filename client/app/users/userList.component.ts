@@ -20,6 +20,7 @@ export class UserListComponent {
 
     constructor(private userService: UserService, private helper: Helper, private _notificationsService: NotificationsService) {
         this.helper.setPageInfo("Liste utilisateurs", "Liste des utilisateurs");
+        this.helper.currentMenu("a_collapse_users");
         this.getList();
     }
 

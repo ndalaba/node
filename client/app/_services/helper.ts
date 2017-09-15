@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import {Response} from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Response } from '@angular/http';
 
 @Injectable()
 export class Helper {
@@ -32,5 +32,19 @@ export class Helper {
             document.getElementById("animationload").style.display = "block";
         else
             document.getElementById("animationload").style.display = "none";
+    }
+
+    public isImage(file: any) {
+        let extensions = file.name.split('.');
+        let extension: string = '.' + extensions[extensions.length - 1];
+        if (extension !== '.jpg' && extension !== '.JPG' && extension !== '.png' && extension !== '.jpeg') {
+            return false;
+        }
+        return true;
+    }
+    public currentMenu(id:string){
+        let element=document.getElementById(id);
+        if(element.classList.contains('collapsed'))
+            element.click();
     }
 }  

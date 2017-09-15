@@ -1,11 +1,11 @@
 <simple-notifications [options]="options" style="z-index:9999"></simple-notifications>
 <div class="page-layout carded full-width">
-    <div class="top-bg bg-primary"></div>
+    <div class="top-bg"></div>
     <!-- CONTENT -->
     <div class="page-content">
 
         <!-- HEADER -->
-        <div class="header bg-primary text-auto row no-gutters align-items-center justify-content-between">
+        <div class="header text-auto row no-gutters align-items-center justify-content-between">
 
             <!-- APP TITLE -->
             <div class="col-12 col-sm">
@@ -44,76 +44,61 @@
 
         </div>
         <!-- / HEADER -->
-
         <div class="page-content-card">
 
-            <table id="e-commerce-products-table" class="table dataTable">
-
+            <table id="e-commerce-products-table" class="table table-responsive">
                 <thead>
-
                 <tr>
-
                     <th>
                         <div class="table-header">
                             <span class="column-title">ID</span>
                         </div>
                     </th>
-
                     <th>
                         <div class="table-header">
                             <span class="column-title">IMAGE</span>
                         </div>
                     </th>
-
                     <th>
                         <div class="table-header">
                             <span class="column-title">NOM</span>
                         </div>
                     </th>
-
                     <th>
                         <div class="table-header">
                             <span class="column-title">EMAIL</span>
                         </div>
                     </th>
-
                     <th>
                         <div class="table-header">
                             <span class="column-title">ROLE</span>
                         </div>
                     </th>
-
-
                     <th>
                         <div class="table-header">
                             <span class="column-title"></span>
                         </div>
                     </th>
-
                 </tr>
                 </thead>
-
                 <tbody>
-
                 <tr *ngFor="let user of filtredUsers">
                     <td>{{user.id}}</td>
                     <td>
-                        <img class="product-image" [src]="upload_folder+user.photo" [alt]="user.name" style="width: 55px;height: 55px">
+                        <img class="product-image" [src]="upload_folder+user.photo" [alt]="user.name" style="border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;width: 55px;height: 55px">
                     </td>
                     <td>{{user.name}}</td>
                     <td>{{user.email}}</td>
                     <td>{{user.roles}}</td>
                     <td>
-                        <a [routerLink]="['/utilisateurs/modifier/',user.id]" class="btn btn-icon" data-toggle="tooltip" data-original-title="Modifier l'utilisateur">
+                        <a [routerLink]="['/utilisateurs/modifier/',user.id]" class="btn btn-icon" title="Modifier l'utilisateur">
                             <i class="icon icon-pencil s-4"></i>
                         </a>
-                        <a class="btn btn-icon btn-sm" data-toggle="tooltip" data-original-title="Supprimer l'utilisateur" (click)="removeUser($event,user)">
+                        <a class="btn btn-icon btn-sm" title="Supprimer l'utilisateur" (click)="removeUser($event,user)">
                             <i class="icon icon-trash s-4"></i>
                         </a>
                     </td>
                 </tr>
-
-
                 </tbody>
             </table>
         </div>

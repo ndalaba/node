@@ -4,11 +4,11 @@
       <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12">
 
           <div class="logo bg-primary mb-8">
-              <span>D</span>
+              <span>{{app_icon}}</span>
           </div>
 
           <div class="title">
-              PARC
+              {{app_name}}
           </div>
 
           <div class="description pt-2">
@@ -18,13 +18,8 @@
       </div>
   </div>
     <div class="form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0">
-        <div class="form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-32 px-12">
-            <div class="title h5">Enregistrer un utilisateur</div>
-
-            <div class="description mt-2">
-                Ajouter un nouvel utilisateur
-            </div>
-
+        <div class="form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12">
+            <div class="title h5">Ajouter un utilisateur</div>
             <form name="registerForm" class="mt-8" (submit)="handleSubmit($event)" #userForm="ngForm">
                 <div class="form-group mb-4"  [class.has-danger]="!name.valid || (!name.pristine && userForm.submitted)">
                     <input type="text" class="form-control" [class.md-has-value]="currentUser.name.length" required name="name" id="name" [(ngModel)]="currentUser.name" #name="ngModel"  />
@@ -57,24 +52,19 @@
                         <label class="form-check-label">
                             <input type="checkbox" class="form-check-input" aria-label="Afficher" [checked]="showPassword" (change)="toggleShowPassword()"/>
                             <span class="checkbox-icon"></span>
-                            <span data-toggle="tooltip" data-original-title="Afficher le mot de passe">
+                            <span title="Afficher le mot de passe">
                                 Afficher
                             </span>
                         </label>
                     </div>
-                    <a href="#" data-toggle="tooltip" data-original-title="Générer un nouveau mot de passe" class="btn btn-primary fuse-ripple-ready" (click)="generatePassword($event)">Générer</a>
+                    <a href="#" title="Nouveau mot de passe" class="btn btn-sm btn-primary" (click)="generatePassword($event)">Générer</a>
                 </div>
-
-                <button type="submit" [disabled]="!userForm.form.valid" class="submit-button btn btn-block btn-primary my-4 mx-auto" aria-label="LOG IN">
+                <button [disabled]="!userForm.form.valid" class="btn btn-primary my-4 mx-auto" aria-label="Créer un compte">
                     CREER UN COMPTE
                 </button>
+                <a [routerLink]="['/utilisateurs/liste']" title="Annuler et revenir à la liste">ANNULLER</a>
 
             </form>
-
-            <!--<div class="login d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">
-                <span class="text mr-sm-2">Already have an account?</span>
-                <a class="link text-primary" href="#">Connexion</a>
-            </div>-->
 
         </div>
     </div>

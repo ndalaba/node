@@ -3,7 +3,7 @@ export class User {
     name: string;
     email: string;
     plainPassword: string;
-    roles: any;
+    roles: string;
     phone: string;
     photo: string;
 

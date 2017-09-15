@@ -1,73 +1,92 @@
 <simple-notifications [options]="options" style="z-index:9999"></simple-notifications>
-<div id="register" class="row no-gutters">
-    <div class="form-wrapper md-elevation-8 p-8">
+<div id="register-v2" class="row no-gutters">
+    <div class="intro col-12 col-md">
+        <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12">
 
-        <div class="logo">
-            <img [src]="upload_folder+currentUser.photo" alt="currentUser.name" style="cursor: pointer;width: 128px;height: 128px" data-toggle="tooltip" data-original-title="Modifier photo" (click)="browse()">
-            <input type="file" id="fileElement" name="image" (change)="loadImage($event)" style="display: none"/>
-            <img [src]="loading" alt="loading" [hidden]="!uploading" />
+            <div class="logo bg-primary mb-8">
+                <span>{{app_icon}}</span>
+            </div>
+
+            <div class="title">
+                {{app_name}}
+            </div>
+
+            <div class="description pt-2">
+                Modifier l'utilisateur {{currentUser.name}}
+            </div>
+
         </div>
-
-        <div class="title mt-4 mb-8">{{currentUser.name}}</div>
-
-        <form name="registerForm" class="mt-8" (submit)="handleSubmit($event)" #userForm="ngForm">
-            <div class="form-group mb-4" [class.has-danger]="!name.valid || (!name.pristine && userForm.submitted)">
-                <input type="text" class="form-control" [class.md-has-value]="currentUser.name.length" required name="name" id="name" [(ngModel)]="currentUser.name" #name="ngModel"/>
-                <label for="name">Nom</label>
-                <div class="form-control-feedback" [hidden]="name.valid || (name.pristine && !userForm.submitted)">Nom
-                    invalide
+    </div>
+    <div class="form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0">
+        <div class="form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12">
+            <div class="title h5">Modifier l'utilisateur</div>
+            <form name="registerForm" class="mt-8" (submit)="handleSubmit($event)" #userForm="ngForm">
+                <div class="logo">
+                    <img [src]="upload_folder+currentUser.photo" alt="currentUser.name" style="cursor: pointer;width: 128px;height: 128px;border-radius:70px" data-toggle="tooltip" data-original-title="Modifier photo" (click)="browse()">
+                    <input type="file" id="fileElement" name="image" (change)="loadImage($event)" style="display: none"/>
+                    <img [src]="loading" alt="loading" [hidden]="!uploading" />
                 </div>
-            </div>
 
-            <div class="form-group mb-4" [class.has-danger]="!email.valid || (!email.pristine && userForm.submitted)">
-                <input type="email" class="form-control" [class.md-has-value]="currentUser.email.length" required name="email" id="email" #email="ngModel" [(ngModel)]="currentUser.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
-                <label for="email">Email</label>
-                <div class="form-control-feedback" [hidden]="email.valid || (email.pristine && !userForm.submitted)">
-                    Adresse email invalide
+                <div class="form-group mb-4" [class.has-danger]="!name.valid || (!name.pristine && userForm.submitted)">
+                    <input type="text" class="form-control" [class.md-has-value]="currentUser.name.length" required name="name" id="name" [(ngModel)]="currentUser.name" #name="ngModel"/>
+                    <label for="name">Nom</label>
+                    <div class="form-control-feedback" [hidden]="name.valid || (name.pristine && !userForm.submitted)">Nom
+                        invalide
+                    </div>
                 </div>
-            </div>
-            <div class="form-group mb-4" [class.has-danger]="!phone.valid || (!phone.pristine && userForm.submitted)">
-                <input type="tel" class="form-control" [class.md-has-value]="currentUser.phone.length"  name="phone" id="phone" #phone="ngModel" [(ngModel)]="currentUser.phone"/>
-                <label for="email">Téléphone</label>
-                <div class="form-control-feedback" [hidden]="phone.valid || (phone.pristine && !userForm.submitted)">
-                    Téléphone invalide
-                </div>
-            </div>
-            <div class="form-group mb-4" [class.has-danger]="!roles.valid || (!roles.pristine && userForm.submitted)">
-                <select name="roles" id="roles" class="form-control" [class.md-has-value]="currentUser.roles.length" [(ngModel)]="currentUser.roles" #roles="ngModel" required>
-                    <option value=""></option>
-                    <option *ngFor="let role of userRoles">{{role}}</option>
-                </select>
-                <label for="roles">Rôle utilisateur</label>
-                <div class="form-control-feedback" [hidden]="roles.valid || (roles.pristine && !userForm.submitted)">Un
-                    utilisateur doit avoir un rôle
-                </div>
-            </div>
 
-            <div class="form-group mb-4"  [class.has-danger]="!password.valid || (!password.pristine && userForm.submitted)">
-                <input type="text" class="form-control" [class.md-has-value]="currentUser.plainPassword.length" minlength="8" name="plainPassword" id="plainPassword" [(ngModel)]="currentUser.plainPassword" #password="ngModel" />
-                <label for="plainPassword">Mot de passe</label>
-                <div class="form-control-feedback" [hidden]="password.valid || (password.pristine && !userForm.submitted)">Mot de passe incorrect (8 caractères min) </div>
-            </div>
+                <div class="form-group mb-4" [class.has-danger]="!email.valid || (!email.pristine && userForm.submitted)">
+                    <input type="email" class="form-control" [class.md-has-value]="currentUser.email.length" required name="email" id="email" #email="ngModel" [(ngModel)]="currentUser.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
+                    <label for="email">Email</label>
+                    <div class="form-control-feedback" [hidden]="email.valid || (email.pristine && !userForm.submitted)">
+                        Adresse email invalide
+                    </div>
+                </div>
+                <div class="form-group mb-4" [class.has-danger]="!phone.valid || (!phone.pristine && userForm.submitted)">
+                    <input type="tel" class="form-control" [class.md-has-value]="currentUser.phone.length"  name="phone" id="phone" #phone="ngModel" [(ngModel)]="currentUser.phone"/>
+                    <label for="email">Téléphone</label>
+                    <div class="form-control-feedback" [hidden]="phone.valid || (phone.pristine && !userForm.submitted)">
+                        Téléphone invalide
+                    </div>
+                </div>
+                <div class="form-group mb-4" [class.has-danger]="!roles.valid || (!roles.pristine && userForm.submitted)">
+                    <select name="roles" id="roles" class="form-control" [class.md-has-value]="currentUser.roles.length" [(ngModel)]="currentUser.roles" #roles="ngModel" required>
+                        <option value=""></option>
+                        <option *ngFor="let role of userRoles" [ngValue]="role">{{role}}</option>
+                    </select>
+                    <label for="roles">Rôle utilisateur</label>
+                    <div class="form-control-feedback" [hidden]="roles.valid || (roles.pristine && !userForm.submitted)">Un
+                        utilisateur doit avoir un rôle
+                    </div>
+                </div>
 
-            <div class="remember-forgot-password row no-gutters align-items-center justify-content-between pt-4">
-                <div class="form-check remember-me mb-4">
-                    <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" aria-label="Afficher" [checked]="showPassword" (change)="toggleShowPassword()"/>
-                        <span class="checkbox-icon"></span>
-                        <span data-toggle="tooltip" data-original-title="Afficher le mot de passe">
+                <div class="form-group mb-4"  [class.has-danger]="!password.valid || (!password.pristine && userForm.submitted)">
+                    <input type="text" class="form-control" [class.md-has-value]="currentUser.plainPassword.length" minlength="8" name="plainPassword" id="plainPassword" [(ngModel)]="currentUser.plainPassword" #password="ngModel" />
+                    <label for="plainPassword">Mot de passe</label>
+                    <div class="form-control-feedback" [hidden]="password.valid || (password.pristine && !userForm.submitted)">Mot de passe incorrect (8 caractères min) </div>
+                </div>
+
+                <div class="remember-forgot-password row no-gutters align-items-center justify-content-between pt-4">
+                    <div class="form-check remember-me mb-4">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" aria-label="Afficher" [checked]="showPassword" (change)="toggleShowPassword()"/>
+                            <span class="checkbox-icon"></span>
+                            <span title="Afficher le mot de passe">
                                 Afficher
                             </span>
-                    </label>
+                        </label>
+                    </div>
+                    <a href="#" title="Nouveau mot de passe" class="btn btn-sm btn-primary" (click)="generatePassword($event)">Générer</a>
                 </div>
-                <a href="#" data-toggle="tooltip" data-original-title="Générer un nouveau mot de passe" class="btn btn-primary fuse-ripple-ready" (click)="generatePassword($event)">Générer</a>
-            </div>
 
-            <button type="submit" [disabled]="!userForm.form.valid" class="submit-button btn btn-block btn-primary my-4 mx-auto" aria-label="LOG IN">
-                ENREGISTRER
-            </button>
+                <button [disabled]="!userForm.form.valid" class="btn btn-primary my-4 mx-auto" aria-label="Enregistrer">
+                    ENREGISTRER
+                </button>
+                <a [routerLink]="['/utilisateurs/liste']" title="Annuller et revenir à la liste">ANNULLER</a>
 
-        </form>
+            </form>
 
+
+        </div>
     </div>
 </div>

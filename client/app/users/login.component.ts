@@ -3,6 +3,7 @@ import {Login} from "../_models/index";
 import {AuthService,Helper} from "../_services/index"
 import {Router} from "@angular/router";
 import { NotificationsService } from 'angular2-notifications';
+import { Config } from "../_modules/app.config";
 
 @Component({
     selector: 'login',
@@ -12,13 +13,9 @@ import { NotificationsService } from 'angular2-notifications';
 export class LoginComponent implements OnInit{
 
     private currentUser:Login;
-    public options = {
-        position: ["middle", "right"],
-        timeOut: 5000,
-        lastOnBottom: true,
-        pauseOnHover: true,
-        clickToClose: true
-    };
+    private app_name: string = Config.APP_NAME;
+    private app_icon: string = this.app_name.charAt(0);
+    public options = Config.NOTIFICATION_OPTIONS;
 
     constructor(private authService:AuthService,private router:Router,private helper:Helper ,private _notificationsService: NotificationsService) {
         this.currentUser = new Login({email: "", password: "", remember_me: false});
@@ -34,12 +31,13 @@ export class LoginComponent implements OnInit{
         this.authService.login(this.currentUser).subscribe(response => {
             if (response.success){
                 localStorage.setItem("loggedUser", JSON.stringify(response.loggedUser));
+                localStorage.setItem("first_login", "true");
                 this.authService.onAuth();
                 this.router.navigate(['/']);
-                this.helper.toggleLoadding(false);
             }
             else
                 this._notificationsService.error('Erreur', response.message);
+            this.helper.toggleLoadding(false);
         });
     }
 }
