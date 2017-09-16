@@ -20,6 +20,12 @@ export class ModelService {
         this.headers.append('X-Requested-With', 'XMLHttpRequest');
     }
 
+    byBrand(id: number) {
+        return this.http.get(Config.API_ROUTE.model_by_brand + "/" + id, {headers: this.headers}).map(response => {
+            return response.json();
+        });
+    }
+
     findOne(id: number | string): Observable<any> {
         return this.http.get(Config.API_ROUTE.model_edit + "/" + id, {headers: this.headers}).map(response => {
             return response.json();
@@ -38,28 +44,10 @@ export class ModelService {
         }).catch(this.helper.handleError);
     }
 
-    createModel(data: Model): Observable<any> {
-        return this.http.post(Config.API_ROUTE.registration, data, {headers: this.headers}).map(response => {
+    saveModel(data: Model) {
+        let url = (data.id === 0) ? Config.API_ROUTE.model_add : Config.API_ROUTE.model_edit + "/" + data.id;
+        return this.http.post(url, data, {headers: this.headers}).map(response => {
             return response.json();
         }).catch(this.helper.handleError);
-    }
-
-    editModel(data: Model) {
-        return this.http.post(Config.API_ROUTE.model_edit + '/' + data.id, data, {headers: this.headers}).map(response => {
-            return response.json();
-        }).catch(this.helper.handleError);
-    }
-
-    getRoles(): Observable<any> {
-        return this.http.get(Config.API_ROUTE.roles, {headers: this.headers}).map(response => {
-            return response.json();
-        }).catch(this.helper.handleError);
-    }
-
-    uploadPhoto(id: number, formData: any): Observable<any> {
-        return this.http.post(Config.API_ROUTE.upload_photo + "/" + id, formData).map(response => {
-            return response.json();
-        });
-
     }
 }

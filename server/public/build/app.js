@@ -15616,6 +15616,7 @@ var Config = (function () {
                 profil: this.APP_HOST + 'profil',
                 login: this.APP_HOST + "auth/login",
                 logout: this.APP_HOST + "auth/logout",
+                logged: this.APP_HOST + "auth/islogged",
                 roles: this.APP_HOST + "utilisateurs/roles",
                 brand_add: this.APP_HOST + "marques/ajouter",
                 brand_list: this.APP_HOST + "marques/liste",
@@ -15625,6 +15626,7 @@ var Config = (function () {
                 model_list: this.APP_HOST + "models/liste",
                 model_edit: this.APP_HOST + "models/modifier",
                 model_remove: this.APP_HOST + "models/supprimer",
+                model_by_brand: this.APP_HOST + "models/marques"
             };
         },
         enumerable: true,
@@ -15840,14 +15842,7 @@ function __asyncValues(o) {
 }
 
 /***/ }),
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22071,6 +22066,13 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.2.6'
 
 
 /***/ }),
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
 /* 33 */,
 /* 34 */,
 /* 35 */,
@@ -35936,7 +35938,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(1);
-var router_1 = __webpack_require__(32);
+var router_1 = __webpack_require__(25);
 var AdminGuard = (function () {
     function AdminGuard(router) {
         this.router = router;
@@ -35974,7 +35976,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(1);
-var router_1 = __webpack_require__(32);
+var router_1 = __webpack_require__(25);
 var AuthGuard = (function () {
     function AuthGuard(router) {
         this.router = router;
@@ -36078,8 +36080,8 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(187));
-__export(__webpack_require__(188));
+__export(__webpack_require__(394));
+__export(__webpack_require__(395));
 
 
 /***/ }),
@@ -37008,7 +37010,7 @@ var platform_browser_1 = __webpack_require__(38);
 var animations_1 = __webpack_require__(174);
 var forms_1 = __webpack_require__(173);
 var http_1 = __webpack_require__(52);
-var router_1 = __webpack_require__(32);
+var router_1 = __webpack_require__(25);
 var index_1 = __webpack_require__(115);
 var angular2_notifications_1 = __webpack_require__(39);
 var route_module_1 = __webpack_require__(181);
@@ -37017,8 +37019,9 @@ var index_2 = __webpack_require__(189);
 var home_component_1 = __webpack_require__(119);
 var index_3 = __webpack_require__(120);
 var index_4 = __webpack_require__(117);
+var index_5 = __webpack_require__(390);
 var contact_component_1 = __webpack_require__(118);
-var index_5 = __webpack_require__(11);
+var index_6 = __webpack_require__(11);
 var AppModule = (function () {
     function AppModule() {
     }
@@ -37032,9 +37035,9 @@ AppModule = __decorate([
         ],
         declarations: [
             app_component_1.AppComponent, index_2.NavigationComponent, index_2.MenuComponent, home_component_1.HomeComponent, index_3.RegistrationComponent, index_3.LoginComponent,
-            contact_component_1.ContactComponent, index_3.ProfilComponent, index_3.UserListComponent, index_3.EditComponent, index_4.BrandListComponent, index_4.EditComponent
+            contact_component_1.ContactComponent, index_3.ProfilComponent, index_3.UserListComponent, index_3.EditComponent, index_4.Brand_listeComponent, index_4.Brand_editComponent, index_5.Model_listeComponent, index_5.Model_editComponent
         ],
-        providers: [index_5.Helper, index_5.UserService, index_1.AuthGuard, index_5.AuthService, index_1.AdminGuard, index_5.BrandService, index_5.ModelService],
+        providers: [index_6.Helper, index_6.UserService, index_1.AuthGuard, index_6.AuthService, index_1.AdminGuard, index_6.BrandService, index_6.ModelService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
@@ -76749,6 +76752,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var home_component_1 = __webpack_require__(119);
 var index_1 = __webpack_require__(120);
 var index_2 = __webpack_require__(117);
+var index_3 = __webpack_require__(390);
 var contact_component_1 = __webpack_require__(118);
 var auth_guard_1 = __webpack_require__(114);
 var admin_guard_1 = __webpack_require__(113);
@@ -76760,9 +76764,12 @@ exports.appRoutes = [
     { path: 'utilisateurs/liste', component: index_1.UserListComponent, canActivate: [admin_guard_1.AdminGuard] },
     { path: 'contact', component: contact_component_1.ContactComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'utilisateur/profil', component: index_1.ProfilComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'marques/liste', component: index_2.BrandListComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'marques/enregistrer/:id', component: index_2.EditComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'marques/modifier/:id', component: index_2.EditComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'marques/liste', component: index_2.Brand_listeComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'marques/enregistrer/:id', component: index_2.Brand_editComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'marques/modifier/:id', component: index_2.Brand_editComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'models/liste', component: index_3.Model_listeComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'models/enregistrer/:id', component: index_3.Model_editComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'models/modifier/:id', component: index_3.Model_editComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'auth/login', component: index_1.LoginComponent },
 ];
 
@@ -76922,6 +76929,11 @@ var ModelService = (function () {
         this.headers = new http_1.Headers();
         this.headers.append('X-Requested-With', 'XMLHttpRequest');
     }
+    ModelService.prototype.byBrand = function (id) {
+        return this.http.get(app_config_1.Config.API_ROUTE.model_by_brand + "/" + id, { headers: this.headers }).map(function (response) {
+            return response.json();
+        });
+    };
     ModelService.prototype.findOne = function (id) {
         return this.http.get(app_config_1.Config.API_ROUTE.model_edit + "/" + id, { headers: this.headers }).map(function (response) {
             return response.json();
@@ -76937,25 +76949,11 @@ var ModelService = (function () {
             return response.json();
         }).catch(this.helper.handleError);
     };
-    ModelService.prototype.createModel = function (data) {
-        return this.http.post(app_config_1.Config.API_ROUTE.registration, data, { headers: this.headers }).map(function (response) {
+    ModelService.prototype.saveModel = function (data) {
+        var url = (data.id === 0) ? app_config_1.Config.API_ROUTE.model_add : app_config_1.Config.API_ROUTE.model_edit + "/" + data.id;
+        return this.http.post(url, data, { headers: this.headers }).map(function (response) {
             return response.json();
         }).catch(this.helper.handleError);
-    };
-    ModelService.prototype.editModel = function (data) {
-        return this.http.post(app_config_1.Config.API_ROUTE.model_edit + '/' + data.id, data, { headers: this.headers }).map(function (response) {
-            return response.json();
-        }).catch(this.helper.handleError);
-    };
-    ModelService.prototype.getRoles = function () {
-        return this.http.get(app_config_1.Config.API_ROUTE.roles, { headers: this.headers }).map(function (response) {
-            return response.json();
-        }).catch(this.helper.handleError);
-    };
-    ModelService.prototype.uploadPhoto = function (id, formData) {
-        return this.http.post(app_config_1.Config.API_ROUTE.upload_photo + "/" + id, formData).map(function (response) {
-            return response.json();
-        });
     };
     return ModelService;
 }());
@@ -77058,10 +77056,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(1);
 var auth_service_1 = __webpack_require__(116);
+var router_1 = __webpack_require__(25);
 var AppComponent = (function () {
-    function AppComponent(authService) {
+    function AppComponent(authService, router) {
         var _this = this;
         this.authService = authService;
+        this.router = router;
         this.authService.onLoggin$.subscribe(function () {
             _this.ngOnInit();
         });
@@ -77081,159 +77081,14 @@ AppComponent = __decorate([
         selector: 'ng-app',
         template: __webpack_require__(347)
     }),
-    __metadata("design:paramtypes", [auth_service_1.AuthService])
+    __metadata("design:paramtypes", [auth_service_1.AuthService, router_1.Router])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 
 
 /***/ }),
-/* 187 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(1);
-var index_1 = __webpack_require__(53);
-var index_2 = __webpack_require__(11);
-var angular2_notifications_1 = __webpack_require__(39);
-var router_1 = __webpack_require__(32);
-var app_config_1 = __webpack_require__(15);
-var EditComponent = (function () {
-    function EditComponent(brandService, helper, _notificationsService, route) {
-        this.brandService = brandService;
-        this.helper = helper;
-        this._notificationsService = _notificationsService;
-        this.route = route;
-        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
-        this.app_name = app_config_1.Config.APP_NAME;
-        this.app_icon = this.app_name.charAt(0);
-        this.loading = app_config_1.Config.API_ROUTE.loading;
-        this.helper.currentMenu("a_collapse_brands");
-        this.resetCurrentBrand();
-    }
-    EditComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.route.paramMap.subscribe(function (params) {
-            _this.helper.toggleLoadding(true);
-            _this.brandService.findOne(params.get('id')).subscribe(function (response) {
-                if (response !== null)
-                    _this.currentBrand = response;
-                _this.helper.toggleLoadding(false);
-            });
-        });
-    };
-    EditComponent.prototype.resetCurrentBrand = function () {
-        this.currentBrand = new index_1.Brand({
-            id: 0,
-            name: '',
-        });
-    };
-    EditComponent.prototype.handleSubmit = function (event) {
-        var _this = this;
-        event.preventDefault();
-        this.helper.toggleLoadding(true);
-        this.brandService.saveBrand(this.currentBrand).subscribe(function (response) {
-            _this.helper.toggleLoadding(false);
-            if (response.success)
-                _this._notificationsService.success('Succès', response.message);
-            else
-                _this._notificationsService.error('Erreur', response.message);
-        });
-    };
-    return EditComponent;
-}());
-EditComponent = __decorate([
-    core_1.Component({
-        selector: 'edit',
-        template: __webpack_require__(348)
-    }),
-    __metadata("design:paramtypes", [index_2.BrandService, index_2.Helper, angular2_notifications_1.NotificationsService, router_1.ActivatedRoute])
-], EditComponent);
-exports.EditComponent = EditComponent;
-
-
-/***/ }),
-/* 188 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(1);
-var index_1 = __webpack_require__(11);
-var angular2_notifications_1 = __webpack_require__(39);
-var app_config_1 = __webpack_require__(15);
-var BrandListComponent = (function () {
-    function BrandListComponent(brandService, helper, _notificationsService) {
-        this.brandService = brandService;
-        this.helper = helper;
-        this._notificationsService = _notificationsService;
-        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
-        this.helper.setPageInfo("Liste marques", "Liste des marques");
-        this.helper.currentMenu("a_collapse_brands");
-        this.getList();
-    }
-    BrandListComponent.prototype.filterBrands = function (event) {
-        var _this = this;
-        this.filtredBrands = this.brands.filter(function (brand) {
-            return brand.name.toLocaleLowerCase().indexOf(_this.textFilter.toLocaleLowerCase()) !== -1;
-        });
-        this.brandCount = this.filtredBrands.length;
-    };
-    BrandListComponent.prototype.getList = function () {
-        var _this = this;
-        this.brandService.getListe().subscribe(function (response) {
-            _this.brands = response;
-            _this.filtredBrands = _this.brands;
-            _this.brandCount = _this.brands.length;
-        });
-    };
-    BrandListComponent.prototype.removeBrand = function (event, brand) {
-        var _this = this;
-        event.preventDefault();
-        if (confirm("Supprimer la marque")) {
-            this.brandService.removeBrand(brand.id).subscribe(function (response) {
-                if (response.success) {
-                    _this.getList();
-                    _this._notificationsService.success('Succès', response.message);
-                }
-                else
-                    _this._notificationsService.error('Erreur', response.message);
-            });
-        }
-    };
-    return BrandListComponent;
-}());
-BrandListComponent = __decorate([
-    core_1.Component({
-        selector: "brand-list",
-        template: __webpack_require__(349)
-    }),
-    __metadata("design:paramtypes", [index_1.BrandService, index_1.Helper, angular2_notifications_1.NotificationsService])
-], BrandListComponent);
-exports.BrandListComponent = BrandListComponent;
-
-
-/***/ }),
+/* 187 */,
+/* 188 */,
 /* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -77265,7 +77120,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(1);
 var index_1 = __webpack_require__(11);
-var router_1 = __webpack_require__(32);
+var router_1 = __webpack_require__(25);
 var app_config_1 = __webpack_require__(15);
 var MenuComponent = (function () {
     function MenuComponent(authService, router) {
@@ -77315,7 +77170,7 @@ var core_1 = __webpack_require__(1);
 var index_1 = __webpack_require__(11);
 var index_2 = __webpack_require__(115);
 var app_config_1 = __webpack_require__(15);
-var router_1 = __webpack_require__(32);
+var router_1 = __webpack_require__(25);
 var NavigationComponent = (function () {
     function NavigationComponent(authService, adminGuard, authGuard, router) {
         this.authService = authService;
@@ -77368,7 +77223,7 @@ var core_1 = __webpack_require__(1);
 var index_1 = __webpack_require__(53);
 var index_2 = __webpack_require__(11);
 var angular2_notifications_1 = __webpack_require__(39);
-var router_1 = __webpack_require__(32);
+var router_1 = __webpack_require__(25);
 var app_config_1 = __webpack_require__(15);
 var EditComponent = (function () {
     function EditComponent(userService, helper, _notificationsService, route) {
@@ -77492,7 +77347,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(1);
 var index_1 = __webpack_require__(53);
 var index_2 = __webpack_require__(11);
-var router_1 = __webpack_require__(32);
+var router_1 = __webpack_require__(25);
 var angular2_notifications_1 = __webpack_require__(39);
 var app_config_1 = __webpack_require__(15);
 var LoginComponent = (function () {
@@ -77507,7 +77362,7 @@ var LoginComponent = (function () {
         this.currentUser = new index_1.Login({ email: "", password: "", remember_me: false });
     }
     LoginComponent.prototype.ngOnInit = function () {
-        this.authService.logout().subscribe();
+        //this.authService.logout().subscribe();
     };
     LoginComponent.prototype.login = function (event) {
         var _this = this;
@@ -77689,9 +77544,13 @@ var UserListComponent = (function () {
     UserListComponent.prototype.getList = function () {
         var _this = this;
         this.userService.getListe().subscribe(function (response) {
-            _this.users = response;
-            _this.filtredUsers = _this.users;
-            _this.userCount = _this.users.length;
+            if (response.success) {
+                _this.users = response.users;
+                _this.filtredUsers = _this.users;
+                _this.userCount = _this.users.length;
+            }
+            else
+                _this._notificationsService.error('Erreur', response.message);
         });
     };
     UserListComponent.prototype.removeUser = function (event, user) {
@@ -77877,18 +77736,8 @@ exports.UserListComponent = UserListComponent;
 module.exports = "<div id=\"wrapper\">\r\n    <navigation style=\"z-index:1030\" *ngIf=\"isUserLogged\"></navigation>\r\n    <div class=\"content-wrapper\">\r\n        <menu *ngIf=\"isUserLogged\"></menu>\r\n\r\n        <div class=\"content\">\r\n           <router-outlet></router-outlet>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 348 */
-/***/ (function(module, exports) {
-
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n  <div class=\"intro col-12 col-md\">\r\n      <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n          <div class=\"logo bg-primary mb-8\">\r\n              <span>{{app_icon}}</span>\r\n          </div>\r\n\r\n          <div class=\"title\">\r\n              {{app_name}}\r\n          </div>\r\n\r\n          <div class=\"description pt-2\">\r\n              Enregistrer une marque\r\n          </div>\r\n\r\n      </div>\r\n  </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Enregistrer une marque</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #brandForm=\"ngForm\">\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!name.valid || (!name.pristine && brandForm.submitted)\">\r\n                    <textarea style=\"height: 280px;\" class=\"form-control\"  [class.md-has-value]=\"currentBrand.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentBrand.name\" #name=\"ngModel\"  rows=\"3\"></textarea>\r\n                    <label for=\"name\">Marques séparées par une virgule</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !brandForm.submitted)\">Nom invalide</div>\r\n                </div>\r\n\r\n                <button [disabled]=\"!brandForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Enregistrer\">\r\n                    ENREGISTRER\r\n                </button>\r\n                <a [routerLink]=\"['/marques/liste']\" title=\"Annuler et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
-
-/***/ }),
-/* 349 */
-/***/ (function(module, exports) {
-
-module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div class=\"page-layout carded full-width\">\r\n    <div class=\"top-bg\"></div>\r\n    <!-- CONTENT -->\r\n    <div class=\"page-content\">\r\n\r\n        <!-- HEADER -->\r\n        <div class=\"header text-auto row no-gutters align-items-center justify-content-between\">\r\n\r\n            <!-- APP TITLE -->\r\n            <div class=\"col-12 col-sm\">\r\n\r\n                <div class=\"logo row no-gutters align-items-start\">\r\n                    <div class=\"logo-icon mr-3 mt-1\">\r\n                        <i class=\"icon-cube-outline s-6\"></i>\r\n                    </div>\r\n                    <div class=\"logo-text\">\r\n                        <div class=\"h4\">Liste marques</div>\r\n                        <div class=\"\">Total marques: {{brandCount}}</div>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / APP TITLE -->\r\n\r\n            <!-- SEARCH -->\r\n            <div class=\"col search-wrapper px-2\">\r\n\r\n                <div class=\"input-group\">\r\n                    <span class=\"input-group-btn\">\r\n                        <button type=\"button\" class=\"btn btn-icon\">\r\n                            <i class=\"icon icon-magnify\"></i>\r\n                        </button>\r\n                    </span>\r\n                    <input [(ngModel)]=\"textFilter\" type=\"text\" (keyup)=\"filterBrands($event)\" class=\"form-control\" placeholder=\"rechercher\" aria-label=\"Search\">\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / SEARCH -->\r\n\r\n            <div class=\"col-auto\">\r\n                <a [routerLink]=\"['/marques/enregistrer/0']\" class=\"btn btn-secondary\">Ajouter une nouvelle</a>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- / HEADER -->\r\n        <div class=\"page-content-card\">\r\n\r\n            <table id=\"e-commerce-products-table\" class=\"table table-responsive\">\r\n                <thead>\r\n                <tr>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ID</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">MARQUE</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\"></span>\r\n                        </div>\r\n                    </th>\r\n                </tr>\r\n                </thead>\r\n                <tbody>\r\n                <tr *ngFor=\"let brand of filtredBrands\">\r\n                    <td>{{brand.id}}</td>\r\n                    <td>{{brand.name}}</td>\r\n                    <td>\r\n                        <a [routerLink]=\"['/marques/modifier/',brand.id]\" class=\"btn btn-icon\" title=\"Modifier la marque\">\r\n                            <i class=\"icon icon-pencil s-4\"></i>\r\n                        </a>\r\n                        <a class=\"btn btn-icon btn-sm\" title=\"Supprimer la marque\" (click)=\"removeBrand($event,brand)\">\r\n                            <i class=\"icon icon-trash s-4\"></i>\r\n                        </a>\r\n                    </td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n    <!-- / CONTENT -->\r\n</div>";
-
-/***/ }),
+/* 348 */,
+/* 349 */,
 /* 350 */
 /***/ (function(module, exports) {
 
@@ -77910,7 +77759,7 @@ module.exports = "<nav id=\"toolbar\" class=\"fixed-top bg-white\">\r\n\r\n    <
 /* 353 */
 /***/ (function(module, exports) {
 
-module.exports = "<aside id=\"aside\" class=\"aside aside-left\" data-fuse-bar=\"aside\" data-fuse-bar-media-step=\"md\" data-fuse-bar-position=\"left\">\r\n    <div class=\"aside-content-wrapper\">\r\n        <div class=\"aside-content\">\r\n            <div class=\"aside-toolbar\">\r\n                <!--<div class=\"logo\">\r\n                    <span class=\"logo-icon\">{{ loggedUserIcon | uppercase}}</span><span class=\"logo-text\">{{loggedUser.name}}</span>\r\n                </div>-->\r\n                <div class=\"logo\">\r\n                    <span class=\"logo-icon\">{{app_icon}}</span><span class=\"logo-text\">{{app_name}}</span>\r\n                </div>\r\n                <button id=\"toggle-fold-aside-button\" type=\"button\" class=\"btn btn-icon d-none d-lg-block\" data-fuse-aside-toggle-fold=\"\">\r\n                    <i class=\"icon icon-backburger\" style=\"color:#fff\"></i>\r\n                </button>\r\n            </div>\r\n            <ul class=\"nav flex-column custom-scrollbar\" id=\"sidenav\" data-children=\".nav-item\">\r\n                <li class=\"subheader\">\r\n                    <span>APPS</span>\r\n                </li>\r\n\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-dashboards\">\r\n                    <a class=\"nav-link ripple with-arrow \" data-toggle=\"collapse\" data-target=\"#collapse-dashboards\" href=\"#\" aria-expanded=\"true\" aria-controls=\"collapse-dashboards\">\r\n                        <i class=\"icon s-4 icon-tile-four\"></i>\r\n                        <span>Tableau de bord</span>\r\n                    </a>\r\n                    <ul id=\"collapse-dashboards\" class=\"collapse show\" role=\"tabpanel\" aria-labelledby=\"heading-dashboards\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" [routerLink]=\"['/']\">\r\n                                <span>Project Dashboard</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-ecommerce\">\r\n                    <a class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-ecommerce\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-ecommerce\">\r\n                        <i class=\"icon s-4 icon-cart\"></i>\r\n                        <span>Ecommerce</span>\r\n                    </a>\r\n                    <ul id=\"collapse-ecommerce\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-ecommerce\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple \">\r\n                                <span>Orders</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link ripple \">\r\n                        <i class=\"icon s-4 icon-email\"></i>\r\n                        <span>Mail</span>\r\n                    </a>\r\n                </li>\r\n                <li class=\"subheader\">\r\n                    <span>PAGES</span>\r\n                </li>\r\n                <li class=\"nav-item\" id=\"heading-brands\" role=\"tab\"  *ngIf=\"authGuard.canActivate()\">\r\n                    <a id=\"a_collapse_brands\" class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-brands\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-brands\">\r\n                        <i class=\"icon s-4 icon-car\"></i>\r\n                        <span>Marques et models</span>\r\n                    </a>\r\n                    <ul id=\"collapse-brands\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-brands\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/marques/liste']\">\r\n                                <i class=\"icon s-4 icon-car\"></i>\r\n                                <span>Liste marques</span>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/marques/enregistrer/0']\">\r\n                                <i class=\"icon s-4 icon-pencil-circle\"></i>\r\n                                <span>Ajouter une marque</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-users\" *ngIf=\"adminGuard.canActivate()\">\r\n                    <a id=\"a_collapse_users\" class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-users\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-users\">\r\n                        <i class=\"icon s-4 icon-account-box\"></i>\r\n                        <span>Utilisateurs</span>\r\n                    </a>\r\n                    <ul id=\"collapse-users\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-users\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/liste']\">\r\n                                <i class=\"icon s-4 icon-account\"></i>\r\n                                <span>Liste utilisateurs</span>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/ajouter']\">\r\n                                <i class=\"icon s-4 icon-pencil-circle\"></i>\r\n                                <span>Ajouter un utilisateur</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n            <!--<div class=\"btn-group dropup\">\r\n                <button style=\"background-color:#0747a6;margin-top: 20px;\" type=\"button\" class=\"btn btn-secondary dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                   <div class=\"avatar-wrapper\">\r\n                        <img class=\"avatar\" [src]=\"upload_folder+loggedUser.photo\"/>\r\n                    </div>\r\n                </button>\r\n                <div class=\"dropdown-menu\">\r\n                    <p style=\"padding:0 10px\">{{loggedUser.name | uppercase}}</p>\r\n                    <a class=\"dropdown-item\" href=\"#\">Mon profil</a>\r\n                    <div class=\"dropdown-divider\"></div>\r\n                    <a class=\"dropdown-item\" href=\"#\" (click)=\"logout($event)\">Se deconnecter</a>\r\n                </div>\r\n            </div>-->\r\n        </div>\r\n    </div>\r\n</aside>";
+module.exports = "<aside id=\"aside\" class=\"aside aside-left\" data-fuse-bar=\"aside\" data-fuse-bar-media-step=\"md\" data-fuse-bar-position=\"left\">\r\n    <div class=\"aside-content-wrapper\">\r\n        <div class=\"aside-content\">\r\n            <div class=\"aside-toolbar\">\r\n                <!--<div class=\"logo\">\r\n                    <span class=\"logo-icon\">{{ loggedUserIcon | uppercase}}</span><span class=\"logo-text\">{{loggedUser.name}}</span>\r\n                </div>-->\r\n                <div class=\"logo\">\r\n                    <span class=\"logo-icon\">{{app_icon}}</span><span class=\"logo-text\">{{app_name}}</span>\r\n                </div>\r\n                <button id=\"toggle-fold-aside-button\" type=\"button\" class=\"btn btn-icon d-none d-lg-block\" data-fuse-aside-toggle-fold=\"\">\r\n                    <i class=\"icon icon-backburger\" style=\"color:#fff\"></i>\r\n                </button>\r\n            </div>\r\n            <ul class=\"nav flex-column custom-scrollbar\" id=\"sidenav\" data-children=\".nav-item\">\r\n                <li class=\"subheader\">\r\n                    <span>APPS</span>\r\n                </li>\r\n\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-dashboards\">\r\n                    <a class=\"nav-link ripple with-arrow \" data-toggle=\"collapse\" data-target=\"#collapse-dashboards\" href=\"#\" aria-expanded=\"true\" aria-controls=\"collapse-dashboards\">\r\n                        <i class=\"icon s-4 icon-tile-four\"></i>\r\n                        <span>Tableau de bord</span>\r\n                    </a>\r\n                    <ul id=\"collapse-dashboards\" class=\"collapse show\" role=\"tabpanel\" aria-labelledby=\"heading-dashboards\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" [routerLink]=\"['/']\">\r\n                                <span>Project Dashboard</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-ecommerce\">\r\n                    <a class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-ecommerce\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-ecommerce\">\r\n                        <i class=\"icon s-4 icon-cart\"></i>\r\n                        <span>Ecommerce</span>\r\n                    </a>\r\n                    <ul id=\"collapse-ecommerce\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-ecommerce\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple \">\r\n                                <span>Orders</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link ripple \">\r\n                        <i class=\"icon s-4 icon-email\"></i>\r\n                        <span>Mail</span>\r\n                    </a>\r\n                </li>\r\n                <li class=\"subheader\">\r\n                    <span>PAGES</span>\r\n                </li>\r\n                <li class=\"nav-item\" id=\"heading-brands\" role=\"tab\"  *ngIf=\"authGuard.canActivate()\">\r\n                    <a id=\"a_collapse_brands\" class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-brands\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-brands\">\r\n                        <i class=\"icon s-4 icon-car\"></i>\r\n                        <span>Marques et models</span>\r\n                    </a>\r\n                    <ul id=\"collapse-brands\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-brands\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/marques/liste']\">\r\n                                <i class=\"icon s-4 icon-car\"></i>\r\n                                <span>Liste marques</span>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/marques/enregistrer/0']\">\r\n                                <i class=\"icon s-4 icon-pencil-circle\"></i>\r\n                                <span>Ajouter une marque</span>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/models/liste']\">\r\n                                <i class=\"icon s-4 icon-car\"></i>\r\n                                <span>Liste models</span>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/models/enregistrer/0']\">\r\n                                <i class=\"icon s-4 icon-pencil-circle\"></i>\r\n                                <span>Ajouter un model</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"nav-item\" role=\"tab\" id=\"heading-users\" *ngIf=\"adminGuard.canActivate()\">\r\n                    <a id=\"a_collapse_users\" class=\"nav-link ripple with-arrow collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-users\" href=\"#\" aria-expanded=\"false\" aria-controls=\"collapse-users\">\r\n                        <i class=\"icon s-4 icon-account-box\"></i>\r\n                        <span>Utilisateurs</span>\r\n                    </a>\r\n                    <ul id=\"collapse-users\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"heading-users\" data-children=\".nav-item\">\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/liste']\">\r\n                                <i class=\"icon s-4 icon-account\"></i>\r\n                                <span>Liste utilisateurs</span>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link ripple\" routerLinkActive=\"active\" [routerLink]=\"['/utilisateurs/ajouter']\">\r\n                                <i class=\"icon s-4 icon-pencil-circle\"></i>\r\n                                <span>Ajouter un utilisateur</span>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n            <!--<div class=\"btn-group dropup\">\r\n                <button style=\"background-color:#0747a6;margin-top: 20px;\" type=\"button\" class=\"btn btn-secondary dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                   <div class=\"avatar-wrapper\">\r\n                        <img class=\"avatar\" [src]=\"upload_folder+loggedUser.photo\"/>\r\n                    </div>\r\n                </button>\r\n                <div class=\"dropdown-menu\">\r\n                    <p style=\"padding:0 10px\">{{loggedUser.name | uppercase}}</p>\r\n                    <a class=\"dropdown-item\" href=\"#\">Mon profil</a>\r\n                    <div class=\"dropdown-divider\"></div>\r\n                    <a class=\"dropdown-item\" href=\"#\" (click)=\"logout($event)\">Se deconnecter</a>\r\n                </div>\r\n            </div>-->\r\n        </div>\r\n    </div>\r\n</aside>";
 
 /***/ }),
 /* 354 */
@@ -80230,6 +80079,393 @@ var app_module_1 = __webpack_require__(165);
 //enableProdMode();
 platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 
+
+/***/ }),
+/* 388 */,
+/* 389 */,
+/* 390 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(396));
+__export(__webpack_require__(397));
+
+
+/***/ }),
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(53);
+var index_2 = __webpack_require__(11);
+var angular2_notifications_1 = __webpack_require__(39);
+var router_1 = __webpack_require__(25);
+var app_config_1 = __webpack_require__(15);
+var Brand_editComponent = (function () {
+    function Brand_editComponent(brandService, helper, _notificationsService, route) {
+        this.brandService = brandService;
+        this.helper = helper;
+        this._notificationsService = _notificationsService;
+        this.route = route;
+        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
+        this.app_name = app_config_1.Config.APP_NAME;
+        this.app_icon = this.app_name.charAt(0);
+        this.loading = app_config_1.Config.API_ROUTE.loading;
+        this.helper.setPageInfo("Enregistrer une marque de véhicules", "Enregistrer une marque de véhicules");
+        this.helper.currentMenu("a_collapse_brands");
+        this.resetCurrentBrand();
+    }
+    Brand_editComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.paramMap.subscribe(function (params) {
+            _this.helper.toggleLoadding(true);
+            _this.brandService.findOne(params.get('id')).subscribe(function (response) {
+                if (response.success)
+                    _this.currentBrand = (response.brand != null) ? response.brand : _this.currentBrand;
+                else
+                    _this._notificationsService.error('Erreur', response.message);
+                _this.helper.toggleLoadding(false);
+            });
+        });
+    };
+    Brand_editComponent.prototype.resetCurrentBrand = function () {
+        this.currentBrand = new index_1.Brand({
+            id: 0,
+            name: '',
+        });
+    };
+    Brand_editComponent.prototype.handleSubmit = function (event) {
+        var _this = this;
+        event.preventDefault();
+        this.helper.toggleLoadding(true);
+        this.brandService.saveBrand(this.currentBrand).subscribe(function (response) {
+            _this.helper.toggleLoadding(false);
+            if (response.success)
+                _this._notificationsService.success('Succès', response.message);
+            else
+                _this._notificationsService.error('Erreur', response.message);
+        });
+    };
+    return Brand_editComponent;
+}());
+Brand_editComponent = __decorate([
+    core_1.Component({
+        selector: 'edit',
+        template: __webpack_require__(398)
+    }),
+    __metadata("design:paramtypes", [index_2.BrandService, index_2.Helper, angular2_notifications_1.NotificationsService, router_1.ActivatedRoute])
+], Brand_editComponent);
+exports.Brand_editComponent = Brand_editComponent;
+
+
+/***/ }),
+/* 395 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(11);
+var angular2_notifications_1 = __webpack_require__(39);
+var app_config_1 = __webpack_require__(15);
+var Brand_listeComponent = (function () {
+    function Brand_listeComponent(brandService, helper, _notificationsService) {
+        this.brandService = brandService;
+        this.helper = helper;
+        this._notificationsService = _notificationsService;
+        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
+        this.helper.setPageInfo("Liste marques de véhicules", "Liste des marques de véhicules");
+        this.helper.currentMenu("a_collapse_brands");
+        this.getList();
+    }
+    Brand_listeComponent.prototype.filterBrands = function () {
+        var _this = this;
+        this.filtredBrands = this.brands.filter(function (brand) {
+            return brand.name.toLocaleLowerCase().indexOf(_this.textFilter.toLocaleLowerCase()) !== -1;
+        });
+        this.brandCount = this.filtredBrands.length;
+    };
+    Brand_listeComponent.prototype.getList = function () {
+        var _this = this;
+        this.brandService.getListe().subscribe(function (response) {
+            if (response.success) {
+                _this.brands = response.brands;
+                _this.filtredBrands = _this.brands;
+                _this.brandCount = _this.brands.length;
+            }
+            else
+                _this._notificationsService.error('Erreur', response.message);
+        });
+    };
+    Brand_listeComponent.prototype.removeBrand = function (event, brand) {
+        var _this = this;
+        event.preventDefault();
+        if (confirm("Supprimer la marque")) {
+            this.brandService.removeBrand(brand.id).subscribe(function (response) {
+                if (response.success) {
+                    _this.getList();
+                    _this._notificationsService.success('Succès', response.message);
+                }
+                else
+                    _this._notificationsService.error('Erreur', response.message);
+            });
+        }
+    };
+    return Brand_listeComponent;
+}());
+Brand_listeComponent = __decorate([
+    core_1.Component({
+        selector: "brand-list",
+        template: __webpack_require__(399)
+    }),
+    __metadata("design:paramtypes", [index_1.BrandService, index_1.Helper, angular2_notifications_1.NotificationsService])
+], Brand_listeComponent);
+exports.Brand_listeComponent = Brand_listeComponent;
+
+
+/***/ }),
+/* 396 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(53);
+var index_2 = __webpack_require__(11);
+var angular2_notifications_1 = __webpack_require__(39);
+var router_1 = __webpack_require__(25);
+var app_config_1 = __webpack_require__(15);
+var Model_editComponent = (function () {
+    function Model_editComponent(modelService, brandService, helper, _notificationsService, route) {
+        this.modelService = modelService;
+        this.brandService = brandService;
+        this.helper = helper;
+        this._notificationsService = _notificationsService;
+        this.route = route;
+        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
+        this.app_name = app_config_1.Config.APP_NAME;
+        this.app_icon = this.app_name.charAt(0);
+        this.loading = app_config_1.Config.API_ROUTE.loading;
+        this.helper.setPageInfo("Enregister un model de véhicule", "Enregister un model de véhicule");
+        this.helper.currentMenu("a_collapse_brands");
+        this.resetCurrentModel();
+    }
+    Model_editComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.paramMap.subscribe(function (params) {
+            _this.helper.toggleLoadding(true);
+            _this.modelService.findOne(params.get('id')).subscribe(function (response) {
+                if (response.success)
+                    _this.currentModel = (response.model != null) ? response.model : _this.currentModel;
+                else
+                    _this._notificationsService.error('Erreur', response.message);
+                _this.helper.toggleLoadding(false);
+            });
+        });
+        this.brandService.getListe().subscribe(function (response) {
+            if (response.success) {
+                _this.brands = response.brands;
+            }
+            else
+                _this._notificationsService.error('Erreur', response.message);
+        });
+    };
+    Model_editComponent.prototype.resetCurrentModel = function () {
+        this.currentModel = new index_1.Model({
+            id: 0,
+            name: '',
+            brand_id: 0
+        });
+    };
+    Model_editComponent.prototype.handleSubmit = function (event) {
+        var _this = this;
+        event.preventDefault();
+        this.helper.toggleLoadding(true);
+        console.log(this.currentModel);
+        this.modelService.saveModel(this.currentModel).subscribe(function (response) {
+            _this.helper.toggleLoadding(false);
+            if (response.success)
+                _this._notificationsService.success('Succès', response.message);
+            else
+                _this._notificationsService.error('Erreur', response.message);
+        });
+    };
+    return Model_editComponent;
+}());
+Model_editComponent = __decorate([
+    core_1.Component({
+        selector: 'edit-model',
+        template: __webpack_require__(400)
+    }),
+    __metadata("design:paramtypes", [index_2.ModelService, index_2.BrandService, index_2.Helper, angular2_notifications_1.NotificationsService, router_1.ActivatedRoute])
+], Model_editComponent);
+exports.Model_editComponent = Model_editComponent;
+
+
+/***/ }),
+/* 397 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(1);
+var index_1 = __webpack_require__(53);
+var index_2 = __webpack_require__(11);
+var angular2_notifications_1 = __webpack_require__(39);
+var app_config_1 = __webpack_require__(15);
+var Model_listeComponent = (function () {
+    function Model_listeComponent(modelService, brandService, helper, _notificationsService) {
+        this.modelService = modelService;
+        this.brandService = brandService;
+        this.helper = helper;
+        this._notificationsService = _notificationsService;
+        this.options = app_config_1.Config.NOTIFICATION_OPTIONS;
+        this.helper.setPageInfo("Liste models", "Liste des models");
+        this.helper.currentMenu("a_collapse_brands");
+        this.currentBrand = new index_1.Brand({ id: 0, name: '' });
+        this.getListe();
+    }
+    Model_listeComponent.prototype.filterModels = function () {
+        var _this = this;
+        this.filtredModels = this.models.filter(function (model) {
+            return model.name.toLocaleLowerCase().indexOf(_this.textFilter.toLocaleLowerCase()) !== -1;
+        });
+        this.modelCount = this.filtredModels.length;
+    };
+    Model_listeComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.brandService.getListe().subscribe(function (response) {
+            if (response.success) {
+                _this.brands = response.brands;
+            }
+            else
+                _this._notificationsService.error('Erreur', response.message);
+        });
+    };
+    Model_listeComponent.prototype.getListe = function () {
+        var _this = this;
+        this.modelService.getListe().subscribe(function (response) {
+            if (response.success) {
+                _this.models = response.models;
+                _this.filtredModels = _this.models;
+                _this.modelCount = _this.models.length;
+            }
+            else
+                _this._notificationsService.error('Erreur', response.message);
+        });
+    };
+    Model_listeComponent.prototype.byBrand = function (event) {
+        var _this = this;
+        event.preventDefault();
+        this.modelService.byBrand(this.currentBrand.id).subscribe(function (response) {
+            if (response.success) {
+                _this.models = response.models;
+                _this.filtredModels = _this.models;
+                _this.modelCount = _this.models.length;
+            }
+            else
+                _this._notificationsService.error('Erreur', response.message);
+        });
+    };
+    Model_listeComponent.prototype.removeModel = function (event, model) {
+        var _this = this;
+        event.preventDefault();
+        if (confirm("Supprimer le model")) {
+            this.modelService.removeModel(model.id).subscribe(function (response) {
+                if (response.success) {
+                    _this.getListe();
+                    _this._notificationsService.success('Succès', response.message);
+                }
+                else
+                    _this._notificationsService.error('Erreur', response.message);
+            });
+        }
+    };
+    return Model_listeComponent;
+}());
+Model_listeComponent = __decorate([
+    core_1.Component({
+        selector: "model-list",
+        template: __webpack_require__(401)
+    }),
+    __metadata("design:paramtypes", [index_2.ModelService, index_2.BrandService, index_2.Helper, angular2_notifications_1.NotificationsService])
+], Model_listeComponent);
+exports.Model_listeComponent = Model_listeComponent;
+
+
+/***/ }),
+/* 398 */
+/***/ (function(module, exports) {
+
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n  <div class=\"intro col-12 col-md\">\r\n      <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n          <div class=\"logo bg-primary mb-8\">\r\n              <span>{{app_icon}}</span>\r\n          </div>\r\n\r\n          <div class=\"title\">\r\n              {{app_name}}\r\n          </div>\r\n\r\n          <div class=\"description pt-2\">\r\n              Enregistrer une marque\r\n          </div>\r\n\r\n      </div>\r\n  </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Enregistrer une marque</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #brandForm=\"ngForm\">\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!name.valid || (!name.pristine && brandForm.submitted)\">\r\n                    <textarea style=\"height: 280px;\" class=\"form-control\"  [class.md-has-value]=\"currentBrand.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentBrand.name\" #name=\"ngModel\"  rows=\"3\"></textarea>\r\n                    <label for=\"name\">Marques séparées par une virgule</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !brandForm.submitted)\">Nom invalide</div>\r\n                </div>\r\n\r\n                <button [disabled]=\"!brandForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Enregistrer\">\r\n                    ENREGISTRER\r\n                </button>\r\n                <a [routerLink]=\"['/marques/liste']\" title=\"Annuler et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 399 */
+/***/ (function(module, exports) {
+
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div class=\"page-layout carded full-width\">\r\n    <div class=\"top-bg\"></div>\r\n    <!-- CONTENT -->\r\n    <div class=\"page-content\">\r\n\r\n        <!-- HEADER -->\r\n        <div class=\"header text-auto row no-gutters align-items-center justify-content-between\">\r\n\r\n            <!-- APP TITLE -->\r\n            <div class=\"col-12 col-sm\">\r\n\r\n                <div class=\"logo row no-gutters align-items-start\">\r\n                    <div class=\"logo-icon mr-3 mt-1\">\r\n                        <i class=\"icon-cube-outline s-6\"></i>\r\n                    </div>\r\n                    <div class=\"logo-text\">\r\n                        <div class=\"h4\">Liste marques</div>\r\n                        <div class=\"\">Total marques: {{brandCount}}</div>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / APP TITLE -->\r\n\r\n            <!-- SEARCH -->\r\n            <div class=\"col search-wrapper px-2\">\r\n\r\n                <div class=\"input-group\">\r\n                    <span class=\"input-group-btn\">\r\n                        <button type=\"button\" class=\"btn btn-icon\">\r\n                            <i class=\"icon icon-magnify\"></i>\r\n                        </button>\r\n                    </span>\r\n                    <input [(ngModel)]=\"textFilter\" (keyup)=\"filterBrands()\" class=\"form-control\" placeholder=\"rechercher\" aria-label=\"Search\">\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / SEARCH -->\r\n\r\n            <div class=\"col-auto\">\r\n                <a [routerLink]=\"['/marques/enregistrer/0']\" class=\"btn btn-secondary\">Ajouter une nouvelle</a>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- / HEADER -->\r\n        <div class=\"page-content-card\">\r\n\r\n            <table id=\"e-commerce-products-table\" class=\"table table-responsive\">\r\n                <thead>\r\n                <tr>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ID</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">MARQUE</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\"></span>\r\n                        </div>\r\n                    </th>\r\n                </tr>\r\n                </thead>\r\n                <tbody>\r\n                <tr *ngFor=\"let brand of filtredBrands\">\r\n                    <td>{{brand.id}}</td>\r\n                    <td>{{brand.name}}</td>\r\n                    <td>\r\n                        <a [routerLink]=\"['/marques/modifier/',brand.id]\" class=\"btn btn-icon\" title=\"Modifier la marque\">\r\n                            <i class=\"icon icon-pencil s-4\"></i>\r\n                        </a>\r\n                        <a class=\"btn btn-icon btn-sm\" title=\"Supprimer la marque\" (click)=\"removeBrand($event,brand)\">\r\n                            <i class=\"icon icon-trash s-4\"></i>\r\n                        </a>\r\n                    </td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n    <!-- / CONTENT -->\r\n</div>";
+
+/***/ }),
+/* 400 */
+/***/ (function(module, exports) {
+
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div id=\"register-v2\" class=\"row no-gutters\">\r\n  <div class=\"intro col-12 col-md\">\r\n      <div class=\"d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12\">\r\n\r\n          <div class=\"logo bg-primary mb-8\">\r\n              <span>{{app_icon}}</span>\r\n          </div>\r\n\r\n          <div class=\"title\">\r\n              {{app_name}}\r\n          </div>\r\n\r\n          <div class=\"description pt-2\">\r\n              Enregistrer un model\r\n          </div>\r\n\r\n      </div>\r\n  </div>\r\n    <div class=\"form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0\">\r\n        <div class=\"form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-8 px-12\">\r\n            <div class=\"title h5\">Enregistrer un model de véhicule</div>\r\n            <form name=\"registerForm\" class=\"mt-8\" (submit)=\"handleSubmit($event)\" #modelForm=\"ngForm\">\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!brand_id.valid || (!brand_id.pristine && modelForm.submitted)\">\r\n                    <select name=\"brand_id\" id=\"brand_id\" class=\"form-control\" [class.md-has-value]=\"currentModel.brand_id\" [(ngModel)]=\"currentModel.brand_id\" #brand_id=\"ngModel\" required>\r\n                        <option value=\"\"></option>\r\n                        <option  *ngFor=\"let brand of brands\" [value]=\"brand.id\">{{brand.name}}</option>\r\n                    </select>\r\n                    <label for=\"brand_id\">Marque models</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"brand_id.valid || (brand_id.pristine && !modelForm.submitted)\">Un model doit avoir une marque </div>\r\n                </div>\r\n\r\n                <div class=\"form-group mb-4\"  [class.has-danger]=\"!name.valid || (!name.pristine && modelForm.submitted)\">\r\n                    <textarea style=\"height: 280px;\" class=\"form-control\"  [class.md-has-value]=\"currentModel.name.length\" required name=\"name\" id=\"name\" [(ngModel)]=\"currentModel.name\" #name=\"ngModel\"  rows=\"3\"></textarea>\r\n                    <label for=\"name\">Models séparés par une virgule</label>\r\n                    <div class=\"form-control-feedback\" [hidden]=\"name.valid || (name.pristine && !modelForm.submitted)\">Nom invalide</div>\r\n                </div>\r\n\r\n                <button [disabled]=\"!modelForm.form.valid\" class=\"btn btn-primary my-4 mx-auto\" aria-label=\"Enregistrer\">\r\n                    ENREGISTRER\r\n                </button>\r\n                <a [routerLink]=\"['/models/liste']\" title=\"Annuler et revenir à la liste\">ANNULLER</a>\r\n\r\n            </form>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 401 */
+/***/ (function(module, exports) {
+
+module.exports = "<simple-notifications [options]=\"options\" style=\"z-index:9999\"></simple-notifications>\r\n<div class=\"page-layout carded full-width\">\r\n    <div class=\"top-bg\"></div>\r\n    <!-- CONTENT -->\r\n    <div class=\"page-content\">\r\n\r\n        <!-- HEADER -->\r\n        <div class=\"header text-auto row no-gutters align-items-center justify-content-between\">\r\n\r\n            <!-- APP TITLE -->\r\n            <div class=\"col-12 col-sm\">\r\n\r\n                <div class=\"logo row no-gutters align-items-start\">\r\n                    <div class=\"logo-icon mr-3 mt-1\">\r\n                        <i class=\"icon-cube-outline s-6\"></i>\r\n                    </div>\r\n                    <div class=\"logo-text\">\r\n                        <div class=\"h4\">Liste Models</div>\r\n                        <div class=\"\">Total Models: {{modelCount}}</div>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / APP TITLE -->\r\n\r\n            <!-- SEARCH -->\r\n            <div class=\"col search-wrapper px-2\">\r\n\r\n                <div class=\"input-group\">\r\n                    <span class=\"input-group-btn\">\r\n                        <button type=\"button\" class=\"btn btn-icon\" (click)=\"byBrand($event)\" >\r\n                            <i class=\"icon icon-magnify\"></i>\r\n                        </button>\r\n                    </span>\r\n                    <input [(ngModel)]=\"textFilter\" (keyup)=\"filterModels()\" class=\"form-control\" placeholder=\"rechercher\" aria-label=\"Search\">\r\n                    <select name=\"brand_id\" id=\"brand_id\" class=\"form-control\" [(ngModel)]=\"currentBrand.id\">\r\n                        <option value=\"\"></option>\r\n                        <option  *ngFor=\"let brand of brands\" [value]=\"brand.id\">{{brand.name}}</option>\r\n                    </select>\r\n                </div>\r\n\r\n            </div>\r\n            <!-- / SEARCH -->\r\n\r\n            <div class=\"col-auto\">\r\n                <a [routerLink]=\"['/models/enregistrer/0']\" class=\"btn btn-secondary\">Ajouter un nouveau</a>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- / HEADER -->\r\n        <div class=\"page-content-card\">\r\n\r\n            <table id=\"e-commerce-products-table\" class=\"table table-responsive\">\r\n                <thead>\r\n                <tr>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">ID</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">MODELS</span>\r\n                        </div>\r\n                    </th>\r\n\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\">MARQUE</span>\r\n                        </div>\r\n                    </th>\r\n                    <th>\r\n                        <div class=\"table-header\">\r\n                            <span class=\"column-title\"></span>\r\n                        </div>\r\n                    </th>\r\n                </tr>\r\n                </thead>\r\n                <tbody>\r\n                <tr *ngFor=\"let model of filtredModels\">\r\n                    <td>{{model.id}}</td>\r\n                    <td>{{model.name}}</td>\r\n                    <td>{{model.Brand.name}}</td>\r\n                    <td>\r\n                        <a [routerLink]=\"['/models/modifier/',model.id]\" class=\"btn btn-icon\" title=\"Modifier le model\">\r\n                            <i class=\"icon icon-pencil s-4\"></i>\r\n                        </a>\r\n                        <a class=\"btn btn-icon btn-sm\" title=\"Supprimer la marque\" (click)=\"removeModel($event,model)\">\r\n                            <i class=\"icon icon-trash s-4\"></i>\r\n                        </a>\r\n                    </td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n    <!-- / CONTENT -->\r\n</div>";
 
 /***/ })
 /******/ ]);

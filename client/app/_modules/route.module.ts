@@ -2,7 +2,8 @@ import {Routes} from '@angular/router';
 
 import {HomeComponent} from './../home/home.component';
 import {RegistrationComponent, ProfilComponent, LoginComponent, UserListComponent,EditComponent} from '../users/index';
-import {BrandListComponent,EditComponent as EditBrand} from "../brands/index"
+import {Brand_listeComponent,Brand_editComponent} from "../brands/index";
+import {Model_listeComponent,Model_editComponent} from "../models/index";
 import {ContactComponent} from '../contact/contact.component';
 
 import {AuthGuard} from "../_guard/auth.guard";
@@ -19,10 +20,13 @@ export const appRoutes: Routes = [
     {path: 'contact', component: ContactComponent, canActivate: [AuthGuard]},
     {path: 'utilisateur/profil', component: ProfilComponent, canActivate: [AuthGuard]},
 
-    {path: 'marques/liste', component: BrandListComponent, canActivate: [AuthGuard]},
-    {path: 'marques/enregistrer/:id', component: EditBrand, canActivate: [AuthGuard]},
-    {path: 'marques/modifier/:id', component: EditBrand, canActivate: [AuthGuard]},
+    {path: 'marques/liste', component: Brand_listeComponent, canActivate: [AuthGuard]},
+    {path: 'marques/enregistrer/:id', component: Brand_editComponent, canActivate: [AuthGuard]},
+    {path: 'marques/modifier/:id', component: Brand_editComponent, canActivate: [AuthGuard]},
 
+    {path: 'models/liste', component: Model_listeComponent, canActivate: [AuthGuard]},
+    {path: 'models/enregistrer/:id', component: Model_editComponent, canActivate: [AuthGuard]},
+    {path: 'models/modifier/:id', component: Model_editComponent, canActivate: [AuthGuard]},
 
     {path: 'auth/login', component: LoginComponent},
 ];

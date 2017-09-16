@@ -1,2 +1,2 @@
-export * from "./edit.component";
-export * from "./liste.component";
+export * from "./brand_edit.component";
+export * from "./brand_liste.component";

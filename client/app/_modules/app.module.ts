@@ -16,7 +16,8 @@ import {NavigationComponent, MenuComponent} from './../layout/index';
 
 import {HomeComponent} from './../home/home.component';
 import {RegistrationComponent, ProfilComponent, LoginComponent, UserListComponent, EditComponent} from '../users/index';
-import {BrandListComponent,EditComponent as EditBrand} from "../brands/index";
+import {Brand_listeComponent,Brand_editComponent} from "../brands/index";
+import {Model_listeComponent,Model_editComponent} from "../models/index";
 import {ContactComponent} from '../contact/contact.component';
 import {Helper, UserService, AuthService, BrandService, ModelService} from '../_services/index';
 
@@ -28,7 +29,7 @@ import {Helper, UserService, AuthService, BrandService, ModelService} from '../_
     ],
     declarations: [
         AppComponent, NavigationComponent, MenuComponent, HomeComponent, RegistrationComponent, LoginComponent,
-        ContactComponent, ProfilComponent, UserListComponent, EditComponent, BrandListComponent,EditBrand
+        ContactComponent, ProfilComponent, UserListComponent, EditComponent, Brand_listeComponent,Brand_editComponent,Model_listeComponent,Model_editComponent
 
     ],
     providers: [Helper, UserService, AuthGuard, AuthService, AdminGuard, BrandService, ModelService],

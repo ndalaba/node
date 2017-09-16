@@ -3,7 +3,10 @@ const Brand = require('../models').Brand;
 class BrandManager {
 
     getAll(cb, err) {
-        return Brand.findAll().then((brands) => {
+        return Brand.findAll({
+            order: [
+                ['name', 'ASC']]
+        }).then((brands) => {
             cb(brands);
         }).catch(error => err(error));
     }
@@ -18,7 +21,9 @@ class BrandManager {
         return Brand.find({
             where: {
                 name: name
-            }
+            },
+            order: [
+                ['name', 'ASC']]
         });
     }
 
@@ -51,10 +56,12 @@ class BrandManager {
         }).catch(error => err(error));
     }
 
-    editBrand(data,cb,err) {
+    editBrand(data, cb, err) {
         return this.byId(data.id, (brand) => {
-            return brand.update(data).then(()=>{cb()});
-        },err);
+            return brand.update(data).then(() => {
+                cb()
+            });
+        }, err);
     }
 
 

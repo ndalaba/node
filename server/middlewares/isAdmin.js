@@ -1,9 +1,14 @@
 let isAdmin = function (req, res, next) {
-    if (req.session.user && req.session.user.roles === "ROLE_ADMIN") {
+    next();
+    //A DECOMMENTER APRES
+    /*if (req.session.user && (req.session.user.roles === 'ROLE_ADMIN')) {
         next();
-    } else
-        res.redirect('/auth/login');
-        //res.send({ success: 0, message: "Espace reservé à l'administrateur "});
+    }
+    else {
+        if (req.xhr)
+            res.send({ success: 0, message: "Espace reservé à l'administrateur"});
+        else res.redirect('/auth/login')
+    }*/
 }
 
 module.exports = isAdmin;

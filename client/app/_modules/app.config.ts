@@ -22,6 +22,7 @@ export class Config {
             profil: this.APP_HOST + 'profil',
             login: this.APP_HOST + "auth/login",
             logout: this.APP_HOST + "auth/logout",
+            logged: this.APP_HOST + "auth/islogged",
             roles: this.APP_HOST + "utilisateurs/roles",
 
             brand_add: this.APP_HOST + "marques/ajouter",
@@ -33,6 +34,7 @@ export class Config {
             model_list: this.APP_HOST + "models/liste",
             model_edit: this.APP_HOST + "models/modifier",
             model_remove: this.APP_HOST + "models/supprimer",
+            model_by_brand: this.APP_HOST+ "models/marques"
 
         }
     }

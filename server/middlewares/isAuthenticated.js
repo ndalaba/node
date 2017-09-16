@@ -1,9 +1,14 @@
 var isAuthenticated = function (req, res, next) {
-    if (req.session.user) {
+
+    next();
+    //A DECOMMENTER APRES
+   /* if (req.session.user) {
         next();
-    } else
-       res.redirect('/auth/login');
-       
+    } else {
+        if (req.xhr)
+            res.send({success: 0, message: "Veillez vous reconnecter"});
+        else res.redirect('/auth/login')
+    }*/
 }
 
 module.exports = isAuthenticated;

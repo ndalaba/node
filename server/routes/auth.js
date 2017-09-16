@@ -1,6 +1,5 @@
 let express = require('express');
 let auth = express.Router();
-const User = require('../models').User;
 let UserManager = require('../services/userManager');
 
 

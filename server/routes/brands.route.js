@@ -4,7 +4,7 @@ let isAdmin = require('../middlewares/isAdmin');
 
 let brandManager = require('../services/brandManager');
 
-//router.use(isAdmin)
+router.use(isAdmin)
 
 router.get('/supprimer/:id', (req, res, next) => {
     brandManager.deleteBrand(req.params.id, () => {
@@ -19,14 +19,17 @@ router.post('/modifier/:id', (req, res, next) => {
     brandManager.editBrand(req.body, () => {
         res.json({
             success: 1,
-            message: "Marque modifié"
+            message: "Marque modifiée"
         });
     }, error => res.status(400).send(error));
 });
 
 router.get('/modifier/:id', (req, res, next) => {
     if (req.xhr) {
-        brandManager.byId(req.params.id, brand => res.json(brand), error => error => res.status(400).send(error));
+        brandManager.byId(req.params.id, brand => res.json({
+            success: 1,
+            brand: brand
+        }), error => error => res.status(400).send(error));
     } else res.render('layout', {
         title: 'Modification marque',
         description: "Modification marque"
@@ -35,7 +38,7 @@ router.get('/modifier/:id', (req, res, next) => {
 
 router.get('/liste', (req, res, next) => {
     if (req.xhr) {
-        brandManager.getAll((brands) => res.json(brands), (error) => res.status(400).send(error));
+        brandManager.getAll((brands) => res.json({success: 1, brands: brands}), (error) => res.status(400).send(error));
     } else
         res.render('layout', {
             title: 'Liste marques',

@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit{
 
     }
     ngOnInit(): void {
-        this.authService.logout().subscribe();
+        //this.authService.logout().subscribe();
     }
 
     login(event:Event) {

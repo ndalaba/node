@@ -25,7 +25,7 @@ export class UserListComponent {
     }
 
     filterUsers(event: Event) {
-        this.filtredUsers= this.users.filter(user => {
+        this.filtredUsers = this.users.filter(user => {
             return user.name.toLocaleLowerCase().indexOf(this.textFilter.toLocaleLowerCase()) !== -1;
         });
         this.userCount = this.filtredUsers.length;
@@ -33,9 +33,12 @@ export class UserListComponent {
 
     private getList() {
         this.userService.getListe().subscribe(response => {
-            this.users = response;
-            this.filtredUsers = this.users;
-            this.userCount = this.users.length;
+            if (response.success) {
+                this.users = response.users;
+                this.filtredUsers = this.users;
+                this.userCount = this.users.length;
+            } else
+                this._notificationsService.error('Erreur', response.message);
         });
     }
 

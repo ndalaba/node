@@ -9,10 +9,10 @@ import {Config} from '../_modules/app.config';
 
 @Component({
     selector: 'edit',
-    templateUrl: './edit.component.html'
+    templateUrl: './brand_edit.component.html'
 })
 
-export class EditComponent implements OnInit {
+export class Brand_editComponent implements OnInit {
 
     private currentBrand: Brand;
 
@@ -24,6 +24,7 @@ export class EditComponent implements OnInit {
 
     constructor(private brandService: BrandService, private helper: Helper, private _notificationsService: NotificationsService, private route: ActivatedRoute) {
         this.loading = Config.API_ROUTE.loading;
+        this.helper.setPageInfo("Enregistrer une marque de véhicules", "Enregistrer une marque de véhicules");
         this.helper.currentMenu("a_collapse_brands");
         this.resetCurrentBrand();
 
@@ -33,8 +34,9 @@ export class EditComponent implements OnInit {
         this.route.paramMap.subscribe((params: ParamMap) => {
             this.helper.toggleLoadding(true);
             this.brandService.findOne(params.get('id')).subscribe(response => {
-                if (response !== null)
-                    this.currentBrand = response;
+                if (response.success)
+                    this.currentBrand = (response.brand != null) ? response.brand : this.currentBrand;
+                else this._notificationsService.error('Erreur', response.message);
                 this.helper.toggleLoadding(false);
             });
 

@@ -42,7 +42,7 @@ router.post('/modifier/:id', (req, res, next) => {
 
 router.get('/modifier/:id', (req, res, next) => {
   if (req.xhr) {
-    userManager.byId(req.params.id, user => res.json(user), error => error => res.status(400).send(error));
+    userManager.byId(req.params.id, user => res.json({success:1,user:user}), error => error => res.status(400).send(error));
   } else res.render('layout', {
     title: 'Modification utilisateur',
     description: "Modification utilisateur"
@@ -51,7 +51,7 @@ router.get('/modifier/:id', (req, res, next) => {
 
 router.get('/liste', (req, res, next) => {
   if (req.xhr) {
-    userManager.getAll((users) => res.json(users), (error) => res.status(400).send(error));
+    userManager.getAll((users) => res.json({success:1,users:users}), (error) => res.status(400).send(error));
   } else
     res.render('layout', {
       title: 'Liste utilisateurs',

@@ -70,6 +70,18 @@
                                 <span>Ajouter une marque</span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link ripple" routerLinkActive="active" [routerLink]="['/models/liste']">
+                                <i class="icon s-4 icon-car"></i>
+                                <span>Liste models</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ripple" routerLinkActive="active" [routerLink]="['/models/enregistrer/0']">
+                                <i class="icon s-4 icon-pencil-circle"></i>
+                                <span>Ajouter un model</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item" role="tab" id="heading-users" *ngIf="adminGuard.canActivate()">
